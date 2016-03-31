@@ -18,7 +18,6 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
 .multiselect,
 .combobox,
 .dropdown,
-.popup .list .item,
 .dropdown-wrap {
     border-radius: $border-radius;
 }
@@ -56,8 +55,7 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
 .autocomplete.state-border-down,
 .autocomplete.state-border-down .input,
 .multiselect.state-border-down,
-.dropdown-wrap.state-border-down,
-.picker-wrap.state-border-down {
+.dropdown-wrap.state-border-down {
     border-radius: $border-radius $border-radius 0 0;
 }
 

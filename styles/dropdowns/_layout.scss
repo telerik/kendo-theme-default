@@ -33,20 +33,26 @@ $input-indent: .33em;
 .dropdown-wrap {
     display: block;
     position: relative;
+
+   .select {
+        position: absolute; /* icon positioning */
+        top: 0;
+        right: 0;
+        display: inline-block;
+        text-decoration: none;
+        min-height: $input-height;
+        line-height: ($input-height + .35em);
+        vertical-align: middle;
+        -moz-box-sizing: border-box;
+        text-align: center;
+        width: 1.9em;
+        height: 100%;
+    }
 }
 
 .list-scroller {
     position: relative;
     overflow: auto;
-}
-
-.popup.list-container,
-.popup.calendar-container {
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
-    padding: 2px;
-    border-width: 1px;
-    border-style: solid;
 }
 
 .list-container.state-border-down,
@@ -73,20 +79,6 @@ $input-indent: .33em;
 .textbox,
 .autocomplete {
     padding: 0;
-}
-
-.textbox.space-left {
-    padding-left: 1.9em;
-}
-
-.textbox.space-right {
-    padding-right: 1.9em;
-}
-
-.textbox .icon {
-    top: 50%;
-    margin: -8px 0 0;
-    position: absolute;
 }
 
 .space-left .icon {
@@ -126,21 +118,6 @@ $input-indent: .33em;
     text-overflow: ellipsis;
 }
 
-.dropdown-wrap .select {
-    position: absolute; /* icon positioning */
-    top: 0;
-    right: 0;
-    display: inline-block;
-    text-decoration: none;
-    min-height: $input-height;
-    line-height: ($input-height + .35em);
-    vertical-align: middle;
-    -moz-box-sizing: border-box;
-    text-align: center;
-    width: 1.9em;
-    height: 100%;
-}
-
 .combobox .select {
     border-style: solid;
     border-width: 0 0 0 1px;
@@ -177,12 +154,18 @@ $input-indent: .33em;
     margin: 0;
 }
 
-.combobox .dropdown-wrap:before {
-    content: '\a0';
-    display: inline-block;
-    width: 0;
-    height: $input-height;
-    padding-bottom: .3em;
+.combobox {
+    .dropdown-wrap:before {
+        content: '\a0';
+        display: inline-block;
+        width: 0;
+        height: $input-height;
+        padding-bottom: .3em;
+    }
+
+    .input {
+        display: inline;
+    }
 }
 
 /* fix missing bottom border on browser zoom in Chrome */
@@ -195,19 +178,30 @@ $input-indent: .33em;
     content: none;
 }
 
-.combobox .input {
-    display: inline;
-}
-
 .combobox .icon,
 .dropdown,
 .selectbox .icon {
     cursor: pointer;
 }
 
+
 .popup {
     border-style: solid;
     border-width: 1px;
+
+    &.list-container,
+    &.calendar-container {
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+        padding: 2px;
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    > .group-header,
+    > .virtual-wrap > .group-header {
+        padding-right: 22px;
+    }
 }
 
 .popup .item,
@@ -228,11 +222,6 @@ $input-indent: .33em;
     min-height: 1.8em;
 }
 
-.popup > .group-header,
-.popup > .virtual-wrap > .group-header {
-    padding-right: 22px;
-}
-
 .popup .list .state-hover,
 .popup .list .state-focused,
 .popup .list .state-selected,
@@ -246,18 +235,18 @@ $input-indent: .33em;
 .list-filter {
     position: relative;
     margin-bottom: 2px;
-}
 
-.list-filter > .textbox {
-    padding-right: 20px;
-    width: 100%;
-}
+    > .textbox {
+        padding-right: 20px;
+        width: 100%;
+    }
 
-.list-filter > .icon {
-    position: absolute;
-    right: 6px;
-    top: 50%;
-    transform: translateY(-50%);
+    > .icon {
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .km-root .list-filter > .textbox {
@@ -268,36 +257,43 @@ $input-indent: .33em;
 }
 
 /* MultiSelect */
-
 .multiselect-wrap {
     position: relative;
     border-width: 0;
     border-style: solid;
     border-radius: 4px;
     min-height: 2.04em;
-}
 
-.multiselect-wrap .input {
-    background-color: transparent;
-    height: 1.31em;
-    line-height: 1.31em;
-    padding: .18em 0;
-    text-indent: $input-indent;
-    border: 0;
-    margin: 1px 0 0;
-    float: left;
-}
+    .input {
+        background-color: transparent;
+        height: 1.31em;
+        line-height: 1.31em;
+        padding: .18em 0;
+        text-indent: $input-indent;
+        border: 0;
+        margin: 1px 0 0;
+        float: left;
+    }
 
-.multiselect-wrap .input::-ms-clear {
-    display: none;
-}
+    .input::-ms-clear {
+        display: none;
+    }
 
-.multiselect-wrap li {
-    margin: 1px 0 1px 1px;
-    padding: .1em 1.6em .1em .4em;
-    line-height: ($input-height - .15);
-    float: left;
-    position: relative;
+    li {
+        margin: 1px 0 1px 1px;
+        padding: .1em 1.6em .1em .4em;
+        line-height: ($input-height - .15);
+        float: left;
+        position: relative;
+    }
+
+    .select {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: .1em .2em;
+    }
 }
 
 .autocomplete .loading,
@@ -311,18 +307,24 @@ $input-indent: .33em;
     visibility: hidden;
 }
 
-.multiselect-wrap .select {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: .1em .2em;
-}
-
 .textbox {
     display: inline-block;
     vertical-align: middle;
     outline: 0;
+
+    &.space-left {
+        padding-left: 1.9em;
+    }
+
+    &.space-right {
+        padding-right: 1.9em;
+    }
+
+    .icon {
+        top: 50%;
+        margin: -8px 0 0;
+        position: absolute;
+    }
 }
 
 /* inputs */
