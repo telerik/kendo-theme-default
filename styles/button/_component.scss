@@ -18,8 +18,7 @@ $primary-disabled-background: lighten($accent, 18%) !default;
     border-color: $button-border-color;
     color: $normal-text-color;
 
-    &:hover,
-    &.state-hover {
+    &:hover {
         background-color: $hover-background;
     }
 
@@ -46,6 +45,13 @@ $primary-disabled-background: lighten($accent, 18%) !default;
         background-color: $button-background;
         border-color: $disabled-border-color;
         color: $disabled-border-color;
+        cursor: default;
+        outline: 0;
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* IE/Edge */
+        user-select: none;   
     }
 }
 
@@ -73,6 +79,30 @@ $primary-disabled-background: lighten($accent, 18%) !default;
         background-color: $primary-disabled-background;
         border-color: $primary-disabled-background;
         color: $selected-text-color;
+    }
+}
+
+.button-group {
+    border-radius: $border-radius;
+
+    .button {       
+        border-radius: 0;
+
+        &.state-active {
+            border-color: $button-border-color;
+        }
+
+        &.group-start {
+            border-radius: $border-radius 0 0 $border-radius;
+        }
+
+        &.group-end {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+
+        &.group-start:last-child {
+            border-radius: $border-radius;
+        }
     }
 }
 }

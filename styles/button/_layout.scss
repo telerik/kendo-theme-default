@@ -57,5 +57,32 @@ $button-padding: 2px 7px 2px !default;
     border-width: 0;
     color: inherit;
 }
+
+.button-group {
+    .tool-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+
+    .button {
+        &.group-start {
+            border-right-width: 0;
+        }
+
+        &.group-end {
+            border-left-width: 0;
+        }   
+
+        &.group-start + .group-end {
+            border-left-width: 1px;
+        }
+
+        &:last-child {
+            border-right-width: 1px;
+        }
+    }    
+}
 }
 
