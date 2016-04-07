@@ -1,5 +1,7 @@
 $button-border-color: darken($base, 10%) !default;
 $button-background: saturate($base, 1%) !default;
+$button-hover-border-color: darken($hover-background, 5%) !default;
+$button-active-border-color: darken($selected-background, 5%) !default;
 
 $primary-background: lighten($accent, 7%) !default;
 $primary-border-color: lighten($accent, 3%) !default;
@@ -17,9 +19,15 @@ $primary-disabled-background: lighten($accent, 18%) !default;
     background-color: $button-background;
     border-color: $button-border-color;
     color: $normal-text-color;
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;
 
     &:hover {
         background-color: $hover-background;
+        border-color: $button-hover-border-color;
     }
 
     &:focus,
@@ -30,7 +38,7 @@ $primary-disabled-background: lighten($accent, 18%) !default;
     &:active,
     &.state-active {
         background-color: $selected-background;
-        border-color: $selected-background;
+        border-color: $button-active-border-color;
         color: $selected-text-color;
     }
 
@@ -47,11 +55,6 @@ $primary-disabled-background: lighten($accent, 18%) !default;
         color: $disabled-border-color;
         cursor: default;
         outline: 0;
-        -webkit-user-select: none;   /* Chrome/Safari/Opera */
-        -khtml-user-select: none;    /* Konqueror */
-        -moz-user-select: none;      /* Firefox */
-        -ms-user-select: none;       /* IE/Edge */
-        user-select: none;   
     }
 }
 
@@ -85,12 +88,8 @@ $primary-disabled-background: lighten($accent, 18%) !default;
 .button-group {
     border-radius: $border-radius;
 
-    .button {       
+    .button {
         border-radius: 0;
-
-        &.state-active {
-            border-color: $button-border-color;
-        }
 
         &.group-start {
             border-radius: $border-radius 0 0 $border-radius;
