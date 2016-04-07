@@ -6,7 +6,9 @@ $dropdowns-background-color: lighten($base, 1%);
 $dropdowns-border-color: darken($base, 14%);
 $dropdowns-shadow-color: rgba(0, 0, 0, .3);
 
-$dropdowns-focused-background-color: saturate($hover-background, 1%);
+$dropdowns-hover-border-color: darken($base, 20%);
+
+$dropdowns-focused-background-color: saturate($hover-background, 1%); 
 $dropdowns-focused-border-color: darken($base, 20%);
 $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
 
@@ -27,8 +29,9 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
     background-position: 50% 50%;
     border-color: $dropdowns-border-color;
 
-    &.state-hover {
+    &:hover {
         background-color: $hover-background;
+        border-color: $dropdowns-hover-border-color;
     }
 
     &.state-focused {
@@ -36,6 +39,15 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
         background-position: 50% 50%;
         border-color: $dropdowns-focused-border-color;
         box-shadow: $dropdowns-focused-box-shadow;
+    }
+}
+
+.textbox {
+    border-color: $dropdowns-border-color;
+    border-radius: $border-radius;
+
+    &:hover {
+        border-color: $dropdowns-hover-border-color;
     }
 }
 
