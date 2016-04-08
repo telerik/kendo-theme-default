@@ -197,7 +197,13 @@ $button-spacing: ($slider-button-size + $slider-button-offset);
 }
 
 .slider-selection {
-    transition: width .3s ease-out;
+    .slider-horizontal & {
+        transition: width .3s ease-out;
+    }
+
+    .slider-vertical & {
+        transition: height .3s ease-out;
+    }
 }
 
 .slider-track,
@@ -244,18 +250,18 @@ $button-spacing: ($slider-button-size + $slider-button-offset);
     text-decoration: none;
     text-indent: -3333px;
 
-    transition: left .3s ease-out;
-
     .slider-horizontal & {
         height: 14px;
         top: -4px;
         width: 13px;
+        transition: left .3s ease-out;
     }
 
     .slider-vertical & {
         height: 13px;
         left: -4px;
         width: 14px;
+        transition: bottom .3s ease-out;
     }
 }
 
