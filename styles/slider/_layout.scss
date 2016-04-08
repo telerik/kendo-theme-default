@@ -196,6 +196,10 @@ $button-spacing: ($slider-button-size + $slider-button-offset);
     width: 100%;
 }
 
+.slider-selection {
+    transition: width .3s ease-out;
+}
+
 .slider-track,
 .slider-selection {
     margin: 0;
@@ -239,6 +243,8 @@ $button-spacing: ($slider-button-size + $slider-button-offset);
     text-align: center;
     text-decoration: none;
     text-indent: -3333px;
+
+    transition: left .3s ease-out;
 
     .slider-horizontal & {
         height: 14px;
