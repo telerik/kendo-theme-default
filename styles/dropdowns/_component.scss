@@ -39,6 +39,7 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
         background-position: 50% 50%;
         border-color: $dropdowns-focused-border-color;
         box-shadow: $dropdowns-focused-box-shadow;
+        outline: 0;
     }
 }
 
