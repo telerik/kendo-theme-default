@@ -41,6 +41,12 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
         box-shadow: $dropdowns-focused-box-shadow;
         outline: 0;
     }
+
+    &.state-disabled:hover {
+        background-color: $dropdowns-background-color;
+        background-position: 50% 50%;
+        border-color: $dropdowns-border-color;
+    }
 }
 
 .textbox {
