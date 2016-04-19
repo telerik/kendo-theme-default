@@ -46,6 +46,7 @@ $input-indent: .33em;
         text-align: center;
         width: 1.9em;
         height: 100%;
+        padding: 0;
     }
 
     .icon {
@@ -238,7 +239,7 @@ $input-indent: .33em;
 
     > .textbox {
         padding-right: 20px;
-        max-width: 100%;
+        width: 100%;
     }
 
     > .icon {

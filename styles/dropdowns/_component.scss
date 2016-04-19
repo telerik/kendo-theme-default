@@ -66,8 +66,14 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color;
     color: $normal-text-color;
 }
 
-.dropdown-wrap .input {
-    border-radius: $border-radius 0 0 $border-radius;
+.dropdown-wrap {
+    .input {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+    
+    > .select {
+        border-radius: 0 $border-radius $border-radius 0;
+    }    
 }
 
 .autocomplete.state-border-down,
