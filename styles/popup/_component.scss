@@ -1,15 +1,15 @@
 @import '../animation/main';
 @import '../base/states';
-@import 'layout';
+@import './layout';
 
 $list-container-border-color: darken($base, 10%) !default;
 $list-container-button-background: $base !default;
-$list-container-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .3);
+$list-container-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .3) !default;
 
-$list-items-hover-border-color: darken($base, 20%);
-$list-items-focused-border-color: darken($base, 20%);
+$list-items-hover-border-color: darken($base, 20%) !default;
+$list-items-focused-border-color: darken($base, 20%) !default;
 
-@include exports('popups/component') {
+@include exports('popup/component') {
 .list-container {
     background-color: $list-container-button-background;
     border-color: $list-container-border-color;
