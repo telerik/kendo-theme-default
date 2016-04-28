@@ -43,7 +43,9 @@ $dropdowns-focused-box-shadow: 0 0 4px 0 $dropdowns-shadow-color !default;
         outline: 0;
     }
 
-    &.state-disabled:hover {
+    &.state-disabled:hover,
+    &.state-disabled.state-focused {
+        box-shadow: none;
         background-color: $dropdowns-background-color;
         background-position: 50% 50%;
         border-color: $dropdowns-border-color;

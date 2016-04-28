@@ -22,6 +22,10 @@ $input-indent: .33em;
 .combobox,
 .dropdown {
     white-space: nowrap;
+
+    .popup {
+        width: 100%;
+    }
 }
 
 .autocomplete {

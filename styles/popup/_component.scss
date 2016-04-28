@@ -10,7 +10,7 @@ $list-items-hover-border-color: darken($base, 20%) !default;
 $list-items-focused-border-color: darken($base, 20%) !default;
 
 @include exports('popup/component') {
-.list-container {
+.popup .list-container {
     background-color: $list-container-button-background;
     border-color: $list-container-border-color;
     box-shadow: $list-container-box-shadow;
@@ -39,9 +39,5 @@ $list-items-focused-border-color: darken($base, 20%) !default;
         border-color: $list-items-hover-border-color;
     }
 
-    .item.state-focused {
-        border-color: $list-items-focused-border-color;
-        outline: 0;
-    }
 }
 }
