@@ -97,6 +97,12 @@
         }
     }
 
+    .expand {
+        .child-animation-container {
+            overflow: hidden;
+        }
+    }
+
     .fade {
         &-enter {
             opacity: 0;
