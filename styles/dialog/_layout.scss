@@ -2,8 +2,8 @@
 
 @include exports('dialog/layout') {
 
-$window-titlebar-size: 2em;
-$window-padding: .58em;
+$window-titlebar-size: 3em;
+$window-padding: .93em;
 $window-z-index: 10001;
 
 .window {
@@ -20,18 +20,16 @@ $window-z-index: 10001;
 }
 
 .window-titlebar {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    height: 1.1em;
+    height: $window-titlebar-size;
+    line-height: $window-titlebar-size;
     margin-top: -$window-titlebar-size;
     min-height: 1em;
-    padding: .4em 0;
     position: absolute;
     white-space: nowrap;
     width: 100%;
 
     .window-actions {
-        padding-top: .4em;
+        line-height: $window-titlebar-size;
         position: absolute;
         right: .4em;
         top: 0;
@@ -41,26 +39,29 @@ $window-z-index: 10001;
     .window-action {
         cursor: pointer;
         display: inline-block;
+        border: 0;
         font-size: .6em;
-        line-height: 1em;
-        opacity: .7;
-        padding: .4em;
         text-decoration: none;
-        vertical-align: middle;
+        vertical-align: baseline;
 
         .icon {
             margin: 0;
             vertical-align: top;
+        }
+
+        &:hover,
+        &:focus {
+            font-size: .875em;
         }
     }
 }
 
 .window-title {
     cursor: default;
-    left: .44em;
+    left: $window-padding;
     overflow: hidden;
     position: absolute;
-    right: .44em;
+    right: $window-padding;
     text-overflow: ellipsis;
 
     .image {
@@ -191,7 +192,6 @@ $resizer-offset: -$resizer-size / 2;
 }
 
 .action-buttons {
-    border-top: 1px solid $widget-border-color;
     clear: both;
     padding: $window-padding;
     text-align: right;
