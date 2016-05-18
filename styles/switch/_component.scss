@@ -5,13 +5,12 @@ $switch-on-color: $accent !default;
 $switch-off-color: darken($base, 48%) !default;
 $switch-background: $normal-background !default;
 $switch-border-color: rgba(0, 0, 0, .08) !default;
-$switch-border-radius: 1.25em !default;
+$switch-border-radius: ($switch-size / 2) !default;
 $switch-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06) !default;
 $switch-handle-gradient: lighten($base, 5%), lighten($base, 3%) !default;
-$switch-handle-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .06) !default;
 $switch-hover-border-color: rgba(0, 0, 0, .15) !default;
-$switch-hover-on-handle-gradient: adjust-hue($accent, 7), adjust-hue($accent, -356) !default;
-$switch-hover-onhandle-border-color: adjust-hue($accent, 357) !default;
+$switch-hover-on-handle-gradient: adjust-hue($accent, 7), adjust-hue($accent, 4) !default;
+$switch-hover-onhandle-border-color: adjust-hue($accent, -3) !default;
 $switch-hover-off-handle-gradient: lighten($base, 2%), $base !default;
 $switch-focus-box-shadow: 0 0 0 2px darken($background, 6%) !default;
 
@@ -42,7 +41,7 @@ $switch-focus-box-shadow: 0 0 0 2px darken($background, 6%) !default;
         background-color: $switch-background;
         background-image: linear-gradient($switch-handle-gradient);
         border-color: $switch-border-color;
-        box-shadow: $switch-handle-box-shadow;
+        box-shadow: $switch-box-shadow;
     }
 
     .switch-on,
@@ -66,7 +65,7 @@ $switch-focus-box-shadow: 0 0 0 2px darken($background, 6%) !default;
     }
 
     .switch-off {
-        :hover {
+        &:hover {
             .switch-handle {
                 background-image: linear-gradient($switch-hover-off-handle-gradient);
                 border-color: $switch-hover-border-color;

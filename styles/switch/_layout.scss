@@ -1,19 +1,20 @@
 $switch-border-width: 1px;
-$switch-handle-width: 2em;
+$switch-size: 2.5em !default;
+$switch-handle-size: (.8 * $switch-size) !default;
 
 @include exports('switch/layout') {
     .switch {
         cursor: pointer;
         display: inline-block;
         font-size: .75em;
-        height: 2.5em;
-        line-height: 1.76em;
+        height: $switch-size;
+        line-height: $switch-handle-size;
         overflow: hidden;
         position: relative;
         text-align: left;
         user-select: none;
         vertical-align: middle;
-        width: 5em;
+        width: (2 * $switch-size);
         outline: 0;
 
         [type=checkbox] {
@@ -61,10 +62,8 @@ $switch-handle-width: 2em;
     }
 
     .switch-handle {
-        top: 0;
-        left: 0;
-        width: $switch-handle-width;
-        height: $switch-handle-width;
+        width: $switch-handle-size;
+        height: $switch-handle-size;
         display: inline-block;
         background-color: currentcolor;
         margin: 0 6px 0 2px;
@@ -72,16 +71,15 @@ $switch-handle-width: 2em;
         background-clip: padding-box;
         box-shadow: 0 1px 0 1px currentcolor, 0 -1px 0 1px currentcolor;
         vertical-align: middle;
-        margin-top: .17em;
     }
 
     .switch-label-off {
-        left: $switch-handle-width;
+        left: $switch-handle-size;
         margin-left: 2px;
     }
 
     .switch-label-on {
-        left: -$switch-handle-width;
+        left: -$switch-handle-size;
     }
 
     .switch-label-on,

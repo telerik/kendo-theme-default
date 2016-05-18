@@ -1,11 +1,11 @@
 @import '../base/states';
 @import './layout';
 
-$button-border-color: lighten($base, 1%) !default;
+$button-border: lighten($base, 1%) !default;
 $button-background: $background !default;
-$button-hover-border-color: darken($button-border-color, 7%) !default;
-$button-active-border-color: rgba(0, 0, 0, .1) !default;
-$button-disabled-border-color: $button-border-color;
+$button-hover-border: darken($button-border, 7%) !default;
+$button-active-border: rgba(0, 0, 0, .1) !default;
+$button-disabled-border: $button-border;
 
 $button-gradient: lighten($base, 5%), lighten($base, 3%) !default;
 $button-hover-gradient: lighten($base, 2%), $base !default;
@@ -15,7 +15,7 @@ $button-focused-box-shadow: 0 0 0 2px lighten($base, 3%) !default;
 $button-active-box-shadow: inset 0 3px 5px $base !default;
 
 $primary-background: $accent !default;
-$primary-border-color: $accent !default;
+$primary-border: $accent !default;
 $primary-focused-box-shadow: 0 0 0 2px lighten($primary-background, 23%) !default;
 $primary-active-background: $primary-background !default;
 $primary-active-box-shadow: inset 0 3px 5px desaturate($primary-background, 3%) !default;
@@ -24,7 +24,7 @@ $primary-disabled-background: $primary-background !default;
 $primary-gradient: adjust-hue($primary-background, 3), $primary-background !default;
 $primary-hover-gradient: adjust-hue($primary-background, 6), adjust-hue($primary-background, 3) !default;
 $primary-active-gradient: $primary-background, adjust-hue($primary-background, 3) !default;
-$primary-disabled-gradient: adjust-hue($primary-background, 6), $accent !default;
+$primary-disabled-gradient: adjust-hue($primary-background, 6), $primary-disabled-background !default;
 
 $buttongroup-button-focused-box-shadow: inset 0 0 0 2px darken($base, 5%) !default;
 $buttongroup-button-hover-box-shadow: inset 0 0 0 1px darken($base, 6%) !default;
@@ -36,17 +36,17 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
     color: $normal-text-color;
     background-color: $button-background;
     background-image: linear-gradient($button-gradient);
-    border-color: $button-border-color;
+    border-color: $button-border;
     user-select: none;
 
     &:hover {
         background-image: linear-gradient($button-hover-gradient);
-        border-color: $button-hover-border-color;
+        border-color: $button-hover-border;
     }
 
     &:focus,
     &.state-focused {
-        border-color: $button-hover-border-color;
+        border-color: $button-hover-border;
         box-shadow: $button-focused-box-shadow;
         outline: 0;
     }
@@ -54,7 +54,7 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
     &:active,
     &.state-active {
         background-image: linear-gradient($button-active-gradient);
-        border-color: $button-active-border-color;
+        border-color: $button-active-border;
         box-shadow: $button-active-box-shadow;
     }
 
@@ -66,7 +66,7 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
     &.state-disabled:hover,
     &.state-disabled:active {
         background-image: linear-gradient($button-gradient);
-        border-color: $button-disabled-border-color;
+        border-color: $button-disabled-border;
         opacity: .7;
         box-shadow: none;
         cursor: default;
@@ -78,11 +78,11 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
     color: $selected-text-color;
     background-color: $primary-background;
     background-image: linear-gradient($primary-gradient);
-    border-color: $primary-border-color;
+    border-color: $primary-border;
 
     &:hover {
         background-image: linear-gradient($primary-hover-gradient);
-        border-color: $primary-border-color;
+        border-color: $primary-border;
     }
 
     &:focus,
@@ -110,14 +110,14 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
 $inner-border-radius: 1px; /* $border-radius - 1 */
 
 .button-group {
-    border-color: $button-border-color;
+    border-color: $button-border;
     border-radius: 2px; /* $border-radius */
 
     .button {
         border-radius: 0;
 
         &:before {
-            background: $button-border-color;
+            background: $button-border;
         }
 
         &:focus {
@@ -128,7 +128,7 @@ $inner-border-radius: 1px; /* $border-radius - 1 */
             color: $selected-text-color;
             background-color: $primary-background;
             background-image: linear-gradient($primary-gradient);
-            border-color: $primary-border-color;
+            border-color: $primary-border;
             box-shadow: none;
 
             &:focus {
@@ -137,12 +137,12 @@ $inner-border-radius: 1px; /* $border-radius - 1 */
 
             &:hover {
                 background-image: linear-gradient($primary-hover-gradient);
-                border-color: $primary-border-color;
+                border-color: $primary-border;
             }
 
             &.state-active:before,
             &.state-active + .button:before {
-                background: $primary-border-color;
+                background: $primary-border;
             }
         }
 
