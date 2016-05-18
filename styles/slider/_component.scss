@@ -3,7 +3,7 @@
 @import './layout';
 
 $slider-tracbackground-color: darken($background, 8%) !default;
-$slider-selection-background-color: #ff6358 !default;
+$slider-selection-background-color: $accent !default;
 $slider-draghandle-background-color: $background !default;
 $slider-draghandle-gradient: lighten($base, 5%), lighten($base, 3%) !default;
 $slider-draghandle-border-color: rgba(0, 0, 0, .08) !default;

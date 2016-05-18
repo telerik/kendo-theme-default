@@ -1,9 +1,9 @@
 @import '../base/states';
 @import './layout';
 
-$button-border-color: #ebebeb !default;
+$button-border-color: lighten($base, 1%) !default;
 $button-background: $background !default;
-$button-hover-border-color: #d9d9d9 !default;
+$button-hover-border-color: darken($button-border-color, 7%) !default;
 $button-active-border-color: rgba(0, 0, 0, .1) !default;
 $button-disabled-border-color: $button-border-color;
 
@@ -12,10 +12,10 @@ $button-hover-gradient: lighten($base, 2%), $base !default;
 $button-active-gradient: lighten($base, 3%), lighten($base, 5%) !default;
 
 $button-focused-box-shadow: 0 0 0 2px lighten($base, 3%) !default;
-$button-active-box-shadow: inset 0 3px 5px #e8e8e8 !default;
+$button-active-box-shadow: inset 0 3px 5px $base !default;
 
-$primary-background: #ff6358 !default;
-$primary-border-color: rgba(255, 99, 88, 1) !default;
+$primary-background: $accent !default;
+$primary-border-color: $accent !default;
 $primary-focused-box-shadow: 0 0 0 2px lighten($primary-background, 23%) !default;
 $primary-active-background: $primary-background !default;
 $primary-active-box-shadow: inset 0 3px 5px desaturate($primary-background, 3%) !default;
@@ -24,10 +24,10 @@ $primary-disabled-background: $primary-background !default;
 $primary-gradient: adjust-hue($primary-background, 3), $primary-background !default;
 $primary-hover-gradient: adjust-hue($primary-background, 6), adjust-hue($primary-background, 3) !default;
 $primary-active-gradient: $primary-background, adjust-hue($primary-background, 3) !default;
-$primary-disabled-gradient: adjust-hue($primary-background, 6), #ff6358 !default;
+$primary-disabled-gradient: adjust-hue($primary-background, 6), $accent !default;
 
 $buttongroup-button-focused-box-shadow: inset 0 0 0 2px darken($base, 5%) !default;
-$buttongroup-button-hover-box-shadow: inset 0 0 0 1px #d9d9d9 !default;
+$buttongroup-button-hover-box-shadow: inset 0 0 0 1px darken($base, 6%) !default;
 $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary-background, 2%) !default;
 
 @include exports('button/component') {

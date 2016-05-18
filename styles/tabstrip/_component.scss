@@ -1,11 +1,11 @@
 @import '../base/states';
 @import './layout';
 
-$tabstrip-tabs-color: #ff6358 !default;
+$tabstrip-tabs-color: $accent !default;
 $tabstrip-background-color: $background !default;
 $tabstrip-border-color: rgba(0, 0, 0, .08) !default;
 $tabstrip-hover-color: darken($tabstrip-tabs-color, 4%) !default;
-$tabstrip-active-color: #656565 !default;
+$tabstrip-active-color: lighten($normal-text-color, 22%) !default;
 $tabstrip-active-background-color: desaturate($background, 1%) !default;
 $tabstrip-active-border-color: darken($base, 29%) !default;
 $tabstrip-disabled-color: darken($background, 27%) !default;
