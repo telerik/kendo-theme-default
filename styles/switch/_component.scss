@@ -12,7 +12,7 @@ $switch-hover-border-color: rgba(0, 0, 0, .15) !default;
 $switch-hover-on-handle-gradient: adjust-hue($accent, 7), adjust-hue($accent, 4) !default;
 $switch-hover-onhandle-border-color: adjust-hue($accent, -3) !default;
 $switch-hover-off-handle-gradient: lighten($base, 2%), $base !default;
-$switch-focus-box-shadow: 0 0 0 2px darken($background, 6%) !default;
+$switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 
 @include exports('switch/component') {
     .switch-container,
