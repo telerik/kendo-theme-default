@@ -4,11 +4,6 @@ $button-padding: .375em !default;
 
 @include exports('button/layout') {
 
-body {
-    font-size: 24px;
-
-}
-
 .button {
     border-radius: $border-radius;
     border-style: solid;
@@ -18,7 +13,7 @@ body {
     font-family: inherit;
     line-height: 1em;
     margin: 0;
-    padding: $button-padding ($button-padding*3);
+    padding: $button-padding ($button-padding) * 3;
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -42,7 +37,7 @@ body {
 
     .icon,
     > .image {
-        margin-right: (2*$button-padding)/3;
+        margin-right: (2 * $button-padding) / 3;
     }
 }
 
