@@ -42,6 +42,9 @@ const config = kendoTasks.webpackThemeConfig({
     new ExtractTextPlugin('[name].css')
   ],
   resolve: {
+    alias: {
+      "react": __dirname + '/node_modules/react',
+    },
     extensions: ['', '.js', '.sass'],
     root: [path.join(__dirname, './src')]
   }
