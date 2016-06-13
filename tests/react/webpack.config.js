@@ -1,61 +1,47 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StringReplacePlugin = require("string-replace-webpack-plugin");
-const path = require('path')
-const kendoTasks = require('@telerik/kendo-common-tasks');
+const commonTasks = require('@telerik/kendo-common-tasks');
+const path = require('path');
 
-const sassLoaders = [
-  'css-loader',
-  'postcss-loader',
-  'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, './src')
-]
+const sourceExtensions = [ '.jsx' ];
+const nodeModulesPath = path.join(__dirname, 'node_modules');
 
-const config = kendoTasks.webpackThemeConfig({
-  entry: {
-    app: ['./src/index']
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-            presets: ['es2015', 'react']
-        }
-      },
-      {
-        test: /\.(sass|scss)$/,
-        include: /src/,
-        loaders: [
-            ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+const resolve = commonTasks.resolveConfig(sourceExtensions, nodeModulesPath);
+
+const babelLoader = {
+    test: /\.jsx?$/,
+    exclude: /(node_modules|bower_components)/,
+    loader: require.resolve('babel-loader'),
+    plugins: [
+        require.resolve('babel-plugin-add-module-exports')
+    ],
+    query: {
+        presets: [
+            require.resolve('babel-preset-react'),
+            require.resolve('babel-preset-es2015'),
+            require.resolve('babel-preset-stage-1') // Note: stage-1 should be after es2015 in order to work
+        ],
+        plugins: [
+            require.resolve('babel-plugin-transform-object-assign')
         ]
-      }
-    ]
-  },
-  output: {
-    filename: '[name].js',
-    path: path.join(__dirname, './build'),
-    publicPath: '/build'
-  },
-  plugins: [
-    new StringReplacePlugin(),
-    new ExtractTextPlugin('[name].css')
-  ],
-  resolve: {
-    alias: {
-      "react": __dirname + '/node_modules/react',
-    },
-    extensions: ['', '.js', '.sass'],
-    root: [path.join(__dirname, './src')]
-  }
-})
+    }
+};
+
+let config = {
+    dev: commonTasks.webpackDevConfig({
+        resolve,
+        loaders: [ babelLoader ],
+        entries: 'examples/*.jsx'
+    }), // dev
+}; // module.exports
 
 // insert string replace before style loader
 // tightly coupled to the order in commonTasks.webpackThemeConfig
-const loaders = config.module.loaders;
+const loaders = config.dev.module.loaders;
+config.dev.plugins.push( new StringReplacePlugin() );
 loaders[loaders.length-3].loaders.splice(1, 0,
     StringReplacePlugin.replace({
         replacements: [
+            // replace pseudo classes with class names to show them in static page
             {
                 pattern: /:(hover|focus|active)/ig,
                 replacement: function (_, state) {
