@@ -8,7 +8,8 @@ $focused-item-shadow: inset 0 0 3px 1px lighten($normal-text-color, 30%) !defaul
 @include exports('base/states') {
 
 .widget,
-.content {
+.content,
+.input {
     background-color: $background;
     border-color: $widget-border-color;
     color: $normal-text-color;
