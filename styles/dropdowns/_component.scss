@@ -71,14 +71,6 @@ $dropdowns-focused-box-shadow: 0 0 0 2px darken($background, 6%) !default;
     }
 }
 
-.combobox .select {
-    //border-color: $dropdowns-border-color;
-}
-
-.dropdown .input {
-    //color: $normal-text-color;
-}
-
 .dropdown-wrap {
     .input {
         border-radius: $border-radius 0 0 $border-radius;
@@ -97,13 +89,4 @@ $dropdowns-focused-box-shadow: 0 0 0 2px darken($background, 6%) !default;
 .list-container {
     border-radius: $border-radius;
 }
-
-.list-container {
-    > .list-filter {
-        .textbox {
-            //border-color: transparent transparent red;
-        }
-    }
-}
-
 }

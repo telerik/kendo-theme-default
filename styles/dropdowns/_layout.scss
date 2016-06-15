@@ -207,15 +207,6 @@ $input-indent: .33em;
     height: auto;
 }
 
-.popup .list .item,
-.list-optionlabel,
-.popup > .group-header,
-.popup > .virtual-wrap > .group-header {
-    padding: 1px 5px;
-    line-height: 1.8em;
-    min-height: 1.8em;
-}
-
 .popup .list .state-hover,
 .popup .list .state-focused,
 .popup .list .state-selected,
@@ -331,9 +322,9 @@ textarea.textbox {
 }
 
 input.textbox {
-    height: ($input-height + .48em);
+    height: ($input-height + .35em);
     text-indent: $input-indent;
-    line-height: 1.6em;
+    line-height: 2em;
 }
 
 .ie input.textbox {
