@@ -50,4 +50,9 @@ $list-item-focused-border: darken($base, 10%) !default;
         }
     }
 }
+
+.popup,
+.list-container {
+    border-radius: $border-radius;
+}
 }
