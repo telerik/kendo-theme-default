@@ -2,11 +2,15 @@
 @import '../button/component';
 @import './layout';
 
-$slider-tracbackground-color: darken($background, 8%) !default;
+$slider-trackbackground-color: darken($background, 10%) !default;
 $slider-selection-background-color: $accent !default;
 $slider-draghandle-background-color: $accent !default;
 $slider-draghandle-border-color: rgba(0, 0, 0, .08) !default;
 $slider-draghandle-hover-border-color: rgba(0, 0, 0, .15) !default;
+
+$slider-draghandle-gradient: linear-gradient(adjust-hue($accent, 3), $accent) !default;
+$slider-draghandle-hover-gradient: linear-gradient(adjust-hue($accent, 6), adjust-hue($accent, 3)) !default;
+$slider-draghandle-active-gradient: linear-gradient($accent, adjust-hue($accent, 3)) !default;
 
 $slider-draghandle-selected-background-color: $accent !default;
 $slider-draghandle-selected-border-color: $accent !default;
@@ -24,7 +28,7 @@ $slider-draghandle-active-box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, .06) !de
     }
 
    .slider-track {
-        background-color: $slider-tracbackground-color;
+        background-color: $slider-trackbackground-color;
     }
 
     .slider-selection {
@@ -33,12 +37,14 @@ $slider-draghandle-active-box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, .06) !de
 
     .draghandle {
         background-color: $slider-draghandle-background-color;
+        //background-image: $slider-draghandle-gradient;
         border-color: $slider-draghandle-border-color;
         border-radius: 50%;
 
         &:hover,
         &.pressed {
             background-color: darken($accent, 4%);
+            //background-image: $slider-draghandle-hover-gradient;
         }
 
         &:focus {
@@ -48,6 +54,7 @@ $slider-draghandle-active-box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, .06) !de
         &:active,
         &.pressed {
             box-shadow: $slider-draghandle-active-box-shadow;
+            //background-image: $slider-draghandle-active-gradient;
         }
 
         &:hover {
