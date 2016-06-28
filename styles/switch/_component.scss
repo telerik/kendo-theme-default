@@ -7,11 +7,11 @@ $switch-background: $normal-background !default;
 $switch-border-color: rgba(0, 0, 0, .08) !default;
 $switch-border-radius: ($switch-size / 2) !default;
 $switch-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06) !default;
-$switch-handle-gradient: lighten($base, 5%), lighten($base, 3%) !default;
+$switch-handle-gradient: darken($background, 4%), darken($background, 5%) !default;
 $switch-hover-border-color: rgba(0, 0, 0, .15) !default;
 $switch-hover-on-handle-gradient: adjust-hue($accent, 7), adjust-hue($accent, 4) !default;
-$switch-hover-onhandle-border-color: adjust-hue($accent, -3) !default;
-$switch-hover-off-handle-gradient: lighten($base, 2%), $base !default;
+$switch-hover-on-handle-border-color: adjust-hue($accent, 3) !default;
+$switch-hover-off-handle-gradient: darken($background, 7%), darken($background, 9%) !default;
 $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 
 @include exports('switch/component') {
@@ -59,7 +59,7 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
             .switch-handle {
                 background-color: $accent;
                 background-image: linear-gradient($switch-hover-on-handle-gradient);
-                border-color: $switch-hover-onhandle-border-color;
+                border-color: $switch-hover-on-handle-border-color;
             }
         }
     }
@@ -101,6 +101,35 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
                 background: $accent;
                 background-image: none;
                 border-color: $accent;
+            }
+        }
+
+        &.state-disabled {
+            cursor: auto;
+
+            .switch-container,
+            .switch-wrapper {
+                border-color: $switch-border-color;
+                box-shadow: none;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            .switch-handle {
+                background-color: $switch-background;
+                background-image: linear-gradient($switch-handle-gradient);
+                border-color: $switch-border-color;
+                box-shadow: $switch-box-shadow;
+            }
+
+            &.switch-on {
+                .switch-handle {
+                    background: $accent;
+                    border-color: $accent;
+                    opacity: .5;
+                }
             }
         }
     }
