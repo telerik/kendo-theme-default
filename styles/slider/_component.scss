@@ -19,6 +19,8 @@ $slider-draghandle-selected-box-shadow: inset 0 0 3px 1px darken($accent, 9%) !d
 $slider-draghandle-focus-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .06) !default;
 $slider-draghandle-active-box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, .06) !default;
 
+$slider-button-focused-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
+
 @include exports('slider/component') {
 
 .slider {
@@ -37,14 +39,12 @@ $slider-draghandle-active-box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, .06) !de
 
     .draghandle {
         background-color: $slider-draghandle-background-color;
-        //background-image: $slider-draghandle-gradient;
         border-color: $slider-draghandle-border-color;
         border-radius: 50%;
 
         &:hover,
         &.pressed {
             background-color: darken($accent, 4%);
-            //background-image: $slider-draghandle-hover-gradient;
         }
 
         &:focus {
@@ -54,7 +54,6 @@ $slider-draghandle-active-box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, .06) !de
         &:active,
         &.pressed {
             box-shadow: $slider-draghandle-active-box-shadow;
-            //background-image: $slider-draghandle-active-gradient;
         }
 
         &:hover {
@@ -67,6 +66,7 @@ $slider-draghandle-active-box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, .06) !de
 
         &:active {
             color: $normal-text-color;
+            box-shadow: $slider-button-focused-box-shadow
         }
     }
 
