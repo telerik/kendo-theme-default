@@ -66,7 +66,7 @@ $slider-button-focused-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 
         &:active {
             color: $normal-text-color;
-            box-shadow: $slider-button-focused-box-shadow
+            box-shadow: $slider-button-focused-box-shadow;
         }
     }
 
