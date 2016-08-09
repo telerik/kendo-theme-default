@@ -13,7 +13,7 @@ $grid-alt-background: $base !default;
 $grid-active-color: $accent !default;
 
 
-@include exports('grid/component') {
+@include exports('grid/theme') {
     .grid-header,
     .grid-header-wrap,
     .grid td,
@@ -21,7 +21,6 @@ $grid-active-color: $accent !default;
     .grid-footer-locked,
     .grid-header-locked {
         border-color: $grid-border-color;
-        //border-color: green;
     }
 
     .grid-header,

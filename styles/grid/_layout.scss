@@ -3,14 +3,9 @@
 @import '../dialog/main';
 
 @include exports('grid/layout') {
-    body {
-        font-size: 14px;
-    }
-
     .grid {
         display: block;
         position: relative;
-        zoom: 1;
         border-width: 1px;
         border-style: solid;
     }
@@ -69,7 +64,6 @@
         overflow: auto;
         overflow-x: auto;
         overflow-y: scroll;
-        zoom: 1;
         min-height: 0%; /* IE9 bug workaround - expanding Grid on hover */
     }
 
@@ -100,7 +94,6 @@
         overflow: hidden;
         border-style: solid;
         border-width: 0 1px 0 0;
-        zoom: 1;
     }
 
     .grid .group-col,
@@ -131,7 +124,7 @@
     }
 
     .grid-content-locked td:first-child {
-    border-width: 0 0 0 1px;
+        border-width: 0 0 0 1px;
     }
 
     .grid-content-locked+.grid-content,
@@ -142,13 +135,11 @@
     }
 
     /* Pager */
-
     .grid .pager-numbers,
     .pager-numbers .link,
     .pager-numbers .state-selected {
         display: inline-block;
         vertical-align: top;
-        //margin-right: 1px;
     }
 
     .pager-wrap {
@@ -199,16 +190,6 @@
         border-width: 1px;
         border-style: solid;
         border-color: transparent;
-
-        .icon {
-            font-size: 0;
-
-            &::before {
-                font-size: initial;
-                line-height: 1.75em;
-                vertical-align: initial;
-            }
-        }
     }
 
     .pager-wrap>a.state-disabled:hover {
