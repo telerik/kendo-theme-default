@@ -1,34 +1,16 @@
 @import '../base/states';
 @import '../button/theme';
+@import '../action-buttons/theme';
 @import './layout';
 
 $upload-background-color: $background !default;
 $upload-border-color: rgba(0, 0, 0, .08) !default;
-
-$upload-disabled-color: darken($background, 27%) !default;
-$upload-error-color: $error !default;
-$upload-error-border-color: lighten($error, 29%);
 $upload-progress-color: $normal-text-color !default;
-
-$upload-progress-text-color: darken($info, 50%);
-$upload-progress-background-color: $info;
-$upload-success-text-color: darken($success, 50%);
-$upload-success-background-color: $success;
-//$upload-error-text-color: darken($error, 50%);
-//$upload-error-background-color: $error;
-
-
-
-//From the theme
-$upload-progress-background-color: $info;
-//$upload-progress-text-color: $header-text-color;
-$upload-success-background-color: $success;
-$upload-success-text-color: $upload-success-background-color;
-$upload-error-background-color: $error;
-
-$upload-error-text-color: $upload-error-background-color;
-
-
+$upload-progress-background: $info !default;
+$upload-error-color: $error !default;
+$upload-error-border-color: lighten($error, 29%) !default;
+$upload-success: $success !default;
+$upload-disabled-color: darken($background, 27%) !default;
 
 @include exports('upload/theme') {
 
@@ -46,19 +28,19 @@ $upload-error-text-color: $upload-error-background-color;
     }
 
     .k-file-progress {
-        color: $upload-progress-color; //@upload-progress-text-color;
+        color: $upload-progress-color;
     }
 
     .k-file-progress .k-progress {
-        background-color: red; //@upload-progress-background-color;
+        background-color: $upload-progress-background;
     }
 
     .k-file-success {
-        color: green; //@upload-success-text-color;
+        color: $upload-success;
     }
 
     .k-file-success .k-progress {
-        background-color: orange; //@upload-success-background-color;
+        background-color: $upload-success;
     }
 
     .k-file-error {
@@ -77,7 +59,7 @@ $upload-error-text-color: $upload-error-background-color;
     }
 
     .k-file-invalid .k-file-name-invalid {
-        color: lightBlue; //@error;
+        color: $upload-error-color;
     }
 
     .k-file-invalid-extension-wrapper,
@@ -99,8 +81,8 @@ $upload-error-text-color: $upload-error-background-color;
     }
 
     .k-multiple-files-extension-wrapper::after {
-        border-top-color: brown; //@disabled-text-color;
-        border-left-color: brown; //@disabled-text-color;
+        border-top-color: $upload-disabled-color;
+        border-left-color: $upload-disabled-color;
     }
 
     .k-multiple-files-invalid-extension-wrapper::after {
@@ -112,11 +94,6 @@ $upload-error-text-color: $upload-error-background-color;
     .k-file-information,
     .k-file-validation-message {
         color: $upload-disabled-color;
-    }
-
-    .k-upload .k-upload-selected {
-        color: lightBlue; //contrast(@base, @widget-text-color, @accent, .9);
-        border-color: lightgreen; //$upload-border-color;
     }
 }
 }
