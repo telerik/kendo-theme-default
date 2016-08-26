@@ -50,6 +50,7 @@
         margin: 0 auto;
         text-align: center;
         list-style: none;
+        pointer-events: none;
 
         & > li.k-button {
             vertical-align: middle;
@@ -60,6 +61,7 @@
             width: $scrollview-page-button-size;
             height: $scrollview-page-button-size;
             cursor: pointer;
+            pointer-events: all;
         }
     }
 
