@@ -3,8 +3,9 @@
 @import './layout';
 
  $scrollview-arrow-icon-color: $selected-text-color !default;
- $scrollview-arrow-icon-shadow: rgba(0, 0, 0, 0.3) 0 0 15px !default;
- $scrollview-pagebutton-shadow: 0 0 2px rgba(0, 0, 0, 0.08) !default;
+ $scrollview-arrow-icon-shadow: rgba(0, 0, 0, .3) 0 0 15px !default;
+ $scrollview-pagebutton-shadow: 0 0 2px rgba(0, 0, 0, .08) !default;
+ $scrollview-navigation-background: rgba(0, 0, 0, 0) !default;
 
 @include exports('scrollview/theme') {
     .k-scrollview-pageable > li.k-button {
@@ -14,7 +15,7 @@
 
     .k-scrollview-next,
     .k-scrollview-prev {
-        background: rgba(0, 0, 0, 0);
+        background: $scrollview-navigation-background;
         outline-width: 0;
     }
 
@@ -25,7 +26,7 @@
     }
 
     .k-scrollview-animation {
-        transition-duration: 0.3s;
+        transition-duration: .3s;
         transition-timing-function: ease-out;
     }
 }
