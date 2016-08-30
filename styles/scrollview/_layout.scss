@@ -118,3 +118,15 @@
         width: 100%;
     }
 }
+
+@supports (-webkit-user-select: none) {
+    div.k-scrollview-wrap ul.k-scrollview li > *  {
+        pointer-events: auto;
+    }
+}
+
+@supports (not (-webkit-user-select: none)) {
+    div.k-scrollview-wrap ul.k-scrollview li > *  {
+        pointer-events: none;
+    }
+}
