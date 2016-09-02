@@ -6,6 +6,7 @@
  $scrollview-arrow-icon-shadow: rgba(0, 0, 0, .3) 0 0 15px !default;
  $scrollview-pagebutton-shadow: 0 0 2px rgba(0, 0, 0, .08) !default;
  $scrollview-navigation-background: rgba(0, 0, 0, 0) !default;
+ $webkit-highlight-color: rgba(0, 0, 0, 0) !default;
 
 @include exports('scrollview/theme') {
     .k-scrollview-pageable > li.k-button {
@@ -17,6 +18,7 @@
     .k-scrollview-prev {
         background: $scrollview-navigation-background;
         outline-width: 0;
+        -webkit-tap-highlight-color: $webkit-highlight-color;
     }
 
     .k-scrollview-next span,
