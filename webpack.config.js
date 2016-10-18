@@ -8,7 +8,7 @@ var glob = require('glob');
 var path = require('path');
 var fs = require('fs');
 
-var FILES = '{src,styles}/packages/*.scss';
+var FILES = 'src/packages/*.scss';
 
 var tmpDir = './.tmp/';
 var createTmpDir = true;
