@@ -1,7 +1,12 @@
 // Core
-@include "import-once";
-@include "placeholder-selectors";
+@import "import-once";
+@import "placeholder-selectors";
+
+
+// Utils
+@import "decoration";
+@import "compact";
 
 
 // Appearance
-@include "appearance/all";
+@import "appearance/all";
