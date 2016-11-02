@@ -26,3 +26,71 @@ $series-f: #aa46be !default;
 
 $base-font-size: 14px !default;
 $base-font-family: inherit !default;
+
+
+/////////////////////////////////////////////////
+
+$font-size: 14px !default;
+$font-family: inherit !default;
+
+
+$spacer: 1em;
+
+
+$accent: #ff6358 !default;
+$accent-contrast: #ffffff !default;
+
+$text-color: #656565 !default;
+$bg-color: #ffffff !default;
+$border-color: darken($bg-color, 3%) !default;
+
+$base-text: #656565 !default;
+$base-bg: #f6f6f6 !default;
+$base-border: darken($base-bg, 3%) !default;
+
+$hover-text: #656565 !default;
+$hover-bg: #ededed !default;
+$hover-border: darken($hover-bg, 3%) !default;
+
+$selected-text: $accent-contrast !default;
+$selected-bg: $accent !default;
+$selected-border: darken($selected-bg, 3%) !default;
+
+$border-radius: 2px !default;
+
+$transition: background-color .2s ease !default;
+
+$error: #f31700 !default;
+$warning: #ffc000 !default;
+$success: #37b400 !default;
+$info: #0058e9 !default;
+
+$series-a: #ff6358 !default;
+$series-b: #ffd246 !default;
+$series-c: #78d237 !default;
+$series-d: #28b4c8 !default;
+$series-e: #2d73f5 !default;
+$series-f: #aa46be !default;
+
+
+// Widget
+$widget-text: $text-color !default;
+$widget-bg: $bg-color !default;
+$widget-border: darken( $widget-bg, 2 ) !default;
+
+
+// Header
+$header-text: $base-text !default;
+$header-bg: $base-bg !default;
+$header-border: darken( $header-bg, 2 ) !default;
+
+
+// Calendar widget
+$calendar-text: $widget-text !default;
+$calendar-bg: $widget-bg !default;
+$calendar-border: darken( $calendar-bg, 2 ) !default;
+$calendar-colors: ( $calendar-text, $calendar-bg, $calendar-border );
+
+$calendar-header-text: $header-text !default;
+$calendar-header-bg: $header-bg !default;
+$calendar-header-border: darken( $calendar-header-bg, 2 ) !default;

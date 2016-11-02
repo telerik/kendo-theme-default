@@ -15,6 +15,7 @@ $calendar-selected-hover-background: blend-multiply($accent, darken($background,
 $calendar-header-background-color: $base;
 
 .k-calendar {
+    @include fill( $calendar-colors... );
     background-color: $calendar-background-color;
     border-color: $calendar-border-color;
 
