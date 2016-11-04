@@ -22,7 +22,7 @@ $progressbar-active-border: darken($accent, 4%) !default;
     }
 
     .k-progressbar-indeterminate {
-        background: url(map-get($data-uris, 'indeterminate.gif'));
+        background: embed-url('indeterminate.gif');
 
         .k-progress-status-wrap,
         .k-state-selected {

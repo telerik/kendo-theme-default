@@ -86,10 +86,10 @@ $slider-button-focused-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 }
 
 .k-slider-horizontal .k-tick {
-    background-image: url(map-get($data-uris, 'slider-h.gif'));
+    background-image: embed-url('slider-h.gif');
 }
 
 .k-slider-vertical .k-tick {
-    background-image: url(map-get($data-uris, 'slider-v.gif'));
+    background-image: embed-url('slider-v.gif');
 }
 }

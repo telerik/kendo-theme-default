@@ -8,7 +8,8 @@ $icon-size: 16px !default;
     font-family: 'KendoUIGlyphs';
     font-style: normal;
     font-weight: normal;
-    src: url(map-get($data-uris, 'KendoUIGlyphs.woff')) format('woff');
+
+    src: embed-url('KendoUIGlyphs.woff') format('woff');
 }
 
 .k-icon {
