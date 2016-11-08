@@ -3,35 +3,35 @@ $_node-imported: false !default;
 @if ( $_node-imported == false ) {
 
     %appearance_node {
-        // color: $node-color;
-        // background-color: $node-bg;
-        // border-color: $node-border;
-        // @include linear-gradient( $node-gradient );
+        color: $node-text;
+        background-color: $node-bg;
+        border-color: $node-border;
+        @include linear-gradient( $node-gradient );
     }
     %appearance_hovered-node {
-        // color: $node-hovered-color;
-        // background-color: $node-hovered-bg;
-        // border-color: $node-hovered-border;
-        // @include linear-gradient( $node-hovered-gradient );
+        color: $node-hovered-text;
+        background-color: $node-hovered-bg;
+        border-color: $node-hovered-border;
+        @include linear-gradient( $node-hovered-gradient );
     }
     %appearance_selected-node {
-        // color: $node-selected-color;
-        // background-color: $node-selected-bg;
-        // border-color: $node-selected-border;
-        // @include linear-gradient( $node-selected-gradient );
+        color: $node-selected-text;
+        background-color: $node-selected-bg;
+        border-color: $node-selected-border;
+        @include linear-gradient( $node-selected-gradient );
     }
 
     %appearance_list-item {
-        // color: $list-item-color;
-        // background-color: $list-item-bg;
+        color: $list-item-text;
+        background-color: $list-item-bg;
     }
     %appearance_hovered-list-item {
-        // color: $list-item-hovered-color;
-        // background-color: $list-item-hovered-bg;
+        color: $list-item-hovered-text;
+        background-color: $list-item-hovered-bg;
     }
     %appearance_selected-list-item {
-        // color: $list-item-selected-color;
-        // background-color: $list-item-selected-bg;
+        color: $list-item-selected-text;
+        background-color: $list-item-selected-bg;
     }
 
     $_node-imported: true;

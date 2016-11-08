@@ -7,20 +7,41 @@ $focused-item-shadow: 0 0 0 2px darken($background, 6%) !default;
 
 @include exports('base/states') {
 
-.k-widget,
-.k-content,
-.k-input,
-.k-textbox {
-    background-color: $background;
-    border-color: $widget-border-color;
-    color: $normal-text-color;
-    border-radius: $border-radius;
-}
+    // Widget
+    .k-widget {
+        border-width: 1px;
+        border-style: solid;
+    }
+    .k-widget {
+        @include appearance( "widget" );
+        @include border-radius( $border-radius );
+    }
 
-.k-header {
-    background-color: $header-background;
-    border-color: $widget-border-color;
-}
+    // Panels
+    .k-content {
+        @include appearance( "panel" );
+    }
+
+    // Header
+    .k-header {
+        @include appearance( "header" );
+    }
+    .k-header.k-state-hover {
+        @include appearance( "hovered-header" );
+    }
+    .k-header.k-state-selected {
+        @include appearance( "selected-header" );
+    }
+
+
+    // Input
+    .k-input,
+    .k-textbox {
+        @include appearance( "input" );
+        @include border-radius( $border-radius );
+        border-width: 1px;
+        border-style: solid;
+    }
 
 .k-link,
 .k-icon,

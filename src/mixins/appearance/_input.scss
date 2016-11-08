@@ -3,19 +3,19 @@ $_input-imported: false !default;
 @if ( $_input-imported == false ) {
 
     %appearance_input {
-        // color: $input-color;
-        // background-color: $input-bg;
-        // border-color: $input-border;
+        color: $input-text;
+        background-color: $input-bg;
+        border-color: $input-border;
     }
     %appearance_hovered-input {
-        // color: $input-hovered-color;
-        // background-color: $input-hovered-bg;
-        // border-color: $input-hovered-border;
+        color: $input-hovered-text;
+        background-color: $input-hovered-bg;
+        border-color: $input-hovered-border;
     }
     %appearance_focused-input {
-        // color: $input-active-color;
-        // background-color: $input-active-bg;
-        // border-color: $input-active-border;
+        color: $input-focused-text;
+        background-color: $input-focused-bg;
+        border-color: $input-focused-border;
     }
 
     $_input-imported: true;

@@ -3,41 +3,41 @@ $_button-imported: false !default;
 @if ( $_button-imported == false ) {
 
     %appearance_button {
-        // color: $button-text;
-        // background-color: $button-bg;
-        // border-color: $button-border;
-        // @include linear-gradient( $button-gradient );
+        color: $button-text;
+        background-color: $button-bg;
+        border-color: $button-border;
+        @include linear-gradient( $button-gradient );
     }
     %appearance_hovered-button {
-        // color: $button-hovered-text;
-        // background-color: $button-hovered-bg;
-        // border-color: $button-hovered-border;
-        // @include linear-gradient( $button-hovered-gradient );
+        color: $button-hovered-text;
+        background-color: $button-hovered-bg;
+        border-color: $button-hovered-border;
+        @include linear-gradient( $button-hovered-gradient );
     }
     %appearance_pressed-button {
-        // color: $button-pressed-text;
-        // background-color: $button-pressed-bg;
-        // border-color: $button-pressed-border;
-        // @include linear-gradient( $button-pressed-gradient );
+        color: $button-pressed-text;
+        background-color: $button-pressed-bg;
+        border-color: $button-pressed-border;
+        @include linear-gradient( $button-pressed-gradient );
     }
 
     %appearance_primary-button {
-        // color: $primary-button-text;
-        // background-color: $primary-button-bg;
-        // border-color: $primary-button-border;
-        // @include linear-gradient( $primary-button-gradient );
+        color: $primary-button-text;
+        background-color: $primary-button-bg;
+        border-color: $primary-button-border;
+        @include linear-gradient( $primary-button-gradient );
     }
     %appearance_hovered-primary-button {
-        // color: $primary-button-hovered-text;
-        // background-color: $primary-button-hovered-bg;
-        // border-color: $primary-button-hovered-border;
-        // @include linear-gradient( $primary-button-hovered-gradient );
+        color: $primary-button-hovered-text;
+        background-color: $primary-button-hovered-bg;
+        border-color: $primary-button-hovered-border;
+        @include linear-gradient( $primary-button-hovered-gradient );
     }
     %appearance_pressed-primary-button {
-        // color: $primary-button-pressed-text;
-        // background-color: $primary-button-pressed-bg;
-        // border-color: $primary-button-pressed-border;
-        // @include linear-gradient( $primary-button-pressed-gradient );
+        color: $primary-button-pressed-text;
+        background-color: $primary-button-pressed-bg;
+        border-color: $primary-button-pressed-border;
+        @include linear-gradient( $primary-button-pressed-gradient );
     }
 
     $_button-imported: true;

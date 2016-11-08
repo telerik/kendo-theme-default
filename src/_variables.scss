@@ -97,14 +97,14 @@ $popup-border: darken( $popup-bg, 2 ) !default;
 
 // Header
 $header-text: $base-text !default;
-$header-bg: $base-bg !default;
+$header-bg: saturate( $base-bg, 4 ) !default;
 $header-border: darken( $header-bg, 2 ) !default;
 $header-gradient: null !default;
 
-$header-hover-text: $hover-text !default;
-$header-hover-bg: $hover-bg !default;
-$header-hover-border: darken( $header-hover-bg, 2 ) !default;
-$header-hover-gradient: null !default;
+$header-hovered-text: $hover-text !default;
+$header-hovered-bg: $hover-bg !default;
+$header-hovered-border: darken( $header-hovered-bg, 2 ) !default;
+$header-hovered-gradient: null !default;
 
 $header-selected-text: $selected-text !default;
 $header-selected-bg: $selected-bg !default;
@@ -118,10 +118,10 @@ $button-bg: $base-bg !default;
 $button-border: darken( $button-bg, 2 ) !default;
 $button-gradient: null !default;
 
-$button-hover-text: $hover-text !default;
-$button-hover-bg: $hover-bg !default;
-$button-hover-border: darken( $button-hover-bg, 2 ) !default;
-$button-hover-gradient: null !default;
+$button-hovered-text: $hover-text !default;
+$button-hovered-bg: $hover-bg !default;
+$button-hovered-border: darken( $button-hovered-bg, 2 ) !default;
+$button-hovered-gradient: null !default;
 
 $button-pressed-text: $selected-text !default;
 $button-pressed-bg: $selected-bg !default;
@@ -129,14 +129,31 @@ $button-pressed-border: darken( $button-pressed-bg, 2 ) !default;
 $button-pressed-gradient: null !default;
 
 
+// Primary button
+$primary-button-text: $accent-contrast !default;
+$primary-button-bg: $accent !default;
+$primary-button-border: $accent !default;
+$primary-button-gradient: linear-gradient( adjust-hue( $primary-button-bg, 3), $primary-button-bg ) !default;
+
+$primary-button-hovered-text: $hover-text !default;
+$primary-button-hovered-bg: $hover-bg !default;
+$primary-button-hovered-border: darken( $button-hovered-bg, 2 ) !default;
+$primary-button-hovered-gradient: null !default;
+
+$primary-button-pressed-text: $selected-text !default;
+$primary-button-pressed-bg: $selected-bg !default;
+$primary-button-pressed-border: darken( $button-pressed-bg, 2 ) !default;
+$primary-button-pressed-gradient: null !default;
+
+
 // Input
 $input-text: $panel-text !default;
 $input-bg: $panel-bg !default;
 $input-border: $button-border !default;
 
-$input-hover-text: $input-text !default;
-$input-hover-bg: $input-bg !default;
-$input-hover-border: $button-hover-border !default;
+$input-hovered-text: $input-text !default;
+$input-hovered-bg: $input-bg !default;
+$input-hovered-border: $button-hovered-border !default;
 
 $input-focused-text: $input-text !default;
 $input-focused-bg: $input-bg !default;
@@ -149,10 +166,10 @@ $node-bg: $button-bg !default;
 $node-border: darken( $node-bg, 2) !default;
 $node-gradient: null !default;
 
-$node-hover-text: $button-hover-text !default;
-$node-hover-bg: $button-hover-bg !default;
-$node-hover-border: darken( $node-hover-bg, 2 ) !default;
-$node-hover-gradient: null !default;
+$node-hovered-text: $button-hovered-text !default;
+$node-hovered-bg: $button-hovered-bg !default;
+$node-hovered-border: darken( $node-hovered-bg, 2 ) !default;
+$node-hovered-gradient: null !default;
 
 $node-selected-text: $button-pressed-text !default;
 $node-selected-bg: $button-pressed-bg !default;
@@ -161,14 +178,14 @@ $node-selected-gradient: null !default;
 
 
 // List
-$list-text: $node-text !default;
-$list-bg: $node-bg !default;
+$list-item-text: $node-text !default;
+$list-item-bg: $node-bg !default;
 
-$list-hover-text: $node-hover-text !default;
-$list-hover-bg: $node-hover-bg !default;
+$list-item-hovered-text: $node-hovered-text !default;
+$list-item-hovered-bg: $node-hovered-bg !default;
 
-$list-selected-text: $node-selected-text !default;
-$list-selected-bg: $node-selected-bg !default;
+$list-item-selected-text: $node-selected-text !default;
+$list-item-selected-bg: $node-selected-bg !default;
 
 
 // Color maps
@@ -176,17 +193,17 @@ $widget-colors: ( $widget-text, $widget-bg, $widget-border );
 $panel-colors: ( $panel-text, $panel-bg, $panel-border );
 $popup-colors: ( $popup-text, $popup-bg, $popup-border );
 $header-colors: ( $header-text, $header-bg, $header-border );
-$header-hover-colors: ( $header-hover-text, $header-hover-bg, $header-hover-border );
+$header-hovered-colors: ( $header-hovered-text, $header-hovered-bg, $header-hovered-border );
 $header-selected-colors: ( $header-selected-text, $header-selected-bg, $header-selected-border );
 $button-colors: ( $button-text, $button-bg, $button-border );
-$button-hover-colors: ( $button-hover-text, $button-hover-bg, $button-hover-border );
+$button-hovered-colors: ( $button-hovered-text, $button-hovered-bg, $button-hovered-border );
 $button-pressed-colors: ( $button-pressed-text, $button-pressed-bg, $button-pressed-border );
 $input-colors: ( $input-text, $input-bg, $input-border );
-$input-hover-colors: ( $input-hover-text, $input-hover-bg, $input-hover-border );
+$input-hovered-colors: ( $input-hovered-text, $input-hovered-bg, $input-hovered-border );
 $input-focused-colors: ( $input-focused-text, $input-focused-bg, $input-focused-border );
 $node-colors: ( $node-text, $node-bg, $node-border );
-$node-hover-colors: ( $node-hover-text, $node-hover-bg, $node-hover-border );
+$node-hovered-colors: ( $node-hovered-text, $node-hovered-bg, $node-hovered-border );
 $node-selected-colors: ( $node-selected-text, $node-selected-bg, $node-selected-border );
-$list-colors: ( $list-text, $list-bg, null );
-$list-hover-colors: ( $list-hover-text, $list-hover-bg, null );
-$list-selected-colors: ( $list-selected-text, $list-selected-bg, null );
+$list-item-colors: ( $list-item-text, $list-item-bg, null );
+$list-item-hover-colors: ( $list-item-hovered-text, $list-item-hovered-bg, null );
+$list-item-selected-colors: ( $list-item-selected-text, $list-item-selected-bg, null );

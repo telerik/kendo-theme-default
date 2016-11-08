@@ -1,9 +1,14 @@
-@import "panel";
+@import "widget";
 @import "button";
 @import "input";
 @import "node";
 
 @mixin appearance( $what ) {
+
+    // Widget
+    @if ( $what == widget ) {
+        @include appearance_widget;
+    }
 
     // Panels
     @if ( $what == panel ) {
