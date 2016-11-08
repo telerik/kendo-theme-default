@@ -130,6 +130,11 @@ $calendar-line-height: 1.25 !default;
             .k-other-month {
                 opacity: .6;
             }
+
+            .k-state-hover,
+            .k-state-selected {
+                opacity: 1;
+            }
         }
 
 
