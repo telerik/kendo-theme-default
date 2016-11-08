@@ -17,11 +17,6 @@ $_input-imported: false !default;
         // background-color: $input-active-bg;
         // border-color: $input-active-border;
     }
-    %appearance_disabled-input {
-        // color: $input-disabled-color;
-        // background-color: $input-disabled-bg;
-        // border-color: $input-disabled-border;
-    }
 
     $_input-imported: true;
 
@@ -31,4 +26,3 @@ $_input-imported: false !default;
 @mixin appearance_input { @extend %appearance_input; }
 @mixin appearance_hovered-input { @extend %appearance_hovered-input; }
 @mixin appearance_focused-input { @extend %appearance_focused-input; }
-@mixin appearance_disabled-input { @extend %appearance_disabled-input; }

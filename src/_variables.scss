@@ -26,3 +26,167 @@ $series-f: #aa46be !default;
 
 $base-font-size: 14px !default;
 $base-font-family: inherit !default;
+
+
+/////////////////////////////////////////////////
+
+
+$font-size: 14px !default;
+$font-family: inherit !default;
+
+
+$spacer: 1em !default;
+
+$padding-x: 14px !default;
+$padding-y: 7px !default;
+
+$border-radius: 2px !default;
+
+
+$accent: #ff6358 !default;
+$accent-contrast: #ffffff !default;
+
+$text-color: #656565 !default;
+$bg-color: #ffffff !default;
+$border-color: darken($bg-color, 3%) !default;
+
+$base-text: #656565 !default;
+$base-bg: #f6f6f6 !default;
+$base-border: darken($base-bg, 3%) !default;
+
+$hover-text: #656565 !default;
+$hover-bg: #ededed !default;
+$hover-border: darken($hover-bg, 3%) !default;
+
+$selected-text: $accent-contrast !default;
+$selected-bg: $accent !default;
+$selected-border: darken($selected-bg, 3%) !default;
+
+$transition: background-color .2s ease !default;
+
+$error: #f31700 !default;
+$warning: #ffc000 !default;
+$success: #37b400 !default;
+$info: #0058e9 !default;
+
+$series-a: #ff6358 !default;
+$series-b: #ffd246 !default;
+$series-c: #78d237 !default;
+$series-d: #28b4c8 !default;
+$series-e: #2d73f5 !default;
+$series-f: #aa46be !default;
+
+
+// Widget
+$widget-text: $text-color !default;
+$widget-bg: $bg-color !default;
+$widget-border: darken( $widget-bg, 2 ) !default;
+
+
+// Panel
+$panel-text: $widget-text !default;
+$panel-bg: $widget-bg !default;
+$panel-border: darken( $panel-bg, 2 ) !default;
+
+
+// Popup
+$popup-text: $widget-text !default;
+$popup-bg: $widget-bg !default;
+$popup-border: darken( $popup-bg, 2 ) !default;
+
+
+// Header
+$header-text: $base-text !default;
+$header-bg: $base-bg !default;
+$header-border: darken( $header-bg, 2 ) !default;
+$header-gradient: null !default;
+
+$header-hover-text: $hover-text !default;
+$header-hover-bg: $hover-bg !default;
+$header-hover-border: darken( $header-hover-bg, 2 ) !default;
+$header-hover-gradient: null !default;
+
+$header-selected-text: $selected-text !default;
+$header-selected-bg: $selected-bg !default;
+$header-selected-border: darken( $header-selected-bg, 2 ) !default;
+$header-selected-gradient: null !default;
+
+
+// Button
+$button-text: $base-text !default;
+$button-bg: $base-bg !default;
+$button-border: darken( $button-bg, 2 ) !default;
+$button-gradient: null !default;
+
+$button-hover-text: $hover-text !default;
+$button-hover-bg: $hover-bg !default;
+$button-hover-border: darken( $button-hover-bg, 2 ) !default;
+$button-hover-gradient: null !default;
+
+$button-pressed-text: $selected-text !default;
+$button-pressed-bg: $selected-bg !default;
+$button-pressed-border: darken( $button-pressed-bg, 2 ) !default;
+$button-pressed-gradient: null !default;
+
+
+// Input
+$input-text: $panel-text !default;
+$input-bg: $panel-bg !default;
+$input-border: $button-border !default;
+
+$input-hover-text: $input-text !default;
+$input-hover-bg: $input-bg !default;
+$input-hover-border: $button-hover-border !default;
+
+$input-focused-text: $input-text !default;
+$input-focused-bg: $input-bg !default;
+$input-focused-border: $button-pressed-border !default;
+
+
+// Node
+$node-text: $button-text !default;
+$node-bg: $button-bg !default;
+$node-border: darken( $node-bg, 2) !default;
+$node-gradient: null !default;
+
+$node-hover-text: $button-hover-text !default;
+$node-hover-bg: $button-hover-bg !default;
+$node-hover-border: darken( $node-hover-bg, 2 ) !default;
+$node-hover-gradient: null !default;
+
+$node-selected-text: $button-pressed-text !default;
+$node-selected-bg: $button-pressed-bg !default;
+$node-selected-border: darken( $node-selected-bg, 2 ) !default;
+$node-selected-gradient: null !default;
+
+
+// List
+$list-text: $node-text !default;
+$list-bg: $node-bg !default;
+
+$list-hover-text: $node-hover-text !default;
+$list-hover-bg: $node-hover-bg !default;
+
+$list-selected-text: $node-selected-text !default;
+$list-selected-bg: $node-selected-bg !default;
+
+
+// Color maps
+$widget-colors: ( $widget-text, $widget-bg, $widget-border );
+$panel-colors: ( $panel-text, $panel-bg, $panel-border );
+$popup-colors: ( $popup-text, $popup-bg, $popup-border );
+$header-colors: ( $header-text, $header-bg, $header-border );
+$header-hover-colors: ( $header-hover-text, $header-hover-bg, $header-hover-border );
+$header-selected-colors: ( $header-selected-text, $header-selected-bg, $header-selected-border );
+$button-colors: ( $button-text, $button-bg, $button-border );
+$button-hover-colors: ( $button-hover-text, $button-hover-bg, $button-hover-border );
+$button-pressed-colors: ( $button-pressed-text, $button-pressed-bg, $button-pressed-border );
+$input-colors: ( $input-text, $input-bg, $input-border );
+$input-hover-colors: ( $input-hover-text, $input-hover-bg, $input-hover-border );
+$input-focused-colors: ( $input-focused-text, $input-focused-bg, $input-focused-border );
+$node-colors: ( $node-text, $node-bg, $node-border );
+$node-hover-colors: ( $node-hover-text, $node-hover-bg, $node-hover-border );
+$node-selected-colors: ( $node-selected-text, $node-selected-bg, $node-selected-border );
+$list-colors: ( $list-text, $list-bg, null );
+$list-hover-colors: ( $list-hover-text, $list-hover-bg, null );
+$list-selected-colors: ( $list-selected-text, $list-selected-bg, null );

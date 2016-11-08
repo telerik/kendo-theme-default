@@ -31,12 +31,6 @@ $_panel-imported: false !default;
         // border-color: $header-selected-border;
         // @include linear-gradient( $header-selected-gradient );
     }
-    %appearance_disabled-header {
-        // color: $header-disabled-color;
-        // background-color: $header-disabled-bg;
-        // border-color: $header-disabled-border;
-        // @include linear-gradient( $header-disabled-gradient );
-    }
 
     $_panel-imported: true;
 
@@ -49,4 +43,3 @@ $_panel-imported: false !default;
 @mixin appearance_header { @extend %appearance_header };
 @mixin appearance_hovered-header { @extend %appearance_hovered-header };
 @mixin appearance_selected-header { @extend %appearance_selected-header };
-@mixin appearance_disabled-header { @extend %appearance_disabled-header };

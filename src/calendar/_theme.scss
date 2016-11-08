@@ -1,7 +1,6 @@
 @import '../base/states';
 @import '../animation/main';
 @import './layout';
-@import '../mixins/blend-modes';
 
 @include exports('calendar/theme') {
 
