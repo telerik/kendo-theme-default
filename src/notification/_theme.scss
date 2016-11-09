@@ -1,0 +1,42 @@
+// TODO: extract or remove alert color variables
+$alert-info-border: blue !default;
+$alert-info-text: black !default;
+$alert-info-bg: blue !default;
+$alert-success-border: green !default;
+$alert-success-text: white !default;
+$alert-success-bg: green !default;
+$alert-warning-border: yellow !default;
+$alert-warning-text: black !default;
+$alert-warning-bg: yellow !default;
+$alert-danger-border: red !default;
+$alert-danger-text: white !default;
+$alert-danger-bg: red !default;
+
+@include exports("notification/theme") {
+
+	// Theme
+	.k-notification {
+		@include border-radius( $border-radius );
+	}
+	.k-notification-info {
+		border-color: $alert-info-border;
+		color: $alert-info-text;
+		background-color: $alert-info-bg;
+	}
+	.k-notification-success {
+		border-color: $alert-success-border;
+		color: $alert-success-text;
+		background-color: $alert-success-bg;
+	}
+	.k-notification-warning {
+		border-color: $alert-warning-border;
+		color: $alert-warning-text;
+		background-color: $alert-warning-bg;
+	}
+	.k-notification-error {
+		border-color: $alert-danger-border;
+		color: $alert-danger-text;
+		background-color: $alert-danger-bg;
+	}
+
+}
