@@ -1,0 +1,15 @@
+// TODO: extract or remove alert colors variables
+$alert-warning-border: pink !default;
+$alert-warning-text: purple !default;
+$alert-warning-bg: green !default;
+
+
+@include exports("validator/theme") {
+
+	.k-tooltip-validation {
+		border-color: $alert-warning-border;
+		color: $alert-warning-text;
+		background-color: $alert-warning-bg;
+	}
+
+}
