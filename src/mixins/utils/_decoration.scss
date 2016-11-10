@@ -44,6 +44,8 @@
 
 
 // Disabled
+// TODO: cursor disabled
+$cursor-disabled: not-allowed;
 @mixin disabled {
     cursor: $cursor-disabled;
     opacity: .65;

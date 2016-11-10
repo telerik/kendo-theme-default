@@ -1,3 +1,11 @@
+// TODO: dropdown item padding
+$dropdown-item-padding-x: 1em;
+$dropdown-item-padding-y: .5em;
+
+// TODO: popup padding
+$popup-padding-x: 2px;
+$popup-padding-y: 2px;
+
 @include exports( "common/popup" ) {
 
 	// Layout

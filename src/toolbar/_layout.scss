@@ -2,6 +2,10 @@
 $dropdown-item-padding-x: 1em;
 $dropdown-item-padding-y: .5em;
 
+// TODO: button padding sm
+$button-padding-x-sm: .5em;
+$button-padding-y-sm: .25em;
+
 @include exports("toolbar/layout") {
 
 	// Base
