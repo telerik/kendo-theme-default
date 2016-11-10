@@ -1,0 +1,17 @@
+// TODO: extract or remove modal variables
+$modal-content-bg: $background !default;
+$modal-content-xs-box-shadow: 0 3px 9px rgba(0,0,0,.5) !default;
+$modal-header-border-color: $border-color !default;
+
+@include exports("window/theme") {
+
+	.k-window {
+		@include border-radius( $border-radius );
+		background-color: $modal-content-bg;
+		@include box-shadow($modal-content-xs-box-shadow);
+	}
+	.k-window-titlebar {
+		border-color: $modal-header-border-color;
+	}
+
+}
