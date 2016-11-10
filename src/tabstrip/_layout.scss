@@ -1,194 +1,128 @@
 @import '../base/layout';
 @import '../animation/effect';
 
-@include exports('tabstrip/layout') {
+// TODO: nav link variables
+$nav-link-padding: 1em;
+$nav-item-margin: 2px;
 
-.k-tabstrip {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
+@include exports("tabstrip/layout") {
 
-    margin: 0;
-    padding: 0;
-    position: relative;
-    zoom: 1;
+    .k-tabstrip {
+        border-width: 0;
 
-    > .k-button {
-        position: absolute;
-        top: .4em;
-        user-select: none;
-        z-index: 2;
-    }
-
-    &.k-header {
-        border: 0;
-    }
-}
-
-.k-tabstrip-items {
-    .k-tabstrip-scrollable & {
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    .k-item {
-        border-style: solid;
-        border-width: 1px 1px 0;
-        display: inline-block;
-        list-style-type: none;
-        margin: 0 -1px 0 0;
-        outline: 0;
-        padding: 0;
-        position: relative;
-        vertical-align: top;
-
-        .k-link {
-            border-bottom-width: 0;
-            display: inline-block;
-            padding: .5em .92em;
+        .k-tabstrip-items {
+            border-width: 0;
+            border-style: solid;
+            display: flex;
+            flex-direction: row;
+            position: relative;
         }
 
-        .k-icon {
-            margin: -1px 4px 0 -3px;
-            vertical-align: top;
-        }
-
-        .k-image,
-        .k-sprite {
-            margin: -3px 3px 0 -6px;
-            vertical-align: middle;
-        }
-    }
-
-    .k-tab-on-top,
-    .k-state-active {
-        margin-bottom: -1px;
-        padding-bottom: 1px;
-    }
-
-    .k-tab-on-top {
-        z-index: 1;
-    }
-}
-
-.k-tabstrip-prev {
-    left: .4em;
-}
-
-.k-tabstrip-next {
-    right: .4em;
-}
-
-.k-tabstrip > .k-content {
-    border-style: solid;
-    border-width: 1px;
-    display: none;
-    margin: 0 .286em .3em;
-    overflow: auto;
-    padding: .3em .92em;
-    position: static;
-    zoom: 1;
-
-    &.k-state-active {
-        display: block;
-    }
-}
-
-// left and right tabs
-
-.k-tabstrip-left,
-.k-tabstrip-right {
-    > .k-content {
-        margin: .286em .3em;
-    }
-
-    .k-tabstrip-items {
         .k-item {
-            display: block;
-            margin-bottom: -1px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid transparent;
+            position: relative;
         }
-
-        .k-link {
+        .k-item.k-tab-on-top {
+            z-index: 1;
+        }
+        .k-item .k-link {
+            padding: $nav-link-padding;
+            cursor: pointer;
             display: block;
         }
 
-        .k-tab-on-top,
-        .k-state-active {
-            margin-bottom: -1px;
-            padding-bottom: 0;
+        .k-content {
+            display: none;
+            overflow: auto;
+        }
+        > .k-content.k-state-active {
+            display: block;
+        }
+
+
+        // Scrolling
+        &.k-tabstrip-scrollable {
+
+            .k-tabstrip-items {
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+
+
+
+        // Compact
+        @include compact {
+
+            .k-item .k-link {
+                padding: $padding-y-sm $padding-x-sm;
+            }
+
         }
     }
-}
 
-// left tabs
 
-.k-tabstrip-left > .k-tabstrip-items {
-    float: left;
-    padding: .3em 0 .3em .3em;
+    // Tabstrip variants
+    .k-tabstrip-top {
 
-    .k-item {
-        border-width: 1px 0 1px 1px;
-    }
-
-    .k-state-active {
-        border-width: 1px 0 1px 1px;
-    }
-
-    .k-tab-on-top,
-    .k-state-active {
-        margin-right: -2px;
-        padding-right: 1px;
-    }
-}
-
-// right tabs
-
-.k-tabstrip-right > .k-tabstrip-items {
-    float: right;
-    padding: .3em .3em .3em 0;
-
-    .k-item {
-        border-width: 1px 1px 1px 0;
-    }
-
-    .k-state-active {
-        border-width: 1px 1px 1px 0;
-    }
-
-    .k-tab-on-top,
-    .k-state-active {
-        margin-left: -1px;
-        padding-left: 1px;
-    }
-}
-
-// bottom tabs
-
-.k-tabstrip-bottom {
-    > .k-button {
-        bottom: .4em;
-        top: auto;
-    }
-
-    > .k-tabstrip-items {
-        margin-top: -1px;
-        padding: 0 .3em .3em;
+        .k-tabstrip-items {
+            border-bottom-width: 1px;
+        }
 
         .k-item {
-            border-width: 0 1px 1px;
+            margin-bottom: -1px;
+        }
+        .k-item + .k-item {
+            margin-left: $nav-item-margin;
         }
 
-        .k-state-active {
-            margin-bottom: 0;
-            padding-bottom: 0;
+    }
+    .k-tabstrip-bottom {
+
+        .k-tabstrip-items {
+            border-top-width: 1px;
         }
+
+        .k-item {
+            margin-top: -1px;
+        }
+        .k-item + .k-item {
+            margin-left: $nav-item-margin;
+        }
+
+    }
+    .k-tabstrip-left {
+
+        .k-tabstrip-items {
+            border-right-width: 1px;
+            flex-direction: column;
+        }
+
+        .k-item {
+            margin-right: -1px;
+        }
+        .k-item + .k-item {
+            margin-top: $nav-item-margin;
+        }
+
+    }
+    .k-tabstrip-right {
+
+        .k-tabstrip-items {
+            border-left-width: 1px;
+            flex-direction: column;
+        }
+
+        .k-item {
+            margin-left: -1px;
+        }
+        .k-item + .k-item {
+            margin-top: $nav-item-margin;
+        }
+
     }
 
-    > .k-content {
-        margin: .3em .286em 0;
-        min-height: 100px;
-        position: relative;
-        z-index: 1;
-    }
-}
 }
