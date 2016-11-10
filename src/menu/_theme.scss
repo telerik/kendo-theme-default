@@ -1,0 +1,41 @@
+// TODO: navbar colors
+$gray-lightest: #f0f0f0;
+$navbar-light-color: #f0f0f0;
+$navbar-light-hover-color: #f0f0f0;
+$dropdown-link-color: #f0f0f0;
+$dropdown-link-hover-color: #f0f0f0;
+$dropdown-link-hover-bg: #f0f0f0;
+$dropdown-link-active-color: #f0f0f0;
+$dropdown-link-active-bg: #f0f0f0;
+
+@include exports("menu/theme") {
+
+	// Theme
+	.k-menu {
+		border-color: $gray-lightest;
+		color: $navbar-light-color;
+		background-color: $gray-lightest;
+
+		.k-link {}
+		.k-item.k-state-hover > .k-link {
+			color: $navbar-light-hover-color;
+		}
+
+	}
+	.k-menu-group {
+		color: $dropdown-link-color;
+
+		.k-link {}
+		.k-item.k-state-hover > .k-link,
+		.k-item > .k-link.k-state-active {
+			color: $dropdown-link-hover-color;
+			background-color: $dropdown-link-hover-bg;
+		}
+		.k-item.k-state-hover > .k-link.k-state-active {
+			color: $dropdown-link-active-color;
+			background-color: $dropdown-link-active-bg;
+		}
+
+	}
+
+}
