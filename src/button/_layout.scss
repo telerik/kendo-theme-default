@@ -1,95 +1,145 @@
 @import '../base/layout';
 @import '../icons/main';
 
+// TODO: button variables
 $button-padding: 6px !default;
+$button-padding-x: 1em;
+$button-padding-y: .5em;
+$button-padding-x-sm: .5em;
+$button-padding-y-sm: .25em;
+
+// TODO: font size line height
+$font-size-sm: 12px;
+$form-line-height: 1.5;
 
 @include exports('button/layout') {
-.k-button {
-    border-radius: $border-radius;
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer;
-    display: inline-block;
-    font-family: inherit;
-    line-height: 1.2em;
-    margin: 0;
-    padding: $button-padding ($button-padding * 3);
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
 
-    [disabled] {
-        cursor: default;
-    }
-
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
-
-    .k-icon {
-        vertical-align: text-bottom;
-    }
-
-    > .k-image {
-        vertical-align: middle;
-    }
-
-    .k-icon,
-    > .k-image {
-        margin-right: $button-padding;
-    }
-}
-
-.k-button-icon {
-    padding: $button-padding;
-    line-height: 1em;
-
-    .k-icon {
-        margin-right: 0;
-    }
-}
-
-.k-button-icon > span {
-    width: 1em;
-}
-
-.k-button-icontext {
-    overflow: visible; // IE9
-}
-
-.k-button-bare {
-    border-width: 0;
-    color: inherit;
-}
-
-.k-button-group {
-    display: inline-block;
-    border-width: 1px;
-    border-style: solid;
-
+    // Button
     .k-button {
-        border-width: 0;
-        position: relative;
-        margin-left: 1px;
+        padding: $button-padding-y $button-padding-x;
+        border-width: 1px;
+        border-style: solid;
+        font-size: $font-size;
+        line-height: $form-line-height;
+        text-decoration: none;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+        user-select: none;
+        cursor: pointer;
 
-        &::before {
-            content: '';
-            height: 100%;
-            position: absolute;
-            width: 1px;
-            top: 0;
-            left: 0;
-            margin-left: -1px;
+        &[disabled] {
+            @extend %disabled;
         }
 
-        &.k-group-start {
-            margin-left: 0;
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
 
-            &::before {
-                display: none;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+        .k-icon,
+        .k-image {
+            align-self: center;
+        }
+
+
+        // Button variants
+        &-icontext {
+            overflow: visible; // IE9
+
+            .k-icon,
+            .k-image {
+                margin: 0 ($button-padding-x/2) 0 (-$button-padding-x/2);
+            }
+        }
+        &-icon {
+            width: $form-line-height * 1em;
+            height: $form-line-height * 1em;
+            padding: $button-padding-y;
+            box-sizing: content-box;
+            justify-content: center;
+        }
+        &-bare {
+            border-width: 0;
+            color: inherit;
+            background: none !important;
+        }
+
+
+
+
+        // Compact
+        @include compact {
+            padding: $button-padding-y-sm $button-padding-x-sm;
+            font-size: $font-size-sm;
+
+            &-icontext {
+                .k-icon {
+                    margin: 0 ($button-padding-x-sm/2) 0 (-$button-padding-x-sm/2);
+                }
+            }
+            &-icon {
+                padding: $button-padding-y-sm;
+            }
+        }
+
+    }
+
+
+    // Toggle button
+    .k-toggle-button {}
+
+
+    // Split button
+    .k-split-button {
+
+        .k-split-button-arrow {
+            margin-left: -1px;
+            padding: $button-padding-y;
+        }
+
+
+        @include compact {
+            .k-split-button-arrow {
+                padding: $button-padding-y-sm;
             }
         }
     }
-}
+
+
+    // Bare button
+    .k-button-bare {
+        user-select: none;
+        text-decoration: none;
+    }
+
+
+    // Button group
+    .k-button-group {
+        white-space: nowrap;
+        display: inline-flex;
+        flex-direction: row;
+        vertical-align: middle;
+        position: relative;
+
+        .k-button {
+            position: relative;
+        }
+        .k-button + .k-button {
+            margin-left: -1px;
+        }
+
+        .k-button:hover,
+        .k-button.k-state-hover,
+        .k-button.k-state-active {
+            z-index: 2;
+        }
+    }
+
 }
