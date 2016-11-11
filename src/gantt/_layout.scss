@@ -102,7 +102,9 @@ $cell-padding: 4px;
             border-width: 0;
         }
         .k-grid-header {
+            // sass-lint:disable no-important
             padding: 0 !important;
+            // sass-lint:enable no-important
         }
         .k-grid-header tr {
             height: calc( #{2 * $row-height} + 2px );
@@ -163,7 +165,7 @@ $cell-padding: 4px;
             position: relative;
             vertical-align: middle;
         }
-        td:after { content: "\a0"; }
+        td::after { content: "\a0"; }
     }
     .k-task-wrap {
         margin: 0 -1.5em;
@@ -193,7 +195,7 @@ $cell-padding: 4px;
     .k-task-wrap.k-origin .k-task-dot {
         display: block;
     }
-    .k-task-dot:before {
+    .k-task-dot::before {
         content: "";
         margin: -4px 0 0 -4px;
         width: 8px;
@@ -206,8 +208,8 @@ $cell-padding: 4px;
         top: 50%;
         left: 50%;
     }
-    .k-task-dot:hover:before,
-    .k-task-dot.k-state-hover:before {
+    .k-task-dot:hover::before,
+    .k-task-dot.k-state-hover::before {
         border-width: 1px;
     }
     .k-task-start { left: 0; }
@@ -248,8 +250,8 @@ $cell-padding: 4px;
     }
     .k-task-summary,
     .k-task-summary-complete {
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             content: "";
             width: 0;
             height: 0;
@@ -258,11 +260,11 @@ $cell-padding: 4px;
             top: 0;
         }
 
-        &:before {
+        &::before {
             border-left-color: inherit;
             left: 0;
         }
-        &:after {
+        &::after {
             border-right-color: inherit;
             right: 0;
         }
@@ -290,18 +292,18 @@ $cell-padding: 4px;
             z-index: 2;
             visibility: hidden;
         }
-        .k-resize-handle:before {
+        .k-resize-handle::before {
             position: absolute;
             top: 2px;
             bottom: 2px;
         }
         .k-resize-w { left: 0; }
-        .k-resize-w:before {
+        .k-resize-w::before {
             left: 2px;
             border-left-width: 1px;
         }
         .k-resize-e { right: 0; }
-        .k-resize-e:before {
+        .k-resize-e::before {
             right: 2px;
             border-left-width: 1px;
         }

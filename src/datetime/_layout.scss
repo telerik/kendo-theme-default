@@ -9,6 +9,7 @@
 
 
         // Compact
+        // sass-lint:disable mixins-before-declarations
         @include compact {
 
             .k-input {
@@ -19,6 +20,7 @@
                 padding: $button-padding-y-sm;
             }
         }
+        // sass-lint:enable mixins-before-declarations
     }
 
     // Timepicker
@@ -30,6 +32,7 @@
 
 
         // Compact
+        // sass-lint:disable mixins-before-declarations
         @include compact {
 
             .k-input {
@@ -40,6 +43,7 @@
                 padding: $button-padding-y-sm;
             }
         }
+        // sass-lint:enable mixins-before-declarations
     }
 
     // Datetimepicker
@@ -60,6 +64,7 @@
 
 
         // Compact
+        // sass-lint:disable mixins-before-declarations
         @include compact {
 
             .k-input {
@@ -70,6 +75,7 @@
                 padding: $button-padding-y-sm;
             }
         }
+        // sass-lint:enable mixins-before-declarations
     }
 
 }

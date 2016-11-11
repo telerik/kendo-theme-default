@@ -15,7 +15,9 @@ $input-padding-x-sm: .5em !default;
         position: relative;
 
         .k-input {
+            // sass-lint:disable no-important
             width: auto !important;
+            // sass-lint:enable no-important
             padding: $input-padding-y $input-padding-x;
             border: 0;
             outline: 0;

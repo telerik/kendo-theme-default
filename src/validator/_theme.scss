@@ -1,7 +1,7 @@
 // TODO: extract or remove alert colors variables
-$alert-warning-border: pink !default;
-$alert-warning-text: purple !default;
-$alert-warning-bg: green !default;
+$alert-warning-border: #ff0000 !default;
+$alert-warning-text: #00ff00 !default;
+$alert-warning-bg: #00ff00 !default;
 
 
 @include exports("validator/theme") {

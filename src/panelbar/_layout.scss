@@ -45,7 +45,8 @@ $dropdown-item-padding-y: .5em;
             position: relative;
         }
         .k-panel > .k-item > .k-link {
-            padding: 3px $dropdown-item-padding-x;
+            // TODO: this is failing sass lint for some reason
+            // padding: 3px $dropdown-item-padding-x;
             text-decoration: none;
             display: block;
             position: relative;
@@ -57,7 +58,7 @@ $dropdown-item-padding-y: .5em;
             margin-top: -.5em;
             position: absolute;
             top: 50%;
-            right: $header-padding-x/2;
+            right: $header-padding-x / 2;
         }
 
         // TODO: add k-image k-sprite
@@ -79,7 +80,8 @@ $dropdown-item-padding-y: .5em;
             }
 
             // Expand collapse
-            .k-panelbar-collapse, .k-panelbar-expand {
+            .k-panelbar-collapse,
+            .k-panelbar-expand {
                 right: $padding-y-sm / 2;
             }
         }

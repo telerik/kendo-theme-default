@@ -16,9 +16,9 @@ $font-size-sm: 12px;
 
 
     // Float wrap
-    .k-floatwrap:after,
-    .k-grid-toolbar:after,
-    .k-slider-items:after {
+    .k-floatwrap::after,
+    .k-grid-toolbar::after,
+    .k-slider-items::after {
         content: "";
         display: block;
         clear: both;
@@ -45,7 +45,9 @@ $font-size-sm: 12px;
         font-size: $font-size;
         line-height: $line-height;
         -webkit-touch-callout: none;
+        // sass-lint:disable no-color-literals
         -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+        // sass-lint:enable no-color-literals
 
         &:disabled,
         &[disabled] {
@@ -85,7 +87,7 @@ $font-size-sm: 12px;
         align-items: center;
         justify-content: center;
     }
-    .k-resize-handle:before {
+    .k-resize-handle::before {
         content: "";
         border: 0 solid;
         border-color: inherit;

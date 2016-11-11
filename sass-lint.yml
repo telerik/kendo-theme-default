@@ -21,3 +21,13 @@ rules:
     no-misspelled-properties: 0
     no-trailing-whitespace: 2
     no-qualifying-elements: 0
+
+
+
+
+
+    final-newline: 0
+    empty-line-between-blocks: 0
+    quotes: 0
+    space-between-parens: 0
+    no-empty-rulesets: 0

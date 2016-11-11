@@ -5,6 +5,7 @@
 
 
 	// Title bar
+	// TODO: should title bar always appear the same?
 	.k-mediaplayer-titlebar {
 		color: $panel-bg;
 		background-image: linear-gradient( rgba( $panel-text, .7 ), rgba( $panel-text, 0 ) );

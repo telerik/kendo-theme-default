@@ -74,9 +74,12 @@
                 margin: -5px 0 0 -5px;
                 width: 8px;
                 height: 8px;
+                // TODO: move draghandle appearance to theme
+                // sass-lint:disable no-color-literals
                 border: 1px solid #eee;
                 border-radius: 6px;
                 box-shadow: 0 1px 2px #444;
+                // sass-lint:enable no-color-literals
                 cursor: pointer;
                 position: absolute;
                 z-index: 10;
@@ -87,8 +90,12 @@
         .k-hsv-gradient {
             margin-bottom: 5px;
             height: 180px;
-            background: linear-gradient( to bottom, rgba( black, 0 ), black ),
+            background:
+                // TODO: consider having varibales for gradients
+                // sass-lint:disable no-color-literals no-color-keywords
+                linear-gradient( to bottom, rgba( black, 0 ), black ),
                 linear-gradient( to right, white, rgba( white, 0 ) );
+                // sass-lint:enable no-color-literals no-color-keywords
         }
 
         // Sliders
@@ -98,21 +105,29 @@
 
             .k-draghandle {
                 border-width: 3px;
+                // TODO: move draghandle appearance to theme
+                // sass-lint:disable no-color-literals no-color-keywords
                 border-color: rgba( white, .9);
                 border-radius: 100%;
                 box-shadow: 0 1px 4px rgba( black, .9);
+                // sass-lint:enable no-color-literals no-color-keywords
                 background-color: transparent;
             }
             .k-draghandle:hover,
             .k-draghandle:focus {
+                // sass-lint:disable no-color-literals no-color-keywords
                 border-color: white;
                 box-shadow: 0 1px 4px black;
+                // sass-lint:enable no-color-literals no-color-keywords
                 background-color: transparent;
             }
         }
         .k-hue-slider {
             .k-slider-track {
+                // TODO: consider using variables for gradeints
+                // sass-lint:disable no-color-literals
                 background: linear-gradient( to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00 );
+                // sass-lint:enable no-color-literals
             }
             .k-slider-selection {
                 background: none;
@@ -150,17 +165,20 @@
             overflow: hidden;
             -ms-high-contrast-adjust: none;
         }
+        // TODO: consider extrangting variables
+        // sass-lint:disable no-color-literals no-color-keywords
         .k-item:hover {
-            box-shadow: 0 1px 3px 1px rgba( black,.5 ), inset 0 0 0 1px rgba( white,.3 );
+            box-shadow: 0 1px 3px 1px rgba( black, .5 ), inset 0 0 0 1px rgba( white, .3 );
             position: relative;
             z-index: 101;
         }
         .k-item.k-state-selected,
         .k-item.k-state-selected:hover {
-            box-shadow: 0 1px 3px 1px rgba( black,.7 ), inset 0 0 0 1px rgba( white,.45 );
+            box-shadow: 0 1px 3px 1px rgba( black, .7 ), inset 0 0 0 1px rgba( white, .45 );
             position: relative;
             z-index: 100;
         }
+        // sass-lint:enable no-color-literals no-color-keywords
     }
 
 }

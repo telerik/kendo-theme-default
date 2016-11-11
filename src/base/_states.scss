@@ -111,13 +111,17 @@ $focused-item-shadow: 0 0 0 2px darken($background, 6%) !default;
 }
 
 .k-button-bare {
+    // sass-lint:disable no-important
     background: none !important;
+    // sass-lint:enable no-important
     border-width: 0;
     box-shadow: none;
 }
 
 .k-button-bare:focus {
+    // sass-lint:disable no-important
     box-shadow: none !important;
+    // sass-lint:enable no-important
     border-color: transparent;
 }
 

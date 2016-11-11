@@ -270,7 +270,7 @@ $modal-inner-padding: 1em;
 			opacity: .5;
 			visibility: hidden;
 		}
-		.k-resize-handle:before { border-color: currentColor; }
+		.k-resize-handle::before { border-color: currentColor; }
 		.k-resize-n {
 			height: .5em;
 			top: 0;
@@ -510,9 +510,9 @@ $modal-inner-padding: 1em;
 
 
 	.k-edit-form-container .k-edit-buttons {
-		margin: $spacer (-$modal-inner-padding) (-$modal-inner-padding) (-$modal-inner-padding);
+		margin: $spacer (-$modal-inner-padding) (-$modal-inner-padding);
 		padding: $modal-inner-padding;
-		border-width: 1px 0 0 0;
+		border-width: 1px 0 0;
 		border-style: solid;
 		text-align: right;
 		clear: both;

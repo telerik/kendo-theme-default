@@ -9,7 +9,7 @@
         font-family: "WebComponentsGlyphs";
         font-style: normal;
         font-weight: normal;
-        src: url( map-get( $data-uris, 'WebComponentsGlyphs.woff' ) ) format( "woff" );
+        src: url(map-get( $data-uris, 'WebComponentsGlyphs.woff' )) format( "woff" );
     }
 
     .k-icon {
@@ -48,6 +48,7 @@
     .k-icon-lg { font-size: ( $icon-size * 3 ); }
     .k-icon-xl { font-size: ( $icon-size * 4 ); }
 
+    // sass-lint:disable single-line-per-selector
     .k-i-arrow-n::before { content: '\e600'; }
     .k-i-arrow-e::before { content: '\e601'; }
     .k-i-arrow-s::before { content: '\e602'; }
@@ -209,6 +210,7 @@
 
     .k-plus::before { content: '\e621'; }
     .k-minus::before { content: '\e623'; }
+    // sass-lint:enable single-line-per-selector
 
 
     // Fix those

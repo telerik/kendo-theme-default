@@ -31,10 +31,12 @@ $font-size-sm: .8em !default;
 			height: 40px;
 			cursor: pointer;
 			position: absolute;
+			// TODO: remove once we have icon
 			background: green;
 		}
 
 
+		// TODO: see attribuion
 		// Attribution
 		.k-attribution {
 			padding: $padding-y-sm $padding-x-sm;

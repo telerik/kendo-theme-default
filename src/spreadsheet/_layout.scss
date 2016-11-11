@@ -89,7 +89,7 @@ $popup-padding-y: .5em;
 		border-style: solid;
 		border-color: inherit;
 		font-size: 12px;
-		font-family: Arial,Verdana,sans-serif;
+		font-family: Arial, Verdana, sans-serif;
 		position: relative;
 		display: flex;
 		flex-direction: row;
@@ -100,7 +100,10 @@ $popup-padding-y: .5em;
 		border-style: solid;
 		border-color: inherit;
 
-		.k-combobox { width: 100%; font-size: inherit; }
+		.k-combobox {
+			width: 100%;
+			font-size: inherit;
+		}
 		.k-combobox .k-dropdown-wrap {
 			border-width: 0;
 			border-radius: 0;
@@ -249,7 +252,7 @@ $popup-padding-y: .5em;
 	// Grid lines
 	.k-spreadsheet-haxis,
 	.k-spreadsheet-vaxis {
-		border: 0px solid;
+		border: 0 solid;
 		border-color: inherit;
 		position: absolute;
 	}
@@ -346,7 +349,7 @@ $popup-padding-y: .5em;
 			padding: $popup-padding-y;
 		}
 		.k-spreadsheet-border-type-palette {
-			width: 12.50rem;
+			width: 12.5rem;
 			height: 5rem;
 			display: flex;
 			flex-flow: row wrap;

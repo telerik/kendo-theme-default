@@ -18,7 +18,7 @@ $modal-inner-padding: .5em !default;
 
         // Centered
         &.k-dialog-centered {
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             top: 50%;
             left: 50%;
         }
@@ -70,7 +70,9 @@ $modal-inner-padding: .5em !default;
         display: flex;
 
         .k-button {
+            // sass-lint:disable no-important
             width: auto !important;
+            // sass-lint:enable no-important
             white-space: normal;
             display: flex;
             justify-content: center;

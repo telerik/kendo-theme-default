@@ -55,7 +55,7 @@ $form-line-height: 1.5;
 
             .k-icon,
             .k-image {
-                margin: 0 ($button-padding-x/2) 0 (-$button-padding-x/2);
+                margin: 0 ($button-padding-x / 2) 0 (-$button-padding-x / 2);
             }
         }
         &-icon {
@@ -68,7 +68,9 @@ $form-line-height: 1.5;
         &-bare {
             border-width: 0;
             color: inherit;
+            // sass-lint:disable no-important
             background: none !important;
+            // sass-lint:enable no-important
         }
 
 
@@ -81,7 +83,7 @@ $form-line-height: 1.5;
 
             &-icontext {
                 .k-icon {
-                    margin: 0 ($button-padding-x-sm/2) 0 (-$button-padding-x-sm/2);
+                    margin: 0 ($button-padding-x-sm / 2) 0 (-$button-padding-x-sm / 2);
                 }
             }
             &-icon {
