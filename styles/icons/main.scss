@@ -12,7 +12,9 @@ $icon-size: 16px !default;
     src: embed-url('KendoUIGlyphs.woff') format('woff');
 }
 
-.k-icon {
+.k-icon,
+.k-grouping-dropclue
+ {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: 'KendoUIGlyphs';
@@ -50,10 +52,12 @@ $icon-size: 16px !default;
 .k-i-sarrow-e::before { content: '\e609'; }
 .k-i-sarrow-s::before { content: '\e60a'; }
 .k-i-sarrow-w::before { content: '\e60b'; }
+.k-i-expand::before { content: '\e60c'; }
 .k-i-expand-n::before { content: '\e60c'; }
 .k-i-expand-e::before { content: '\e60d'; }
 .k-i-expand-s::before { content: '\e60e'; }
 .k-i-expand-w::before { content: '\e60f'; }
+.k-i-collapse::before { content: '\e60e'; }
 .k-i-collapse-ne::before { content: '\e610'; }
 .k-i-collapse-se::before { content: '\e611'; }
 .k-i-collapse-sw::before { content: '\e612'; }
@@ -76,6 +80,7 @@ $icon-size: 16px !default;
 .k-i-minus::before { content: '\e623'; }
 .k-i-sminus::before { content: '\e624'; }
 .k-i-filter::before { content: '\e625'; }
+.k-i-group-delete::before { content: '\e61d'; }
 .k-i-filter-clear::before { content: '\e626'; }
 .k-i-refresh::before { content: '\e627'; }
 .k-i-refresh-clear::before { content: '\e628'; }
