@@ -1,16 +1,16 @@
 // TODO: extract or remove alert color variables
-$alert-info-border: blue !default;
-$alert-info-text: black !default;
-$alert-info-bg: blue !default;
-$alert-success-border: green !default;
-$alert-success-text: white !default;
-$alert-success-bg: green !default;
-$alert-warning-border: yellow !default;
-$alert-warning-text: black !default;
-$alert-warning-bg: yellow !default;
-$alert-danger-border: red !default;
-$alert-danger-text: white !default;
-$alert-danger-bg: red !default;
+$alert-info-border: $info !default;
+$alert-info-text: lighten($text-color, 100%) !default;
+$alert-info-bg: $info !default;
+$alert-success-border: $success !default;
+$alert-success-text: lighten($text-color, 100%) !default;
+$alert-success-bg: $success !default;
+$alert-warning-border: $warning !default;
+$alert-warning-text: $text-color !default;
+$alert-warning-bg: $warning !default;
+$alert-danger-border: $error !default;
+$alert-danger-text: lighten($text-color, 100%) !default;
+$alert-danger-bg: $error !default;
 
 @include exports("notification/theme") {
 
