@@ -69,6 +69,10 @@ $font-size-sm: 12px;
         @include appearance( header );
     }
 
+}
+
+
+@include exports( "common/resize" ) {
 
     // Resize handle
     .k-resize-handle,
@@ -119,6 +123,10 @@ $font-size-sm: 12px;
         cursor: w-resize;
     }
 
+}
+
+
+@include exports( "common/lines" ) {
 
     // Lines
     .k-line {}
@@ -128,6 +136,9 @@ $font-size-sm: 12px;
     }
     .k-line-h { height: 2px; }
     .k-line-v { width: 2px; }
+
+
+    // Arrows
     .k-arrow-e,
     .k-arrow-w {
         width: 0;
@@ -192,6 +203,7 @@ $font-size-sm: 12px;
     .k-marquee-text {
         color: $selected-text;
     }
+
 }
 
 
