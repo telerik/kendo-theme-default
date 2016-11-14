@@ -31,6 +31,32 @@ $font-size-sm: 12px;
         text-decoration: none;
     }
 
+
+    // Inputs
+    .k-textbox > input,
+    .k-input,
+    .k-textbox,
+    .k-button {
+        border-width: 1px;
+        border-style: solid;
+        font-size: inherit;
+        -webkit-appearance: none;
+    }
+
+
+    // Outline
+    .k-textbox,
+    .k-content {
+        outline: 0;
+    }
+
+
+    // Box sizing
+    .k-block,
+    .k-textbox {
+        box-sizing: border-box;
+    }
+
 }
 
 
@@ -69,6 +95,31 @@ $font-size-sm: 12px;
     // Header
     .k-header {
         @include appearance( header );
+    }
+
+}
+
+
+@include exports( "common/states" ) {
+
+    // Selected
+    .k-state-selected {
+        color: $selected-text;
+        background-color: $selected-bg;
+        border-color: $selected-border;
+    }
+
+
+    // Focused
+    .k-state-focused {
+        // TODO: focused state
+    }
+
+
+    // Disabled
+    .k-disabled,
+    .k-state-disabled {
+        @include disabled;
     }
 
 }
@@ -164,24 +215,6 @@ $font-size-sm: 12px;
 }
 
 
-@include exports( "common/states" ) {
-
-    // Selected
-    .k-state-selected {
-        color: $selected-text;
-        background-color: $selected-bg;
-        border-color: $selected-border;
-    }
-
-    // Disabled
-    .k-disabled,
-    .k-state-disabled {
-        @include disabled;
-    }
-
-}
-
-
 @include exports( "common/marquee" ) {
 
     .k-marquee {
@@ -209,8 +242,37 @@ $font-size-sm: 12px;
 }
 
 
-@include exports( "common/loadingmask" ) {
+@include exports( "common/loading" ) {
 
+    // Loading indicator
+    .k-loading {
+        width: 64px;
+        height: 64px;
+        display: block;
+
+        .animate {
+            animation: loading 2s infinite linear;
+        }
+    }
+
+    @keyframes loading {
+        0% {
+            stroke-dasharray: 0 251;
+            stroke-dashoffset: 502;
+        }
+
+        50% {
+            stroke-dasharray: 250 1;
+        }
+
+        100% {
+            stroke-dasharray: 0 251;
+            stroke-dashoffset: 0;
+        }
+    }
+
+
+    // Loading mask
     .k-loading-mask,
     .k-loading-image,
     .k-loading-color {
