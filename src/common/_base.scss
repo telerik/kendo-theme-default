@@ -10,7 +10,7 @@ $popup-padding-x: 2px;
 $popup-padding-y: 2px;
 
 
-@include exports( "common/reset" ) {
+@include exports( "common/layout" ) {
 
     // Layout
     .k-reset {
@@ -23,53 +23,6 @@ $popup-padding-y: 2px;
         list-style: none;
     }
 
-
-    // Float wrap
-    .k-floatwrap::after,
-    .k-grid-toolbar::after,
-    .k-slider-items::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-
-    // Links
-    .k-link,
-    .k-link:hover {
-        text-decoration: none;
-    }
-
-
-    // Inputs
-    .k-textbox > input,
-    .k-input,
-    .k-textbox,
-    .k-button {
-        border-width: 1px;
-        border-style: solid;
-        font-size: inherit;
-        -webkit-appearance: none;
-    }
-
-
-    // Outline
-    .k-textbox,
-    .k-content {
-        outline: 0;
-    }
-
-
-    // Box sizing
-    .k-block,
-    .k-textbox {
-        box-sizing: border-box;
-    }
-
-}
-
-
-@include exports( "common/widget" ) {
 
     // Layout
     .k-widget {
@@ -95,9 +48,79 @@ $popup-padding-y: 2px;
     }
 
 
-    // Theme
+    // Float wrap
+    .k-floatwrap::after,
+    .k-grid-toolbar::after,
+    .k-slider-items::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+
+    // Links
+    .k-link,
+    .k-link:hover {
+        text-decoration: none;
+    }
+
+
+    // Form controls
+    .k-textbox > input,
+    .k-input,
+    .k-textbox,
+    .k-button {
+        border-width: 1px;
+        border-style: solid;
+        font-size: inherit;
+        -webkit-appearance: none;
+    }
+    .k-input,
+    .k-textbox {
+        @include border-radius( $border-radius );
+    }
+    .k-textbox:focus {
+        // box-shadow: $focused-item-shadow;
+    }
+
+
+    // Outline
+    .k-textbox,
+    .k-content {
+        outline: 0;
+    }
+
+
+    // Box sizing
+    .k-block,
+    .k-textbox {
+        box-sizing: border-box;
+    }
+
+
+    // Centering
+    .k-centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+@include exports( "common/theme" ) {
+
+
+    // Widget
     .k-widget {
         @include appearance( widget );
+    }
+
+
+    // Panels
+    .k-content {
+        @include appearance( panel );
     }
 
 
@@ -105,13 +128,45 @@ $popup-padding-y: 2px;
     .k-header {
         @include appearance( header );
     }
+    .k-header.k-state-hover {
+        @include appearance( hovered-header );
+    }
+    .k-header.k-state-selected {
+        @include appearance( selected-header );
+    }
 
-}
+
+    // TODO: do we need default state?
+    // Default state
+    // .k-state-default {
+    //     border-color: $widget-border;
+    // }
 
 
-@include exports( "common/states" ) {
+    // Input
+    .k-input,
+    .k-textbox {
+        @include appearance( "input" );
+    }
 
-    // Selected
+
+    // Link
+    .k-link
+    .k-icon:hover {
+        color: $normal-text-color;
+    }
+
+
+    // Hover state
+    .k-state-hover,
+    .k-state-hover:hover {
+        // background-color: $hover-background;
+        // border-color: $hover-border-color;
+        // color: $hover-text-color;
+    }
+
+
+    // Selected state
     .k-state-selected {
         color: $selected-text;
         background-color: $selected-bg;
@@ -119,16 +174,52 @@ $popup-padding-y: 2px;
     }
 
 
-    // Focused
+    // TODO: focused state
+    // Focused focused state
     .k-state-focused {
-        // TODO: focused state
+        // box-shadow: $focused-item-shadow;
     }
 
 
-    // Disabled
+    // TODO: what is highlight state?
+    // Highlight state
+    .k-state-highlight {
+        background-color: saturate($base, 4%);
+        border-color: $accent;
+    }
+
+
+    // TODO: what is active state?
+    // Active state
+    .k-state-active {
+        background-color: $background;
+    }
+
+
+    // Disabled state
     .k-disabled,
     .k-state-disabled {
         @include disabled;
+
+
+        .k-link,
+        .k-button {
+            cursor: default;
+            outline: 0;
+        }
+    }
+
+
+    // Error-state
+    .k-state-error {
+        border-style: ridge;
+    }
+
+
+    // TODO: what is smpty state?
+    // Empty state
+    .k-state-empty {
+        font-style: italic;
     }
 
 }

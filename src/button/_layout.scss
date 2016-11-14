@@ -66,10 +66,11 @@ $form-line-height: 1.5;
             justify-content: center;
         }
         &-bare {
-            border-width: 0;
-            color: inherit;
             // sass-lint:disable no-important
+            border-width: 0 !important;
+            color: inherit;
             background: none !important;
+            box-shadow: none !important;
             // sass-lint:enable no-important
         }
 
