@@ -161,3 +161,18 @@ $selection-box-shadow: inset 0 1px 7px rgba(0, 0, 0, .15) !default;
     }
 
 }
+
+
+// TODO: merge with above
+@include exports("chart/theme") {
+
+    // Chart
+    .k-chart {}
+    .k-chart-tooltip {
+        color: $panel-bg;
+    }
+    .k-chart-tooltip-inverse {
+        color: $panel-text;
+    }
+
+}
