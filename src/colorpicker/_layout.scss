@@ -91,11 +91,8 @@
             margin-bottom: 5px;
             height: 180px;
             background:
-                // TODO: consider having varibales for gradients
-                // sass-lint:disable no-color-literals no-color-keywords
-                linear-gradient( to bottom, rgba( black, 0 ), black ),
-                linear-gradient( to right, white, rgba( white, 0 ) );
-                // sass-lint:enable no-color-literals no-color-keywords
+                linear-gradient( to bottom, $gradient-transparent-to-black ),
+                linear-gradient( to right, $gradient-white-to-transparent );
         }
 
         // Sliders
@@ -124,10 +121,7 @@
         }
         .k-hue-slider {
             .k-slider-track {
-                // TODO: consider using variables for gradeints
-                // sass-lint:disable no-color-literals
-                background: linear-gradient( to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00 );
-                // sass-lint:enable no-color-literals
+                background: linear-gradient( to right, $gradient-rainbow );
             }
             .k-slider-selection {
                 background: none;

@@ -1,16 +1,3 @@
-@import '../icons/main';
-
-// TODO: button variables
-$button-padding: 6px !default;
-$button-padding-x: 1em;
-$button-padding-y: .5em;
-$button-padding-x-sm: .5em;
-$button-padding-y-sm: .25em;
-
-// TODO: font size line height
-$font-size-sm: 12px;
-$form-line-height: 1.5;
-
 @include exports('button/layout') {
 
     // Button
@@ -58,8 +45,8 @@ $form-line-height: 1.5;
             }
         }
         &-icon {
-            width: $form-line-height * 1em;
-            height: $form-line-height * 1em;
+            width: $form-line-height-em;
+            height: $form-line-height-em;
             padding: $button-padding-y;
             box-sizing: content-box;
             justify-content: center;

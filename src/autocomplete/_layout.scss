@@ -1,9 +1,3 @@
-// TODO: extract or remove input padding variables
-$input-padding-y: 1em !default;
-$input-padding-x: .5em !default;
-$input-padding-y-sm: 1em !default;
-$input-padding-x-sm: .5em !default;
-
 @include exports("autocomplete/layout") {
 
     // Layout
