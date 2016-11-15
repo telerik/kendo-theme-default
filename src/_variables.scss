@@ -24,9 +24,20 @@ $padding-x-lg: $padding-x * 1.5 !default;
 $padding-y-lg: $padding-y * 1.5 !default;
 
 $border-radius: 2px !default;
+$border-radius-sm: 1px !default;
+$border-radius-lg: 4px !default;
+
+$panel-padding-x: $padding-x !default;
+$panel-padding-y: $padding-y !default;
+
+// $popup-padding-x: null !default;
+// $popup-padding-y: $dropdown-padding-y !default;
 
 $header-padding-x: $padding-x !default;
 $header-padding-y: $padding-y !default;
+
+$form-line-height: $btn-line-height !default;
+$form-line-height-em: $form-line-height * 1em !default;
 
 $button-padding-x: $padding-x !default;
 $button-padding-y: $padding-y !default;
@@ -37,6 +48,15 @@ $input-padding-x: $padding-y !default;
 $input-padding-y: $padding-x !default;
 $input-padding-x-sm: $input-padding-x / 2 !default;
 $input-padding-y-sm: $input-padding-y / 2 !default;
+
+// $table-alt-bg: $table-bg-accent !default;
+// $table-hover-bg: $table-bg-hover !default;
+// $table-active-bg: $table-bg-active !default;
+
+// $cell-padding-x: $padding-x-sm !default;
+// $cell-padding-y: $padding-y-sm !default;
+// $cell-padding: $table-cell-padding !default;
+// $cell-padding-sm: $table-sm-cell-padding !default;
 
 $rgba-transparent: rgba( 0, 0, 0, 0 );
 
@@ -196,6 +216,7 @@ $series-c: #78d237 !default;
 $series-d: #28b4c8 !default;
 $series-e: #2d73f5 !default;
 $series-f: #aa46be !default;
+
 $chart-font-size: $font-size !default;
 $chart-font-size-sm: 11px !default;
 $chart-font-size-md: 12px !default;
@@ -206,24 +227,3 @@ $chart-major-lines: darken( $widget-border, 30% ) !default;
 $chart-minor-lines: darken( $widget-border, 20% ) !default;
 
 $chart-area-opacity: .8 !default;
-
-
-// Color maps
-$widget-colors: ( $widget-text, $widget-bg, $widget-border );
-$panel-colors: ( $panel-text, $panel-bg, $panel-border );
-$popup-colors: ( $popup-text, $popup-bg, $popup-border );
-$header-colors: ( $header-text, $header-bg, $header-border );
-$header-hovered-colors: ( $header-hovered-text, $header-hovered-bg, $header-hovered-border );
-$header-selected-colors: ( $header-selected-text, $header-selected-bg, $header-selected-border );
-$button-colors: ( $button-text, $button-bg, $button-border );
-$button-hovered-colors: ( $button-hovered-text, $button-hovered-bg, $button-hovered-border );
-$button-pressed-colors: ( $button-pressed-text, $button-pressed-bg, $button-pressed-border );
-$input-colors: ( $input-text, $input-bg, $input-border );
-$input-hovered-colors: ( $input-hovered-text, $input-hovered-bg, $input-hovered-border );
-$input-focused-colors: ( $input-focused-text, $input-focused-bg, $input-focused-border );
-$node-colors: ( $node-text, $node-bg, $node-border );
-$node-hovered-colors: ( $node-hovered-text, $node-hovered-bg, $node-hovered-border );
-$node-selected-colors: ( $node-selected-text, $node-selected-bg, $node-selected-border );
-$list-item-colors: ( $list-item-text, $list-item-bg, null );
-$list-item-hover-colors: ( $list-item-hovered-text, $list-item-hovered-bg, null );
-$list-item-selected-colors: ( $list-item-selected-text, $list-item-selected-bg, null );
