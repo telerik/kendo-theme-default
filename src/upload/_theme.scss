@@ -2,14 +2,14 @@
 @import '../action-buttons/theme';
 @import './layout';
 
-$upload-background-color: $background !default;
+$upload-background-color: $widget-bg !default;
 $upload-border-color: rgba(0, 0, 0, .08) !default;
-$upload-progress-color: $normal-text-color !default;
+$upload-progress-color: $base-text !default;
 $upload-progress-background: $info !default;
 $upload-error-color: $error !default;
 $upload-error-border-color: lighten($error, 29%) !default;
 $upload-success: $success !default;
-$upload-disabled-color: darken($background, 27%) !default;
+$upload-disabled-color: darken($widget-bg, 27%) !default;
 
 @include exports('upload/theme') {
 
@@ -96,7 +96,7 @@ $upload-disabled-color: darken($background, 27%) !default;
     }
 
     .k-dropzone-hovered {
-        background-color: $hover-background;
+        background-color: $hover-bg;
     }
 }
 }

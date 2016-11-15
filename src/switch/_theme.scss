@@ -1,17 +1,15 @@
-@import './layout';
-
 $switch-on-color: $accent !default;
-$switch-off-color: darken($base, 44%) !default;
-$switch-background: $normal-background !default;
+$switch-off-color: darken($base-bg, 44%) !default;
+// $switch-background: $normal-background !default;
 $switch-border-color: rgba(0, 0, 0, .08) !default;
 $switch-border-radius: ($switch-size / 2) !default;
 $switch-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06) !default;
 $switch-handle-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06) !default;
-$switch-handle-gradient: darken($background, 4%), darken($background, 5%) !default;
+$switch-handle-gradient: darken($widget-bg, 4%), darken($widget-bg, 5%) !default;
 $switch-hover-border-color: rgba(0, 0, 0, .15) !default;
 $switch-hover-on-handle-gradient: adjust-hue($accent, 7), adjust-hue($accent, 4) !default;
 $switch-hover-on-handle-border-color: adjust-hue($accent, 3) !default;
-$switch-hover-off-handle-gradient: darken($background, 7%), darken($background, 9%) !default;
+$switch-hover-off-handle-gradient: darken($widget-bg, 7%), darken($widget-bg, 9%) !default;
 $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 
 @include exports('switch/theme') {
@@ -36,7 +34,7 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
     }
 
     .k-switch-wrapper {
-        background-color: $switch-background;
+        background-color: $widget-bg;
     }
 
     .k-switch-background {
@@ -45,7 +43,7 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
     }
 
     .k-switch-handle {
-        background-color: $switch-background;
+        background-color: $widget-bg;
         background-image: linear-gradient($switch-handle-gradient);
         border-color: $switch-border-color;
         box-shadow: $switch-handle-box-shadow;
@@ -54,7 +52,7 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 
     .k-switch-on,
     .k-switch-off {
-        color: $switch-background;
+        color: $widget-bg;
     }
 
     .k-switch-on {

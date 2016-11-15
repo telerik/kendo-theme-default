@@ -2,7 +2,6 @@
 $chart-tap-highlight-color: rgba(0, 0, 0, 0);
 $chart-selection-background: rgba(255, 255, 255, .01);
 
-$chart-font-size: $font-size !default;
 $chart-tooltip-font-size: .929em !default;
 $chart-label-font-size: .857em !default;
 $chart-title-font-size: 1.143em !default;
@@ -36,7 +35,7 @@ $chart-title-font-size: 1.143em !default;
     .k-chart,
     .k-stockchart {
         font-size: $chart-font-size;
-        font-family: $base-font-family;
+        font-family: $font-family;
         display: block;
         height: 400px;
     }
@@ -245,6 +244,133 @@ $chart-title-font-size: 1.143em !default;
 }
 
 
+@include exports("dataviz/map/layout") {
+
+    // Layout
+    .k-map {
+        height: 600px;
+
+        // Scroll wrap
+        .k-scroll-wrapper {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+            position: absolute;
+        }
+        .k-touch-scrollbar { display: none; }
+
+        // Layers
+        .k-layer {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        // Marker
+        .k-marker {
+            margin: -40px 0 0 -14px;
+            width: 28px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            // TODO: remove once we have icon
+            background: green;
+        }
+
+
+        // TODO: see attribuion
+        // Attribution
+        .k-attribution {
+            padding: $padding-y-sm $padding-x-sm;
+            font-size: $font-size-sm * .75;
+            background-color: rgba( $panel-bg, .8);
+            z-index: 1000;
+        }
+
+    }
+
+
+    // Controls
+    .k-map-controls {
+        position: absolute;
+        display: flex;
+        align-items: center;
+    }
+    .k-pos-top { top: 0; }
+    .k-pos-bottom { bottom: 0; }
+    .k-pos-left { left: 0; }
+    .k-pos-right { right: 0; }
+
+
+    // Navigator
+    .k-navigator {
+        margin: $spacer-x;
+        width: 3.25em;
+        height: 3.25em;
+        border-radius: 80px;
+        position: relative;
+
+        .k-pdf-export & { display: none; }
+
+
+        // Buttons
+        button {
+            border-color: transparent;
+            background: none;
+        }
+        .k-button {
+            margin: 0;
+            padding: 0;
+            border-radius: 100%;
+            line-height: 1;
+            position: absolute;
+        }
+        .k-navigator-n {
+            margin-left: calc( -#{$font-size/2} - 1px);
+            top: 2px;
+            left: 50%;
+        }
+        .k-navigator-e {
+            margin-top: calc( -#{$font-size/2} - 1px);
+            right: 2px;
+            top: 50%;
+        }
+        .k-navigator-s  {
+            margin-left: calc( -#{$font-size/2} - 1px);
+            bottom: 2px;
+            left: 50%;
+        }
+        .k-navigator-w {
+            margin-top: calc( -#{$font-size/2} - 1px);
+            left: 2px;
+            top: 50%;
+        }
+    }
+
+
+    // Zoom control
+    .k-zoom-control {
+        margin: $spacer-x;
+        border: 0;
+        background: none;
+        display: flex;
+
+        .k-pdf-export & { display: none; }
+
+
+        // Buttons
+        .k-button {
+            padding: $button-padding-y;
+        }
+    }
+    .k-buttons-horizontal {}
+    .k-buttons-vertical {
+        flex-direction: vertical;
+    }
+
+}
+
+
 @include exports("dataviz/treemap/layout") {
 
     // Base
@@ -322,49 +448,6 @@ $chart-title-font-size: 1.143em !default;
         }
     }
 
-}
-
-
-// export variables to allow use in scripts
-$exported: (
-    accent: $accent,
-    base: $base,
-    background: $background,
-
-    border-radius: $border-radius,
-
-    normal-background: $normal-background,
-    normal-text-color: $normal-text-color,
-    hover-background: $hover-background,
-    hover-text-color: $hover-text-color,
-    selected-background: $selected-background,
-    selected-text-color: $selected-text-color,
-
-    error: $error,
-    warning: $warning,
-    success: $success,
-    info: $info,
-
-    series-a: $series-a,
-    series-b: $series-b,
-    series-c: $series-c,
-    series-d: $series-d,
-    series-e: $series-e,
-    series-f: $series-f
-);
-
-@each $name, $value in $exported {
-    $type: type-of($value);
-
-    .k-var--#{$name} {
-        @if $type == 'color' {
-            // background-color can store any color
-            background-color: $value;
-        } @else if $type == 'number' {
-            // margin-top can store positive & negative values
-            margin-top: $value;
-        }
-    }
 }
 
 
@@ -571,5 +654,16 @@ $exported: (
     // .k-var--chart-major-lines { background-color: $chart-major-lines; }
     // .k-var--chart-minor-lines { background-color: $chart-minor-lines; }
     // .k-var--chart-area-opacity { opacity: $chart-area-opacity; }
+
+
+    // .k-var--chart-notes-background { background-color: $chart-notes-background; }
+    // .k-var--chart-notes-border { background-color: $chart-notes-border; }
+    // .k-var--chart-notes-lines { background-color: $chart-notes-lines; }
+
+
+    // .k-var--chart-crosshair-background { background-color: $chart-crosshair-background; }
+
+
+    // .k-var--chart-error-bars-background { background-color: $error-bars-background; }
 
 }

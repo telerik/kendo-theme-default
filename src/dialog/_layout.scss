@@ -181,7 +181,7 @@ $modal-inner-padding: .5em !default;
 // }
 
 // .k-window > .k-resize-handle {
-//     background-color: $background;
+//     background-color: $widget-bg;
 //     filter: alpha(opacity=0);
 //     font-size: 0;
 //     line-height: 6px;
@@ -275,13 +275,13 @@ $modal-inner-padding: .5em !default;
 // }
 
 // .k-overlay {
-//     background-color: invert($background);
+//     background-color: invert($widget-bg);
 //     opacity: .5;
 //     z-index: $window-z-index;
 // }
 
 // .k-window .k-overlay {
-//     background-color: $background;
+//     background-color: $widget-bg;
 //     height: 100%;
 //     opacity: 0;
 //     position: absolute;

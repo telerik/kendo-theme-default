@@ -1,36 +1,3 @@
-$accent: #ff6358 !default;
-$base: #f6f6f6 !default;
-$background: #fff !default;
-
-// $border-radius: 2px !default;
-
-$normal-background: $background !default;
-$normal-text-color: #656565 !default;
-$hover-background: #ededed !default;
-$hover-text-color: $normal-text-color !default;
-$selected-background: $accent !default;
-$selected-text-color: #fff !default;
-// $transition: background-color .2s ease !default;
-
-// $error: #f31700 !default;
-// $warning: #ffc000 !default;
-// $success: #37b400 !default;
-// $info: #0058e9 !default;
-
-// $series-a: #ff6358 !default;
-// $series-b: #ffd246 !default;
-// $series-c: #78d237 !default;
-// $series-d: #28b4c8 !default;
-// $series-e: #2d73f5 !default;
-// $series-f: #aa46be !default;
-
-$base-font-size: 14px !default;
-$base-font-family: inherit !default;
-
-
-/////////////////////////////////////////////////
-
-
 // Fonts
 $font-size: 14px !default;
 $font-family: inherit !default;
@@ -74,7 +41,7 @@ $input-padding-y-sm: $input-padding-y / 2 !default;
 $rgba-transparent: rgba( 0, 0, 0, 0 );
 
 
-// Colors
+// Theme colors
 $accent: #ff6358 !default;
 $accent-contrast: #ffffff !default;
 
@@ -101,19 +68,14 @@ $warning: #fdce3e !default;
 $success: #5ec232 !default;
 $info: #3e80ed !default;
 
-$series-a: #ff6358 !default;
-$series-b: #ffd246 !default;
-$series-c: #78d237 !default;
-$series-d: #28b4c8 !default;
-$series-e: #2d73f5 !default;
-$series-f: #aa46be !default;
-
 $gradient-transparent-to-black: rgba( black, 0), black;
 $gradient-transparent-to-white: rgba( white, 0), white;
 $gradient-black-to-transparent: black, rgba( black, 0);
 $gradient-white-to-transparent: white, rgba( white, 0);
 
 $gradient-rainbow: #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000;
+
+
 
 
 // Widget
@@ -225,6 +187,25 @@ $list-item-hovered-bg: $node-hovered-bg !default;
 
 $list-item-selected-text: $node-selected-text !default;
 $list-item-selected-bg: $node-selected-bg !default;
+
+
+// Chart
+$series-a: #ff6358 !default;
+$series-b: #ffd246 !default;
+$series-c: #78d237 !default;
+$series-d: #28b4c8 !default;
+$series-e: #2d73f5 !default;
+$series-f: #aa46be !default;
+$chart-font-size: $font-size !default;
+$chart-font-size-sm: 11px !default;
+$chart-font-size-md: 12px !default;
+$chart-font-size-lg: 16px !default;
+
+$chart-inactive: rgba( $widget-bg, .5 ) !default;
+$chart-major-lines: darken( $widget-border, 30% ) !default;
+$chart-minor-lines: darken( $widget-border, 20% ) !default;
+
+$chart-area-opacity: .8 !default;
 
 
 // Color maps

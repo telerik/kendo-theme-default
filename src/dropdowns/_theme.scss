@@ -1,21 +1,21 @@
 @import '../popup/main';
 @import './layout';
 
-$dropdowns-background-color: lighten($base, 4%) !default;
+$dropdowns-background-color: lighten($base-bg, 4%) !default;
 $dropdowns-border-color: rgba(0, 0, 0, .08) !default;
 
-$dropdowns-gradient: linear-gradient($base, darken($base, 2%)) !default;
-$dropdowns-hover-gradient: linear-gradient(darken($hover-background, 1%), darken($hover-background, 2%)) !default;
-$dropdowns-active-gradient: linear-gradient(darken($base, 2%), $base) !default;
+$dropdowns-gradient: linear-gradient($base-bg, darken($base-bg, 2%)) !default;
+$dropdowns-hover-gradient: linear-gradient(darken($hover-bg, 1%), darken($hover-bg, 2%)) !default;
+$dropdowns-active-gradient: linear-gradient(darken($base-bg, 2%), $base-bg) !default;
 
 $dropdowns-hover-border-color: rgba(0, 0, 0, .15) !default;
 
-$dropdowns-focused-background-color: saturate($hover-background, 1%) !default;
+$dropdowns-focused-background-color: saturate($hover-bg, 1%) !default;
 $dropdowns-focused-border-color: $dropdowns-hover-border-color;
-$dropdowns-focused-box-shadow: 0 0 0 2px darken($background, 6%) !default;
+$dropdowns-focused-box-shadow: 0 0 0 2px darken($widget-bg, 6%) !default;
 
 $dropdowns-invalid-background: $error !default;
-$dropdowns-invalid-color: $selected-text-color !default;
+$dropdowns-invalid-color: $selected-text !default;
 
 @include exports('dropdowns/theme') {
 
@@ -31,12 +31,12 @@ $dropdowns-invalid-color: $selected-text-color !default;
     border-color: $dropdowns-border-color;
 
     &:hover {
-        background-color: $hover-background;
+        background-color: $hover-bg;
         background-image: $dropdowns-hover-gradient;
         border-color: $dropdowns-hover-border-color;
 
         .k-select {
-            background-color: $hover-background;
+            background-color: $hover-bg;
             background-image: $dropdowns-hover-gradient;
             border-color: $dropdowns-hover-border-color;
         }
@@ -79,7 +79,7 @@ $dropdowns-invalid-color: $selected-text-color !default;
 .k-combobox {
     .k-dropdown-wrap.k-state-invalid {
         >.k-input {
-            color: $normal-text-color;
+            color: $input-text;
         }
 
         .k-select {

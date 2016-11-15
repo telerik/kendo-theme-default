@@ -1,12 +1,12 @@
 @import './layout';
 
 $tabstrip-tabs-color: $accent !default;
-$tabstrip-background-color: $background !default;
+$tabstrip-background-color: $widget-bg !default;
 $tabstrip-border-color: rgba(0, 0, 0, .08) !default;
-$tabstrip-hover-color: blend-multiply($accent, darken($background, 8%)) !default;
-$tabstrip-active-color: $normal-text-color !default;
-$tabstrip-active-background-color: desaturate($background, 1%) !default;
-$tabstrip-disabled-color: darken($background, 27%) !default;
+$tabstrip-hover-color: blend-multiply($accent, darken($widget-bg, 8%)) !default;
+$tabstrip-active-color: $base-text !default;
+$tabstrip-active-background-color: desaturate($widget-bg, 1%) !default;
+$tabstrip-disabled-color: darken($widget-bg, 27%) !default;
 
 @include exports('tabstrip/theme') {
 

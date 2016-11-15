@@ -2,10 +2,10 @@
 
 @include exports('example/theme') {
 
-$example-background-color: saturate($base, 4%) !default;
-$example-border-color: darken($base, 8%) !default;
-$example-active-background-color: desaturate($background, 1%) !default;
-$example-active-border-color: darken($base, 29%) !default;
+$example-background-color: saturate($base-bg, 4%) !default;
+$example-border-color: darken($base-bg, 8%) !default;
+$example-active-background-color: desaturate($widget-bg, 1%) !default;
+$example-active-border-color: darken($base-bg, 29%) !default;
 
 .k-example {
     &.k-header {

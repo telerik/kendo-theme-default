@@ -1,7 +1,7 @@
 @import './layout';
 @import './images/indeterminate';
 
-$progressbar-base: $base !default;
+$progressbar-base: $base-bg !default;
 $progressbar-border: rgba(0, 0, 0, .08) !default;
 $progressbar-active-border: darken($accent, 4%) !default;
 
