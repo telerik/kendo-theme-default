@@ -1,3 +1,10 @@
+// TOOD: remove form variable;
+$form-line-height: 1.5;
+$input-padding-x-sm: 1em;
+$input-padding-y-sm: .5em;
+$button-padding-x-sm: 1em;
+$button-padding-y-sm: .5em;
+
 @include exports("dropdownlist/layout") {
 
     // Dropdown

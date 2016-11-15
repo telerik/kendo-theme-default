@@ -4,6 +4,10 @@
         position: absolute;
         overflow: hidden;
         z-index: 100;
+
+        &-fixed {
+            position: fixed;
+        }
     }
 
 }
