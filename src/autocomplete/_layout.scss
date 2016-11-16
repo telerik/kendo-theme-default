@@ -2,6 +2,7 @@
 
     // Layout
     .k-autocomplete {
+        @include border-radius( $border-radius );
         line-height: $form-line-height;
         display: inline-flex;
         flex-direction: row;
