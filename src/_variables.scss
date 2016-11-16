@@ -30,8 +30,8 @@ $border-radius-lg: 4px !default;
 $panel-padding-x: $padding-x !default;
 $panel-padding-y: $padding-y !default;
 
-// $popup-padding-x: null !default;
-// $popup-padding-y: $dropdown-padding-y !default;
+$popup-padding-x: 0 !default;
+$popup-padding-y: 0 !default;
 
 $header-padding-x: $padding-x !default;
 $header-padding-y: $padding-y !default;
@@ -48,6 +48,9 @@ $input-padding-x: $padding-y !default;
 $input-padding-y: $padding-x !default;
 $input-padding-x-sm: $input-padding-x / 2 !default;
 $input-padding-y-sm: $input-padding-y / 2 !default;
+
+$list-item-padding-x: $padding-x !default;
+$list-item-padding-y: $padding-y !default;
 
 // $table-alt-bg: $table-bg-accent !default;
 // $table-hover-bg: $table-bg-hover !default;
@@ -67,11 +70,11 @@ $accent-contrast: #ffffff !default;
 
 $text-color: #656565 !default;
 $bg-color: #ffffff !default;
-$border-color: darken($bg-color, 3%) !default;
+$border-color: rgba( black, .08 ) !default;
 
 $base-text: #656565 !default;
 $base-bg: #f6f6f6 !default;
-$base-border: darken($base-bg, 3%) !default;
+$base-border: rgba( black, .08 ) !default;
 
 $hover-text: #656565 !default;
 $hover-bg: #ededed !default;
@@ -199,14 +202,14 @@ $node-selected-gradient: null !default;
 
 
 // List
-$list-item-text: $node-text !default;
-$list-item-bg: $node-bg !default;
+$list-item-text: $text-color !default;
+$list-item-bg: $bg-color !default;
 
-$list-item-hovered-text: $node-hovered-text !default;
-$list-item-hovered-bg: $node-hovered-bg !default;
+$list-item-hovered-text: $hover-text !default;
+$list-item-hovered-bg: $hover-bg !default;
 
-$list-item-selected-text: $node-selected-text !default;
-$list-item-selected-bg: $node-selected-bg !default;
+$list-item-selected-text: $selected-text !default;
+$list-item-selected-bg: $selected-bg !default;
 
 
 // Chart
