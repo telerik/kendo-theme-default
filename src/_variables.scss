@@ -78,11 +78,11 @@ $base-border: rgba( black, .08 ) !default;
 
 $hover-text: #656565 !default;
 $hover-bg: #ededed !default;
-$hover-border: darken($hover-bg, 3%) !default;
+$hover-border: rgba( black, .08 ) !default;
 
 $selected-text: $accent-contrast !default;
 $selected-bg: $accent !default;
-$selected-border: darken($selected-bg, 3%) !default;
+$selected-border: rgba( black, .08 ) !default;
 
 $transition: background-color .2s ease !default;
 

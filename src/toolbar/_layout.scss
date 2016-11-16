@@ -1,7 +1,3 @@
-// TODO: dropdown item padding
-$dropdown-item-padding-x: 1em;
-$dropdown-item-padding-y: .5em;
-
 @include exports("toolbar/layout") {
 
     // Base
@@ -116,7 +112,7 @@ $dropdown-item-padding-y: .5em;
 
         // Items
         .k-overflow-button {
-            padding: 3px $dropdown-item-padding-x;
+            padding: $list-item-padding-y $list-item-padding-x;
             border-width: 0;
             border-radius: 0;
             display: flex;
@@ -131,7 +127,7 @@ $dropdown-item-padding-y: .5em;
 
         // Items
         .k-button {
-            padding: 3px $dropdown-item-padding-x;
+            padding: $list-item-padding-y $list-item-padding-x;
             border-width: 0;
             border-radius: 0;
             display: flex;

@@ -1,8 +1,3 @@
-// TODO: dropdown variables
-$dropdown-item-padding-x: 1em;
-$dropdown-item-padding-y: .5em;
-
-
 @include exports("panelbar/layout") {
 
     // Base
@@ -38,8 +33,7 @@ $dropdown-item-padding-y: .5em;
             position: relative;
         }
         .k-panel > .k-item > .k-link {
-            // TODO: this is failing sass lint for some reason
-            // padding: 3px $dropdown-item-padding-x;
+            padding: $list-item-padding-y $list-item-padding-x;
             text-decoration: none;
             display: block;
             position: relative;
