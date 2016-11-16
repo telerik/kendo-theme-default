@@ -12,16 +12,10 @@ $modal-inner-padding: .5em !default;
 
     .k-dialog {
         padding-top: 0;
+        min-width: 450px;
         max-width: 100%;
         position: fixed;
-
-
-        // Centered
-        &.k-dialog-centered {
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;
-        }
+        border-width: 0;
     }
 
 
