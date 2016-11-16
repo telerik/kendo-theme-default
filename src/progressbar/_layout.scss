@@ -1,228 +1,182 @@
 @include exports('progressbar/layout') {
 
-	// Base
-	.k-progressbar {
-		border-width: 0;
-		font-size: $spacer-y * .75;
-		line-height: $spacer-y;
-		display: inline-flex;
-		vertical-align: middle;
-		position: relative;
-		overflow: hidden;
+    // Base
+    .k-progressbar {
+        position: relative;
+        display: inline-flex;
+        font-size: $spacer-y * .75;
+        line-height: $spacer-y;
+        vertical-align: middle;
+        overflow: hidden;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: $border-radius;
 
-		// Status
-		.k-progress-status-wrap {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			position: absolute;
-		}
-		.k-progress-status {
-			padding: 0 $spacer-x / 4;
-			min-width: 10px;
-			text-align: center;
-			display: inline-block;
-			white-space: nowrap;
-		}
+        // Status
+        .k-progress-status-wrap {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+        }
+        .k-progress-status {
+            padding: 0 $spacer-x / 4;
+            min-width: 10px;
+            text-align: center;
+            display: inline-block;
+            white-space: nowrap;
+        }
 
-		// Progress
-		> .k-state-selected {
-			position: relative;
-			overflow: hidden;
+        > .k-state-selected {
+            position: relative;
+            overflow: hidden;
+            border-style: solid;
+            border-width: 1px;
 
-			.k-progress-status-wrap {}
-		}
+            .k-progress-status-wrap {}
+        }
 
-		// Chunks
-		> ul {
-			display: flex;
-			flex: 1;
-		}
-		.k-item {
-			border-width: 0;
-			border-style: solid;
-		}
-
-
-		@include compact {
-			font-size: $spacer-y * .75;
-		}
-	}
+        > ul {
+            display: flex;
+            flex: 1;
+        }
+        .k-item {
+            border-width: 0;
+            border-style: solid;
+        }
 
 
-	// Orientation
-	.k-progressbar-horizontal {
-		width: 27em;
-		height: $spacer-y;
-		flex-direction: row;
+        @include compact {
+            font-size: $spacer-y * .75;
+        }
 
-		// Status
-		.k-progress-status-wrap {
-			flex-direction: row;
-			justify-content: flex-end;
-			top: 0;
-			left: 0;
-		}
+        > .k-reset {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            white-space: nowrap;
+        }
+    }
 
-		// Progress
-		> .k-state-selected {}
+    .k-progressbar-horizontal {
+        width: 27em;
+        height: $spacer-y;
+        flex-direction: row;
 
-		// Chunks
-		> ul {
-			flex-direction: row;
-		}
-		.k-item {}
-		.k-item + .k-item {
-			border-left-width: 1px;
-		}
+        .k-progress-status-wrap {
+            flex-direction: row;
+            justify-content: flex-end;
+            top: 0;
+            left: 0;
+        }
 
+        > .k-state-selected {
+            left: -1px;
+            right: auto;
+            top: -1px;
+            height: 100%;
+            border-radius: $border-radius 0 0 $border-radius;
+        }
 
-		// Reverse
-		&.k-progressbar-reverse {
-			flex-direction: row-reverse;
+        > ul {
+            flex-direction: row;
+        }
+        .k-item {
+            display: inline-block;
+            height: 100%;
+            border-style: solid;
+            margin-left: -1px;
+            border-width: 1px 0 1px 1px;
 
-			// Status
-			.k-progress-status-wrap {
-				justify-content: flex-start;
-				left: auto;
-				right: 0;
-			}
-		}
-	}
-	.k-progressbar-vertical {
-		width: $spacer-y;
-		height: 27em;
-		flex-direction: column;
-		justify-content: flex-end;
+                &.k-first {
+                    margin-left: 0;
+                }
 
-		// Status
-		.k-progress-status-wrap {
-			flex-direction: column;
-			justify-content: flex-start;
-			left: 0;
-			bottom: 0;
-		}
-
-		// Progress
-		> .k-state-selected {}
-
-		// Chunks
-		> ul {
-			flex-direction: column;
-		}
-		.k-item {}
-		.k-item + .k-item {
-			border-top-width: 1px;
-		}
+                &.k-last {
+                    border-right-width: 0;
+                }
+        }
+        .k-item + .k-item {
+            border-left-width: 1px;
+        }
 
 
-		// Reverse
-		&.k-progressbar-reverse {
-			flex-direction: column-reverse;
+        &.k-progressbar-reverse {
+            flex-direction: row-reverse;
 
-			// Status
-			.k-progress-status-wrap {
-				justify-content: flex-end;
-				top: 0;
-				bottom: auto;
-			}
+            > .k-state-selected {
+                left: auto;
+                right: -1px;
+                border-radius: 0 $border-radius $border-radius 0;
+            }
 
-			// Progress
-			> .k-state-selected {}
-		}
-	}
+            .k-item {
+                border-width: 1px 0 1px 1px;
+            }
 
-    //TODO: Revise and remove old styles
-    // $progressbar-size: 1.9em;
-    // $progressbar-altsize: 27em;
+            .k-progress-status-wrap {
+                justify-content: flex-start;
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .k-progressbar-vertical {
+        width: $spacer-y;
+        height: 27em;
+        flex-direction: column;
+        justify-content: flex-end;
 
-    // .k-progressbar {
-    //     display: inline-block;
-    //     position: relative;
-    //     vertical-align: middle;
-    //     border-width: 1px;
-    //     border-style: solid;
-    //     border-radius: $border-radius;
+        .k-progress-status-wrap {
+            flex-direction: column;
+            justify-content: flex-start;
+            left: 0;
+            bottom: 0;
+        }
 
-    //     > .k-state-selected {
-    //         position: absolute;
-    //         border-style: solid;
-    //         border-width: 1px;
-    //         overflow: hidden;
-    //     }
+        > .k-state-selected {
+            left: -1px;
+            bottom: -1px;
+            width: 100%;
+            border-radius: 0 0 $border-radius $border-radius;
+        }
 
-    //     > .k-reset {
-    //         list-style: none;
-    //         margin: 0;
-    //         padding: 0;
-    //         position: absolute;
-    //         left: -1px;
-    //         top: -1px;
-    //         width: 100%;
-    //         height: 100%;
-    //         border-radius: $border-radius;
-    //         white-space: nowrap;
-    //     }
-    // }
+        &.k-progressbar-reverse > .k-state-selected {
+            bottom: auto;
+            top: -1px;
+            border-radius: $border-radius $border-radius 0 0;
+        }
 
-    // .k-progressbar-horizontal {
-    //     width: $progressbar-altsize;;
-    //     height: $progressbar-size;
+        > ul {
+            flex-direction: column;
+        }
+        .k-item {}
+        .k-item + .k-item {
+            border-top-width: 1px;
+        }
 
-    //     > .k-state-selected {
-    //         left: -1px;
-    //         right: auto;
-    //         top: -1px;
-    //         height: 100%;
-    //         border-radius: $border-radius 0 0 $border-radius;
-    //     }
+        &.k-progressbar-reverse {
+            flex-direction: column-reverse;
 
-    //     .k-item {
-    //         display: inline-block;
-    //         height: 100%;
-    //         border-style: solid;
-    //         margin-left: -1px;
-    //         border-width: 1px 0 1px 1px;
+            .k-progress-status-wrap {
+                justify-content: flex-end;
+                top: 0;
+                bottom: auto;
+            }
 
-    //         &.k-first {
-    //             margin-left: 0;
-    //         }
-
-    //         &.k-last {
-    //             border-right-width: 0;
-    //         }
-    //     }
-
-    //     &.k-progressbar-reverse {
-    //         > .k-state-selected {
-    //             left: auto;
-    //             right: -1px;
-    //             border-radius: 0 $border-radius $border-radius 0;
-    //         }
-
-    //         .k-item {
-    //             border-width: 1px 0 1px 1px;
-    //         }
-    //     }
-    // }
-
-    // .k-progressbar-vertical {
-    //     width: $progressbar-size;;
-    //     height: $progressbar-altsize;
-
-    //     > .k-state-selected {
-    //         left: -1px;
-    //         bottom: -1px;
-    //         width: 100%;
-    //         border-radius: 0 0 $border-radius $border-radius;
-    //     }
-
-    //     &.k-progressbar-reverse > .k-state-selected {
-    //         bottom: auto;
-    //         top: -1px;
-    //         border-radius: $border-radius $border-radius 0 0;
-    //     }
-    // }
+            > .k-state-selected {
+                left: auto;
+                right: -1px;
+                border-radius: 0 $border-radius $border-radius 0;
+            }
+        }
+    }
 
     .k-progressbar > .k-state-selected.k-complete {
         border-radius: $border-radius;
