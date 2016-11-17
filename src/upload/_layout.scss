@@ -31,10 +31,14 @@ html .k-upload {
                 padding: ($padding-y-sm / 2) $padding-x-sm;
             }
             .k-filename {
-                margin-left: $spacer-x/2;
+                margin-left: $spacer-x / 2;
             }
         }
     }
+    .k-upload-button {
+        min-width: 7.167em;
+    }
+    .k-fail {}
 }
 
 
@@ -43,6 +47,7 @@ html .k-upload {
     position: relative;
     overflow: hidden;
     direction: ltr;
+    vertical-align: middle;
 
     .k-upload-sync & {
         margin: $padding-y $padding-x;
@@ -51,7 +56,7 @@ html .k-upload {
 .k-upload-button input {
     margin: 0;
     padding: 0;
-    font: 170px monospace!important;
+    font: 170px monospace !important;
     filter: alpha(opacity=0);
     opacity: 0;
     cursor: pointer;
@@ -68,6 +73,9 @@ html .k-upload {
     display: flex;
     align-items: center;
     position: relative;
+    border-style: solid;
+    border-width: 0;
+    background-color: transparent;
 
     em {
         margin-left: $spacer-x;
@@ -77,6 +85,8 @@ html .k-upload {
         opacity: 0;
         white-space: nowrap;
         position: relative;
+        vertical-align: middle;
+        visibility: hidden;
     }
     .k-upload-status-total {
         display: flex;
@@ -84,12 +94,14 @@ html .k-upload {
         position: relative;
 
         .k-icon {
+            display: inline-block;
             margin-left: $spacer-x / 2;
         }
     }
     .k-dropzone-active {
 
         em {
+            visibility: visible;
             opacity: 1;
         }
     }
@@ -97,13 +109,15 @@ html .k-upload {
 
 // Upload files list
 .k-upload-files {
+    line-height: 2.66;
     padding-bottom: $padding-y;
     border-width: 1px 0 0;
     border-style: solid;
     border-color: inherit;
+    margin: 0;
 
     .k-file {
-        padding: $list-item-padding-y $list-item-padding-y;
+        padding: $list-item-padding-y;
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
@@ -137,6 +151,10 @@ html .k-upload {
         .k-button {
             margin-left: $spacer-x / 2;
         }
+
+        .k-warning {
+            display: none;
+        }
     }
 
     .k-button {
@@ -146,86 +164,6 @@ html .k-upload {
 
 
 //TODO: Revise and remove old styles
-// .k-dropzone em,
-// .k-upload-button {
-//     vertical-align: middle;
-// }
-
-// .k-dropzone,
-// .k-file {
-//     position: relative;
-// }
-
-// .k-dropzone {
-//     border-style: solid;
-//     border-width: 0;
-//     padding: .8em;
-//     background-color: transparent;
-// }
-
-// .k-dropzone em {
-//     visibility: hidden;
-//     margin-left: .6em;
-// }
-
-// .k-dropzone-active em {
-//     visibility: visible;
-// }
-
-// .k-upload-button {
-//     position: relative;
-//     overflow: hidden;
-//     direction: ltr;
-// }
-
-// .k-upload .k-upload-button {
-//     min-width: 7.167em;
-// }
-
-// .k-upload-sync .k-upload-button,
-// .k-ie8 .k-upload-button,
-// .k-ie9 .k-upload-button {
-//     margin: .8em;
-// }
-
-// .k-upload-button input {
-//     position: absolute;
-//     bottom: 0;
-//     right: 0;
-//     z-index: 1;
-//     font: 170px monospace !important; /* critical for correct operation; larger values lead to ignoring or text layout problems in IE */
-//     filter: alpha(opacity=0);
-//     opacity: 0;
-//     margin: 0;
-//     padding: 0;
-//     cursor: pointer;
-// }
-
-// .k-upload-files {
-//     line-height: 2.66;
-//     border-style: solid;
-//     border-width: 1px 0 0;
-//     margin: 0;
-//     padding: 0 0 5px;
-// }
-
-// .k-upload-status .k-warning {
-//     display: none;
-// }
-
-// .k-upload-status-total .k-icon {
-//     display: inline-block;
-//     margin-right: 4px;
-// }
-
-// .k-dropzone .k-upload-status-total {
-//     top: 50%;
-//     transform: translateY(-50%);
-// }
-
-// .k-upload .k-fail {
-//     background-position: -161px -111px;
-// }
 
 // .k-file {
 //     border-style: solid;
@@ -396,6 +334,9 @@ html .k-upload {
         > .k-icon {
             margin-top: -3px;
         }
+    }
+    .k-upload-button {
+        margin: $padding-y-sm $padding-x-sm;
     }
 }
 
