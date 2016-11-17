@@ -75,12 +75,12 @@ $border-color: rgba( black, .08 ) !default;
 $base-text: #656565 !default;
 $base-bg: #f6f6f6 !default;
 $base-border: rgba( black, .08 ) !default;
-$base-gradient: null !default;
+$base-gradient: linear-gradient( $base-bg, darken( $base-bg, 2% ) ) !default;
 
 $hover-text: #656565 !default;
 $hover-bg: #ededed !default;
 $hover-border: rgba( black, .15 ) !default;
-$hover-gradient: null !default;
+$hover-gradient: linear-gradient( $hover-bg, darken( $hover-bg, 2% ) ) !default;
 
 $selected-text: $accent-contrast !default;
 $selected-bg: $accent !default;
@@ -143,12 +143,12 @@ $header-selected-gradient: null !default;
 $button-text: $base-text !default;
 $button-bg: $base-bg !default;
 $button-border: $base-border !default;
-$button-gradient: null !default;
+$button-gradient: $base-gradient !default;
 
 $button-hovered-text: $hover-text !default;
 $button-hovered-bg: $hover-bg !default;
 $button-hovered-border: $hover-border !default;
-$button-hovered-gradient: null !default;
+$button-hovered-gradient: $hover-gradient !default;
 
 $button-pressed-text: $selected-text !default;
 $button-pressed-bg: $selected-bg !default;
@@ -162,15 +162,15 @@ $primary-button-bg: $accent !default;
 $primary-button-border: $accent !default;
 $primary-button-gradient: linear-gradient( adjust-hue( $primary-button-bg, 3), $primary-button-bg ) !default;
 
-$primary-button-hovered-text: $hover-text !default;
-$primary-button-hovered-bg: $hover-bg !default;
-$primary-button-hovered-border: darken( $button-hovered-bg, 2 ) !default;
-$primary-button-hovered-gradient: null !default;
+$primary-button-hovered-text: $primary-button-text !default;
+$primary-button-hovered-bg: adjust-hue( $primary-button-bg, 3) !default;
+$primary-button-hovered-border: $primary-button-border !default;
+$primary-button-hovered-gradient: linear-gradient( adjust-hue( $primary-button-hovered-bg, 3 ), $primary-button-hovered-bg ) !default;
 
-$primary-button-pressed-text: $selected-text !default;
-$primary-button-pressed-bg: $selected-bg !default;
-$primary-button-pressed-border: darken( $button-pressed-bg, 2 ) !default;
-$primary-button-pressed-gradient: null !default;
+$primary-button-pressed-text: $primary-button-text !default;
+$primary-button-pressed-bg: $primary-button-bg !default;
+$primary-button-pressed-border: $primary-button-border !default;
+$primary-button-pressed-gradient: $primary-button-gradient !default;
 
 
 // Input

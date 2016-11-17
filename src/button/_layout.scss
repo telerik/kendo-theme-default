@@ -2,6 +2,7 @@
 
     // Button
     .k-button {
+        @include border-radius( $border-radius );
         padding: $button-padding-y $button-padding-x;
         border-width: 1px;
         border-style: solid;
@@ -15,7 +16,11 @@
         user-select: none;
         cursor: pointer;
 
-        &[disabled] {
+        // TODO: extend disabled selector
+        &[disabled],
+        &.k-state-disabled:hover,
+        &.k-state-disabled:focus,
+        [disabled] & {
             @extend %disabled;
         }
 
@@ -31,6 +36,7 @@
 
         .k-icon,
         .k-image {
+            color: inherit;
             align-self: center;
         }
 
@@ -119,6 +125,7 @@
 
         .k-button {
             position: relative;
+            border-radius: 0;
         }
         .k-button + .k-button {
             margin-left: -1px;
@@ -128,6 +135,19 @@
         .k-button.k-state-hover,
         .k-button.k-state-active {
             z-index: 2;
+        }
+
+        .k-group-start,
+        .k-button:first-child {
+            @include border-radius( $border-radius 0 0 $border-radius );
+        }
+        .k-group-end,
+        .k-button:last-child {
+            @include border-radius( 0 $border-radius $border-radius 0 );
+        }
+        .k-group-start.k-group-end,
+        .k-button:first-child:last-child {
+            @include border-radius( $border-radius );
         }
     }
 
