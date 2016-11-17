@@ -61,6 +61,14 @@ $list-item-padding-y: $padding-y !default;
 // $cell-padding: $table-cell-padding !default;
 // $cell-padding-sm: $table-sm-cell-padding !default;
 
+$window-padding-x: $padding-x;
+$window-padding-y: $padding-y;
+$window-titlebar-padding-x: $padding-x;
+$window-titlebar-padding-y: $padding-x;
+
+$zindex-popup: 1;
+$zindex-window: 2;
+
 $rgba-transparent: rgba( 0, 0, 0, 0 );
 
 
