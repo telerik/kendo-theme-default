@@ -83,12 +83,12 @@ $border-color: rgba( black, .08 ) !default;
 $base-text: #656565 !default;
 $base-bg: #f6f6f6 !default;
 $base-border: rgba( black, .08 ) !default;
-$base-gradient: linear-gradient( $base-bg, darken( $base-bg, 2% ) ) !default;
+$base-gradient: $base-bg, darken( $base-bg, 2% ) !default;
 
 $hover-text: #656565 !default;
 $hover-bg: #ededed !default;
 $hover-border: rgba( black, .15 ) !default;
-$hover-gradient: linear-gradient( $hover-bg, darken( $hover-bg, 2% ) ) !default;
+$hover-gradient: $hover-bg, darken( $hover-bg, 2% ) !default;
 
 $selected-text: $accent-contrast !default;
 $selected-bg: $accent !default;
@@ -168,12 +168,12 @@ $button-pressed-gradient: null !default;
 $primary-button-text: $accent-contrast !default;
 $primary-button-bg: $accent !default;
 $primary-button-border: $accent !default;
-$primary-button-gradient: linear-gradient( adjust-hue( $primary-button-bg, 3), $primary-button-bg ) !default;
+$primary-button-gradient: adjust-hue( $primary-button-bg, 3), $primary-button-bg !default;
 
 $primary-button-hovered-text: $primary-button-text !default;
 $primary-button-hovered-bg: adjust-hue( $primary-button-bg, 3) !default;
 $primary-button-hovered-border: $primary-button-border !default;
-$primary-button-hovered-gradient: linear-gradient( adjust-hue( $primary-button-hovered-bg, 3 ), $primary-button-hovered-bg ) !default;
+$primary-button-hovered-gradient: adjust-hue( $primary-button-hovered-bg, 3 ), $primary-button-hovered-bg !default;
 
 $primary-button-pressed-text: $primary-button-text !default;
 $primary-button-pressed-bg: $primary-button-bg !default;
