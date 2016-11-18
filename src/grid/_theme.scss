@@ -2,13 +2,13 @@
 
 @include exports('grid/theme') {
 	// New 
-	$grid-chrome-text: $text-color !default;
-	$grid-chrome-bg: lighten($base-bg, 1%) !default;
+	$grid-chrome-text: $header-text !default;
+	$grid-chrome-bg: $header-bg !default;
 	$grid-chrome-border: $border-color !default;
 	$grid-alt-bg: $grid-chrome-bg !default;
 
-	$grid-selection-text: $selected-text !default;
-	$grid-selection-bg: $selected-bg !default;
+	$grid-selected-text: $selected-text !default;
+	$grid-selected-bg: $selected-bg !default;
 	$grid-grouping-row-text: $text-color !default;
 	$grid-grouping-row-bg: darken($base-bg, 1%) !default;
 
@@ -16,6 +16,7 @@
 	.k-header,
     .k-grid-header-wrap,
 	.k-grouping-header,
+	.k-grouping-header .k-group-indicator,
     .k-grid td,
     .k-grid-footer,
     .k-grid-footer-wrap,
@@ -51,8 +52,8 @@
         }
 
         tr.k-state-selected {
-			color: $grid-selection-text;
-			background-color: $grid-selection-bg;
+			color: $grid-selected-text;
+			background-color: $grid-selected-bg;
 
             .k-hierarchy-cell > .k-icon {
                 color: $selected-text;

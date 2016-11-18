@@ -25,7 +25,7 @@ $group-indicator-padding: 6px !default;
     .k-grid-toolbar,
 	.k-grouping-header {
         display: block;
-        padding: 1em;
+        padding: .5em;
         border-width: 0 0 1px;
         border-style: solid;
     }
@@ -38,6 +38,22 @@ $group-indicator-padding: 6px !default;
             vertical-align: text-bottom;
         }
     }
+	.k-grouping-header .k-group-indicator {
+		display: inline-block;
+		border-style: solid;
+		border-width: 1px;
+		margin: 0 6px 0 0;
+		//padding: .15em .15em .15em .4em;
+		//line-height: 1.5em;
+	}
+	.k-grouping-row+tr td {
+		border-top-width: 1px;
+		border-style: solid;
+	}
+	.k-grouping-row .k-group-cell,
+	.k-grouping-row+tr .k-group-cell {
+		border-top-width: 0;
+	}
 	.k-grid-footer {
         border-width: 1px 0 0;
         border-style: solid;
@@ -75,7 +91,7 @@ $group-indicator-padding: 6px !default;
     .k-filter-row th {
         overflow: hidden;
         border-style: solid;
-        border-width: 0 0 1px 1px;
+        border-width: 0 0 0 1px;
         padding: 1em;
         font-weight: normal;
         white-space: nowrap;
@@ -84,12 +100,14 @@ $group-indicator-padding: 6px !default;
         line-height: 1.286em;
     }
 	.k-grouping-header,
-	.k-filter-row th,
-	.k-grid-header th.k-header {
+	.k-filter-row th {
 		border-bottom-style: solid;
         border-bottom-width: 1px;
 	}
 
+	.k-filter-row th {
+		padding: .5em;
+	}
     .k-grid-header th.k-header>.k-link {
         display: block;
         line-height: 1.286em;
