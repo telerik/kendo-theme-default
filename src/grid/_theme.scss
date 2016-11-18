@@ -1,42 +1,43 @@
 @import './layout';
 
-$grid-header-color: $accent !default;
-$grid-color: $base-text !default;
-$grid-border-color: rgba(0, 0, 0, .08) !default;
-$grid-header-background: $widget-bg !default;
-$grid-background: $base-bg !default;
-
-$grid-alt-background: $base-bg !default;
-$grid-active-color: $accent !default;
-
-$pager-focused-box-shadow: inset 0 0 0 2px darken($base-bg, 8%) !default;
-$pager-selected-focused-box-shadow: inset 0 0 0 2px blend-multiply($accent, darken($widget-bg, 8%)) !default;
-$pager-hover-background: $hover-bg !default;
-$pager-selected-background: $selected-bg !default;
-$pager-selected-color: $selected-text !default;
-$pager-selected-hover-background: blend-multiply($accent, darken($widget-bg, 8%)) !default;
-
 @include exports('grid/theme') {
+	// New 
+	$grid-chrome-text: $text-color !default;
+	$grid-chrome-bg: lighten($base-bg, 1%) !default;
+	$grid-chrome-border: $border-color !default;
+	$grid-alt-bg: $grid-chrome-bg !default;
+
+	$grid-selection-text: $selected-text !default;
+	$grid-selection-bg: $selected-bg !default;
+	$grid-grouping-row-text: $text-color !default;
+	$grid-grouping-row-bg: darken($base-bg, 1%) !default;
+
     .k-grid-header,
+	.k-header,
     .k-grid-header-wrap,
+	.k-grouping-header,
     .k-grid td,
     .k-grid-footer,
     .k-grid-footer-wrap,
     .k-grid-content-locked,
     .k-grid-footer-locked,
     .k-grid-header-locked,
-    .k-grouping-header,
-    .k-grouping-header .k-group-indicator {
-        border-color: $grid-border-color;
+	.k-filter-row > th {
+        border-color: $grid-chrome-border;
     }
 
     .k-grid-header,
-    .k-grid-footer,
-    .k-pager-wrap,
-    .k-group-footer,
-    .k-grouping-header {
-        background-color: $grid-background;
+	.k-grouping-header,
+    .k-grid-footer {
+		color: $grid-chrome-text;
+        background-color: $grid-chrome-bg;
     }
+	.k-grid-footer td,
+	.k-group-footer td,
+	.k-grouping-row td {
+		color: $grid-grouping-row-text;
+		background-color: $grid-grouping-row-bg;
+	}
 
     .k-grid-footer td,
     .k-group-footer td,
@@ -46,12 +47,12 @@ $pager-selected-hover-background: blend-multiply($accent, darken($widget-bg, 8%)
 
     .k-grid {
         .k-alt {
-            background-color: $grid-alt-background;
+            background-color: $grid-alt-bg;
         }
 
         tr.k-state-selected {
-            background-color: $selected-bg;
-            color: $selected-text;
+			color: $grid-selection-text;
+			background-color: $grid-selection-bg;
 
             .k-hierarchy-cell > .k-icon {
                 color: $selected-text;
@@ -70,7 +71,7 @@ $pager-selected-hover-background: blend-multiply($accent, darken($widget-bg, 8%)
     }
 
     /* Pager */
-    .k-grid-pager {
+    /*.k-grid-pager {
         .k-link,
         .k-link:link {
             color: $grid-active-color;
@@ -101,5 +102,5 @@ $pager-selected-hover-background: blend-multiply($accent, darken($widget-bg, 8%)
                 background-color: transparent;
             }
         }
-    }
+    }*/
 }

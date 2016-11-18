@@ -1,13 +1,16 @@
 @include exports("pager/theme") {
+	// New
+	$pager-text: $text-color !default;
+	$pager-bg: lighten($base-bg, 1%) !default;
 
-	// Theme
 	.k-pager-wrap {
-
+		color: $pager-text;
+		background-color: $pager-bg;
 		.k-pager-first {
-			@include border-radius( $border-radius 0 0 $border-radius );
+			//@include border-radius( $border-radius 0 0 $border-radius );
 		}
 		.k-pager-last {
-			@include border-radius( 0 $border-radius $border-radius 0 );
+			//@include border-radius( 0 $border-radius $border-radius 0 );
 		}
 
 		.k-link,
@@ -16,13 +19,13 @@
 
 			&:hover {
 				@include appearance( hovered-button );
-				z-index: 2;
+				//z-index: 2;
 			}
 		}
 
 		.k-state-selected {
 			@include appearance( active-button );
-			z-index: 2;
+			//z-index: 2;
 		}
 	}
 

@@ -23,7 +23,7 @@ $group-indicator-padding: 6px !default;
     }
 
     .k-grid-toolbar,
-    .k-grouping-header {
+	.k-grouping-header {
         display: block;
         padding: 1em;
         border-width: 0 0 1px;
@@ -38,8 +38,7 @@ $group-indicator-padding: 6px !default;
             vertical-align: text-bottom;
         }
     }
-
-    .k-grid-footer {
+	.k-grid-footer {
         border-width: 1px 0 0;
         border-style: solid;
     }
@@ -76,7 +75,7 @@ $group-indicator-padding: 6px !default;
     .k-filter-row th {
         overflow: hidden;
         border-style: solid;
-        border-width: 0 0 0 1px;
+        border-width: 0 0 1px 1px;
         padding: 1em;
         font-weight: normal;
         white-space: nowrap;
@@ -84,6 +83,12 @@ $group-indicator-padding: 6px !default;
         text-align: left;
         line-height: 1.286em;
     }
+	.k-grouping-header,
+	.k-filter-row th,
+	.k-grid-header th.k-header {
+		border-bottom-style: solid;
+        border-bottom-width: 1px;
+	}
 
     .k-grid-header th.k-header>.k-link {
         display: block;
@@ -114,7 +119,8 @@ $group-indicator-padding: 6px !default;
 
     .k-grid tbody td:first-child,
     .k-grid tfoot td:first-child,
-    .k-grid-header th.k-header:first-child {
+    .k-grid-header th.k-header:first-child,
+	.k-filter-row > th:first-child {
         border-left-width: 0;
     }
 
