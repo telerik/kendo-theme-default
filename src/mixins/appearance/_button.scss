@@ -40,6 +40,13 @@ $_button-imported: false !default;
         @include linear-gradient( $primary-button-pressed-gradient );
     }
 
+    %appearance_toolbar {
+        color: $toolbar-text;
+        background-color: $toolbar-bg;
+        border-color: $toolbar-border;
+        @include linear-gradient( $toolbar-gradient );
+    }
+
     $_button-imported: true;
 
 }
@@ -52,3 +59,5 @@ $_button-imported: false !default;
 @mixin appearance_primary-button { @extend %appearance_primary-button };
 @mixin appearance_hovered-primary-button { @extend %appearance_hovered-primary-button };
 @mixin appearance_pressed-primary-button { @extend %appearance_pressed-primary-button };
+
+@mixin appearance_toolbar { @extend %appearance_toolbar };

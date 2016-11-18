@@ -1,17 +1,19 @@
 @include exports("toolbar/theme") {
 
-	// Theme
-	.k-toolbar {
+    // Theme
+    .k-toolbar {
+        @include appearance( toolbar );
 
-		// Split button
-		.k-split-button {
-			.k-button {
-				@include border-radius( $border-radius 0 0 $border-radius );
-			}
-			.k-split-button-arrow {
-				@include border-radius( 0 $border-radius $border-radius 0 );
-			}
-		}
 
-	}
+        // Active state
+        .k-button {
+            border-width: 0;
+            background-image: none;
+        }
+
+        .k-button.k-state-active {
+            @include appearance( pressed-button );
+        }
+    }
+
 }

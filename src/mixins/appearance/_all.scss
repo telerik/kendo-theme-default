@@ -55,6 +55,12 @@
     }
 
 
+    // Toolbar
+    @if ( $what == toolbar ) {
+        @include appearance_toolbar;
+    }
+
+
     // Input
     @if ( $what == input ) {
         @include appearance_input;

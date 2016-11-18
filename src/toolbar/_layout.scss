@@ -30,6 +30,15 @@
         }
 
 
+        // All buttons
+        .k-button:not(:hover, .k-state-hover, :active, .k-state-active) {
+            border-color: transparent;
+            color: inherit;
+            background-color: transparent;
+            background-image: none;
+        }
+
+
         // Button
         .k-button {}
 
