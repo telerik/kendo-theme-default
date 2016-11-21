@@ -6,7 +6,7 @@
     $panelbar-header-text: $accent !default;
     $panelbar-header-bg: $widget-bg !default;
     $panelbar-header-hover-text: darken(desaturate(adjust-hue($accent, -.056), 20.6186), 5.2941) !default;
-    $panelbar-expanded-bg: lighten(saturate(adjust-hue($base-bg, 0), 0), 1.1765) !default;
+    $panelbar-expanded-bg: darken(saturate(adjust-hue($widget-bg, 0), 0), 2.3529) !default;
     $panelbar-selected-hover-bg: blend-multiply($accent, darken($widget-bg, 8%)) !default;
     $panelbar-focused-box-shadow: inset 0 0 0 2px darken($base-bg, 8%) !default;
     $panelbar-selected-focused-box-shadow: inset 0 0 0 2px blend-multiply($accent, darken($widget-bg, 8%)) !default;
@@ -16,10 +16,12 @@
         &.k-header,
         .k-item,
         .k-panel,
+        .k-content,
         > .k-item > .k-link {
             border-color: $panelbar-border;
         }
 
+        .k-content,
         .k-state-expanded {
             background: $panelbar-expanded-bg;
         }
@@ -27,6 +29,10 @@
         .k-item {
             > .k-header {
                 user-select: none;
+            }
+
+            &:first-child {
+                border-color: $panelbar-border;
             }
 
             .k-link {

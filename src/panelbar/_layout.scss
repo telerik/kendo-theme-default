@@ -2,15 +2,30 @@
 
     // Base
     .k-panelbar {
+         &.k-widget {
+            border-style: none;
+         }
+
+        .k-header {
+            border-right: 1px solid;
+            border-left: 1px solid;
+        }
 
         .k-panel,
         .k-content {
             margin: 0;
             padding: 0;
             border-bottom: 1px solid;
+            border-right: 1px solid;
+            border-left: 1px solid;
             border-color: inherit;
             list-style: none;
             position: relative;
+        }
+
+        .k-panel .k-panel {
+            border-right-width: 0;
+            border-left-width: 0;
         }
 
         // Items
@@ -21,6 +36,10 @@
             border-color: inherit;
             border-radius: 0;
             display: block;
+        }
+
+        .k-item:first-child {
+            border-top: 1px solid;
         }
 
         // Links
