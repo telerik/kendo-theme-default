@@ -59,16 +59,10 @@
                 color: $selected-text;
             }
         }
-
-        .k-grouping-row {
-            background-color: $grid-grouping-row-background;
-        }
-
-        .k-grouping-dropclue {
-            &::before {
-                border-color: $grid-color transparent transparent;
-            }
-        }
+		.k-grid-filter,
+		.k-header-column-menu {
+			color: $grid-chrome-text;
+		}
     }
 
     /* Pager */
