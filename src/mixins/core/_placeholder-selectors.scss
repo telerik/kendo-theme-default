@@ -181,7 +181,6 @@
 
     /// Disabled
     %disabled {
-        color: red;
         @if ( mixin-exists( disabled ) ) {
             @include disabled;
         }
