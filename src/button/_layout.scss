@@ -8,13 +8,16 @@
         border-style: solid;
         font-size: $font-size;
         line-height: $form-line-height;
+        text-align: center;
         text-decoration: none;
         white-space: nowrap;
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         vertical-align: middle;
         user-select: none;
         cursor: pointer;
+        outline: none;
 
         // TODO: extend disabled selector
         &[disabled],
