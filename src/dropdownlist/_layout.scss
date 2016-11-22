@@ -9,11 +9,14 @@ $button-padding-y-sm: .5em;
 
     // Dropdown
     .k-dropdown {
+		position: relative;
         border-width: 0;
         line-height: $form-line-height;
         display: inline-block;
         vertical-align: middle;
-
+		width: 12.4em;
+		overflow: visible;
+		white-space: nowrap;
 
         .k-input {}
 
@@ -36,5 +39,46 @@ $button-padding-y-sm: .5em;
             }
         }
     }
+	.k-dropdown-wrap {
+		display: block;
+		position: relative;
+		border-width: 1px;
+		border-style: solid;
+		padding: 0 1.9em 0 0;
+		.k-select {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			text-decoration: none;
+			min-height: $line-height-em;
+			line-height: $line-height-em;
+			vertical-align: middle;
+			text-align: center;
+			width: 1.9em;
+			height: 100%;
+			padding: 0;
+			overflow: hidden;
+			border: 0;
+			text-decoration: none;
+			font: inherit;
+			color: inherit;
+		}
 
+		.k-icon {
+			line-height: 2.004em;
+		}
+		.k-input {
+			background: transparent;
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: $line-height-em;
+			line-height: $line-height-em;
+			//padding: .177em 0;
+			//text-indent: $input-indent;
+			border: 0;
+			margin: 0;
+		}
+	}
 }
