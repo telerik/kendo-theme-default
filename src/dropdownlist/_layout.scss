@@ -11,7 +11,7 @@ $button-padding-y-sm: .5em;
     .k-dropdown {
 		position: relative;
         border-width: 0;
-        line-height: $form-line-height;
+        line-height: $line-height;
         display: inline-block;
         vertical-align: middle;
 		width: 12.4em;
@@ -44,7 +44,7 @@ $button-padding-y-sm: .5em;
 		position: relative;
 		border-width: 1px;
 		border-style: solid;
-		padding: 0 1.9em 0 0;
+		//padding: 0 1.9em 0 0;
 		.k-select {
 			position: absolute;
 			top: 0;
@@ -52,12 +52,12 @@ $button-padding-y-sm: .5em;
 			display: inline-block;
 			text-decoration: none;
 			min-height: $line-height-em;
+			height: 100%;
 			line-height: $line-height-em;
 			vertical-align: middle;
 			text-align: center;
-			width: 1.9em;
-			height: 100%;
-			padding: 0;
+			width: $line-height-em;
+			padding: 0 $padding-y;
 			overflow: hidden;
 			border: 0;
 			text-decoration: none;
@@ -66,7 +66,11 @@ $button-padding-y-sm: .5em;
 		}
 
 		.k-icon {
-			line-height: 2.004em;
+			line-height: $line-height-em;
+			width: 100%;
+			height: 100%;
+			padding: $padding-y 0;
+			box-sizing: border-box;
 		}
 		.k-input {
 			background: transparent;
@@ -74,9 +78,9 @@ $button-padding-y-sm: .5em;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			height: $line-height-em;
-			line-height: $line-height-em;
-			//padding: .177em 0;
-			//text-indent: $input-indent;
+			line-height: $line-height;
+			padding: $padding-y 0;
+			text-indent: $padding-y;
 			border: 0;
 			margin: 0;
 		}
