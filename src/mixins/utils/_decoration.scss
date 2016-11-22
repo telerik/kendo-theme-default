@@ -46,8 +46,8 @@
 // Disabled
 @mixin disabled {
     outline: none;
-    cursor: defualt;
+    cursor: default;
     opacity: .7;
-    filter: grayscale(.7);
+    filter: grayscale(.1);
     pointer-events: none;
 }
