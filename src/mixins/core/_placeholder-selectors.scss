@@ -1,8 +1,5 @@
 @include exports( "placeholder-selectors" ) {
 
-
-// Placeholder selectors based on pure css
-
     /// Box sizing `border-box`
     %border-box {
         box-sizing: border-box;
@@ -172,18 +169,6 @@
     }
     %pointer-events-all {
         pointer-events: all;
-    }
-
-
-
-
-// Placeholder selectors based on mixins
-
-    /// Disabled
-    %disabled {
-        @if ( mixin-exists( disabled ) ) {
-            @include disabled;
-        }
     }
 
 }
