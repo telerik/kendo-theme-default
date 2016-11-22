@@ -5,9 +5,9 @@ $font-family: inherit !default;
 $font-size-sm: 12px !default; // .85em?
 $font-size-lg: 16px !default;
 
-$line-height: 1.5 !default;
+$line-height: (20/14) !default;
 $line-height-em: $line-height * 1em;
-$form-line-height: 1.5 !default;
+$form-line-height: $line-height !default;
 $form-line-height-em: $form-line-height * 1em;
 
 
