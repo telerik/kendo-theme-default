@@ -14,13 +14,15 @@
             display: none;
             align-self: center;
             position: absolute;
-            // TODO: position [x] correctly
-            top: $input-padding-y;
-            right: $input-padding-y;
+            top: 50%;
+            transform: translateY(-50%);
+            //right: em($line-height-em + $padding-y);
         }
+
         .k-state-hover .k-i-close,
         .k-state-focused .k-i-close {
-            display: block;
+            display: inline-block;
+            outline: 0;
         }
 
         .k-select {}
