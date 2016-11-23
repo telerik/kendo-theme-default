@@ -44,7 +44,17 @@
     // Toolbar
     .k-keditor-toolbar-wrap {}
     .k-editor-toolbar {
+        margin: 0;
+        padding: .1em 0;
+        list-style-type: none;
+        line-height: 1.3em;
+        cursor: default;
+        word-wrap: break-word; /* allow tools to wrap properly in IE */
 
+        li {
+            display: inline-block;
+            vertical-align: middle;
+        }
 
         // Group
         .k-tool-group {}
