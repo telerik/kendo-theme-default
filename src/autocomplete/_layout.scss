@@ -8,14 +8,17 @@
         flex-direction: row;
         vertical-align: middle;
         position: relative;
+        width: 12.4em;
 
         .k-input {
             // sass-lint:disable no-important
-            width: auto !important;
+            //width: auto !important;
             // sass-lint:enable no-important
-            padding: $input-padding-y $input-padding-x;
+            height: $line-height-em;
+            line-height: $line-height;
+            padding: $padding-y 0;
             border: 0;
-            outline: 0;
+            //outline: 0;
             color: inherit;
             background: none;
             font: inherit;
@@ -27,12 +30,14 @@
             display: none;
             align-self: center;
             position: absolute;
-            top: $input-padding-y;
-            right: $input-padding-y;
+            top: 50%;
+            transform: translateY(-50%);
+            //right: em($line-height-em + $padding-y);
         }
+
         &.k-state-hover .k-i-close,
         &.k-state-focused .k-i-close {
-            display: block;
+            display: inline-block;
         }
 
 
