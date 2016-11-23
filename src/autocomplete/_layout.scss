@@ -9,11 +9,13 @@
         vertical-align: middle;
         position: relative;
         width: 12.4em;
+        white-space: nowrap;
 
         .k-input {
             // sass-lint:disable no-important
             //width: auto !important;
             // sass-lint:enable no-important
+            display: block;
             height: $line-height-em;
             line-height: $line-height;
             padding: $padding-y 0;
@@ -22,7 +24,6 @@
             color: inherit;
             background: none;
             font: inherit;
-            display: block;
             flex: 1;
         }
 
