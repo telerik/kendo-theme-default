@@ -9,7 +9,7 @@
         vertical-align: middle;
         overflow: hidden;
         border-style: solid;
-        border-width: 1px;
+        border-width: 0;
         border-radius: $border-radius;
 
         // Status
@@ -20,7 +20,7 @@
             position: absolute;
         }
         .k-progress-status {
-            padding: 0 $spacer-x / 4;
+            padding: 0 $spacer-x / 2;
             min-width: 10px;
             text-align: center;
             display: inline-block;
@@ -31,7 +31,7 @@
             position: relative;
             overflow: hidden;
             border-style: solid;
-            border-width: 1px;
+            border-width: 0;
 
             .k-progress-status-wrap {}
         }
@@ -66,7 +66,7 @@
 
     .k-progressbar-horizontal {
         width: 27em;
-        height: $spacer-y;
+        height: $spacer-y * 2;
         flex-direction: row;
 
         .k-progress-status-wrap {
@@ -128,7 +128,7 @@
         }
     }
     .k-progressbar-vertical {
-        width: $spacer-y;
+        width: $spacer-x * 2;
         height: 27em;
         flex-direction: column;
         justify-content: flex-end;
