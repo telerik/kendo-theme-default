@@ -3,7 +3,7 @@
 	// Base
 	.k-numerictextbox {
 		border-width: 0;
-		//line-height: $form-line-height;
+		line-height: $form-line-height;
 		display: inline-block;
 		vertical-align: middle;
 
@@ -39,6 +39,7 @@
 	@include exports("numericwrap/layout") {
 
 		.k-numeric-wrap {
+			@include border-radius( $border-radius );
 			padding: 0;
 			border-width: 1px;
 			border-style: solid;
@@ -56,6 +57,7 @@
 			}
 
 			.k-select {
+				@include border-radius( 0 $border-radius $border-radius 0 );
 				display: flex;
 				flex-direction: column;
 
