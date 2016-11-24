@@ -4,12 +4,12 @@
     .k-datepicker,
     .k-timepicker,
     .k-datetimepicker {
-
         // Normal state
         .k-picker-wrap {
             @include appearance( input );
             @include border-radius( $border-radius );
         }
+
         .k-select {
             @include appearance( button );
             @include border-radius(  0 $border-radius $border-radius 0 );

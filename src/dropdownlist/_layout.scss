@@ -1,22 +1,8 @@
-// TOOD: remove form variable;
-$form-line-height: 1.5;
-$input-padding-x-sm: 1em;
-$input-padding-y-sm: .5em;
-$button-padding-x-sm: 1em;
-$button-padding-y-sm: .5em;
-
 @include exports("dropdownlist/layout") {
 
-    // Dropdown
     .k-dropdown {
-		position: relative;
-        border-width: 0;
-        line-height: $line-height;
-        display: inline-block;
-        vertical-align: middle;
-		width: 12.4em;
+    	border-width: 0;
 		overflow: visible;
-		white-space: nowrap;
 
         .k-input {}
 
@@ -24,12 +10,8 @@ $button-padding-y-sm: .5em;
             border-width: 0;
         }
 
-
-
-
         // Compact
         @include compact {
-
             .k-input {
                 padding: $input-padding-y-sm $input-padding-x-sm;
             }
@@ -38,31 +20,9 @@ $button-padding-y-sm: .5em;
                 padding: $button-padding-y-sm;
             }
         }
-    }
-	.k-dropdown-wrap {
-		display: block;
-		position: relative;
-		border-width: 1px;
-		border-style: solid;
-		//padding: 0 1.9em 0 0;
-		.k-select {
-			position: absolute;
-			top: 0;
-			right: 0;
-			display: inline-block;
-			text-decoration: none;
-			min-height: $line-height-em;
-			height: 100%;
-			line-height: $line-height-em;
-			vertical-align: middle;
-			text-align: center;
-			width: $line-height-em;
-			padding: 0 $padding-y;
-			overflow: hidden;
-			border: 0;
-			text-decoration: none;
-			font: inherit;
-			color: inherit;
+
+        .k-select {
+			border-width: 0;
 
 			.k-icon {
 				line-height: $line-height-em;
@@ -77,19 +37,5 @@ $button-padding-y-sm: .5em;
 				}
 			}
 		}
-
-
-		.k-input {
-			background: transparent;
-			display: block;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			height: $line-height-em;
-			line-height: $line-height;
-			padding: $padding-y 0;
-			text-indent: $padding-y;
-			border: 0;
-			margin: 0;
-		}
-	}
+    }
 }

@@ -3,46 +3,33 @@
     // Layout
     .k-autocomplete {
         @include border-radius( $border-radius );
-        line-height: $form-line-height;
-        display: inline-flex;
-        flex-direction: row;
-        vertical-align: middle;
-        position: relative;
-        width: 12.4em;
-        white-space: nowrap;
 
         .k-input {
-            // sass-lint:disable no-important
-            //width: auto !important;
-            // sass-lint:enable no-important
-            display: block;
             height: $line-height-em;
             line-height: $line-height;
             padding: $padding-y 0;
             border: 0;
-            //outline: 0;
+            outline: 0;
             color: inherit;
             background: none;
             font: inherit;
             flex: 1;
+            text-indent: $padding-y;
         }
 
-        .k-icon {
+        .k-i-close {
             display: none;
             align-self: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            //right: em($line-height-em + $padding-y);
         }
 
-        &.k-state-hover .k-i-close,
-        &.k-state-focused .k-i-close {
-            display: inline-block;
+        &.k-state-hover,
+        &.k-state-focused {
+            .k-i-close {
+                display: flex;
+                margin-right: $padding-y;
+                outline: 0;
+            }
         }
-
-
-
 
         // Compact
         @include compact {

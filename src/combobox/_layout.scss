@@ -1,35 +1,11 @@
 @include exports("combobox/layout") {
 
-    // Base
     .k-combobox {
         border-width: 0;
-        line-height: $form-line-height;
-        display: inline-block;
-        vertical-align: middle;
-        white-space: nowrap;
-
 
         .k-input {}
 
-        .k-i-close {
-            display: none;
-            align-self: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            //right: em($line-height-em + $padding-y);
-        }
-
-        .k-state-hover .k-i-close,
-        .k-state-focused .k-i-close {
-            display: inline-block;
-            outline: 0;
-        }
-
         .k-select {}
-
-
-
 
         // Compact
         @include compact {

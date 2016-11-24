@@ -1,11 +1,16 @@
+@import '../common/forms';
+
 @include exports("datetime/layout") {
 
     // Datepicker
     .k-datepicker {
         border-width: 0;
         line-height: $form-line-height;
-        display: inline-block;
+        display: inline-flex;
         vertical-align: middle;
+        width: 12.4em;
+        overflow: visible;
+        white-space: nowrap;
 
 
         // Compact
@@ -21,6 +26,46 @@
             }
         }
         // sass-lint:enable mixins-before-declarations
+    }
+
+    .k-picker-wrap {
+        position: relative;
+        cursor: default;
+        //display: block;
+        border-width: 1px;
+        border-style: solid;
+
+        .k-input {
+            width: 100%;
+            height: $line-height-em;
+            line-height: $line-height-em;
+            padding: $padding-y 0;
+            vertical-align: top;
+            font-family: inherit;
+            border-width: 0;
+            outline: 0;
+           // background: pink !important;
+        }
+
+        .k-select {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            vertical-align: top;
+            text-decoration: none;
+            border-style: solid;
+            border-width: 0 0 0 1px;
+            border-color: inherit;
+            width: $line-height-em;
+            height: $line-height-em;
+            line-height: $line-height-em;
+            padding: $padding-y;
+            //text-indent: @input-indent;
+            border: 0;
+            margin: 0;
+            //background: green !important;
+        }
     }
 
     // Timepicker
