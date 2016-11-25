@@ -6,11 +6,12 @@ $nav-item-margin: 2px;
 
     .k-tabstrip {
         border-width: 0;
+        background-color: transparent;
         display: block;
 
         .k-tabstrip-items {
-            border-width: 0;
-            border-style: solid;
+            border: 0 solid transparent;
+            border-color: inherit;
             display: flex;
             flex-direction: row;
             position: relative;
@@ -44,12 +45,43 @@ $nav-item-margin: 2px;
         }
 
 
+        // Loading
+        .k-tabstrip-items .k-loading {
+            width: 20%;
+            height: 0;
+            border: 0;
+            border-top: 1px solid transparent;
+            border-color: inherit;
+            background: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width .2s linear;
+        }
+        .k-tabstrip-items .k-loading.k-complete {
+            width: 100%;
+            border-top-width: 0;
+        }
+
+
         // Scrolling
         &.k-tabstrip-scrollable {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
 
             .k-tabstrip-items {
                 white-space: nowrap;
                 overflow: hidden;
+            }
+            .k-tabstrip-prev {
+                position: absolute;
+                left: 0;
+            }
+            .k-tabstrip-next {
+                position: absolute;
+                right: 0;
             }
         }
 
