@@ -1,17 +1,8 @@
 @import '../common/forms';
 
 @include exports("datetime/layout") {
-
-    // Datepicker
     .k-datepicker {
-        border-width: 0;
-        line-height: $form-line-height;
-        display: inline-flex;
-        vertical-align: middle;
-        width: 12.4em;
         overflow: visible;
-        white-space: nowrap;
-
 
         // Compact
         // sass-lint:disable mixins-before-declarations
@@ -29,63 +20,19 @@
     }
 
     .k-picker-wrap {
-        position: relative;
-        cursor: default;
-        //display: block;
-        border-width: 1px;
-        border-style: solid;
-
         .k-input {
             width: 100%;
-            height: $line-height-em;
-            line-height: $line-height-em;
-            padding: $padding-y 0;
-            vertical-align: top;
-            font-family: inherit;
-            border-width: 0;
-            outline: 0;
-           // background: pink !important;
-        }
-
-        .k-select {
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: inline-block;
-            vertical-align: top;
-            text-decoration: none;
-            border-style: solid;
-            border-width: 0 0 0 1px;
-            border-color: inherit;
-            width: $line-height-em;
-            height: $line-height-em;
-            line-height: $line-height-em;
-            padding: $padding-y;
-            //text-indent: @input-indent;
-            border: 0;
-            margin: 0;
-            //background: green !important;
+            border-radius: $border-radius 0 0 $border-radius;
         }
     }
 
     // Timepicker
     .k-timepicker {
-        border-width: 0;
-        line-height: $form-line-height;
-        display: inline-block;
-        vertical-align: middle;
-
-
         // Compact
         // sass-lint:disable mixins-before-declarations
         @include compact {
-
             .k-input {
                 padding: $input-padding-y-sm $input-padding-x-sm;
-            }
-
-            .k-select {
-                padding: $button-padding-y-sm;
             }
         }
         // sass-lint:enable mixins-before-declarations
@@ -93,17 +40,29 @@
 
     // Datetimepicker
     .k-datetimepicker {
-        border-width: 0;
-        line-height: $form-line-height;
-        display: inline-block;
-        vertical-align: middle;
-
-
         .k-select {
-            padding: 0;
+            width: $line-height-em * 2;
+            padding: 0 ($padding-y * 2);
+            justify-content: space-between;
+            align-items: stretch;
 
             .k-link {
-                padding: $button-padding-y;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .k-link:last-child {
+                &::before {
+                   content: '';
+                   width: 1px;
+                   height: 100%;
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   margin-left: -$padding-y;
+                }
             }
         }
 

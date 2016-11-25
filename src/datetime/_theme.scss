@@ -46,6 +46,13 @@
     .k-timepicker {}
 
     // Datetimepicker
-    .k-datetimepicker {}
-
+    .k-datetimepicker {
+        .k-select {
+            .k-link:last-child {
+                &::before {
+                    background-color: $border-color;
+                }
+            }
+        }
+    }
 }

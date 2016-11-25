@@ -2,6 +2,9 @@
 
     // Layout
     .k-autocomplete {
+        border-width: 1px;
+        border-style: solid;
+
         @include border-radius( $border-radius );
 
         .k-input {

@@ -13,6 +13,7 @@
         line-height: $form-line-height;
         white-space: nowrap;
         vertical-align: middle;
+        border-width: 0;
     }
 
     .k-dropdown-wrap,
@@ -67,6 +68,12 @@
                 display: flex;
                 margin-right: $padding-y;
                 outline: 0;
+            }
+        }
+
+        &.k-state-hover {
+            .k-select {
+                cursor: pointer;
             }
         }
     }

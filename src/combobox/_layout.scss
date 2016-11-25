@@ -1,8 +1,6 @@
 @include exports("combobox/layout") {
 
     .k-combobox {
-        border-width: 0;
-
         .k-input {}
 
         .k-select {}
