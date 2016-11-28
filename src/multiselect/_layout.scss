@@ -2,53 +2,63 @@
 
     // Base
     .k-multiselect {
-        padding: $input-padding-y / 2;
-        line-height: $form-line-height;
-        display: inline-block;
-        vertical-align: middle;
-        box-sizing: border-box;
         position: relative;
+        display: flex;
+        line-height: normal;
+        //line-height: $form-line-height;
+        //padding: $padding-y 0;
+        white-space: nowrap;
+        vertical-align: middle;
 
         .k-multiselect-wrap {
-            margin: (-$input-padding-y / 4) 0;
+            display: flex;
+            align-items: center;
+            //margin: (-$input-padding-y / 4) 0;
+            //margin: $padding-y / 2;
+            width: 100%;
+            min-height: $form-line-height-em;
+            min-height: 28px; /* form-line-height + $padding-y * 2 */
+            //line-height: $form-line-height;
+            //padding: ($padding-y / 2) 0;
         }
 
         ul {
             vertical-align: top;
         }
         li {
-            margin: ($input-padding-y / 4) ($input-padding-x / 4);
+            margin: 0 ($input-padding-x / 4);
             float: left;
         }
 
         .k-button {
-            padding: ($button-padding-y / 4) ($button-padding-x / 2);
-            line-height: inherit;
+            padding: ($button-padding-y / 2) ($button-padding-x / 2);
+            //line-height: inherit;
             cursor: pointer;
             display: inline-flex;
             flex-direction: row;
             align-items: center;
+            line-height: inherit;
 
             .k-select {
-                margin-left: .4ex;
-                margin-right: -.4ex;
-                display: inline-flex;
-                flex-direction: row;
-                align-items: center;
+                display: flex;
+
+                .k-i-close {
+                    display: flex;
+                }
             }
         }
 
         .k-input {
-            padding: 0;
-            margin: ($input-padding-y / 2) ($input-padding-x / 4);
+            //padding: $padding-y 0;
+            //margin: ($input-padding-y / 2) ($input-padding-x / 4);
             width: auto;
             border: 0;
             outline: 0;
             color: inherit;
             background: none;
             font: inherit;
-            display: inline-block;
-            float: left;
+            //display: inline-block;
+            //float: left;
         }
 
 
@@ -59,10 +69,10 @@
             top: $padding-y-sm;
         }
         .k-multiselect-wrap > .k-i-close {
-            position: absolute;
+            //position: absolute;
             //TODO: find solution for mixed units
             //right: $padding-y-sm * 2 + 1rem;
-            top: $padding-y-sm;
+            //top: $padding-y-sm;
         }
 
 
