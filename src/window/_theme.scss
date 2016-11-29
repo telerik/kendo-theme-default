@@ -6,7 +6,6 @@ $modal-header-border-color: $border-color !default;
 @include exports("window/theme") {
 
     .k-window {
-        @include border-radius( $border-radius );
         @include box-shadow($modal-content-xs-box-shadow);
         background-color: $modal-content-bg;
     }
