@@ -5,21 +5,23 @@
         position: relative;
         display: flex;
         line-height: normal;
-        //line-height: $form-line-height;
-        //padding: $padding-y 0;
         white-space: nowrap;
         vertical-align: middle;
 
         .k-multiselect-wrap {
             display: flex;
             align-items: center;
-            //margin: (-$input-padding-y / 4) 0;
-            //margin: $padding-y / 2;
+            justify-content: flex-start;
             width: 100%;
-            min-height: $form-line-height-em;
             min-height: 28px; /* form-line-height + $padding-y * 2 */
-            //line-height: $form-line-height;
-            //padding: ($padding-y / 2) 0;
+
+            > .k-i-close {
+                display: none;
+                align-self: center;
+                margin-left: auto;
+                margin-right: $padding-y;
+                outline: 0;
+            }
         }
 
         ul {
@@ -32,7 +34,6 @@
 
         .k-button {
             padding: ($button-padding-y / 2) ($button-padding-x / 2);
-            //line-height: inherit;
             cursor: pointer;
             display: inline-flex;
             flex-direction: row;
@@ -43,22 +44,19 @@
                 display: flex;
 
                 .k-i-close {
-                    display: flex;
+                    margin-right: 0;
+                    margin-left: $padding-y * 2;
                 }
             }
         }
 
         .k-input {
-            //padding: $padding-y 0;
-            //margin: ($input-padding-y / 2) ($input-padding-x / 4);
             width: auto;
             border: 0;
             outline: 0;
             color: inherit;
             background: none;
             font: inherit;
-            //display: inline-block;
-            //float: left;
         }
 
 
@@ -68,15 +66,15 @@
             right: $padding-y-sm;
             top: $padding-y-sm;
         }
-        .k-multiselect-wrap > .k-i-close {
-            //position: absolute;
-            //TODO: find solution for mixed units
-            //right: $padding-y-sm * 2 + 1rem;
-            //top: $padding-y-sm;
+
+        &.k-state-hover,
+        &.k-state-focused {
+            .k-multiselect-wrap {
+                > .k-i-close {
+                    display: flex;
+                }
+            }
         }
-
-
-
 
         // Compact
         @include compact {
