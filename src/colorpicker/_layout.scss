@@ -1,25 +1,18 @@
 @include exports("colorpicker/layout") {
-
     .k-colorpicker {
-        position: relative;
-        width: auto;
-        border-width: 0;
-        line-height: $form-line-height;
-        white-space: nowrap;
-        display: inline-block;
-        vertical-align: middle;
+        //width: ($form-line-height-em * 2); /* Width: auto or include the padding to the width */
         overflow: visible;
 
 
         .k-picker-wrap {
-            line-height: $form-line-height;
+            //line-height: $form-line-height;
         }
 
         .k-selected-color {
-            padding: $input-padding-y;
-            width: $form-line-height * 1em;
-            height: $form-line-height;
-            box-sizing: content-box;
+            padding: $padding-y;
+            width: $form-line-height-em;
+            height: $form-line-height-em;
+            //box-sizing: content-box;
             line-height: 0;
         }
 
