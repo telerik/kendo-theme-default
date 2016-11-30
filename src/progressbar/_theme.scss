@@ -12,10 +12,6 @@ $progressbar-chunk-border: $bg-color !default;
         background-color: $progressbar-bg;
         border-color: $progressbar-border;
 
-        .k-item {
-            border-color: $progressbar-border;
-        }
-
         .k-state-selected {
             border-color: $progressbar-active-border;
 
