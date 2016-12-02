@@ -1,7 +1,6 @@
 @include exports("colorpicker/theme") {
-
-    // Theme
     .k-colorpicker {
+        border-radius: $border-radius;
 
         // Normal state
         .k-picker-wrap {
@@ -32,7 +31,9 @@
                 border-color: inherit;
             }
         }
-
     }
 
+    .k-flatcolorpicker {
+        background-color: $base-bg;
+    }
 }
