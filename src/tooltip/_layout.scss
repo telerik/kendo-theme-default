@@ -13,9 +13,6 @@ $tooltip-arrow-width: 1em !default;
         position: absolute;
         z-index: 12000;
 
-
-
-
         // Compact
         // sass-lint:disable mixins-before-declarations
         @include compact {
@@ -24,31 +21,8 @@ $tooltip-arrow-width: 1em !default;
         // sass-lint:enable mixins-before-declarations
     }
 
-
     // Callout
     .k-callout {
-        width: 0;
-        height: 0;
-        border-width: $tooltip-arrow-width;
-        border-style: solid;
-        border-color: transparent;
-        position: absolute;
+        display: none;
     }
-    .k-callout-s {
-        left: 50%;
-        bottom: -$tooltip-arrow-width * 2;
-    }
-    .k-callout-n {
-        left: 50%;
-        top: -$tooltip-arrow-width * 2;
-    }
-    .k-callout-w {
-        top: 50%;
-        left: -$tooltip-arrow-width * 2;
-    }
-    .k-callout-e {
-        top: 50%;
-        right: -$tooltip-arrow-width * 2;
-    }
-
 }
