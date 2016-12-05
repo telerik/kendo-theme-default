@@ -1,15 +1,11 @@
 // TODO: extract or remove alert color variables
 $alert-info-border: $info !default;
-$alert-info-text: lighten($text-color, 100%) !default;
 $alert-info-bg: $info !default;
 $alert-success-border: $success !default;
-$alert-success-text: lighten($text-color, 100%) !default;
 $alert-success-bg: $success !default;
 $alert-warning-border: $warning !default;
-$alert-warning-text: $text-color !default;
 $alert-warning-bg: $warning !default;
 $alert-danger-border: $error !default;
-$alert-danger-text: lighten($text-color, 100%) !default;
 $alert-danger-bg: $error !default;
 
 @include exports("notification/theme") {
@@ -20,22 +16,22 @@ $alert-danger-bg: $error !default;
 	}
 	.k-notification-info {
 		border-color: $alert-info-border;
-		color: $alert-info-text;
+		color: black-or-white($alert-info-bg, #000000, #ffffff);
 		background-color: $alert-info-bg;
 	}
 	.k-notification-success {
 		border-color: $alert-success-border;
-		color: $alert-success-text;
+		color: black-or-white($alert-success-bg, #000000, #ffffff);
 		background-color: $alert-success-bg;
 	}
 	.k-notification-warning {
 		border-color: $alert-warning-border;
-		color: $alert-warning-text;
+		color: black-or-white($alert-warning-bg, #000000, #ffffff);
 		background-color: $alert-warning-bg;
 	}
 	.k-notification-error {
 		border-color: $alert-danger-border;
-		color: $alert-danger-text;
+		color: black-or-white($alert-danger-bg, #000000, #ffffff);
 		background-color: $alert-danger-bg;
 	}
 

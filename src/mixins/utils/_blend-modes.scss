@@ -529,3 +529,9 @@
     $hsl: hsv-to-hsl($h, $s, $v);
     @return hsl(nth($hsl, 1), nth($hsl, 2), nth($hsl, 3));
 }
+
+@function black-or-white($in, $black: #000000, $white: #ffffff) {
+    $gray: red(grayscale($in));
+    $out: if($gray > 127, $black, $white);
+    @return $out;
+}

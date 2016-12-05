@@ -16,10 +16,7 @@
     .k-animation-container {
         @include border-radius( 0 0 $border-radius $border-radius );
 
-        .k-popup {
-            // position: relative;
-            color: red;
-        }
+        .k-popup {}
     }
 
 }
