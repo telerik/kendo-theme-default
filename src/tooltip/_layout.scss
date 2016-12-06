@@ -1,12 +1,11 @@
 // TODO: extract or remove tooltip padding variables
 $tooltip-padding-y: 1em !default;
 $tooltip-padding-x: .5em !default;
-$tooltip-arrow-width: 1em !default;
 
 @include exports("tooltip/layout") {
 
     .k-tooltip {
-        padding: $tooltip-padding-y $tooltip-padding-x;
+        padding: $tooltip-padding-x;
         border-width: 0;
         background-repeat: repeat-x;
         text-align: center;
