@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 //import { Dialog } from '@telerik/kendo-react-dialog';
 import { Button } from '@telerik/kendo-react-buttons';
 import { PanelBar, PanelBarItem, PanelBarContent, PanelBarNavigation } from '@telerik/kendo-react-layout';
-import '@telerik/kendo-theme-default/styles/packages/all.scss';
+import '@progress/kendo-theme-default/styles/packages/all.scss';
 import { Stateless as StatelessDropDowns } from '@telerik/kendo-react-dropdowns';
 const { DropDownList, ComboBox, List, ListContainer, ListFilter } = StatelessDropDowns;
 

@@ -1,5 +1,5 @@
 {
-  "name": "@telerik/kendo-theme-tests-react",
+  "name": "@progress/kendo-theme-tests-react",
   "version": "0.1.0",
   "description": "A theme test application with Kendo UI for React",
   "main": "src/index.js",
@@ -15,7 +15,7 @@
     "@telerik/kendo-react-dropdowns": "^0.1.0",
     "@telerik/kendo-react-inputs": "^0.1.0",
     "@telerik/kendo-react-layout": "^0.1.0",
-    "@telerik/kendo-theme-default": "^1.0.0",
+    "@progress/kendo-theme-default": "^1.0.0",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
