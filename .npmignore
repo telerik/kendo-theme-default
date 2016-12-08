@@ -1,9 +1,7 @@
 *.tgz
 .tmp/
 .travis.yml
-build
 dist/*.js
 examples
 sass-lint.yml
 tests
-webpack.config.js
