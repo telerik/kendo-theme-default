@@ -42,6 +42,16 @@
         }
     }
 
+    .k-checkbox,
+    .k-radio {
+        position: absolute;
+        display: inline;
+        opacity: 0;
+        margin: 0;
+        -webkit-appearance: none;
+        overflow: hidden;
+    }
+
     .k-radio:disabled + .k-radio-label,
     .k-checkbox:disabled + .k-checkbox-label {
         @include disabled;
