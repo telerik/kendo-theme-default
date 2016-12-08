@@ -56,34 +56,27 @@
 
 
     // Form controls
-    .k-textbox > input,
-    .k-input,
-    .k-textbox,
+
     .k-button {
         border-width: 1px;
         border-style: solid;
         font-size: inherit;
         -webkit-appearance: none;
     }
-    .k-input,
-    .k-textbox {
-        @include border-radius( $border-radius );
-    }
+
     .k-textbox:focus {
         // box-shadow: $focused-item-shadow;
     }
 
 
     // Outline
-    .k-textbox,
     .k-content {
         outline: 0;
     }
 
 
     // Box sizing
-    .k-block,
-    .k-textbox {
+    .k-block {
         box-sizing: border-box;
     }
 
@@ -132,13 +125,6 @@
     //     border-color: $widget-border;
     // }
 
-
-    // Input
-    .k-input,
-    .k-textbox {
-        @include appearance( "input" );
-        outline: none;
-    }
 
 
     // Link

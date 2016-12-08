@@ -1,0 +1,150 @@
+@include exports( 'input/layout' ) {
+
+    $checkbox-radius: 2px !default;
+    $radio-radius: 50% !default;
+    $textbox-shadow: 0 2px 2px 1px rgba(229, 229, 229, 1) !default;
+
+    .k-textbox > input,
+    .k-input,
+    .k-textbox {
+        border-width: 1px;
+        border-style: solid;
+        font-size: inherit;
+        -webkit-appearance: none;
+    }
+
+    .k-input,
+    .k-textbox {
+        @include border-radius( $border-radius );
+        font: inherit;
+        outline: none;
+
+        > input {
+            font: inherit;
+        }
+    }
+
+    .k-textbox {
+        outline: 0;
+        box-sizing: border-box;
+    }
+
+    .k-textbox:focus {
+        box-shadow: $textbox-shadow;
+    }
+
+    .k-input,
+    .k-textbox {
+        &:disabled,
+        &[disabled],
+        &.k-state-disabled {
+            @include disabled;
+        }
+    }
+
+    .k-radio:disabled + .k-radio-label,
+    .k-checkbox:disabled + .k-checkbox-label {
+        @include disabled;
+    }
+
+    .k-checkbox-label,
+    .k-radio-label {
+        position: relative;
+        padding-left: $padding-x * 3;
+        vertical-align: text-top;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: baseline;
+        line-height: $font-size-lg;
+    }
+
+    .k-checkbox-label::before,
+    .k-radio-label::before {
+        font-family: "WebComponentsIcons";
+        box-sizing: border-box;
+    }
+
+    .k-checkbox-label::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $font-size-lg;
+        height: $font-size-lg;
+        text-align: justify;
+        font-size: $font-size;
+        line-height: $font-size;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: $checkbox-radius;
+    }
+
+    .k-checkbox:indeterminate + .k-checkbox-label::after {
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        width: $font-size-lg / 2;
+        height: $font-size-lg / 2;
+        top: $font-size-lg / 4;
+        left: $font-size-lg / 4;
+    }
+
+    .k-checkbox:indeterminate:disabled + .k-checkbox-label::after {
+        opacity: .5;
+    }
+
+    .k-checkbox:disabled + .k-checkbox-label,
+    .k-checkbox:checked:disabled + .k-checkbox-label {
+        cursor: default;
+    }
+
+    .k-checkbox:checked + .k-checkbox-label::before {
+        content: "\e118";
+    }
+
+    .k-checkbox:checked:disabled + .k-checkbox-label::before {
+        content: "\e118";
+        opacity: .5;
+    }
+
+    .k-checkbox:disabled + .k-checkbox-label:hover::before {
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    .k-radio-label::before {
+        content: "";
+        width: $font-size-lg;
+        height: $font-size-lg;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: $radio-radius;
+        border-width: 1px;
+        border-style: solid;
+        padding: 0;
+    }
+
+    .k-radio:checked + .k-radio-label::after {
+        content: "";
+        position: absolute;
+        width: $font-size-lg / 2;
+        height: $font-size-lg / 2;
+        top: $font-size-lg / 4;
+        left: $font-size-lg / 4;
+        border-radius: 50%;
+    }
+
+    .k-radio:disabled + .k-radio-label {
+        cursor: auto;
+    }
+
+    .k-radio:disabled + .k-radio-label,
+    .k-radio:checked:disabled + .k-radio-label {
+        cursor: default;
+    }
+
+    .k-radio:checked:disabled + .k-radio-label::before {
+        opacity: .5;
+    }
+}
