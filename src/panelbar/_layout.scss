@@ -67,11 +67,12 @@
             right: $header-padding-x / 2;
         }
 
-        // TODO: add k-image k-sprite
-        // k-link > .k-image,
-        // k-link > .k-sprite {}
-
-
+        .k-link > .k-image,
+        .k-link > .k-sprite {
+            vertical-align: middle;
+            float: left;
+            margin-right: 5px;
+        }
 
 
         // Compact
