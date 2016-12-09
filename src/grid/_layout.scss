@@ -185,6 +185,11 @@ $group-indicator-padding: 6px !default;
 		position: relative;
 		z-index: 1;
 	}
+
+    .k-grid-pager {
+        border-width: 1px 0 0;
+    }
+
 	/* Editing */
 	.k-edit-cell>.k-textbox,
 	.k-edit-cell>.k-widget,
