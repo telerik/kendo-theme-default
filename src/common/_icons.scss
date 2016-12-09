@@ -70,10 +70,8 @@
     .k-i-arrow-w:before {content:"\e007";}
     .k-i-arrow-end-up:before {content:"\e008";}
     .k-i-arrow-end-right:before {content:"\e009";}
-    .k-i-seek-e:before {content:"\e009";}
     .k-i-arrow-end-down:before {content:"\e00a";}
     .k-i-arrow-end-left:before {content:"\e00b";}
-    .k-i-seek-w:before {content:"\e00b";}
     .k-i-arrow-double-60-up:before {content:"\e00c";}
     .k-i-arrow-seek-up:before {content:"\e00c";}
     .k-i-arrow-double-60-right:before {content:"\e00d";}
@@ -588,19 +586,9 @@
     .k-i-sln:before {content:"\e920";}
     .k-i-cloud:before {content:"\e921";}
     .k-i-file-horizontal:before {content:"\e922";}
+
+    // backwards compatibility
+    .k-i-seek-e:before {content:"\e009";}
+    .k-i-seek-w:before {content:"\e00b";}
     // sass-lint:enable single-line-per-selector
-
-
-    // Fix those
-    .k-i-close,
-    .k-i-create-link,
-    .k-i-unlink,
-    .k-i-add,
-    .k-i-denied,
-    .k-i-group-delete,
-    .k-i-cancel,
-    .k-si-close {
-        background-color: red;
-    }
-
 }
