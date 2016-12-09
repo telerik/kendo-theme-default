@@ -2,9 +2,20 @@
 $modal-title-padding: 1em !default;
 $modal-title-line-height: 1.2em !default;
 $modal-inner-padding: .5em !default;
-
+$modal-overlay-color: #000 !default;
 
 @include exports("window/layout") {
+
+    .k-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: $modal-overlay-color;
+        opacity: .5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+    }
 
     .k-window {
         @include border-radius( $border-radius );
@@ -16,8 +27,11 @@ $modal-inner-padding: .5em !default;
         position: absolute;
         z-index: 10001;
 
-
-
+        // overlay during dragging
+        .k-overlay {
+            position: absolute;
+            opacity: 0;
+        }
 
         // Compact
         // sass-lint:disable mixins-before-declarations
@@ -81,17 +95,4 @@ $modal-inner-padding: .5em !default;
         position: relative;
         flex: 1;
     }
-
-    .k-overlay {
-        width: 100%;
-        height: 100%;
-        // TODO: breaks lint
-        // background-color: #000;
-        opacity: .5;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10001;
-    }
-
 }
