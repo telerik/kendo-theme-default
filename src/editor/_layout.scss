@@ -18,6 +18,11 @@
             display: block;
         }
     }
+
+    table.k-editor {
+        width: 100%;
+    }
+
     .k-editor-inline {
         border-width: 2px;
         padding: $padding-y-sm $padding-x-sm;
