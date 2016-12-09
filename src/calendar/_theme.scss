@@ -38,6 +38,10 @@
         .k-content td {}
         .k-content .k-today {
             color: $accent;
+
+            &.k-state-selected {
+                color: $accent-contrast;
+            }
         }
         .k-content .k-weekend {
             background: darken( $widget-bg, 5 );
