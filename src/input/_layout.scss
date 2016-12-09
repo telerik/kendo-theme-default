@@ -1,6 +1,6 @@
 @include exports( 'input/layout' ) {
 
-    $checkbox-radius: 2px !default;
+    $checkbox-radius: $border-radius !default;
     $radio-radius: 50% !default;
     $textbox-shadow: 0 2px 2px 1px rgba(229, 229, 229, 1) !default;
 
@@ -60,12 +60,12 @@
     .k-checkbox-label,
     .k-radio-label {
         position: relative;
-        padding-left: $padding-x * 3;
+        padding-left: $spacer-x * 1.5;
         vertical-align: text-top;
         cursor: pointer;
         display: inline-flex;
         align-items: baseline;
-        line-height: $font-size-lg;
+        line-height: $line-height * .65;
     }
 
     .k-checkbox-label::before,
@@ -79,24 +79,26 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: $font-size-lg;
-        height: $font-size-lg;
-        text-align: justify;
-        font-size: $font-size;
-        line-height: $font-size;
+        width: $icon-size;
+        height: $icon-size;
+        text-align: center;
+        font-size: $font-size-sm + 2px;
+        line-height: $line-height * .8;
         border-width: 1px;
         border-style: solid;
         border-radius: $checkbox-radius;
+        display: inline-flex;
+        align-items: center;
     }
 
     .k-checkbox:indeterminate + .k-checkbox-label::after {
         box-sizing: border-box;
         content: "";
         position: absolute;
-        width: $font-size-lg / 2;
-        height: $font-size-lg / 2;
-        top: $font-size-lg / 4;
-        left: $font-size-lg / 4;
+        width: $icon-size / 2;
+        height: $icon-size / 2;
+        top: $icon-size / 4;
+        left: $icon-size / 4;
     }
 
     .k-checkbox:indeterminate:disabled + .k-checkbox-label::after {
@@ -124,8 +126,8 @@
 
     .k-radio-label::before {
         content: "";
-        width: $font-size-lg;
-        height: $font-size-lg;
+        width: $icon-size;
+        height: $icon-size;
         position: absolute;
         left: 0;
         top: 0;
@@ -138,10 +140,10 @@
     .k-radio:checked + .k-radio-label::after {
         content: "";
         position: absolute;
-        width: $font-size-lg / 2;
-        height: $font-size-lg / 2;
-        top: $font-size-lg / 4;
-        left: $font-size-lg / 4;
+        width: $icon-size / 2;
+        height: $icon-size / 2;
+        top: $icon-size / 4;
+        left: $icon-size / 4;
         border-radius: 50%;
     }
 
