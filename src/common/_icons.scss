@@ -589,5 +589,17 @@
     // backwards compatibility
     .k-i-seek-e::before {content:"\e009";}
     .k-i-seek-w::before {content:"\e00b";}
+
+    .k-sprite {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+        -ms-high-contrast-adjust: none;
+    }
     // sass-lint:enable single-line-per-selector
 }
