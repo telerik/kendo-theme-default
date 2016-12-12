@@ -8,9 +8,17 @@ $modal-header-border-color: $border-color !default;
     .k-window {
         @include box-shadow($modal-content-xs-box-shadow);
         background-color: $modal-content-bg;
+
+        .k-window-action {
+        	opacity: 1;
+
+        	.k-icon:hover {
+        		color: $accent-contrast;
+        	}
+        }
     }
+
     .k-window-titlebar {
         border-color: $modal-header-border-color;
     }
-
 }
