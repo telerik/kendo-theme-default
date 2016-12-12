@@ -1,15 +1,9 @@
 $switch-on-color: $accent !default;
-$switch-off-color: darken($base-bg, 44%) !default;
-// $switch-background: $normal-background !default;
-$switch-border-color: rgba(0, 0, 0, .08) !default;
+$switch-off-color: $text-color !default;
+$switch-border-color: $border-color !default;
 $switch-border-radius: ($switch-size / 2) !default;
-$switch-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, .06) !default;
+$switch-hover-border-color: $hover-border !default;
 $switch-handle-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06) !default;
-$switch-handle-gradient: darken($widget-bg, 4%), darken($widget-bg, 5%) !default;
-$switch-hover-border-color: rgba(0, 0, 0, .15) !default;
-$switch-hover-on-handle-gradient: adjust-hue($accent, 7), adjust-hue($accent, 4) !default;
-$switch-hover-on-handle-border-color: adjust-hue($accent, 3) !default;
-$switch-hover-off-handle-gradient: darken($widget-bg, 7%), darken($widget-bg, 9%) !default;
 $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 
 @include exports('switch/theme') {
@@ -29,10 +23,6 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
         }
     }
 
-    .k-switch-container {
-        box-shadow: $switch-box-shadow;
-    }
-
     .k-switch-wrapper {
         background-color: $widget-bg;
     }
@@ -43,29 +33,23 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
     }
 
     .k-switch-handle {
-        background-color: $widget-bg;
-        background-image: linear-gradient($switch-handle-gradient);
-        border-color: $switch-border-color;
+        @include appearance( button );
         box-shadow: $switch-handle-box-shadow;
         border-radius: 50%;
     }
 
-    .k-switch-on,
-    .k-switch-off {
-        color: $widget-bg;
-    }
-
     .k-switch-on {
         .k-switch-handle {
-            background: $accent;
-            border-color: $accent;
+            @include appearance( primary-button );
+
+            &:active {
+                @include appearance( active-primary-button );
+            }
         }
 
         &:hover {
             .k-switch-handle {
-                background-color: $accent;
-                background-image: linear-gradient($switch-hover-on-handle-gradient);
-                border-color: $switch-hover-on-handle-border-color;
+                @include appearance( hovered-primary-button );
             }
         }
     }
@@ -73,15 +57,12 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
     .k-switch-off {
         &:hover {
             .k-switch-handle {
-                background-image: linear-gradient($switch-hover-off-handle-gradient);
-                border-color: $switch-hover-border-color;
+                @include appearance( hovered-button );
             }
         }
 
-        &:focus {
-            .k-switch-handle {
-                background-image: linear-gradient($switch-handle-gradient);
-            }
+        &:action {
+            @include fill( $button-text, $button-bg, $button-border, #{to top, $button-gradient} );
         }
     }
 
@@ -95,14 +76,12 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
     }
 
     .k-switch {
-        &:focus {
+        &:active {
             box-shadow: $switch-focus-box-shadow;
-            outline: none;
+        }
 
-            .k-switch-container,
-            .k-switch-wrapper {
-                border-color: $switch-hover-border-color;
-            }
+        &:focus {
+            outline: none;
         }
 
         &.k-state-disabled {
@@ -116,11 +95,6 @@ $switch-focus-box-shadow: 0 0 0 2px rgba(0, 0, 0, .06) !default;
 
             &:focus {
                 box-shadow: none;
-            }
-
-            .k-switch-handle {
-                background-image: linear-gradient($switch-handle-gradient);
-                border-color: $switch-border-color;
             }
 
             &.k-switch-on {

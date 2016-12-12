@@ -1,4 +1,4 @@
-$switch-size: 2.5em !default;
+$switch-size: 3em !default;
 $switch-handle-size: (.8 * $switch-size) !default;
 
 @include exports('switch/layout') {
@@ -6,8 +6,9 @@ $switch-handle-size: (.8 * $switch-size) !default;
 
     .k-switch {
         cursor: pointer;
+        border: 0;
         display: inline-block;
-        font-size: .75em;
+        font-size: .714 * $font-size;
         overflow: hidden;
         position: relative;
         text-align: left;
@@ -52,21 +53,21 @@ $switch-handle-size: (.8 * $switch-size) !default;
         width: $switch-handle-size;
         height: $switch-handle-size;
         display: inline-block;
-        background-color: currentcolor;
-        margin: 0 6px 0 2px;
-        border: $switch-border-width solid transparent;
+        margin: 0 6px 0 3px;
+        border-width: $switch-border-width;
+        border-style: solid;
         background-clip: padding-box;
-        box-shadow: 0 1px 0 1px currentcolor, 0 -1px 0 1px currentcolor;
         vertical-align: middle;
     }
 
     .k-switch-label-off {
         left: $switch-handle-size;
-        margin-left: 2px;
+        margin-left: $padding-y - 1px;
     }
 
     .k-switch-label-on {
         left: -$switch-handle-size;
+        margin-left: -$padding-y / 2;
     }
 
     .k-switch-label-on,
