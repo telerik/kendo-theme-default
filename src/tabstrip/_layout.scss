@@ -101,11 +101,6 @@ $nav-item-margin: 2px;
 
     // Tabstrip variants
     .k-tabstrip-top {
-
-        .k-tabstrip-items {
-            border-bottom-width: 1px;
-        }
-
         .k-content {
            @include border-radius( 0 0 $border-radius $border-radius);
         }
