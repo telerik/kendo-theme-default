@@ -41,8 +41,10 @@
     // Datetimepicker
     .k-datetimepicker {
         .k-select {
-            width: $line-height-em * 2;
-            padding: 0 ($padding-y * 2);
+            //width: $line-height-em * 2;
+            width: 57px; /* (4*$padding-y) + 1px(separator) + 32px  (2*icons-width) */
+            box-sizing: border-box;
+            padding: 0 $padding-y-lg;
             justify-content: space-between;
             align-items: stretch;
 
@@ -61,7 +63,7 @@
                    position: absolute;
                    top: 0;
                    left: 0;
-                   margin-left: -$padding-y;
+                   margin-left: -7px /* -($padding-y-lg + 1px); */
                 }
             }
         }
