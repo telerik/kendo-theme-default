@@ -55,6 +55,11 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
 
     }
 
+    //DropDown Button
+    kendo-dropdownbutton.k-state-focused > .k-button,
+    kendo-dropdownbutton:focus > .k-button {
+        box-shadow: $button-focused-box-shadow;
+    }
 
     // Button group
     .k-button-group {

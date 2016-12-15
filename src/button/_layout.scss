@@ -113,6 +113,11 @@
         }
     }
 
+    //DropDown Button
+    kendo-dropdownbutton.k-state-focused,
+    kendo-dropdownbutton:focus {
+        outline: 0;
+    }
 
     // Bare button
     .k-button-bare {
