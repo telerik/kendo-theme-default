@@ -1,6 +1,11 @@
 @include exports("combobox/layout") {
 
     .k-combobox {
+        .k-searchbar {
+            flex: 1;
+            display: flex;
+        }
+
         .k-input {}
 
         .k-select {}
