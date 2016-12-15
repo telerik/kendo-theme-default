@@ -3,6 +3,7 @@
     $checkbox-radius: $border-radius !default;
     $radio-radius: 50% !default;
     $textbox-shadow: 0 2px 2px 1px rgba(0, 0, 0, .06) !default;
+    $fieldset-margin: 30px;
 
     .k-textbox > input,
     .k-input,
@@ -162,7 +163,7 @@
     }
 
     fieldset {
-        margin: 30px;
+        margin: $fieldset-margin;
         border-width: 1px 0 0;
         border-style: solid;
         padding: 25px 0 0;
