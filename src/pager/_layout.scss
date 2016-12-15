@@ -1,6 +1,6 @@
 @include exports("pager/layout") {
     .k-pager-wrap {
-        padding: $padding-y;
+        padding: $padding-x;
         border-width: 1px;
         line-height: $form-line-height;
         display: flex;
@@ -8,7 +8,7 @@
 
         .k-link,
         .k-state-selected {
-            padding: $button-padding-y / 2;
+            padding: $button-padding-y;
             width: $form-line-height-em;
             height: $form-line-height-em;
             box-sizing: content-box;
@@ -38,9 +38,6 @@
             li {
                 display: inline-block;
             }
-            li + li {
-                margin-left: -1px;
-            }
 
             .k-current-page {
                 display: none;
@@ -52,20 +49,19 @@
 
         .k-label {
             margin: 0 $spacer-x;
-            display: inline-block;
+            display: flex;
+            align-items: center;
         }
         .k-pager-input {
-
             .k-textbox {
                 margin: 0 1ex;
                 width: 3em;
             }
         }
         .k-pager-sizes {
-            margin: 0 ( 2 * $spacer-x );
-
             .k-dropdown {
-                margin-right: 1ex;
+                width: 5.2em;
+                margin-right: $padding-x;
             }
         }
         .k-pager-refresh {
