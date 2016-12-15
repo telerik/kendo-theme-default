@@ -3,7 +3,9 @@
     .k-dropdown {
 		overflow: visible;
 
-        .k-input {}
+        .k-input {
+            padding: $padding-y 0 $padding-y $padding-x;
+        }
 
         .k-select {
             border-width: 0;
@@ -22,14 +24,6 @@
 
         .k-select {
 			border-width: 0;
-
-			.k-icon {
-				line-height: $line-height-em;
-				width: 100%;
-				padding: 0 $padding-y;
-				margin-left: -$padding-y;
-				margin-right: -$padding-y;
-			}
 		}
     }
 }
