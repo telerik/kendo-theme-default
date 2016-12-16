@@ -33,7 +33,8 @@
         }
 
         .k-button {
-            padding: ($button-padding-y / 2) ($button-padding-x / 2);
+            padding: ($padding-y-lg / 2) ($button-padding-x / 2);
+            margin: 1px;
             cursor: pointer;
             display: inline-flex;
             flex-direction: row;
