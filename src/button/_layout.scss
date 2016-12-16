@@ -111,6 +111,10 @@
                 padding: $button-padding-y-sm;
             }
         }
+
+        .k-widget {
+            border: 0;
+        }
     }
 
     //DropDown Button
@@ -159,6 +163,10 @@
         .k-group-start.k-group-end,
         .k-button:first-child:last-child {
             @include border-radius( $border-radius );
+        }
+
+        .k-button-icon {
+            height: auto;
         }
     }
 
