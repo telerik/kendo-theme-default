@@ -12,9 +12,7 @@ $icon-size: 16px !default;
     src: embed-url('KendoUIGlyphs.woff') format('woff');
 }
 
-.k-icon,
-.k-grouping-dropclue
- {
+.k-icon {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: 'KendoUIGlyphs';

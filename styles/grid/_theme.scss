@@ -65,6 +65,12 @@ $pager-selected-hover-background: blend-multiply($accent, darken($background, 8%
         .k-grouping-row {
             background-color: $grid-grouping-row-background;
         }
+
+        .k-grouping-dropclue {
+            &::before {
+                border-color: $grid-color transparent transparent;
+            }
+        }
     }
 
     /* Pager */
