@@ -52,16 +52,16 @@
 
 	.k-ghost-splitbar-horizontal,
 	.k-splitbar-horizontal {
-		width: 5px;
-		border-width: 0 1px;
+		width: 8px;
+		border-width: 0;
 		background-repeat: repeat-y;
 		flex-direction: column;
 		top: 0;
 	}
 	.k-ghost-splitbar-vertical,
 	.k-splitbar-vertical {
-		height: 5px;
-		border-width: 1px 0;
+		height: 8px;
+		border-width: 0;
 		background-repeat: repeat-x;
 		flex-direction: row;
 		left: 0;
@@ -74,4 +74,76 @@
 	// Icons
 	.k-splitbar .k-icon {}
 
+	.k-splitbar.k-splitbar-horizontal.k-splitbar-draggable-horizontal,
+	.k-splitbar.k-splitbar-vertical.k-splitbar-draggable-vertical {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.k-icon {
+			display: block;
+		}
+	}
+	.k-splitbar.k-splitbar-horizontal.k-splitbar-draggable-horizontal {
+		flex-direction: column;
+	}
+
+	.k-splitbar.k-splitbar-vertical.k-splitbar-draggable-vertical {
+		flex-direction: row;
+	}
+
+	.k-splitbar-draggable-horizontal .k-resize-handle {
+		position: static;
+		width: 3px;
+		height: 16px;
+		margin: 0;
+	}
+
+	.k-splitbar.k-splitbar-vertical.k-splitbar-draggable-vertical {
+		.k-i-arrow-60-down,
+        .k-i-arrow-60-up {
+			font-size: 10px;
+		}
+	}
+
+	.k-splitbar-horizontal.k-splitbar-draggable-horizontal .k-i-arrow-60-left {
+		margin-bottom: 10px;
+	}
+
+	.k-splitbar-horizontal.k-splitbar-draggable-horizontal .k-i-arrow-60-right {
+		margin-top: 10px;
+	}
+
+	.k-splitbar-vertical.k-splitbar-draggable-vertical {
+		.k-i-arrow-60-left,
+		.k-i-arrow-60-right {
+			font-size: 10px;
+		}
+	}
+
+	.k-splitbar-vertical.k-splitbar-draggable-vertical .k-i-arrow-60-up {
+		margin-right: 10px;
+	}
+
+	.k-splitbar-vertical.k-splitbar-draggable-vertical .k-i-arrow-60-down {
+		margin-left: 10px;
+	}
+
+	.k-splitbar-draggable-vertical .k-resize-handle {
+		position: static;
+		width: 16px;
+		height: 3px;
+	}
+
+	.k-icon.k-resize-handle.k-i-hbar::before {
+		content: "";
+	}
+
+		.k-splitter {
+		.k-resize-handle,
+		.k-icon.k-collapse-prev,
+		.k-icon.k-collapse-next {
+			opacity: .4;
+		}
+	}
 }

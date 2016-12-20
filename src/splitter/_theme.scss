@@ -1,7 +1,15 @@
 @include exports("splitter/theme") {
+	$splitter-text: $widget-text;
+	.k-splitter {
+		.k-resize-handle {
+			background-color: $splitter-text;
+		}
 
-	.k-splitter {}
-
+		.k-icon.k-collapse-prev,
+		.k-icon.k-collapse-next {
+			color: $splitter-text;
+		}
+	}
 
 	// Splitbar
 	.k-splitbar {
@@ -14,5 +22,4 @@
 	.k-ghost-splitbar {
 		@include appearance( active-button );
 	}
-
 }
