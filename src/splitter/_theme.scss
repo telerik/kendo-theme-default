@@ -16,6 +16,19 @@
     .k-splitbar {
         @include appearance( button );
 
+        &:active,
+        &.k-state-focused {
+            @include appearance( pressed-button );
+
+            .k-icon {
+                color: $button-pressed-text;
+            }
+
+            .k-resize-handle {
+                background-color: $button-pressed-text;
+            }
+        }
+
         .k-icon {
             color: $button-text;
         }
@@ -28,19 +41,6 @@
     .k-splitbar-horizontal-hover,
     .k-splitbar-vertical-hover {
         @include appearance( hovered-button );
-    }
-
-    .k-splitbar:active,
-    .k-splitbar:active {
-        @include appearance( pressed-button );
-
-        .k-icon {
-            color: $button-pressed-text;
-        }
-
-        .k-resize-handle {
-            background-color: $button-pressed-text;
-        }
     }
 
     .k-ghost-splitbar {
