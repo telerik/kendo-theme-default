@@ -3,10 +3,10 @@
 
 @include exports('progressbar/theme') {
 
-$progressbar-bg: $base-bg !default;
-$progressbar-border: rgba(0, 0, 0, .08) !default;
-$progressbar-active-border: darken($accent, 4%) !default;
-$progressbar-chunk-border: $bg-color !default;
+    $progressbar-bg: $base-bg !default;
+    $progressbar-border: rgba(0, 0, 0, .08) !default;
+    $progressbar-active-border: darken($accent, 4%) !default;
+    $progressbar-chunk-border: $bg-color !default;
 
     .k-progressbar {
         background-color: $progressbar-bg;

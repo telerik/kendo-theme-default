@@ -95,13 +95,13 @@
             margin-left: -1px;
             border-width: 1px 0 1px 1px;
 
-                &.k-first {
-                    margin-left: 0;
-                }
+            &.k-first {
+                margin-left: 0;
+            }
 
-                &.k-last {
-                    border-right-width: 0;
-                }
+            &.k-last {
+                border-right-width: 0;
+            }
         }
         .k-item + .k-item {
             border-left-width: 1px;

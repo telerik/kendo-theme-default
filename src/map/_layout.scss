@@ -1,7 +1,7 @@
 @include exports("map/layout") {
 
-$map-attribution-bg: rgba( $panel-bg, .8) !default;
-$map-marker-bg: #008000 !default;
+    $map-attribution-bg: rgba( $panel-bg, .8) !default;
+    $map-marker-bg: #008000 !default;
 
     // Layout
     .k-map {

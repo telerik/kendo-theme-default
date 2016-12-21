@@ -2,21 +2,21 @@
 
 @include exports('example/theme') {
 
-$example-background-color: saturate($base-bg, 4%) !default;
-$example-border-color: darken($base-bg, 8%) !default;
-$example-active-background-color: desaturate($widget-bg, 1%) !default;
-$example-active-border-color: darken($base-bg, 29%) !default;
+    $example-background-color: saturate($base-bg, 4%) !default;
+    $example-border-color: darken($base-bg, 8%) !default;
+    $example-active-background-color: desaturate($widget-bg, 1%) !default;
+    $example-active-border-color: darken($base-bg, 29%) !default;
 
-.k-example {
-    &.k-header {
-        background-color: $example-background-color;
-        border-color: $example-border-color;
-    }
+    .k-example {
+        &.k-header {
+            background-color: $example-background-color;
+            border-color: $example-border-color;
+        }
 
-    > .k-state-active,
-    .k-example-items .k-state-active {
-        background-color: $example-active-background-color;
-        border-color: $example-active-border-color;
+        > .k-state-active,
+        .k-example-items .k-state-active {
+            background-color: $example-active-background-color;
+            border-color: $example-active-border-color;
+        }
     }
-}
 }
