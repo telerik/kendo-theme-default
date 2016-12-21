@@ -54,9 +54,9 @@
         // Button group
         .k-button-group {}
         .k-button-group .k-group-start,
-        .k-button-group .k-button::first-child,
+        .k-button-group .k-button:first-child,
         .k-button-group .k-group-end,
-        .k-button-group .k-button::last-child {
+        .k-button-group .k-button:last-child {
             border-radius: 0;
         }
 
