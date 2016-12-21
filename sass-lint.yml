@@ -10,7 +10,10 @@ rules:
     no-ids: 2
     property-sort-order: 0
 
-    indentation: 0
+    indentation:
+        - 2
+        -
+          size: 4
 
     force-element-nesting: 0
     force-pseudo-nesting: 0
@@ -28,6 +31,7 @@ rules:
 
     final-newline: 0
     empty-line-between-blocks: 0
+    placeholder-in-extend: 0
     quotes: 0
     space-between-parens: 0
     no-empty-rulesets: 0
