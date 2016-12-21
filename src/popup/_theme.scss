@@ -22,10 +22,10 @@ $popup-text: $normal-text-color !default;
 		background: $text-color;
 		color: $bg-color;
 	}
-	.k-popup .k-list .k-item > .k-group:before {
+	.k-popup .k-list .k-item > .k-group::before {
 		border-color: $text-color $text-color transparent transparent;
 	}
-	.k-group-header+div > .k-list > .k-item.k-first:before {
+	.k-group-header+div > .k-list > .k-item.k-first::before {
 		border-color: $border-color;
 	}
 }
@@ -54,6 +54,10 @@ $popup-text: $normal-text-color !default;
         &.k-state-selected {
             box-shadow: $list-item-selected-focused-box-shadow;
         }
+    }
+
+    .k-list .k-item:active {
+        @include appearance( selected-list-item );
     }
 
     .k-list-optionlabel {
