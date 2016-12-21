@@ -61,13 +61,9 @@
     .k-i-collapse-nw::before {content: "\e003";}
     .k-i-resize-new::before {content: "\e003";}
     .k-i-arrow-60-up::before {content: "\e004";}
-    .k-i-arrow-n::before {content: "\e004";}
     .k-i-arrow-60-right::before {content: "\e005";}
-    .k-i-arrow-e::before {content: "\e005";}
     .k-i-arrow-60-down::before {content: "\e006";}
-    .k-i-arorw-s::before {content: "\e006";}
     .k-i-arrow-60-left::before {content: "\e007";}
-    .k-i-arrow-w::before {content: "\e007";}
     .k-i-arrow-end-up::before {content: "\e008";}
     .k-i-arrow-end-right::before {content: "\e009";}
     .k-i-arrow-end-down::before {content: "\e00a";}
@@ -589,9 +585,12 @@
 
     // backwards compatibility
     .k-i-arrow-s::before { @extend .k-i-arrow-60-down; }
-    .k-i-seek-n::before { @extend .k-i-font-family; }
+    .k-i-arrow-e::before { @extend .k-i-arrow-60-right; }
+    .k-i-arrow-n::before { @extend .k-i-arrow-60-up; }
+    .k-i-arrow-w::before { @extend .k-i-arrow-60-left; }
+    .k-i-seek-n::before { @extend .k-i-arrow-seek-up; }
     .k-i-seek-e::before { @extend .k-i-arrow-end-right; }
-    .k-i-seek-s::before { @extend .k-i-convert-lowercase; }
+    .k-i-seek-s::before { @extend .k-i-arrow-seek-down; }
     .k-i-seek-w::before { @extend .k-i-arrow-end-left; }
     .k-i-sarrow-n::before { @extend .k-i-strikethrough; }
     .k-i-sarrow-e::before { @extend .k-i-sub-script; }
@@ -611,9 +610,9 @@
     .k-i-sminus::before { @extend .k-i-table-align-top-left; }
     .k-i-refresh-clear::before { @extend .k-i-table-align-middle-center; }
     .k-i-restore::before { @extend .k-i-table-align-middle-center; }
-    .k-i-maximize::before { @extend .k-i-table-align-bottom-left; }
-    .k-i-minimize::before { @extend .k-i-table-align-bottom-center; }
-    .k-i-insert-image::before { @extend .k-i-border-right; }
+    .k-i-maximize::before { @extend .k-i-window-maximize; }
+    .k-i-minimize::before { @extend .k-i-window-minimize; }
+    .k-i-insert-image::before { @extend .k-i-image-insert; }
     .k-i-insert-file::before { @extend .k-i-borders-show-hide; }
     .k-i-pdfa::before { @extend .k-i-spell-checker; }
     .k-i-xlsa::before { @extend .k-i-button; }
@@ -632,11 +631,11 @@
     .k-i-superscript::before { @extend .k-i-flash-manager; }
     .k-i-increase-decimal::before { @extend .k-i-cut; }
     .k-i-decrease-decimal::before { @extend .k-i-paste; }
-    .k-i-justify-left::before { @extend .k-i-paste-as-html; }
-    .k-i-justify-center::before { @extend .k-i-paste-from-word; }
-    .k-i-justify-right::before { @extend .k-i-paste-from-word-strip-file; }
-    .k-i-justify-full::before { @extend .k-i-paste-html; }
-    .k-i-justify-clear::before { @extend .k-i-paste-markdown; }
+    .k-i-justify-left::before { @extend .k-i-align-left; }
+    .k-i-justify-center::before { @extend .k-i-align-center; }
+    .k-i-justify-right::before { @extend .k-i-align-right; }
+    .k-i-justify-full::before { @extend .k-i-align-justify; }
+    .k-i-justify-clear::before { @extend .k-i-align-remove; }
     .k-i-insert-n::before { @extend .k-i-strip-css-format; }
     .k-i-insert-m::before { @extend .k-i-strip-font-elements; }
     .k-i-insert-s::before { @extend .k-i-strip-span-elements; }
