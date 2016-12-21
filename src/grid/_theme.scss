@@ -1,44 +1,44 @@
 @import './layout';
 
 @include exports('grid/theme') {
-	// New
-	$grid-chrome-text: $header-text !default;
-	$grid-chrome-bg: $header-bg !default;
-	$grid-chrome-border: $border-color !default;
-	$grid-alt-bg: $grid-chrome-bg !default;
+    // New
+    $grid-chrome-text: $header-text !default;
+    $grid-chrome-bg: $header-bg !default;
+    $grid-chrome-border: $border-color !default;
+    $grid-alt-bg: $grid-chrome-bg !default;
 
-	$grid-selected-text: $selected-text !default;
-	$grid-selected-bg: $selected-bg !default;
-	$grid-grouping-row-text: $text-color !default;
-	$grid-grouping-row-bg: darken($base-bg, 1%) !default;
+    $grid-selected-text: $selected-text !default;
+    $grid-selected-bg: $selected-bg !default;
+    $grid-grouping-row-text: $text-color !default;
+    $grid-grouping-row-bg: darken($base-bg, 1%) !default;
 
     .k-grid-header,
-	.k-header,
+    .k-header,
     .k-grid-header-wrap,
-	.k-grouping-header,
-	.k-grouping-header .k-group-indicator,
+    .k-grouping-header,
+    .k-grouping-header .k-group-indicator,
     .k-grid td,
     .k-grid-footer,
     .k-grid-footer-wrap,
     .k-grid-content-locked,
     .k-grid-footer-locked,
     .k-grid-header-locked,
-	.k-filter-row > th {
+    .k-filter-row > th {
         border-color: $grid-chrome-border;
     }
 
     .k-grid-header,
-	.k-grouping-header,
+    .k-grouping-header,
     .k-grid-footer {
-		color: $grid-chrome-text;
+        color: $grid-chrome-text;
         background-color: $grid-chrome-bg;
     }
-	.k-grid-footer td,
-	.k-group-footer td,
-	.k-grouping-row td {
-		color: $grid-grouping-row-text;
-		background-color: $grid-grouping-row-bg;
-	}
+    .k-grid-footer td,
+    .k-group-footer td,
+    .k-grouping-row td {
+        color: $grid-grouping-row-text;
+        background-color: $grid-grouping-row-bg;
+    }
 
     .k-grid-footer td,
     .k-group-footer td,
@@ -52,17 +52,17 @@
         }
 
         tr.k-state-selected {
-			color: $grid-selected-text;
-			background-color: $grid-selected-bg;
+            color: $grid-selected-text;
+            background-color: $grid-selected-bg;
 
             .k-hierarchy-cell > .k-icon {
                 color: $selected-text;
             }
         }
-		.k-grid-filter,
-		.k-header-column-menu {
-			color: $grid-chrome-text;
-		}
+        .k-grid-filter,
+        .k-header-column-menu {
+            color: $grid-chrome-text;
+        }
     }
 
     /* Pager */

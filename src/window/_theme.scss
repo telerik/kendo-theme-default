@@ -10,11 +10,11 @@ $modal-header-border-color: $border-color !default;
         background-color: $modal-content-bg;
 
         .k-window-action {
-        	opacity: 1;
+            opacity: 1;
 
-        	.k-icon:hover {
-        		color: $accent-contrast;
-        	}
+            .k-icon:hover {
+                color: $accent-contrast;
+            }
         }
     }
 

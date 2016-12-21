@@ -3,9 +3,9 @@ $validator-warning-text: darken($text-color, 40%) !default;
 $validator-warning-border: $validator-warning-bg !default;
 
 @include exports("validator/theme") {
-	.k-tooltip-validation {
-		border-color: $validator-warning-border;
-		color: $validator-warning-text;
-		background-color: $validator-warning-bg;
-	}
+    .k-tooltip-validation {
+        border-color: $validator-warning-border;
+        color: $validator-warning-text;
+        background-color: $validator-warning-bg;
+    }
 }

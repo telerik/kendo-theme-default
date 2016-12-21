@@ -1,5 +1,5 @@
 @include exports( "common/layout" ) {
-	$link-color: $text-color !default;
+    $link-color: $text-color !default;
 
     // Layout
     .k-reset {
@@ -48,9 +48,9 @@
 
 
     // Links
-	.k-link {
-		color: $link-color;
-	}
+    .k-link {
+        color: $link-color;
+    }
     .k-link,
     .k-link:hover {
         text-decoration: none;

@@ -4,7 +4,7 @@
 $group-indicator-padding: 6px !default;
 
 @include exports('grid/layout') {
-	$header-padding: $spacer !default;
+    $header-padding: $spacer !default;
 
     .k-grid {
         display: block;
@@ -25,7 +25,7 @@ $group-indicator-padding: 6px !default;
     }
 
     .k-grid-toolbar,
-	.k-grouping-header {
+    .k-grouping-header {
         display: block;
         border-width: 0 0 1px;
         border-style: solid;
@@ -39,23 +39,23 @@ $group-indicator-padding: 6px !default;
             vertical-align: text-bottom;
         }
     }
-	.k-grouping-header .k-group-indicator {
-		display: inline-block;
-		border-style: solid;
-		border-width: 1px;
-		margin: 0 6px 0 0;
-		//padding: .15em .15em .15em .4em;
-		//line-height: 1.5em;
-	}
-	.k-grouping-row+tr td {
-		border-top-width: 1px;
-		border-style: solid;
-	}
-	.k-grouping-row .k-group-cell,
-	.k-grouping-row+tr .k-group-cell {
-		border-top-width: 0;
-	}
-	.k-grid-footer {
+    .k-grouping-header .k-group-indicator {
+        display: inline-block;
+        border-style: solid;
+        border-width: 1px;
+        margin: 0 6px 0 0;
+        //padding: .15em .15em .15em .4em;
+        //line-height: 1.5em;
+    }
+    .k-grouping-row+tr td {
+        border-top-width: 1px;
+        border-style: solid;
+    }
+    .k-grouping-row .k-group-cell,
+    .k-grouping-row+tr .k-group-cell {
+        border-top-width: 0;
+    }
+    .k-grid-footer {
         border-width: 1px 0 0;
         border-style: solid;
     }
@@ -98,29 +98,29 @@ $group-indicator-padding: 6px !default;
         text-overflow: ellipsis;
         text-align: left;
     }
-	.k-grouping-header,
-	.k-filter-row th {
-		border-bottom-style: solid;
+    .k-grouping-header,
+    .k-filter-row th {
+        border-bottom-style: solid;
         border-bottom-width: 1px;
-	}
+    }
 
-	.k-filter-row th {
-		padding: .5em;
-	}
+    .k-filter-row th {
+        padding: .5em;
+    }
     .k-grid-header th.k-header>.k-link {
         //display: block;
         margin: -$header-padding;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-	.k-grid-header th.k-header,
+    .k-grid-header th.k-header,
     .k-filter-row th,
-	.k-grid-toolbar,
-	.k-grouping-header,
-	.k-grid-header th.k-header>.k-link	{
-		padding: $header-padding;
-		line-height: 1.286em;
-	}
+    .k-grid-toolbar,
+    .k-grouping-header,
+    .k-grid-header th.k-header>.k-link    {
+        padding: $header-padding;
+        line-height: 1.286em;
+    }
     .k-grid-content {
         position: relative;
         overflow: auto;
@@ -142,7 +142,7 @@ $group-indicator-padding: 6px !default;
     .k-grid tbody td:first-child,
     .k-grid tfoot td:first-child,
     .k-grid-header th.k-header:first-child,
-	.k-filter-row > th:first-child {
+    .k-filter-row > th:first-child {
         border-left-width: 0;
     }
 
@@ -177,27 +177,27 @@ $group-indicator-padding: 6px !default;
             outline: 0;
         }
     }
-	.k-header > .k-grid-filter,
-	.k-header > .k-header-column-menu {
-		float: right;
-		margin: (-$header-padding/2) (-$header-padding/2) (-$header-padding/2) 0;
-		padding: ($header-padding / 2) ($header-padding / 5);
-		position: relative;
-		z-index: 1;
-	}
+    .k-header > .k-grid-filter,
+    .k-header > .k-header-column-menu {
+        float: right;
+        margin: (-$header-padding/2) (-$header-padding/2) (-$header-padding/2) 0;
+        padding: ($header-padding / 2) ($header-padding / 5);
+        position: relative;
+        z-index: 1;
+    }
 
     .k-grid-pager {
         border-width: 1px 0 0;
     }
 
-	/* Editing */
-	.k-edit-cell>.k-textbox,
-	.k-edit-cell>.k-widget,
-	.k-grid-edit-row>td>.k-textbox,
-	.k-grid-edit-row>td>.k-widget,
-	.k-grid-edit-row>td>.text-box {
-		width: 100%;
-	}
+    /* Editing */
+    .k-edit-cell>.k-textbox,
+    .k-edit-cell>.k-widget,
+    .k-grid-edit-row>td>.k-textbox,
+    .k-grid-edit-row>td>.k-widget,
+    .k-grid-edit-row>td>.text-box {
+        width: 100%;
+    }
     /* Locked columns */
     .k-grid-content-locked,
     .k-grid-footer-locked,
@@ -216,16 +216,16 @@ $group-indicator-padding: 6px !default;
         display: inline-block;
         vertical-align: top;
     }
-	.k-grid-header-locked>table,
-	.k-grid-header-wrap>table {
-		margin-bottom: -1px;
-	}
+    .k-grid-header-locked>table,
+    .k-grid-header-wrap>table {
+        margin-bottom: -1px;
+    }
 
-	.k-grid-header .k-resize-handle,
-	.k-grid > .k-resize-handle {
-		position: absolute;
-		height: 25px;
-		cursor: col-resize;
-		z-index: 2;
-	}
+    .k-grid-header .k-resize-handle,
+    .k-grid > .k-resize-handle {
+        position: absolute;
+        height: 25px;
+        cursor: col-resize;
+        z-index: 2;
+    }
 }
