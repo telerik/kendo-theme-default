@@ -2,7 +2,7 @@
 
     // Base
     .k-toolbar {
-        padding: $padding-y-sm;
+        padding: $padding-x;
         line-height: $form-line-height;
         display: flex;
         flex-direction: row;
@@ -11,9 +11,10 @@
 
         > * {
             display: inline-flex;
+            vertical-align: middle;
         }
         > * + * {
-            margin-left: $padding-y-sm;
+            margin-left: $padding-x;
         }
         > .k-overflow-anchor + * {
             margin-left: 0;
@@ -40,7 +41,9 @@
 
 
         // Button
-        .k-button {}
+        .k-button {
+            border-radius: 0;
+        }
 
         // Toggle button
         .k-toggle-button {}
@@ -50,22 +53,31 @@
 
         // Button group
         .k-button-group {}
+        .k-button-group .k-group-start,
+        .k-button-group .k-button::first-child,
+        .k-button-group .k-group-end,
+        .k-button-group .k-button::last-child {
+            border-radius: 0;
+        }
+
 
         // Overflow anchor
         .k-overflow-anchor {
             width: $form-line-height * 1em;
             height: $form-line-height * 1em;
-            padding: $button-padding-y;
+            padding: $button-padding-y * 3;
             box-sizing: content-box;
             justify-content: center;
             position: absolute;
-            top: $padding-y-sm;
-            right: $padding-y-sm;
+            top: 0;
+            right: 0;
         }
 
         // Separator
         .k-separator {
             width: 0;
+            margin-top: -8px;
+            margin-bottom: -8px;
             border-width: 0 0 0 1px;
             border-style: solid;
             border-color: inherit;
