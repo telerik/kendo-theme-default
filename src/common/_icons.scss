@@ -647,6 +647,7 @@
     .k-i-create-table::before { @extend .k-i-table-light-dialog; }
     .k-i-add-column-left::before { @extend .k-i-table-column-insert-left; }
     .k-i-add-column-right::before { @extend .k-i-table-column-insert-right; }
+    .k-i-group-delete::before { @extend .k-i-close; }
     .k-i-delete-column::before { @extend .k-i-table-column-delete; }
     .k-i-add-row-above::before { @extend .k-i-table-row-insert-above; }
     .k-i-add-row-below::before { @extend .k-i-table-row-insert-below; }

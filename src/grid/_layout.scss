@@ -5,7 +5,6 @@ $group-indicator-padding: 6px !default;
 
 @include exports('grid/layout') {
     $header-padding: $spacer !default;
-    $group-indicator-padding: 6px !default;
 
     .k-grid {
         display: block;
@@ -66,31 +65,21 @@ $group-indicator-padding: 6px !default;
         }
     }
 
-    .k-header.k-drag-clue {
-        overflow: hidden;
-        padding: .22em 1em .1em;
-        line-height: 1.5em;
-        border-radius: $border-radius;
-    }
-
     .k-grid-header th.k-header,
     .k-filter-row th {
         overflow: hidden;
         border-style: solid;
         border-width: 0 0 1px 1px;
-        padding: 1em;
+        padding: $padding-x;
         font-weight: normal;
         white-space: nowrap;
         text-overflow: ellipsis;
         text-align: left;
-        line-height: 1.286em;
+        line-height: 2.143em;
     }
 
     .k-grid-header th.k-header>.k-link {
-        display: block;
-        line-height: 1.286em;
-        padding: 1em;
-        margin: -1em;
+        margin: -$header-padding;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -112,19 +101,20 @@ $group-indicator-padding: 6px !default;
     .k-filter-row th {
         padding: .5em;
     }
+
     .k-grid-header th.k-header>.k-link {
         margin: -$header-padding;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .k-grid-header th.k-header,
+
     .k-filter-row th,
     .k-grid-toolbar,
     .k-grouping-header,
     .k-grid-header th.k-header>.k-link    {
         padding: $header-padding;
-        line-height: 1.286em;
     }
+
     .k-grid-content {
         position: relative;
         overflow: auto;
@@ -136,9 +126,9 @@ $group-indicator-padding: 6px !default;
     .k-grid td {
         border-style: solid;
         border-width: 0 0 0 1px;
-        padding: ($header-padding / 2) $header-padding;
+        line-height: $line-height;
+        padding: $padding-x;
         overflow: hidden;
-        line-height: 1.6em;
         vertical-align: middle;
         text-overflow: ellipsis;
     }
@@ -181,6 +171,7 @@ $group-indicator-padding: 6px !default;
             outline: 0;
         }
     }
+
     .k-header > .k-grid-filter,
     .k-header > .k-header-column-menu {
         float: right;
@@ -202,6 +193,7 @@ $group-indicator-padding: 6px !default;
     .k-grid-edit-row>td>.text-box {
         width: 100%;
     }
+
     /* Locked columns */
     .k-grid-content-locked,
     .k-grid-footer-locked,
@@ -256,15 +248,9 @@ $group-indicator-padding: 6px !default;
         border-left-width: 1px;
     }
 
-    .k-grouping-row .k-icon {
-        margin: -3px 4px 0 2px;
-    }
-
     .k-grouping-row p {
         display: inline-block;
         vertical-align: middle;
-        margin-left: -.6em;
-        padding: 0 .6em;
     }
 
     .k-grouping-row + tr td {
@@ -280,27 +266,25 @@ $group-indicator-padding: 6px !default;
         border-left-width: 0;
     }
 
-    .k-grid .k-group-col,
-    .k-grid .k-hierarchy-col {
-        width: 27px;
-    }
-
     .k-grouping-header {
         line-height: 2;
-        padding: 8px 6px;
+        padding: $padding-x $padding-y-lg;
         border-bottom-style: solid;
         border-bottom-width: 1px;
     }
 
-    .k-drag-clue {
+    .k-header.k-drag-clue {
         position: absolute;
         z-index: 10003;
         border-style: solid;
         border-width: 1px;
         font-size: .9em;
-        padding: .2em .4em;
+        padding: $padding-y-lg $padding-x;
         white-space: nowrap;
+        overflow: hidden;
         cursor: default;
+        line-height: 1em;
+        border-radius: $border-radius;
     }
 
     .k-grouping-dropclue {
@@ -324,8 +308,8 @@ $group-indicator-padding: 6px !default;
         border-style: solid;
         border-width: 1px;
         border-radius: $border-radius;
-        margin: 0 0 0 16px;
-        padding: $group-indicator-padding ($group-indicator-padding * 3);
+        margin: 0 0 0 $padding-y;
+        padding: $padding-y-lg $padding-x;
         line-height: 1em;
     }
 
@@ -345,12 +329,12 @@ $group-indicator-padding: 6px !default;
     }
 
     .k-grouping-header .k-link .k-icon {
-        margin: 0 0 0 -3px;
         vertical-align: middle;
     }
 
-    .k-grouping-header .k-button .k-icon {
-        margin: 0 0 0 3px;
+    .k-grouping-header .k-button-icon {
+        width: 1.143em;
+        height: 1.143em;
     }
 
     .k-grouping-header a,
