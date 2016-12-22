@@ -170,4 +170,27 @@
         }
     }
 
+    //SplitButton
+    //TODO: Wait for final design + revise
+    kendo-splitbutton.k-button-group.k-state-focused {
+        border-radius: $border-radius;
+    }
+
+    kendo-splitbutton.k-widget {
+        border-width: 0;
+    }
+
+    kendo-splitbutton.k-button-group .k-button {
+        &:first-child {
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
+        // $border-radius
+    }
+
 }

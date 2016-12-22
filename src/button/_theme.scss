@@ -84,7 +84,14 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
     }
 
     //SplitButton
+    //TODO: Wait for final design + revise
     kendo-splitbutton.k-state-focused {
         box-shadow: $button-focused-box-shadow;
+    }
+    kendo-splitbutton.k-button-group .k-button {
+        &:active,
+        &.k-state-active {
+            @include fill( $button-text, $button-bg, $button-border, #{to top, $button-gradient} );
+        }
     }
 }
