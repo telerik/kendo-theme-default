@@ -51,12 +51,14 @@
         }
     }
 
-    .k-radio-label {
+    .k-radio + .k-radio-label {
         &::before {
             border-color: $radio-border;
             background-color: $radio-bg;
         }
+    }
 
+    .k-radio:not(:disabled) + .k-radio-label {
         &:hover::before {
             border-color: $radio-hovered-border;
         }
@@ -72,7 +74,9 @@
         &::after {
             background-color: $radio-checked-text;
         }
+    }
 
+    .k-radio:not(:disabled):checked + .k-radio-label {
         &:hover::before {
             background-color: $radio-checked-text;
             border-color: $radio-hovered-border;
@@ -89,7 +93,7 @@
         border-color: $checkbox-border;
     }
 
-    .k-checkbox-label:hover::before {
+    .k-checkbox:not(:disabled) + .k-checkbox-label:hover::before {
         border-color: $checkbox-hovered-border;
     }
 
@@ -99,7 +103,7 @@
         color: $checkbox-checked-text;
     }
 
-    .k-checkbox:checked + .k-checkbox-label:hover::before {
+    .k-checkbox:not(:disabled):checked + .k-checkbox-label:hover::before {
         background-color: $checkbox-bg;
         border-color: $checkbox-hovered-border;
         color: $checkbox-checked-bg;
