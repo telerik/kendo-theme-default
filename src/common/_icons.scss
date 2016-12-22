@@ -592,86 +592,86 @@
     .k-i-seek-e::before { @extend .k-i-arrow-end-right; }
     .k-i-seek-s::before { @extend .k-i-arrow-seek-down; }
     .k-i-seek-w::before { @extend .k-i-arrow-end-left; }
-    .k-i-sarrow-n::before { @extend .k-i-strikethrough; }
-    .k-i-sarrow-e::before { @extend .k-i-sub-script; }
-    .k-i-sarrow-s::before { @extend .k-i-sup-script; }
-    .k-i-sarrow-w::before { @extend .k-i-div; }
-    .k-i-expand-n::before { @extend .k-i-all; }
-    .k-i-expand-e::before { @extend .k-i-h1; }
-    .k-i-expand-s::before { @extend .k-i-h2; }
-    .k-i-expand-w::before { @extend .k-i-h3; }
-    .k-i-resize-nw::before { @extend .k-i-insert-up; }
-    .k-i-arrowhead-n::before { @extend .k-i-insert-middle; }
-    .k-i-arrowhead-e::before { @extend .k-i-insert-down; }
-    .k-i-arrowhead-s::before { @extend .k-i-align-top; }
-    .k-i-arrowhead-w::before { @extend .k-i-align-middle; }
-    .k-i-deny::before { @extend .k-i-align-right; }
-    .k-i-splus::before { @extend .k-i-text-wrap; }
-    .k-i-sminus::before { @extend .k-i-table-align-top-left; }
-    .k-i-refresh-clear::before { @extend .k-i-table-align-middle-center; }
-    .k-i-restore::before { @extend .k-i-table-align-middle-center; }
+    .k-i-sarrow-n::before { @extend .k-i-arrow-60-up; }
+    .k-i-sarrow-e::before { @extend .k-i-arrow-60-right; }
+    .k-i-sarrow-s::before { @extend .k-i-arrow-60-down; }
+    .k-i-sarrow-w::before { @extend .k-i-arrow-60-left; }
+    .k-i-expand-n::before { @extend .k-i-arrow-60-up; }
+    .k-i-expand-e::before { @extend .k-i-arrow-60-right; }
+    .k-i-expand-s::before { @extend .k-i-arrow-60-down; }
+    .k-i-expand-w::before { @extend .k-i-arrow-60-left; }
+    .k-i-resize-nw::before { @extend .k-i-arrow-45-up-left; }
+    .k-i-arrowhead-n::before { @extend .k-i-arrow-chevron-up; }
+    .k-i-arrowhead-e::before { @extend .k-i-arrow-chevron-right; }
+    .k-i-arrowhead-s::before { @extend .k-i-arrow-chevron-down; }
+    .k-i-arrowhead-w::before { @extend .k-i-arrow-chevron-left; }
+    .k-i-deny::before { @extend .k-i-cancel-outline; }
+    .k-i-splus::before { @extend .k-i-plus-sm; }
+    .k-i-sminus::before { @extend .k-i-minus-sm; }
+    .k-i-refresh-clear::before { @extend .k-i-non-recurrence; }
+    .k-i-restore::before { @extend .k-i-window-restore; }
     .k-i-maximize::before { @extend .k-i-window-maximize; }
     .k-i-minimize::before { @extend .k-i-window-minimize; }
     .k-i-insert-image::before { @extend .k-i-image-insert; }
-    .k-i-insert-file::before { @extend .k-i-borders-show-hide; }
-    .k-i-pdfa::before { @extend .k-i-spell-checker; }
-    .k-i-xlsa::before { @extend .k-i-button; }
-    .k-i-hamburger::before { @extend .k-i-textbox; }
-    .k-i-vbars::before { @extend .k-i-textbox-hidden; }
-    .k-i-hbars::before { @extend .k-i-password; }
-    .k-i-dimension::before { @extend .k-i-change-manually; }
-    .k-i-undo-large::before { @extend .k-i-track-changes-reject; }
-    .k-i-redo-large::before { @extend .k-i-track-changes-reject-all; }
-    .k-i-rotate-ccw::before { @extend .k-i-document-manager; }
-    .k-i-rotate-cw::before { @extend .k-i-custom-icon; }
-    .k-i-strike-through::before { @extend .k-i-comments-remove-all; }
-    .k-i-text::before { @extend .k-i-silverlight; }
-    .k-i-fx::before { @extend .k-i-media-manager; }
-    .k-i-subscript::before { @extend .k-i-video-external; }
-    .k-i-superscript::before { @extend .k-i-flash-manager; }
-    .k-i-increase-decimal::before { @extend .k-i-cut; }
-    .k-i-decrease-decimal::before { @extend .k-i-paste; }
+    .k-i-insert-file::before { @extend .k-i-file-add; }
+    .k-i-pdfa::before { @extend .k-i-pdf; }
+    .k-i-xlsa::before { @extend .k-i-xls; }
+    .k-i-hamburger::before { @extend .k-i-menu; }
+    .k-i-vbars::before { @extend .k-i-more-vertical; }
+    .k-i-hbars::before { @extend .k-i-more-horizontal; }
+    .k-i-dimension::before { @extend .k-i-arrows-dimensions; }
+    .k-i-undo-large::before { @extend .k-i-undo; }
+    .k-i-redo-large::before { @extend .k-i-redo; }
+    .k-i-rotate-ccw::before { @extend .k-i-rotate-left; }
+    .k-i-rotate-cw::before { @extend .k-i-rotate-right; }
+    .k-i-strike-through::before { @extend .k-i-strikethrough; }
+    .k-i-text::before { @extend .k-i-foreground-color; }
+    .k-i-fx::before { @extend .k-i-formula-fx; }
+    .k-i-subscript::before { @extend .k-i-sub-script; }
+    .k-i-superscript::before { @extend .k-i-sup-script; }
+    .k-i-increase-decimal::before { @extend .k-i-decimal-increase; }
+    .k-i-decrease-decimal::before { @extend .k-i-decimal-decrease; }
     .k-i-justify-left::before { @extend .k-i-align-left; }
     .k-i-justify-center::before { @extend .k-i-align-center; }
     .k-i-justify-right::before { @extend .k-i-align-right; }
     .k-i-justify-full::before { @extend .k-i-align-justify; }
     .k-i-justify-clear::before { @extend .k-i-align-remove; }
-    .k-i-insert-n::before { @extend .k-i-strip-css-format; }
-    .k-i-insert-m::before { @extend .k-i-strip-font-elements; }
-    .k-i-insert-s::before { @extend .k-i-strip-span-elements; }
-    .k-i-insert-unordered-list::before { @extend .k-i-strip-word-formatting; }
-    .k-i-insert-ordered-list::before { @extend .k-i-format-code-block; }
-    .k-i-clearformat::before { @extend .k-i-hyperlink-email; }
-    .k-i-create-table::before { @extend .k-i-table-cell; }
-    .k-i-add-column-left::before { @extend .k-i-table-cell-properties; }
-    .k-i-add-column-right::before { @extend .k-i-table-column-insert-left; }
-    .k-i-delete-column::before { @extend .k-i-table-column-insert-right; }
+    .k-i-insert-n::before { @extend .k-i-insert-up; }
+    .k-i-insert-m::before { @extend .k-i-insert-middle; }
+    .k-i-insert-s::before { @extend .k-i-insert-down; }
+    .k-i-insert-unordered-list::before { @extend .k-i-list-unordered; }
+    .k-i-insert-ordered-list::before { @extend .k-i-list-ordered; }
+    .k-i-clearformat::before { @extend .k-i-clear-css; }
+    .k-i-create-table::before { @extend .k-i-table-light-dialog; }
+    .k-i-add-column-left::before { @extend .k-i-table-column-insert-left; }
+    .k-i-add-column-right::before { @extend .k-i-table-column-insert-right; }
+    .k-i-delete-column::before { @extend .k-i-table-column-delete; }
     .k-i-add-row-above::before { @extend .k-i-table-row-insert-above; }
     .k-i-add-row-below::before { @extend .k-i-table-row-insert-below; }
-    .k-i-delete-row::before { @extend .k-i-table-column-delete; }
-    .k-i-merge-cells::before { @extend .k-i-table-row-delete; }
-    .k-i-normal-layout::before { @extend .k-i-table-cell-delete; }
-    .k-i-page-layout::before { @extend .k-i-table-delete; }
-    .k-i-all-borders::before { @extend .k-i-cells-merge; }
-    .k-i-inside-borders::before { @extend .k-i-cells-merge-horizontally; }
-    .k-i-inside-horizontal-borders::before { @extend .k-i-cells-merge-vertically; }
-    .k-i-inside-vertical-borders::before { @extend .k-i-cell-split-horizontally; }
-    .k-i-outside-borders::before { @extend .k-i-cell-split-vertically; }
-    .k-i-top-border::before { @extend .k-i-table-unmerge; }
-    .k-i-right-border::before { @extend .k-i-pane-freeze; }
-    .k-i-bottom-border::before { @extend .k-i-row-freeze; }
-    .k-i-left-border::before { @extend .k-i-column-freeze; }
-    .k-i-no-borders::before { @extend .k-i-toolbar-float; }
-    .k-i-merge-horizontally::before { @extend .k-i-toggle-full-screen-mode; }
-    .k-i-merge-vertically::before { @extend .k-i-formula-fx; }
-    .k-i-freeze-col::before { @extend .k-i-percent; }
-    .k-i-freeze-row::before { @extend .k-i-custom-format; }
-    .k-i-freeze-panes::before { @extend .k-i-decimal-increase; }
-    .k-i-format-number::before { @extend .k-i-decimal-decrease; }
-    .k-i-fullscreen-enter::before { @extend .k-i-file-pdf; }
-    .k-i-volume-low::before { @extend .k-i-flash; }
-    .k-i-volume-high::before { @extend .k-i-config; }
-    .k-i-volume-mute::before { @extend .k-i-ascx; }
+    .k-i-delete-row::before { @extend .k-i-table-row-delete; }
+    .k-i-merge-cells::before { @extend .k-i-cells-merge; }
+    .k-i-normal-layout::before { @extend .k-i-table-unmerge; }
+    .k-i-page-layout::before { @extend .k-i-layout-2-by-2; }
+    .k-i-all-borders::before { @extend .k-i-borders-all; }
+    .k-i-inside-borders::before { @extend .k-i-borders-inside; }
+    .k-i-inside-horizontal-borders::before { @extend .k-i-borders-inside-horizontal; }
+    .k-i-inside-vertical-borders::before { @extend .k-i-borders-inside-vertical; }
+    .k-i-outside-borders::before { @extend .k-i-borders-outside; }
+    .k-i-top-border::before { @extend .k-i-border-top; }
+    .k-i-right-border::before { @extend .k-i-border-right; }
+    .k-i-bottom-border::before { @extend .k-i-border-bottom; }
+    .k-i-left-border::before { @extend .k-i-border-left; }
+    .k-i-no-borders::before { @extend .k-i-border-no; }
+    .k-i-merge-horizontally::before { @extend .k-i-cells-merge-horizontally; }
+    .k-i-merge-vertically::before { @extend .k-i-cells-merge-vertically; }
+    .k-i-freeze-col::before { @extend .k-i-column-freeze; }
+    .k-i-freeze-row::before { @extend .k-i-row-freeze; }
+    .k-i-freeze-panes::before { @extend .k-i-pane-freeze; }
+    .k-i-format-number::before { @extend .k-i-custom-format; }
+    .k-i-fullscreen-enter::before { @extend .k-i-full-screen; }
+    .k-i-volume-low::before { @extend .k-i-volume-down; }
+    .k-i-volume-high::before { @extend .k-i-volume-up; }
+    .k-i-volume-mute::before { @extend .k-i-volume-off; }
 
     .k-sprite {
         display: inline-block;
