@@ -127,4 +127,10 @@
             cursor: pointer;
         }
     }
+
+    //SplitButton
+    //TODO: Wait for final design + revise
+    kendo-splitbutton .k-list .k-item:focus {
+        outline: none;
+    }
 }
