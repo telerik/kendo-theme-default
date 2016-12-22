@@ -6,6 +6,8 @@
     $pager-selected-hover-background: blend-multiply($accent, darken($bg-color, 8%)) !default;
     $pager-selected-focused-box-shadow: inset 0 0 0 2px blend-multiply($accent, darken($bg-color, 8%)) !default;
     $pager-numbers-text: $accent !default;
+    $pager-numbers-selected-text: $accent-contrast !default;
+
     .k-pager-wrap {
         color: $pager-text;
         background-color: $pager-bg;
@@ -34,6 +36,10 @@
         .k-link,
         .k-link:link {
             color: $pager-numbers-text;
+
+            &.k-state-selected {
+                color: $accent-contrast;
+            }
         }
     }
 }

@@ -63,39 +63,12 @@
         .k-header-column-menu {
             color: $grid-chrome-text;
         }
-    }
 
-    /* Pager */
-    /*.k-grid-pager {
-        .k-link,
-        .k-link:link {
-            color: $grid-active-color;
-            transition: $transition;
-
-            &:focus {
-                box-shadow: $pager-focused-box-shadow;
-            }
-
-            &:hover {
-                background-color: $pager-hover-background;
-            }
-
-            &.k-state-selected {
-                color: $pager-selected-color;
-
-                &:focus {
-                    box-shadow: $pager-selected-focused-box-shadow;
-                }
-
-                &:hover {
-                    background-color: $pager-selected-hover-background;
-                }
-            }
-
-            &.k-state-disabled {
-                box-shadow: none;
-                background-color: transparent;
+        .k-grouping-row {
+            .k-icon {
+                color: $grid-chrome-text;
+                text-decoration: none;
             }
         }
-    }*/
+    }
 }
