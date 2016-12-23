@@ -1,11 +1,10 @@
 // TODO: chart variables
 $chart-tap-highlight-color: rgba(0, 0, 0, 0);
-$chart-selection-background: rgba(255, 255, 255, .01);
 
+$chart-font-size: $base-font-size !default;
 $chart-tooltip-font-size: .929em !default;
 $chart-label-font-size: .857em !default;
 $chart-title-font-size: 1.143em !default;
-
 
 @include exports('dataviz/charts/layout') {
 
@@ -30,6 +29,7 @@ $chart-title-font-size: 1.143em !default;
     .k-stockchart {
         -webkit-touch-callout: none;
         -webkit-tap-highlight-color: $chart-tap-highlight-color;
+        border-width: 0;
     }
 
     .k-chart,
@@ -122,31 +122,22 @@ $chart-title-font-size: 1.143em !default;
         height: 100%;
     }
 
-    .k-leftHandle {
+    .k-left-handle {
         left: -($selection-handle-size / 2);
     }
 
-    .k-rightHandle {
+    .k-right-handle {
         right: -($selection-handle-size / 2);
     }
 
-    .k-leftHandle div {
+    .k-left-handle div {
         margin: -20px 0 0 -15px;
         padding: 40px 30px 0 0;
     }
 
-    .k-leftHandle.k-handle-active div {
-        margin-left: -40px;
-        padding-right: 55px;
-    }
-
-    .k-rightHandle div {
+    .k-right-handle div {
         margin: -20px 0 0 -15px;
         padding: 40px 0 0 30px;
-    }
-
-    .k-rightHandle.k-handle-active div {
-        padding-left: 55px;
     }
 
     .k-mask {
@@ -210,8 +201,6 @@ $chart-title-font-size: 1.143em !default;
         -ms-user-select: none;
     }
 }
-
-
 
 
 @include exports("dataviz/diagram/layout") {
@@ -451,154 +440,6 @@ $chart-title-font-size: 1.143em !default;
 }
 
 
-
-
-
-
-// TODO: merge with above styles
-@include exports("chart/layout") {
-
-    // Base
-    .k-chart,
-    .k-gauge,
-    .k-sparkline,
-    .k-stockchart {
-        background-color: transparent;
-        -webkit-touch-callout: none;
-        -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
-    }
-
-    // Charts
-    .k-chart,
-    .k-stockchart {
-        display: block;
-        height: 400px;
-    }
-    .k-chart-surface {
-        height: 100%;
-    }
-
-
-    // Gauges
-    .k-gauge {
-        text-align: left;
-        position: relative;
-    }
-
-    // Sparkline
-    .k-sparkline,
-    .k-sparkline span {
-        display: inline-block;
-        vertical-align: top;
-    }
-    .k-sparkline span {
-        height: 100%;
-        width: 100%;
-    }
-
-
-    // Stockchart selector
-    .k-selector {
-        position: absolute;
-        transform: translateZ(0);
-    }
-
-    .k-selection {
-        border-bottom: 0;
-        position: absolute;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #d2d2d2;
-        border-bottom: 0;
-        height: 100%;
-    }
-
-    .k-selection-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        background-color: rgba(#ffffff, 0.01);
-    }
-
-    .k-handle {
-        background: #d2d2d2;
-        width: 7px;
-        height: 26px;
-        cursor: e-resize;
-        z-index: 1;
-        border-radius: 6px;
-        position: absolute;
-    }
-
-    .k-handle div {
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-    }
-
-    .k-leftHandle {
-        left: -4px;
-    }
-
-    .k-rightHandle {
-        right: -4px;
-    }
-
-    .k-leftHandle div {
-        margin: -20px 0 0 -15px;
-        padding: 40px 30px 0 0;
-    }
-
-    .k-rightHandle div {
-        margin: -20px 0 0 -15px;
-        padding: 40px 0 0 30px;
-    }
-
-    .k-mask {
-        position: absolute;
-        height: 100%;
-        background-color: #fff;
-        opacity: 0.80;
-    }
-
-    .k-border {
-        background: #d2d2d2;
-        width: 1px;
-        height: 100%;
-        position: absolute;
-    }
-
-
-    // Tooltip
-    .k-chart-tooltip {
-        padding: 6px;
-        border-radius: 4px;
-        line-height: normal;
-        white-space: nowrap;
-        z-index: 12000;
-    }
-
-    .k-chart-tooltip table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-    .k-chart-tooltip th {
-        padding: 1px;
-        width: auto;
-        text-align: center;
-    }
-    .k-chart-tooltip td {
-        width: auto;
-        padding: .1em .2em;
-        text-align: left;
-    }
-
-}
-
-
-
-
 @include exports("chart/variables") {
 
     // export variables to allow use in scripts
@@ -642,28 +483,4 @@ $chart-title-font-size: 1.143em !default;
             }
         }
     }
-
-
-    // TODO fix variables
-    // .k-var--chart-font-s { font-size: $chart-font-size-sm; }
-    // .k-var--chart-font-m { font-size: $chart-font-size-md; }
-    // .k-var--chart-font-l { font-size: $chart-font-size-lg; }
-
-
-    // .k-var--chart-inactive { background-color: $chart-inactive; }
-    // .k-var--chart-major-lines { background-color: $chart-major-lines; }
-    // .k-var--chart-minor-lines { background-color: $chart-minor-lines; }
-    // .k-var--chart-area-opacity { opacity: $chart-area-opacity; }
-
-
-    // .k-var--chart-notes-background { background-color: $chart-notes-background; }
-    // .k-var--chart-notes-border { background-color: $chart-notes-border; }
-    // .k-var--chart-notes-lines { background-color: $chart-notes-lines; }
-
-
-    // .k-var--chart-crosshair-background { background-color: $chart-crosshair-background; }
-
-
-    // .k-var--chart-error-bars-background { background-color: $error-bars-background; }
-
 }
