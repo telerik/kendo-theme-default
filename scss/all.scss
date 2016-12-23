@@ -3,69 +3,69 @@
 
 // Dependencies
 @import "common/all";
-@import "popup/main";
+@import "popup";
 
 
 // Data management
-@import "pager/main";
-@import "grid/main";
-@import "spreadsheet/main";
-// @import "pivotgrid/pivotgrid";
-@import "treelist/main";
-@import "scrollview/main";
+@import "pager";
+@import "grid";
+@import "spreadsheet";
+// @import "pivotgrid";
+@import "treelist";
+@import "scrollview";
 
 
 // Editors
-@import "autocomplete/main";
-@import "colorpicker/main";
-@import "combobox/main";
-@import "datetime/main";
-@import "dropdownlist/main";
-@import "editor/main";
-@import "input/main";
-@import "multiselect/main";
-@import "numerictextbox/main";
-@import "slider/main";
-@import "upload/main";
-@import "validator/main";
-@import "switch/main";
+@import "autocomplete";
+@import "colorpicker";
+@import "combobox";
+@import "datetime";
+@import "dropdownlist";
+@import "editor";
+@import "input";
+@import "multiselect";
+@import "numerictextbox";
+@import "slider";
+@import "upload";
+@import "validator";
+@import "switch";
 
 
 // Dataviz
-@import "dataviz/main";
+@import "dataviz";
 
 //Barcodes
-@import "barcode/main";
-@import "qrcode/main";
+@import "barcode";
+@import "qrcode";
 
 // Scheduling
-@import "calendar/main";
-@import "gantt/main";
-@import "scheduler/main";
+@import "calendar";
+@import "gantt";
+@import "scheduler";
 
 
 // Media
-@import "mediaplayer/main";
+@import "mediaplayer";
 
 
 // Layout
-@import "dialog/main";
-@import "notification/main";
-@import "responsivepanel/main";
-@import "splitter/main";
-@import "tooltip/main";
-@import "window/main";
+@import "dialog";
+@import "notification";
+@import "responsivepanel";
+@import "splitter";
+@import "tooltip";
+@import "window";
 
 
 // Navigation
-@import "button/main";
-@import "menu/main";
-@import "panelbar/main";
-@import "tabstrip/main";
-@import "toolbar/main";
-@import "treeview/main";
+@import "button";
+@import "menu";
+@import "panelbar";
+@import "tabstrip";
+@import "toolbar";
+@import "treeview";
 
 
 // Interactivity & UX
-@import "progressbar/main";
-// @import "scroller/scroller";
+@import "progressbar";
+// @import "scroller";
