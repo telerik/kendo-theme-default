@@ -27,6 +27,8 @@
         text-align: center;
     }
 
+
+    // Wrappers
     .k-dropdown-wrap,
     .k-picker-wrap,
     .k-numeric-wrap {
@@ -42,6 +44,13 @@
         // TODO: improve wrapper overflow
         //overflow: hidden;
         cursor: default;
+    }
+
+
+    // Other common
+    .k-dropdown-wrap,
+    .k-picker-wrap,
+    .k-numeric-wrap {
 
         .k-input {
             padding: $input-padding-y $input-padding-x;
