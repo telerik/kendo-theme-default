@@ -1,6 +1,3 @@
-@import './layout';
-@import './images/indeterminate';
-
 @include exports('progressbar/theme') {
 
     $progressbar-bg: $base-bg !default;

@@ -4,12 +4,10 @@
 
 // Dependencies
 @import "../common/all";
-@import "../button/button";
-@import "../scroller/scroller";
+@import "../button/main";
+// @import "../scroller/main";
 
 
 // Component
-// @import "layout";
-//@import "../../node_modules/@telerik/kendo-theme-default/src/editor/layout";
 @import "layout";
 @import "theme";

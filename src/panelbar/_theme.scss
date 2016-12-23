@@ -1,5 +1,3 @@
-@import './layout';
-
 @include exports('panelbar/theme') {
     $panelbar-text: $widget-text !default;
     $panelbar-border: $widget-border;

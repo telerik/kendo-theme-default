@@ -1,5 +1,3 @@
-@import './layout';
-
 @include exports('grid/theme') {
     // New
     $grid-chrome-text: $header-text !default;

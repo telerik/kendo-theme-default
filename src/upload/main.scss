@@ -4,7 +4,11 @@
 
 // Dependencies
 @import "../common/all";
+@import "../common/icons";
+@import "../button/main";
+@import "../action-buttons/main";
 
 
 // Component
-@import 'theme';
+@import "layout";
+@import "theme";

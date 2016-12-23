@@ -1,7 +1,3 @@
-@import '../button/theme';
-@import '../action-buttons/theme';
-@import './layout';
-
 @include exports('upload/theme') {
 
     $upload-bg: $widget-bg !default;

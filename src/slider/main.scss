@@ -4,7 +4,11 @@
 
 // Dependencies
 @import "../common/all";
+@import "../button/main";
+@import "images/slider-h";
+@import "images/slider-v";
 
 
 // Component
-@import 'theme';
+@import "layout";
+@import "theme";

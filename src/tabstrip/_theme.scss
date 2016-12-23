@@ -1,5 +1,3 @@
-@import './layout';
-
 $tabstrip-tabs-color: $accent !default;
 $tabstrip-border-color: rgba(0, 0, 0, .08) !default;
 $tabstrip-hover-color: blend-multiply($accent, darken($widget-bg, 8%)) !default;
