@@ -28,6 +28,14 @@
     }
 
 
+    // Searchbar
+    .k-searchbar {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+
     // Wrappers
     .k-dropdown-wrap,
     .k-picker-wrap,
