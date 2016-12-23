@@ -2,15 +2,11 @@
 
     // Base
     .k-multiselect {
-        position: relative;
+        width: auto;
         display: flex;
-        line-height: normal;
-        white-space: nowrap;
-        vertical-align: middle;
 
         .k-multiselect-wrap {
-            width: 100%;
-            min-height: 28px; /* form-line-height + $padding-y * 2 */
+            min-height: calc( #{$input-calc-height} );
 
             li.k-button {
                 float: left;
