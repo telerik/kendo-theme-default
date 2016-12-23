@@ -2,22 +2,20 @@
 
     // Base
     .k-numerictextbox {
-        border-width: 0;
-        line-height: $form-line-height;
-        display: inline-block;
-        vertical-align: middle;
 
-        .k-input {
-            border: 0;
-            outline: 0;
-            color: inherit;
-            background: none;
-            font: inherit;
-        }
+        .k-input {}
 
         .k-select {
+            padding: 0;
+            width: calc( #{$button-calc-height} );
             border-width: 0 0 0 1px;
             border-style: solid;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .k-link {
+            padding: 0 $button-padding-y;
+            height: calc( (#{$button-calc-height}) / 2 );
         }
 
 
@@ -32,41 +30,6 @@
 
             .k-select {
                 .k-link { padding: 0 $button-padding-y-sm; }
-            }
-        }
-    }
-
-    @include exports("numericwrap/layout") {
-
-        .k-numeric-wrap {
-            @include border-radius( $border-radius );
-            padding: 0;
-            border-width: 1px;
-            border-style: solid;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            position: relative;
-
-            .k-input {
-                padding: $input-padding-y $input-padding-x;
-                width: 100%;
-                flex: 1;
-                display: flex;
-                align-items: center;
-            }
-
-            .k-select {
-                @include border-radius( 0 $border-radius $border-radius 0 );
-                display: flex;
-                flex-direction: column;
-
-                .k-link {
-                    padding: 0 $button-padding-y;
-                }
-
-                .k-icon {}
-
             }
         }
     }
