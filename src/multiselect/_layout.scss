@@ -5,20 +5,27 @@
         width: auto;
         display: flex;
 
-        .k-multiselect-wrap {
-            min-height: calc( #{$input-calc-height} );
+        // Compact
+        @include compact {
+            padding: ($input-padding-y / 4);
+        }
 
-            li.k-button {
-                float: left;
-            }
+    }
 
-            > .k-i-close {
-                display: none;
-                align-self: center;
-                margin-left: auto;
-                margin-right: $padding-y;
-                outline: 0;
-            }
+
+    .k-multiselect-wrap {
+        min-height: calc( #{$input-calc-height} );
+
+        li.k-button {
+            float: left;
+        }
+
+        > .k-i-close {
+            display: none;
+            align-self: center;
+            margin-left: auto;
+            margin-right: $padding-y;
+            outline: 0;
         }
 
         ul {
@@ -81,11 +88,6 @@
                     transform: translateY(-50%);
                 }
             }
-        }
-
-        // Compact
-        @include compact {
-            padding: ($input-padding-y / 4);
         }
     }
 
