@@ -39,7 +39,8 @@
         display: flex;
         flex-direction: row;
         position: relative;
-        overflow: hidden;
+        // TODO: improve wrapper overflow
+        //overflow: hidden;
         cursor: default;
 
         .k-input {
