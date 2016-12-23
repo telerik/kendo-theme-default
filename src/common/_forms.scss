@@ -1,9 +1,12 @@
 @include exports("forms/layout") {
+
+    // Widgets
     .k-autocomplete,
     .k-combobox,
     .k-datepicker,
     .k-datetimepicker,
     .k-dropdown,
+    .k-multiselect,
     .k-numerictextbox,
     .k-timepicker {
         width: 12.4em;
@@ -39,6 +42,7 @@
     // Wrappers
     .k-dropdown-wrap,
     .k-picker-wrap,
+    .k-multiselect-wrap,
     .k-numeric-wrap {
         @include border-radius( $border-radius );
         padding: 0;
@@ -90,6 +94,8 @@
             .k-icon {}
         }
 
+
+        // Clear icon
         .k-i-close {
             display: none;
             align-self: center;
