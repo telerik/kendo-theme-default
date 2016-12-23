@@ -5,6 +5,7 @@
         width: auto;
         display: flex;
 
+
         // Compact
         @include compact {
             padding: ($input-padding-y / 4);
@@ -16,10 +17,6 @@
     .k-multiselect-wrap {
         min-height: calc( #{$input-calc-height} );
 
-        li.k-button {
-            float: left;
-        }
-
         > .k-i-close {
             display: none;
             align-self: center;
@@ -28,14 +25,17 @@
             outline: 0;
         }
 
+
+        // Token list
         ul {
             vertical-align: top;
         }
-
-        .k-searchbar {
+        li.k-button {
             float: left;
         }
 
+
+        // Token
         .k-button {
             padding: ($padding-y-lg / 2) ($button-padding-x / 2);
             margin: $padding-y-sm 0 $padding-y-sm $padding-y-sm;
@@ -55,6 +55,11 @@
             }
         }
 
+
+        // Searchbar
+        .k-searchbar {
+            float: left;
+        }
         .k-input {
             width: 25px;
             margin: $padding-y-sm ($padding-y-sm / 2);
@@ -63,11 +68,9 @@
             color: inherit;
             background: none;
             font: inherit;
+            float: left;
         }
 
-        li.k-item {
-            border-radius: 0;
-        }
 
         // Icons
         .k-i-loading {
@@ -76,9 +79,11 @@
             top: $padding-y-sm;
         }
 
+
+        // TODO: clear icon must be displayed when valur is present
         &:hover,
-        &.k-state-hover,
-        &.k-state-focused {
+        .k-state-hover > &,
+        .k-state-focused > & {
             .k-multiselect-wrap {
                 > .k-i-close {
                     display: inline-block;
