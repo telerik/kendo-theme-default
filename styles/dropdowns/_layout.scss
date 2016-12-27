@@ -145,6 +145,7 @@ $input-indent: .33em;
     height: $input-height;
     line-height: $input-height;
     padding: .177em 0;
+    box-sizing: content-box;
     text-indent: $input-indent;
     border: 0;
     margin: 0;
