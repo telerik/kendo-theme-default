@@ -33,7 +33,7 @@
             background-color: $upload-progress-bg;
         }
 
-        .k-file-success {
+        .k-file-success .k-file-name {
             color: $upload-success-text;
         }
 
@@ -41,7 +41,7 @@
             background-color: $upload-success-bg;
         }
 
-        .k-file-error {
+        .k-file-error .k-file-name {
             color: $upload-error-text;
         }
 
