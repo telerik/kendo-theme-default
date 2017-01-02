@@ -185,8 +185,12 @@ $resizer-offset: -$resizer-size / 2;
     width: 100%;
 }
 
-.k-dialog-wrapper > .k-animation-container {
+.k-dialog-wrapper {
     z-index: $window-z-index;
+}
+
+.k-dialog-wrapper > .k-animation-container {
+    z-index: 1;
 }
 
 .k-overlay {
