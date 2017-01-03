@@ -5,7 +5,8 @@
 
     .k-upload {
         .k-upload-button {
-            min-width: 7.167em;
+            min-width: 6.643em;
+            margin-right: $padding-x;
         }
 
         .k-clear-selected,
@@ -26,6 +27,12 @@
             border-left-style: solid;
             margin-left: -1px;
             border-radius: 0 0 $border-radius;
+        }
+
+        .k-action-buttons {
+            margin: -$padding-y 0 0;
+            padding: 0;
+            border-top: 0;
         }
     }
 
@@ -73,6 +80,7 @@
             position: relative;
             vertical-align: middle;
             visibility: hidden;
+            display: none;
         }
 
         .k-upload-status {
@@ -86,8 +94,13 @@
 
         &.k-dropzone-active {
             em {
+                display: block;
                 visibility: visible;
                 opacity: 1;
+            }
+
+            .k-upload-status {
+                display: none;
             }
         }
     }
@@ -129,8 +142,9 @@
 
         .k-upload-status {
             position: absolute;
-            right: $spacer-x;
-            top: $spacer-x / 2;
+            line-height: 1em;
+            right: $padding-x;
+            top: $padding-x + $padding-y;
 
             .k-button {
                 padding: 0;
@@ -140,24 +154,18 @@
         .k-upload-pct {
             margin-right: $padding-x;
         }
-
-        ~.k-clear-selected,
-        ~.k-upload-selected {
-            margin-top: -$padding-y;
-        }
     }
 
     .k-file-name,
     .k-file-size,
     .k-file-validation-message,
     .k-file-information {
-        display: block;
+        display: inline-block;
+        width: 100%;
     }
 
     .k-file-name {
         position: relative;
-        min-width: 10em;
-        max-width: 16.667em;
         vertical-align: middle;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -174,7 +182,8 @@
     .k-file-name-size-wrapper,
     .k-multiple-files-extension-wrapper,
     .k-file-invalid-extension-wrapper,
-    .k-multiple-files-invalid-extension-wrapper {
+    .k-multiple-files-invalid-extension-wrapper,
+    .k-file-name-size-wrapper {
         display: inline-block;
     }
 
@@ -190,6 +199,7 @@
         vertical-align: top;
         font-size: .57em;
         text-transform: uppercase;
+        margin: 1px $padding-y-lg;
     }
 
     .k-file-invalid-extension-wrapper,
@@ -208,7 +218,8 @@
 
     .k-file-name-size-wrapper {
         vertical-align: middle;
-        margin-left: 1em;
+        width: calc(100% - #{$padding-x * 3} - #{56px});
+        margin-left: $padding-y;
     }
 
     .k-file-extension-wrapper::before,
