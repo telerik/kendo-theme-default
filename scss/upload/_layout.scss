@@ -7,7 +7,7 @@
 
     .k-upload {
         .k-upload-button {
-            min-width: 6.643em;
+            min-width: 7em;
             margin-right: $padding-x;
         }
 
@@ -153,7 +153,7 @@
             position: absolute;
             line-height: 1em;
             right: $padding-x;
-            top: $padding-x + $padding-y;
+            top: $padding-y * 3;
 
             .k-button {
                 padding: $padding-y-sm;
