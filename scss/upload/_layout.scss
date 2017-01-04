@@ -1,4 +1,6 @@
 @include exports('upload/layout') {
+    $line-height-sm: (20 / 12) !default;
+
     html .k-upload {
         position: relative;
     }
@@ -114,6 +116,12 @@
         border-color: inherit;
         margin: 0;
 
+        .k-file-multiple,
+        .k-file-single {
+            display: block;
+            width: 100%;
+        }
+
         .k-file {
             padding: $padding-x;
             border-width: 0 0 1px;
@@ -147,7 +155,8 @@
             top: $padding-x + $padding-y;
 
             .k-button {
-                padding: 0;
+                padding: $padding-y-sm;
+                border-radius: 50%;
             }
         }
 
@@ -160,13 +169,11 @@
     .k-file-size,
     .k-file-validation-message,
     .k-file-information {
-        display: inline-block;
-        width: 100%;
+        display: block;
     }
 
     .k-file-name {
         position: relative;
-        vertical-align: middle;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -175,23 +182,15 @@
     .k-file-size,
     .k-file-information,
     .k-file-validation-message {
-        font-size: .857em;
-    }
-
-    .k-file-extension-wrapper,
-    .k-file-name-size-wrapper,
-    .k-multiple-files-extension-wrapper,
-    .k-file-invalid-extension-wrapper,
-    .k-multiple-files-invalid-extension-wrapper,
-    .k-file-name-size-wrapper {
-        display: inline-block;
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
     }
 
     .k-file-extension-wrapper,
     .k-multiple-files-extension-wrapper,
     .k-file-invalid-extension-wrapper,
     .k-multiple-files-invalid-extension-wrapper {
-        position: relative;
+        position: absolute;
         width: 24px;
         height: 34px;
         border-width: 2px;
@@ -199,7 +198,7 @@
         vertical-align: top;
         font-size: .57em;
         text-transform: uppercase;
-        margin: 1px $padding-y-lg;
+        margin: 0 $padding-y-lg;
     }
 
     .k-file-invalid-extension-wrapper,
@@ -217,9 +216,9 @@
     }
 
     .k-file-name-size-wrapper {
-        vertical-align: middle;
-        width: calc(100% - #{$padding-x * 3} - #{56px});
-        margin-left: $padding-y;
+        display: block;
+        margin-left: calc(#{$padding-x} + #{40px});
+        margin-right: calc(#{$padding-x} + #{16px + #{$padding-x-sm}});
     }
 
     .k-file-extension-wrapper::before,
