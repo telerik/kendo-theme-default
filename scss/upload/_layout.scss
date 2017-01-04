@@ -1,5 +1,8 @@
 @include exports('upload/layout') {
     $line-height-sm: (20 / 12) !default;
+    $uploaded-image-width: 24px !default;
+    $uploaded-image-height: 34px !default;
+    $uploaded-image-border: 2px !default;
 
     html .k-upload {
         position: relative;
@@ -192,14 +195,14 @@
     .k-file-invalid-extension-wrapper,
     .k-multiple-files-invalid-extension-wrapper {
         position: absolute;
-        width: 24px;
-        height: 34px;
-        border-width: 2px;
+        width: $uploaded-image-width;
+        height: $uploaded-image-height;
+        border-width: $uploaded-image-border;
         border-style: solid;
         vertical-align: top;
         font-size: .57em;
         text-transform: uppercase;
-        margin: 0 $padding-y-lg;
+        margin: ($uploaded-image-border / 2) $padding-y-lg;
     }
 
     .k-file-invalid-extension-wrapper,
@@ -218,8 +221,8 @@
 
     .k-file-name-size-wrapper {
         display: block;
-        margin-left: calc(#{$padding-x} + #{40px});
-        margin-right: calc(#{$padding-x} + #{16px + #{$padding-x-sm}});
+        margin-left: calc(#{$padding-x} + #{$uploaded-image-width} + #{$padding-x * 2});
+        margin-right: calc(#{$padding-x} + #{$icon-size} + #{$padding-x-sm});
     }
 
     .k-file-extension-wrapper::before,
