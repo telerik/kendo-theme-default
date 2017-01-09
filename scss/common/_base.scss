@@ -386,17 +386,19 @@
         opacity: .3;
     }
 
-    $loading-size: 12px !default;
+    $loading-stroke-width: 2px !default;
+    $loading-size: ($icon-size - (2 * $loading-stroke-width)) !default;
     $loading-speed: 2s !default;
-    $loading-shadow-width: 2px !default;
     $loading-color: $accent;
+    $loading-outer-size: ($loading-size + ($loading-stroke-width * 2));
+    $loading-half-size: ($loading-outer-size / 2) !default;
 
     .k-icon.k-i-loading {
         position: relative;
         width: $loading-size;
         height: $loading-size;
         border: 2px solid $bg-color;
-        box-shadow: inset 0 0 0 $loading-shadow-width $loading-color;
+        box-shadow: inset 0 0 0 $loading-stroke-width $loading-color;
         border-radius: 50%;
     }
 
@@ -404,28 +406,28 @@
     .k-i-loading::after {
         position: absolute;
         content: '';
-        width: ($loading-size / 2) + $loading-shadow-width;
-        height: $loading-size + ($loading-shadow-width * 2);
+        width:  $loading-half-size;
+        height: $loading-outer-size;
         background: $bg-color;
     }
 
     .k-i-loading::before {
-        border-radius: $loading-size + ($loading-shadow-width * 2) 0 0 $loading-size + ($loading-shadow-width * 2);
-        top: -($loading-shadow-width);
-        left: -($loading-shadow-width);
-        transform-origin: (($loading-size / 2) + $loading-shadow-width) (($loading-size / 2) + $loading-shadow-width);
-        animation: loading-animation $loading-speed infinite ease 1.5s;
+        border-radius: $loading-outer-size 0 0 $loading-outer-size;
+        top: -($loading-stroke-width);
+        left: -($loading-stroke-width);
+        transform-origin: $loading-half-size $loading-half-size;
+        animation: k-loading-animation $loading-speed infinite ease 1.5s;
     }
 
     .k-i-loading::after {
-        border-radius: 0 ( $loading-size + ($loading-shadow-width * 2)) ( $loading-size + ($loading-shadow-width * 2)) 0;
-        top: -($loading-shadow-width);
+        border-radius: 0 $loading-outer-size $loading-outer-size 0;
+        top: -($loading-stroke-width);
         left: ($loading-size / 2);
-        transform-origin: 0 (($loading-size / 2) + $loading-shadow-width);
-        animation: loading-animation $loading-speed infinite ease;
+        transform-origin: 0 $loading-half-size;
+        animation: k-loading-animation $loading-speed infinite ease;
     }
 
-    @keyframes loading-animation {
+    @keyframes k-loading-animation {
         0% {
             transform: rotate(0deg);
         }
