@@ -18,14 +18,15 @@
         background-color: $editor-overlay-background;
     }
 
-
-    .k-header.k-window-content.k-content {
+    // sass-lint:disable class-name-format
+    .editorToolbarWindow.k-header.k-window-content {
         @include appearance( header );
     }
-
+    // sass-lint:enable class-name-format
+    // sass-lint:disable class-name-format
     .k-editor .k-editor-toolbar-wrap,
     .k-ct-popup .k-editor-toolbar,
-    .k-header.k-window-content.k-content {
+    .editorToolbarWindow.k-header.k-window-content {
         a.k-tool {
             @include appearance( button );
             background-image: none;
@@ -46,9 +47,9 @@
                 @include appearance( pressed-button );
             }
         }
-
         .k-tool-group {
             border-color: $border-color;
         }
     }
+    // sass-lint:enable class-name-format
 }
