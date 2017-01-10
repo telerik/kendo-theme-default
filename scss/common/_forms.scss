@@ -97,22 +97,29 @@
 
             .k-icon {}
         }
+    }
 
-
-        // Clear icon
-        .k-i-close {
+    .k-autocomplete,
+    .k-combobox > .k-dropdown-wrap,
+    .k-multiselect > .k-multiselect-wrap {
+        > .k-i-close {
             display: none;
-            align-self: center;
-        }
-
-        &.k-state-hover,
-        &.k-state-focused {
-            .k-i-close {
-                display: flex;
-                margin-right: $padding-y;
-                outline: 0;
-            }
+            position: absolute;
+            right: $padding-x;
+            top: $padding-y-lg;
         }
     }
 
+    .k-autocomplete.k-state-focused,
+    .k-autocomplete.k-state-hover,
+    .k-combobox>.k-dropdown-wrap.k-state-focused,
+    .k-combobox>.k-dropdown-wrap.k-state-hover,
+    .k-multiselect.k-state-focused>.k-multiselect-wrap,
+    .k-multiselect.k-state-hover>.k-multiselect-wrap,
+    .k-multiselect:hover>.k-multiselect-wrap {
+        >.k-i-close {
+            display: inline-block;
+            outline: 0;
+        }
+    }
 }
