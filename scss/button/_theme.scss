@@ -59,11 +59,17 @@ $buttongroup-selected-button-focused-box-shadow: inset 0 0 0 2px darken($primary
     }
 
     //DropDown Button
-    .k-dropdownbutton {
-        &.k-state-focused > .k-button,
-        &:focus > .k-button {
+    .k-dropdown-button {
+        &:focus > .k-button,
+        &.k-state-focused > .k-button {
             box-shadow: $button-focused-box-shadow;
         }
+
+        &:active > .k-button:not(:disabled),
+        &.k-state-active > .k-button:not(:disabled) {
+            box-shadow: $button-active-box-shadow;
+        }
+
         .k-widget {
             border-width: 0;
             display: inline-block;
