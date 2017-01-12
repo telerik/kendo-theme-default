@@ -184,15 +184,18 @@
 
     .k-editor-table-wizard-dialog {
         .k-content {
-            padding: $spacer-y $padding-x 0;
+            padding: $padding-y-lg $padding-x 0;
         }
 
         .k-edit-field {
             .k-numerictextbox {
-                margin: 0 $padding-x-sm 0 0;
-
                 & + .k-dropdown {
                     width: 4em;
+                }
+
+                & + .k-colorpicker,
+                & + .k-dropdown {
+                    margin-left: $padding-x-sm;
                 }
             }
 
