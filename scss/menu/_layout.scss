@@ -2,16 +2,16 @@
 
     // Base
     .k-menu {
-        cursor: default;
+        border-width: 0;
+        background: none;
         display: flex;
         flex-direction: row;
         position: relative;
+        cursor: default;
 
         // Item
         .k-item {
-            border-width: 0 1px 0 0;
-            border-style: solid;
-            border-color: inherit;
+            border: 1px solid transparent;
             display: block;
             position: relative;
             user-select: none;
@@ -20,6 +20,7 @@
         // Link
         .k-link {
             padding: $nav-item-padding-y $nav-item-padding-x;
+            color: inherit;
             display: flex;
             flex-direction: row;
             align-items: center;
