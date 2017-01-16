@@ -129,12 +129,12 @@
         align-items: center;
 
         &::before {
-            content: "\e659";
+            @extend .k-i-formula-fx;
+
             padding: 0 $padding-y;
             border-width: 0 1px 0 0;
             border-style: solid;
             border-color: inherit;
-            font: 1rem/1 KendoUIGlyphs;
         }
 
         .k-spreadsheet-formula-input {
@@ -183,11 +183,19 @@
             border-width: 0;
         }
         // sass-lint:enable no-important
-        .k-link.k-spreadsheet-sheets-remove {
-            margin-right: $spacer / 2;
-            margin-left: -$spacer / 2;
-            padding: 0;
-            line-height: 1;
+
+        .k-item  {
+            .k-link {
+                display: inline-block;
+            }
+
+            .k-spreadsheet-sheets-remove {
+                margin-right: $spacer / 2;
+                margin-left: -$spacer / 2;
+                padding: 0;
+                line-height: 1;
+                vertical-align: middle;
+            }
         }
     }
 
@@ -469,6 +477,12 @@
             align-content: space-around;
             justify-content: space-around;
         }
+
+    }
+
+    .k-spreadsheet-sample {
+        float: right;
+        opacity: .7;
     }
 }
 
@@ -505,6 +519,7 @@
     }
     .k-spreadsheet-window .k-action-buttons {
         margin: 1em -.5em -.5em;
+        border-color: rgba(0, 0, 0, .1);
     }
 
 }
