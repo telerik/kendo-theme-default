@@ -13,7 +13,6 @@
     .k-fieldselector .k-list li.k-item {
         @include border-radius( $border-radius );
         padding: $button-padding-y ($button-padding-x * 7) $button-padding-y $button-padding-x;
-        //margin-right: $padding-x;
         font-size: $font-size;
         line-height: $form-line-height;
         text-align: left;
@@ -100,77 +99,81 @@
     }
 
     /* selector */
-    .k-fieldselector .k-edit-buttons {
-        bottom: auto;
-    }
+    .k-fieldselector {
+        .k-edit-buttons {
+            bottom: auto;
+        }
 
-    .k-fieldselector .k-edit-label {
-        width: 16%;
-    }
+        .k-edit-label {
+            width: 16%;
+        }
 
-    .k-fieldselector .k-edit-field {
-        width: 77%;
-    }
+        .k-edit-field {
+            width: 77%;
 
-    .k-fieldselector .k-edit-field > .k-widget,
-    .k-fieldselector .k-edit-field > .k-textbox {
-        width: 99%;
-    }
+            > .k-widget,
+            > .k-textbox {
+                width: 99%;
+            }
+        }
 
-    .k-fieldselector .k-edit-buttons > input,
-    .k-fieldselector .k-edit-buttons > label {
-        float: left;
-        margin-top: .4em;
-    }
+        .k-edit-buttons {
+            > input,
+            > label {
+                float: left;
+                margin-top: .4em;
+            }
+        }
 
-    .k-fieldselector p {
-        margin: 0 0 $padding-y-sm;
-        text-transform: uppercase;
-    }
+        p {
+            margin: 0 0 $padding-y-sm;
+            text-transform: uppercase;
 
-    .k-fieldselector p .k-icon {
-        margin: 0 5px 0 0;
-    }
+            .k-icon {
+                margin: 0 5px 0 0;
+            }
+        }
 
-    .k-fieldselector .k-columns > div {
-        overflow: auto;
-        padding: $padding-x;
-        border-style: solid;
-        border-width: 0 0 0 1px;
-        float: left;
-        width: 45%;
-    }
+        .k-columns {
+            > div {
+                overflow: auto;
+                padding: $padding-x;
+                border-style: solid;
+                border-width: 0 0 0 1px;
+                float: left;
+                width: 45%;
+            }
 
-    .k-fieldselector .k-columns > div:first-child {
-        border-width: 0;
-    }
+            > div:first-child {
+                border-width: 0;
+            }
 
-    .k-fieldselector .k-columns > div + div {
-        float: right;
-        border-width: 0;
-    }
+            > div + div {
+                float: right;
+                border-width: 0;
+            }
+        }
 
-    .k-fieldselector div.k-treeview {
-        border-width: 0;
-        padding-left: $padding-x-sm;
-        overflow: visible;
-    }
+        div.k-treeview {
+            border-width: 0;
+            padding-left: $padding-x-sm;
+            overflow: visible;
+        }
 
-    .k-fieldselector .k-list-container {
-        margin-bottom: $spacer;
-        padding: $padding-y-sm 0 0;
-        border-style: solid;
-        border-width: 1px;
-    }
+        .k-list-container {
+            margin-bottom: $spacer;
+            padding: $padding-y-sm 0 0;
+            border-style: solid;
+            border-width: 1px;
+        }
 
-    .k-fieldselector .k-list {
-        padding-bottom: $spacer * 2;
-    }
+        .k-list {
+            padding-bottom: $spacer * 2;
 
-    .k-fieldselector .k-list li.k-item {
-        border-width: 1px;
-        border-style: solid;
+            li.k-item {
+                border-width: 1px;
+                border-style: solid;
+            }
+        }
     }
 }
-
-
