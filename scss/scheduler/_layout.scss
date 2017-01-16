@@ -94,14 +94,17 @@ $modal-inner-padding: 1em;
         @extend %ul-button-group;
         flex: 1;
 
+        li .k-link {
+            box-sizing: border-box;
+            height: calc( #{$button-calc-height} );
+        }
+
         // Prev / next
         .k-nav-prev,
         .k-nav-next {
             .k-link {
                 padding: $button-padding-y;
                 width: calc( #{$button-calc-height} );
-                height: calc( #{$button-calc-height} );
-                box-sizing: border-box;
             }
         }
 
@@ -112,6 +115,11 @@ $modal-inner-padding: 1em;
             margin-left: 0;
         }
     }
+
+    .k-scheduler-tools {
+        margin-right: $spacer;
+    }
+
     .k-nav-current {
 
         .k-icon {
@@ -120,7 +128,6 @@ $modal-inner-padding: 1em;
 
         .k-sm-date-format,
         .k-lg-date-format {
-            max-width: 200px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -204,10 +211,14 @@ $modal-inner-padding: 1em;
 
         th {
             border-width: 0 1px 1px 0;
-            border-bottom-color: transparent;
             text-align: right;
             white-space: nowrap;
         }
+
+        tr+tr th {
+            border-bottom-color: transparent;
+        }
+
         .k-slot-cell,
         .k-scheduler-times-all-day {
             border-bottom-color: inherit;
@@ -346,6 +357,42 @@ $modal-inner-padding: 1em;
         > span { margin-top: -.5em; }
     }
 
+    // Current time
+    .k-current-time {
+        background: red;
+        position: absolute;
+    }
+
+    .k-current-time-arrow-down {
+        width: 0;
+        height: 0;
+        background: transparent;
+        border-bottom: 4px solid  transparent;
+        border-top: 4px solid #f00;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    }
+
+    .k-current-time-arrow-left {
+        width: 0;
+        height: 0;
+        background: transparent;
+        border-bottom: 4px solid  transparent;
+        border-top: 4px solid transparent;
+        border-left: 4px solid transparent;
+        border-right: 4px solid #f00;
+    }
+
+    .k-current-time-arrow-right {
+        width: 0;
+        height: 0;
+        background: transparent;
+        border-bottom: 4px solid  transparent;
+        border-top: 4px solid transparent;
+        border-left: 4px solid #f00;
+        border-right: 4px solid transparent;
+    }
+
 
     // Draging hint
     .k-event-drag-hint {
@@ -408,8 +455,8 @@ $modal-inner-padding: 1em;
         }
     }
 
-    // Remove scrollbars during PDF export
     // sass-lint:disable no-important
+    // remove scrollbars during PDF export
     .k-pdf-export-shadow .k-scheduler,
     .k-scheduler-pdf-export .k-scheduler-content,
     .k-scheduler-pdf-export .k-scheduler-times {
@@ -467,6 +514,14 @@ $modal-inner-padding: 1em;
             text-align: right;
         }
 
+        // sass-lint:disable no-important
+        // hidden cells must have no layout
+        .k-hidden {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            border-right-width: 0 !important;
+        }
+        // sass-lint:enable no-important
     }
 
 
