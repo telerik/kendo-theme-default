@@ -28,11 +28,6 @@ You can directly use the web font icons in your project by assigning any of the 
 * [Social Sharing](#toc-social-share)
 * [Toggle](#toc-toggle)
 
-<!--
-stylesheet in _assets/stylesheets/icon-font.css
-fonts in fonts/
- -->
-
 ### Actions
 
  <ul class="WebComponentsIcons">
