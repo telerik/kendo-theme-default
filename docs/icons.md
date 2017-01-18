@@ -7,11 +7,11 @@ position: 2
 
 # Web Font Icons
 
-The Kendo UI for Angular 2 suite delivers more than 400 integrated font icons for its [components]({% slug bundle_supportfor_kendoui_components %}).
+The Kendo UI for Angular 2 suite delivers more than 400 integrated font icons for its [components](http://www.telerik.com/kendo-angular-ui/components).
 
 ## Overview
 
-You can directly use the web font icons in your project by assigning any of the predefined CSS classes from the [list below](#toc-list-of-font-icons), as demonstrated in the following example.
+You can directly use the web font icons in your project by assigning any of the predefined CSS classes from the [list of font icons](#toc-list-of-font-icons) below, as demonstrated in the following example.
 
 // example
 
