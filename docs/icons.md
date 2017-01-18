@@ -68,7 +68,7 @@ You can directly use the web font icons in your project by assigning any of the 
         font-size: 32px;
     }
 
-  .obsolete-classes {
+    .obsolete-classes {
         width: 100%;
         max-width: 900px;
         text-align: left;
