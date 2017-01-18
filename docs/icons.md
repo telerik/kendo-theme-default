@@ -13,8 +13,6 @@ The Kendo UI for Angular 2 suite delivers more than 400 integrated font icons fo
 
 You can directly use the web font icons in your project by assigning any of the predefined CSS classes from the [list of font icons](#toc-list-of-font-icons) below, as demonstrated in the following example.
 
-// example
-
 ## List of Font Icons
 
 * [Actions](#toc-actions)
@@ -29,6 +27,77 @@ You can directly use the web font icons in your project by assigning any of the 
 * [Toggle](#toc-toggle)
 
 ### Actions
+
+<link rel="stylesheet" href="http://www.telerik.com/kendo-angular-ui/npm/node_modules/@progress/kendo-theme-default/dist/all.css" />
+
+<style>
+
+    .WebComponentsIcons {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .WebComponentsIcons::after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        line-height: 0;
+    }
+
+     .WebComponentsIcons li {
+        margin: 10px;
+        padding: 10px;
+        display: block;
+        float: left;
+        vertical-align: top;
+        text-align: center;
+        width: 160px;
+        height: 80px;
+        font-size: 12px;
+        font-weight: 300;
+        color: #999;
+    }
+
+    .WebComponentsIcons .k-icon {
+        display: block;
+        clear: both;
+        margin: 0 auto 10px;
+        color: #656565;
+        font-size: 32px;
+    }
+
+  .obsolete-classes {
+        width: 100%;
+        max-width: 900px;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    .obsolete-classes th,
+    .obsolete-classes td {
+        padding: 10px 0;
+        border-bottom: 1px solid #ececec;
+    }
+
+    .obsolete-classes th {
+        padding: 0 0 5px;
+    }
+
+    .old-class {
+        color: #f31700;
+    }
+
+    .new-class {
+        color: #5ec232;
+    }
+
+    .ref-icon {
+        width: 60px;
+    }
+
+</style>
 
  <ul class="WebComponentsIcons">
      <li><span class="k-icon k-i-undo"></span> .k-i-undo</li>
