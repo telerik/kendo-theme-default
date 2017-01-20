@@ -99,6 +99,17 @@ The basic set of variables is located in the [`_variables.scss` file](https://gi
 
 For a working demo that demonstrates this approach, refer to the [ng2-dashboard sample application](https://github.com/telerik/ng2-dashboard).
 
+### Build only what you need
+
+Depending on the requirements of your project, you might need to skip some of the components styles and include only what you need.
+
+Execute the following command inside the `kendo-theme-default` repository - it will include only the Grid and PanelBar components. A file - `dist/custom.css` will be created, including only the specified compoennts.
+
+```
+COMPONENTS='panelbar,grid' npm run build
+```
+
+
 ## Suggested Links
 
 * [Web Font Icons in Kendo UI for Angular 2]({% slug icons_kendouiforangular %})
