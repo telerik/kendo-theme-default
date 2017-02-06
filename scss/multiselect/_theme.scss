@@ -46,4 +46,10 @@
         }
     }
 
+    .k-multiselect-wrap {
+        > .k-input:not(:focus) {
+            opacity: .5;
+        }
+    }
+
 }
