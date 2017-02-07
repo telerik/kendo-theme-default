@@ -25,6 +25,35 @@
         }
     }
 
+    // Bare button
+    .k-button.k-bare {
+        background-color: transparent;
+        border-color: transparent;
+        background-image: none;
+
+        // Hover state
+        &:hover,
+        &.k-state-hover {
+            @include appearance( hovered-button );
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        // Pressed state
+        &:active,
+        &.k-state-active {
+            @include fill( $button-text, $button-bg, $button-border, #{to top, $button-gradient} );
+            box-shadow: none;
+            border-color: $button-border;
+        }
+
+        // Focused state
+        &:focus,
+        &.k-state-focused {
+            box-shadow: none;
+            border-color: $button-border;
+          }
+    }
 
     // Primary button
     .k-button.k-primary {
