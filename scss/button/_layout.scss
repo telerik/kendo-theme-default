@@ -73,14 +73,6 @@
             box-sizing: content-box;
             justify-content: center;
         }
-        &-bare {
-            // sass-lint:disable no-important
-            border-width: 0 !important;
-            color: inherit;
-            background: none !important;
-            box-shadow: none !important;
-            // sass-lint:enable no-important
-        }
 
 
 
@@ -206,4 +198,27 @@
             border-bottom-right-radius: $border-radius;
         }
     }
+
+
+    // Flat button
+    .k-button.k-flat {
+        // sass-lint:disable no-important
+        border-width: 0 !important;
+        color: inherit;
+        background: none;
+        box-shadow: none;
+        // sass-lint:enable no-important
+    }
+
+
+    // Bare button
+    .k-button.k-bare {
+        // sass-lint:disable no-important
+        border-width: 0 !important;
+        color: inherit;
+        background: none !important;
+        box-shadow: none !important;
+        // sass-lint:enable no-important
+    }
+
 }

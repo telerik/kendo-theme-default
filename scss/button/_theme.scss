@@ -25,36 +25,6 @@
         }
     }
 
-    // Bare button
-    .k-button.k-bare {
-        background-color: transparent;
-        border-color: transparent;
-        background-image: none;
-
-        // Hover state
-        &:hover,
-        &.k-state-hover {
-            @include appearance( hovered-button );
-            background-color: transparent;
-            border-color: transparent;
-        }
-
-        // Pressed state
-        &:active,
-        &.k-state-active {
-            @include fill( $button-text, $button-bg, $button-border, #{to top, $button-gradient} );
-            box-shadow: none;
-            border-color: $button-border;
-        }
-
-        // Focused state
-        &:focus,
-        &.k-state-focused {
-            box-shadow: none;
-            border-color: $button-border;
-          }
-    }
-
     // Primary button
     .k-button.k-primary {
         @include appearance( primary-button );
@@ -126,4 +96,94 @@
             box-shadow: inset $button-pressed-shadow;
         }
     }
+
+
+    // Flat button
+    .k-button.k-flat {
+
+        // Hover state
+        &:hover,
+        &.k-state-hover {
+            @include appearance( hovered-button );
+        }
+
+        // Pressed state
+        &:active,
+        &.k-state-active {
+            @include fill( $button-text, $button-bg, $button-border, #{to top, $button-gradient} );
+            box-shadow: $button-active-box-shadow;
+        }
+
+        // Focused state
+        &:focus,
+        &.k-state-focused {
+            @include appearance( focused-button );
+        }
+    }
+    .k-button.k-primary.k-flat {
+        color: $accent;
+
+        // Hover state
+        &:hover,
+        &.k-state-hover {
+            @include appearance( hovered-primary-button );
+        }
+
+        // Pressed state
+        &:active,
+        &.k-state-active {
+            @include appearance( pressed-primary-button );
+        }
+
+        // Focused state
+        &:focus,
+        &.k-state-focused {
+            box-shadow: $primary-focused-box-shadow;
+        }
+    }
+
+
+    // Bare button
+    .k-button.k-bare {
+
+        // Hover state
+        &:hover,
+        &.k-state-hover {
+            //
+        }
+
+        // Pressed state
+        &:active,
+        &.k-state-active {
+            //
+        }
+
+        // Focused state
+        &:focus,
+        &.k-state-focused {
+            //
+        }
+    }
+    .k-button.k-primary.k-bare {
+        color: $accent;
+
+        // Hover state
+        &:hover,
+        &.k-state-hover {
+            //
+        }
+
+        // Pressed state
+        &:active,
+        &.k-state-active {
+            //
+        }
+
+        // Focused state
+        &:focus,
+        &.k-state-focused {
+            //
+        }
+    }
+
 }
