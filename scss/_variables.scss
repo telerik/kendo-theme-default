@@ -72,10 +72,10 @@ $cell-padding-y: $padding-y-sm !default;
 $cell-padding: 8px !default;
 // $cell-padding-sm: $table-sm-cell-padding !default;
 
-$window-padding-x: $padding-x;
-$window-padding-y: $padding-y;
-$window-titlebar-padding-x: $padding-x;
-$window-titlebar-padding-y: $padding-x;
+$window-inner-padding-x: 14px !default;
+$window-inner-padding-y: 14px !default;
+$window-titlebar-padding-x: 14px !default;
+$window-titlebar-padding-y: 14px !default;
 
 $zindex-popup: 1;
 $zindex-window: 2;

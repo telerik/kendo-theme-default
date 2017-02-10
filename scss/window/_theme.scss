@@ -1,13 +1,22 @@
-// TODO: extract or remove modal variables
-$modal-content-bg: $widget-bg !default;
-$modal-content-xs-box-shadow: 0 3px 9px rgba( 0, 0, 0, .5 ) !default;
-$modal-header-border-color: transparent !default;
-
 @include exports("window/theme") {
 
+    $window-shadow: 0 3px 3px 0 rgba(0, 0, 0, .06) !default;
+    $window-focused-shadow: 1px 1px 7px 1px rgba(0, 0, 0, .3) !default;
+
+
     .k-window {
-        @include box-shadow($modal-content-xs-box-shadow);
-        background-color: $modal-content-bg;
+        @include appearance( panel );
+        box-shadow: $window-shadow;
+
+        > .k-header {
+            @include appearance( header );
+
+            .k-window-action {
+                color: inherit;
+                background: transparent;
+                border-color: transparent;
+            }
+        }
 
         .k-window-action {
             opacity: 1;
@@ -17,8 +26,13 @@ $modal-header-border-color: transparent !default;
             }
         }
     }
+    .k-window.k-state-focused {
+        box-shadow: $window-focused-shadow;
+    }
+
 
     .k-window-titlebar {
-        border-color: $modal-header-border-color;
+        border-color: inherit;
     }
+
 }
