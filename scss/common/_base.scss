@@ -72,7 +72,6 @@
         text-decoration: none;
     }
 
-
     // Outline
     .k-content {
         outline: 0;
@@ -93,6 +92,7 @@
         transform: translate(-50%, -50%);
     }
 
+
     // Off-screen container used during PDF export
     .k-pdf-export-shadow {
         position: absolute;
@@ -100,6 +100,7 @@
         left: -15000px;
         width: 14400px;
     }
+
 }
 
 
