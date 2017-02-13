@@ -224,7 +224,7 @@
     // Bare button
     .k-button.k-bare {
         // sass-lint:disable no-important
-        border-width: 0 !important;
+        border-color: transparent !important;
         color: inherit;
         background: none !important;
         box-shadow: none !important;
@@ -241,10 +241,10 @@
             pointer-events: none;
             position: absolute;
             z-index: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
         }
         &::after {
             content: "";
@@ -254,10 +254,10 @@
             pointer-events: none;
             position: absolute;
             z-index: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
         }
 
         // Hover state
