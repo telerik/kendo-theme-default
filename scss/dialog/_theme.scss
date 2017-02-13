@@ -1,12 +1,14 @@
 @include exports("dialog/theme") {
 
 
-    .k-dialog {
+    .k-dialog {}
 
-        > .k-header {
-            color: $accent-contrast;
-            background-color: $accent;
-        }
+
+    // Titlebar
+    .k-dialog-titlebar {
+        color: $accent-contrast;
+        background-color: $accent;
+        background-image: none;
     }
 
 
@@ -15,14 +17,17 @@
         .k-button {
             color: inherit;
             background: none;
+            background-clip: padding-box;
         }
         .k-button:hover,
         .k-button.k-state-hover {
             @include appearance( hovered-button );
+            border-color: inherit;
         }
         .k-button:active,
         .k-button.k-state-focus {
             @include appearance( hovered-button );
+            border-color: inherit;
         }
         .k-button:focus,
         .k-button.k-state-focused {
@@ -37,6 +42,7 @@
         .k-button.k-primary:hover,
         .k-button.k-primary.k-state-hover {
             @include appearance( hovered-primary-button );
+            border-color: inherit;
 
             &:focus,
             &.k-state-focused {
@@ -46,6 +52,7 @@
         .k-button.k-primary:active,
         .k-button.k-primary.k-state-active {
             @include appearance( pressed-primary-button );
+            border-color: inherit;
         }
         .k-button.k-primary:focus,
         .k-button.k-primary.k-state-focused {

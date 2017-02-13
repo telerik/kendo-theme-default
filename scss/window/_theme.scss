@@ -7,32 +7,30 @@
     .k-window {
         @include appearance( panel );
         box-shadow: $window-shadow;
-
-        > .k-header {
-            @include appearance( header );
-
-            .k-window-action {
-                color: inherit;
-                background: transparent;
-                border-color: transparent;
-            }
-        }
-
-        .k-window-action {
-            opacity: 1;
-
-            .k-icon:hover {
-                color: $accent-contrast;
-            }
-        }
     }
     .k-window.k-state-focused {
         box-shadow: $window-focused-shadow;
     }
 
 
+    // Titlebar
     .k-window-titlebar {
+        @include appearance( header );
         border-color: inherit;
+        background-clip: padding-box;
+    }
+
+
+    // Actions
+    .k-window-action {
+        opacity: 1;
+        transition: transform .1s ease-in-out;
+
+        &:hover,
+        &.k-state-hover {
+            opacity: 1;
+            transform: scale(1.5);
+        }
     }
 
 }
