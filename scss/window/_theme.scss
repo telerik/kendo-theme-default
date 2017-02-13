@@ -6,6 +6,7 @@
 
     .k-window {
         @include appearance( panel );
+        border-width: 0;
         box-shadow: $window-shadow;
     }
     .k-window.k-state-focused {
