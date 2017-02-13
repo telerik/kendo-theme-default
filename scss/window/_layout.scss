@@ -1,7 +1,6 @@
 @include exports("window/layout") {
 
     .k-window {
-        @include border-radius( $border-radius );
         padding: 0;
         max-width: 98vw;
         max-height: 98vh;
