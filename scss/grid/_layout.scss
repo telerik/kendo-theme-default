@@ -53,6 +53,42 @@
             text-decoration: none;
         }
 
+
+        // Grouping and hierarcy
+        .k-group-col,
+        .k-hierarchy-col {
+            padding: 0;
+            width: 30px;
+        }
+        .k-grouping-row td {
+            overflow: visible;
+        }
+        .k-grouping-row + tr td {
+            border-top-width: 1px;
+        }
+        .k-grouping-row .k-group-cell,
+        .k-grouping-row + tr .k-group-cell {
+            border-top-width: 0;
+        }
+
+        .k-hierarchy-cell {
+            text-align: center;
+            padding: 0;
+            overflow: visible;
+
+            > .k-icon {
+                width: 100%;
+                height: 100%;
+                line-height: $line-height;
+                display: inline-block;
+                padding: $padding-x 0;
+                outline: 0;
+            }
+        }
+        .k-hierarchy-cell + td {
+            border-left-width: 0;
+        }
+
     }
 
 
@@ -174,7 +210,6 @@
 
     .k-grid-footer {
         border-width: 1px 0 0;
-        border-style: solid;
     }
 
     // Footer height
