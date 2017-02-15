@@ -36,6 +36,10 @@
             overflow: hidden;
             text-overflow: ellipsis;
 
+            &:first-child {
+                border-left-width: 0;
+            }
+
             &:focus {
                 outline: none;
             }
@@ -184,9 +188,6 @@
         .k-header {
             position: relative;
         }
-        .k-header:first-child {
-            border-left-width: 0;
-        }
 
 
         .k-header > .k-link {
@@ -241,9 +242,6 @@
 
         th {
             padding: $cell-padding / 2;
-        }
-        th:first-child {
-            border-left-width: 0;
         }
 
     }
@@ -346,24 +344,9 @@
         }
     }
 
-    .k-grid td {
-        border-style: solid;
-        border-width: 0 0 0 1px;
-        line-height: $line-height;
-        padding: $padding-x;
-        overflow: hidden;
-        vertical-align: middle;
-        text-overflow: ellipsis;
-    }
-
     .k-grid-add-row td {
         border-bottom-style: solid;
         border-bottom-width: 1px;
-    }
-
-    .k-grid tbody td:first-child,
-    .k-grid tfoot td:first-child {
-        border-left-width: 0;
     }
 
     .k-grid .k-group-col,
