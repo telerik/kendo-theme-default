@@ -106,9 +106,57 @@
         margin: 0 .16em;
     }
 
+
+    // Grid header / footer
+    .k-grid-header-wrap,
+    .k-grid-footer-wrap {
+        width: 100%;
+        border-width: 0 1px 0 0;
+        border-style: solid;
+        border-color: inherit;
+        position: relative;
+        overflow: hidden;
+    }
+    .k-grid-header,
+    .k-grid-footer {
+        padding-right: 17px;
+        border-width: 0;
+        border-style: solid;
+        border-color: inherit;
+
+        table {
+            table-layout: fixed;
+        }
+    }
+
     .k-grid-header {
-        border-bottom-style: solid;
         border-bottom-width: 1px;
+
+        table {
+            margin-bottom: -1px;
+        }
+
+
+        .k-header {
+            position: relative;
+        }
+
+
+        .k-header > .k-link {
+            margin: -$cell-padding;
+            padding: $cell-padding;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .k-header > .k-link:focus {
+            text-decoration: none;
+        }
+        .k-header > .k-link > .k-icon {
+            margin: 0 .4ex;
+            position: static;
+        }
 
         th>.k-link>.k-icon {
             vertical-align: text-bottom;
@@ -129,9 +177,7 @@
     }
 
     .k-grid-content table,
-    .k-grid-content-locked>table,
-    .k-grid-footer table,
-    .k-grid-header table {
+    .k-grid-content-locked>table {
         table-layout: fixed;
     }
 
@@ -161,13 +207,6 @@
         line-height: 2.143em;
     }
 
-    .k-grid-header th.k-header>.k-link {
-        display: block;
-        margin: -$header-padding-x;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
     .k-grid-content {
         position: relative;
         overflow: auto;
@@ -176,14 +215,7 @@
         min-height: 0%; /* IE9 bug workaround - expanding Grid on hover */
     }
 
-    .k-grid-header th.k-header>.k-link {
-        margin: -$header-padding-x;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .k-filter-row th,
-    .k-grid-header th.k-header>.k-link    {
+    .k-filter-row th {
         padding: $header-padding-x;
     }
 
@@ -227,16 +259,6 @@
 
     .k-grid-content tr:last-child td {
         border-bottom-width: 0;
-    }
-
-    .k-grid-footer-wrap,
-    .k-grid-header-wrap {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        border-style: solid;
-        border-width: 0 1px 0 0;
-        box-sizing: content-box;
     }
 
     .k-grid .k-group-col,
