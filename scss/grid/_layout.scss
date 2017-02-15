@@ -25,6 +25,33 @@
             empty-cells: show;
             outline: 0;
         }
+        thead, tbody, tfoot {
+            text-align: left;
+        }
+        tr {}
+        th, td {
+            padding: $cell-padding;
+            border-style: solid;
+            border-color: inherit;
+            outline: 0;
+            font-weight: inherit;
+            text-align: inherit;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        th {
+            border-width: 0 0 1px 1px;
+            white-space: nowrap;
+        }
+        td {
+            border-width: 0 0 0 1px;
+            vertical-align: middle;
+        }
+
+        a {
+            color: inherit;
+        }
+
     }
 
     .k-grid-toolbar,
