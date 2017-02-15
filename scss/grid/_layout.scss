@@ -502,15 +502,21 @@
 @include exports( "filtermenu/layout" ) {
 
     .k-filter-menu {
-        padding: .5em;
+        padding: $padding-y-sm;
+
+        .k-button {
+            margin: ( $spacer-y / 2 ) 1% 0;
+            width: 48%;
+            box-sizing: border-box;
+            display: inline-block;
+        }
 
         .k-widget,
         .k-textbox {
-            display: block;
+            margin: ( $spacer-y / 2 ) 0 0;
             width: 100%;
-            margin: .19em 0 0;
+            display: block;
         }
-
         .k-textbox {
             margin-bottom: 3px;
         }
@@ -520,38 +526,33 @@
             width: 6em;
             margin: .5em 0;
         }
-
-        .k-filter-selected-items {
-            font-weight: bold;
-            line-height: normal;
-            white-space: nowrap;
-            margin: 1em 0 .3em;
-        }
-
-        .k-button {
-            width: 48%;
-            margin: .5em 4% 0 0;
-
-            + .k-button {
-                margin-right: 0;
-            }
-        }
     }
-
     .k-multicheck-wrap {
+        max-height: 300px;
         overflow: auto;
         overflow-x: hidden;
         white-space: nowrap;
-        max-height: 300px;
 
-        .k-item {
-            line-height: 2.2em;
+        .k-item {}
+        .k-item + .k-item {
+            margin-top: ($spacer-y / 2);
         }
 
         .k-label {
-            display: block;
-            cursor: pointer;
+            margin: 0;
+            display: flex;
+            align-items: center;
+
+            input {
+                margin: 0 ($spacer-y / 4);
+            }
         }
+    }
+    .k-filter-selected-items {
+        font-weight: bold;
+        line-height: normal;
+        white-space: nowrap;
+        margin: $spacer-y 0 ($spacer / 2);
     }
 
 }
