@@ -267,6 +267,8 @@
             line-height: $form-line-height;
             display: flex;
             align-items: center;
+            align-content: center;
+            justify-content: center;
             float: right;
             position: relative;
             z-index: 1;
@@ -472,6 +474,7 @@
         position: relative;
         z-index: 1;
     }
+
 
     /* Locked columns */
     .k-grid-content-locked,
