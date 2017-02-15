@@ -67,21 +67,23 @@
 
     // Grouping header
     .k-grouping-header {
-        padding: $cell-padding / 2; // alternatively $header-padding-x or $padding-x $padding-y-lg
+        padding: ($cell-padding / 2); // alternatively $header-padding-x or $padding-x $padding-y-lg
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
+        line-height: $form-line-height;
         display: block;
     }
-    .k-grouping-header .k-group-indicator {
-        display: inline-block;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: $border-radius;
-        margin: 0 0 0 $padding-y;
+    .k-group-indicator {
+        @include border-radius( $border-radius );
+        margin: 0;
         padding: $button-padding-y $button-padding-x;
-        font-size: $font-size;
-        line-height: $form-line-height;
+        border-width: 1px;
+        border-style: solid;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
     }
     .k-grouping-header .k-link {
         display: inline-block;
@@ -107,6 +109,9 @@
     .k-grouping-header .k-button {
         display: inline-block;
         vertical-align: middle;
+    }
+    .k-group-indicator + .k-group-indicator {
+        margin-left: ($cell-padding / 2);
     }
 
     .k-grid-content .k-button {
