@@ -268,10 +268,11 @@
         }
 
         .k-dropdown-operator {
+            width: calc( #{$button-calc-size} );
             flex: none;
             position: absolute;
             top: 0;
-            right: calc( #{$button-calc-size} + #{$cell-padding / 2});
+            right: calc( #{$button-calc-size} + #{$cell-padding / 2} );
         }
         .k-dropdown-operator .k-input {
             padding: 0;
