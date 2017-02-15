@@ -1,20 +1,20 @@
 @include exports('grid/layout') {
 
     .k-grid {
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: relative;
-        border-width: 1px;
-        border-style: solid;
 
         table {
+            margin: 0;
             width: 100%;
-            margin: 0; /* override CSS libraries */
             max-width: none;
+            border-width: 0;
+            border-color: inherit;
             border-collapse: separate;
             border-spacing: 0;
             empty-cells: show;
-            border-width: 0;
-            outline: none;
+            outline: 0;
         }
     }
 
