@@ -397,6 +397,16 @@
     }
 
 
+    // Resize handle
+    .k-grid > .k-resize-handle,
+    .k-grid-header .k-resize-handle {
+        height: 25px;
+        cursor: col-resize;
+        position: absolute;
+        z-index: 2;
+    }
+
+
     // Pager
     .k-grid-pager {
         border-width: 1px 0 0;
@@ -470,14 +480,6 @@
     .k-grid-header-locked>table,
     .k-grid-header-wrap>table {
         margin-bottom: -1px;
-    }
-
-    .k-grid-header .k-resize-handle,
-    .k-grid > .k-resize-handle {
-        position: absolute;
-        height: 25px;
-        cursor: col-resize;
-        z-index: 2;
     }
 
 }
