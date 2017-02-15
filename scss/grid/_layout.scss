@@ -108,7 +108,7 @@
 
     // Toolbar
     .k-grid-toolbar {
-        padding: $cell-padding / 2; // alternatively $header-padding-x
+        padding: ($cell-padding / 2);
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
@@ -120,7 +120,7 @@
             vertical-align: middle;
         }
         .k-button + .k-button {
-            margin-left: .4ex; // alternatively .16em
+            margin-left: ($cell-padding / 2);
         }
     }
 
