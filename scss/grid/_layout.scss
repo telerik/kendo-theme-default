@@ -54,15 +54,31 @@
 
     }
 
-    .k-grid-toolbar,
+
+    // Toolbar
+    .k-grid-toolbar {
+        padding: $cell-padding / 2; // alternatively $header-padding-x
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: inherit;
+        text-overflow: clip;
+        cursor: default;
+
+        .k-button {
+            vertical-align: middle;
+        }
+        .k-button + .k-button {
+            margin-left: .4ex; // alternatively .16em
+        }
+    }
+
     .k-grouping-header {
         display: block;
         border-width: 0 0 1px;
         border-style: solid;
     }
 
-    .k-grid-content .k-button,
-    .k-grid-toolbar .k-button {
+    .k-grid-content .k-button {
         vertical-align: middle;
         margin: 0 .16em;
     }
@@ -141,7 +157,6 @@
     }
 
     .k-filter-row th,
-    .k-grid-toolbar,
     .k-grouping-header,
     .k-grid-header th.k-header>.k-link    {
         padding: $header-padding-x;
@@ -337,10 +352,6 @@
 
     .k-grid-edit-row td {
         text-overflow: clip;
-    }
-
-    .k-grouping-header+.k-grid-toolbar {
-        border-width: 0 0 1px;
     }
 
     .k-group-footer td {
