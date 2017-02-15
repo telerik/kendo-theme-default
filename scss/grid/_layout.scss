@@ -68,6 +68,12 @@
             padding: 0;
             width: 30px;
         }
+
+        .k-grouping-row p {
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
         .k-grouping-row td {
             overflow: visible;
         }
@@ -77,6 +83,7 @@
         .k-grouping-row .k-group-cell,
         .k-grouping-row + tr .k-group-cell {
             border-top-width: 0;
+            text-overflow: none;
         }
 
         .k-hierarchy-cell {
@@ -95,6 +102,15 @@
         }
         .k-hierarchy-cell + td {
             border-left-width: 0;
+        }
+
+        .k-group-footer td {
+            border-style: solid;
+            border-width: 1px 0;
+        }
+
+        .k-group-footer .k-group-cell + td {
+            border-left-width: 1px;
         }
 
     }
@@ -433,39 +449,6 @@
         z-index: 2;
     }
 
-    /* Grid grouping */
-    .k-grid .k-grouping-row td,
-    .k-grid .k-hierarchy-cell {
-        overflow: visible;
-    }
-
-    .k-group-footer td {
-        border-style: solid;
-        border-width: 1px 0;
-    }
-
-    .k-group-footer .k-group-cell + td {
-        border-left-width: 1px;
-    }
-
-    .k-grouping-row p {
-        display: flex;
-        align-content: center;
-    }
-
-    .k-grouping-row + tr td {
-        border-top-width: 1px;
-    }
-
-    .k-grouping-row .k-group-cell,
-    .k-grouping-row+tr .k-group-cell {
-        text-overflow: none;
-    }
-
-    .k-grid .k-hierarchy-cell+td {
-        border-left-width: 0;
-    }
-
     $group-dropclue-size: 6px;
     $group-dropclue-line-size: $group-dropclue-size / 3;
 
@@ -482,8 +465,10 @@
         }
 
         &::before {
-            border-width: $group-dropclue-size;
-            border-style: solid;
+            border-width: $group-dropclue-size solid;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
             top: 0;
         }
 
