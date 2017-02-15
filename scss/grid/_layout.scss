@@ -350,6 +350,13 @@
     }
 
 
+    // Pager
+    .k-grid-pager {
+        border-width: 1px 0 0;
+        border-color: inherit;
+    }
+
+
     .k-grid-content-locked>table {
         table-layout: fixed;
     }
@@ -393,10 +400,6 @@
 
     .k-grid-filter .k-icon {
         vertical-align: middle;
-    }
-
-    .k-grid-pager {
-        border-width: 1px 0 0;
     }
 
     /* Locked columns */
