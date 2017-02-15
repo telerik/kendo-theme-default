@@ -543,7 +543,6 @@
             width: 100%;
             display: block;
         }
-
         .k-textbox {
             margin-bottom: 3px;
         }
@@ -552,13 +551,6 @@
         .k-widget.k-filter-and {
             width: 6em;
             margin: .5em 0;
-        }
-
-        .k-filter-selected-items {
-            font-weight: bold;
-            line-height: normal;
-            white-space: nowrap;
-            margin: 1em 0 .3em;
         }
     }
     .k-multicheck-wrap {
@@ -582,6 +574,12 @@
                 margin: 0 ($spacer-y / 4);
             }
         }
+    }
+    .k-filter-selected-items {
+        font-weight: bold;
+        line-height: normal;
+        white-space: nowrap;
+        margin: $spacer-y 0 ($spacer / 2);
     }
 
 }
