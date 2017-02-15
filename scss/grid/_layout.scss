@@ -264,6 +264,8 @@
             line-height: $form-line-height;
             display: flex;
             align-items: center;
+            align-content: center;
+            justify-content: center;
             float: right;
             position: relative;
             z-index: 1;
@@ -453,10 +455,6 @@
             padding: $padding-x 0;
             outline: 0;
         }
-    }
-
-    .k-grid-filter .k-icon {
-        vertical-align: middle;
     }
 
     /* Locked columns */
