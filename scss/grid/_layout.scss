@@ -14,17 +14,17 @@
         position: relative;
         border-width: 1px;
         border-style: solid;
-    }
 
-    .k-grid table {
-        width: 100%;
-        margin: 0; /* override CSS libraries */
-        max-width: none;
-        border-collapse: separate;
-        border-spacing: 0;
-        empty-cells: show;
-        border-width: 0;
-        outline: none;
+        table {
+            width: 100%;
+            margin: 0; /* override CSS libraries */
+            max-width: none;
+            border-collapse: separate;
+            border-spacing: 0;
+            empty-cells: show;
+            border-width: 0;
+            outline: none;
+        }
     }
 
     .k-grid-toolbar,
