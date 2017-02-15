@@ -54,6 +54,7 @@
         border-color: inherit;
         text-overflow: clip;
         cursor: default;
+        display: block;
 
         .k-button {
             vertical-align: middle;
@@ -63,10 +64,49 @@
         }
     }
 
+
+    // Grouping header
     .k-grouping-header {
-        display: block;
+        padding: $cell-padding / 2; // alternatively $header-padding-x or $padding-x $padding-y-lg
         border-width: 0 0 1px;
         border-style: solid;
+        border-color: inherit;
+        display: block;
+    }
+    .k-grouping-header .k-group-indicator {
+        display: inline-block;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: $border-radius;
+        margin: 0 0 0 $padding-y;
+        padding: $button-padding-y $button-padding-x;
+        font-size: $font-size;
+        line-height: $form-line-height;
+    }
+    .k-grouping-header .k-link {
+        display: inline-block;
+        border-width: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    .k-grouping-header .k-button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        line-height: 1;
+        vertical-align: middle;
+    }
+    .k-grouping-header .k-link .k-icon {
+        vertical-align: middle;
+    }
+    .k-grouping-header .k-button-icon {
+        width: 1.143em;
+        height: 1.143em;
+    }
+    .k-grouping-header a,
+    .k-grouping-header .k-button {
+        display: inline-block;
+        vertical-align: middle;
     }
 
     .k-grid-content .k-button {
@@ -151,7 +191,6 @@
     }
 
     .k-filter-row th,
-    .k-grouping-header,
     .k-grid-header th.k-header>.k-link    {
         padding: $header-padding-x;
     }
@@ -181,7 +220,6 @@
         }
     }
 
-    .k-grouping-header,
     .k-filter-row th,
     .k-grid-add-row td {
         border-bottom-style: solid;
@@ -373,13 +411,6 @@
         border-left-width: 0;
     }
 
-    .k-grouping-header {
-        line-height: 2.143em;
-        padding: $padding-x $padding-y-lg;
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
-    }
-
     .k-header.k-drag-clue {
         overflow: hidden;
     }
@@ -411,47 +442,6 @@
             top: $group-dropclue-size;
             left: calc(#{$group-dropclue-size} - (#{$group-dropclue-line-size} / 2));
         }
-    }
-
-    .k-grouping-header .k-group-indicator {
-        display: inline-block;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: $border-radius;
-        margin: 0 0 0 $padding-y;
-        padding: $button-padding-y $button-padding-x;
-        font-size: $font-size;
-        line-height: $form-line-height;
-    }
-
-    .k-grouping-header .k-link {
-        display: inline-block;
-        border-width: 0;
-        padding: 0;
-        text-decoration: none;
-    }
-
-    .k-grouping-header .k-button {
-        border: 0;
-        padding: 0;
-        background: transparent;
-        line-height: 1;
-        vertical-align: middle;
-    }
-
-    .k-grouping-header .k-link .k-icon {
-        vertical-align: middle;
-    }
-
-    .k-grouping-header .k-button-icon {
-        width: 1.143em;
-        height: 1.143em;
-    }
-
-    .k-grouping-header a,
-    .k-grouping-header .k-button {
-        display: inline-block;
-        vertical-align: middle;
     }
 
     .k-filter-menu {
