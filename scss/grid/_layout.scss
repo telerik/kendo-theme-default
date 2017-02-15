@@ -41,6 +41,7 @@
 
         a {
             color: inherit;
+            text-decoration: none;
         }
 
     }
@@ -67,7 +68,7 @@
 
     // Grouping header
     .k-grouping-header {
-        padding: ($cell-padding / 2); // alternatively $header-padding-x or $padding-x $padding-y-lg
+        padding: $cell-padding; // alternatively $header-padding-x or $padding-x $padding-y-lg
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
@@ -84,34 +85,20 @@
         flex-direction: row;
         align-items: center;
         align-content: center;
-    }
-    .k-grouping-header .k-link {
-        display: inline-block;
-        border-width: 0;
-        padding: 0;
-        text-decoration: none;
-    }
-    .k-grouping-header .k-button {
-        border: 0;
-        padding: 0;
-        background: transparent;
-        line-height: 1;
-        vertical-align: middle;
-    }
-    .k-grouping-header .k-link .k-icon {
-        vertical-align: middle;
-    }
-    .k-grouping-header .k-button-icon {
-        width: 1.143em;
-        height: 1.143em;
-    }
-    .k-grouping-header a,
-    .k-grouping-header .k-button {
-        display: inline-block;
-        vertical-align: middle;
+
+        .k-link,
+        .k-button.k-bare {
+            border-width: 0;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+        }
+        .k-link .k-icon {
+            margin-right: $button-padding-y;
+        }
     }
     .k-group-indicator + .k-group-indicator {
-        margin-left: ($cell-padding / 2);
+        margin-left: $cell-padding;
     }
 
     .k-grid-content .k-button {
