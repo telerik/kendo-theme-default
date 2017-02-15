@@ -217,6 +217,72 @@
         height: $footer-cells-height;
     }
 
+    // Filter row
+    .k-filter-row {
+        line-height: $form-line-height;
+
+        th {
+            padding: $cell-padding / 2;
+        }
+        th:first-child {
+            border-left-width: 0;
+        }
+
+    }
+    .k-filtercell {
+        width: auto;
+        display: block;
+
+        > span {
+            padding-right: calc( 2 * (#{$button-calc-size} + #{$cell-padding / 2}));
+            height: calc( #{$button-calc-size} );
+            display: block;
+            position: relative;
+
+            > .k-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            > label {
+                vertical-align: middle;
+            }
+
+        }
+        > .k-operator-hidden {
+            padding-right: calc( #{$button-calc-size} + #{$cell-padding / 2});
+        }
+
+        .k-widget {
+            display: flex;
+            width: auto;
+            flex: 1;
+        }
+        .k-autocomplete .k-input,
+        .k-dropdown-wrap .k-input,
+        .k-numeric-wrap .k-input,
+        .k-picker-wrap .k-input,
+        .k-selectbox .k-input,
+        .k-textbox > input {
+            // TODO: do we need this?
+            padding-left: 0;
+            padding-right: 0;
+            text-indent: $padding-x;
+        }
+
+        .k-dropdown-operator {
+            flex: none;
+            position: absolute;
+            top: 0;
+            right: calc( #{$button-calc-size} + #{$cell-padding / 2});
+        }
+        .k-dropdown-operator .k-input {
+            padding: 0;
+            width: 0;
+            overflow: hidden;
+        }
+    }
+
     .k-grid-content table,
     .k-grid-content-locked>table {
         table-layout: fixed;
@@ -235,8 +301,7 @@
         }
     }
 
-    .k-grid-header th.k-header,
-    .k-filter-row th {
+    .k-grid-header th.k-header {
         overflow: hidden;
         border-style: solid;
         border-width: 0 0 1px 1px;
@@ -254,10 +319,6 @@
         overflow-x: auto;
         overflow-y: scroll;
         min-height: 0%; /* IE9 bug workaround - expanding Grid on hover */
-    }
-
-    .k-filter-row th {
-        padding: $header-padding-x;
     }
 
     .k-grid-content {
@@ -285,7 +346,6 @@
         }
     }
 
-    .k-filter-row th,
     .k-grid-add-row td {
         border-bottom-style: solid;
         border-bottom-width: 1px;
@@ -293,8 +353,7 @@
 
     .k-grid tbody td:first-child,
     .k-grid tfoot td:first-child,
-    .k-grid-header th.k-header:first-child,
-    .k-filter-row > th:first-child {
+    .k-grid-header th.k-header:first-child {
         border-left-width: 0;
     }
 
@@ -341,54 +400,6 @@
 
     .k-grid-pager {
         border-width: 1px 0 0;
-    }
-
-    /* Filter row */
-    .k-filtercell,
-    .k-filtercell > span,
-    .k-filtercell .k-widget {
-        display: block;
-        width: auto;
-    }
-
-    .k-filtercell > span {
-        padding-right: calc( #{$filter-rows-span-size} + #{$padding-x * 3} + #{$icon-size});
-        position: relative;
-        height: $filter-rows-span-size;
-        line-height: $form-line-height;
-    }
-
-    .k-filtercell > .k-operator-hidden {
-        padding-right: $padding-x * 4;
-    }
-
-    .k-filtercell > span > .k-button,
-    .k-filter-row .k-dropdown-operator {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .k-filter-row .k-dropdown-operator {
-        width: button-size();
-        right: calc(#{$form-line-height-em} + #{$icon-size});
-    }
-
-    .k-filtercell > span > label {
-        vertical-align: middle;
-    }
-
-    .k-filtercell {
-        .k-autocomplete .k-input,
-        .k-dropdown-wrap .k-input,
-        .k-numeric-wrap .k-input,
-        .k-picker-wrap .k-input,
-        .k-selectbox .k-input,
-        .k-textbox>input {
-            padding-left: 0;
-            padding-right: 0;
-            text-indent: $padding-x;
-        }
     }
 
     /* Editing */
