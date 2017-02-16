@@ -89,6 +89,14 @@
             text-overflow: none;
         }
 
+        .k-group-footer td {
+            border-style: solid;
+            border-width: 1px 0;
+        }
+        .k-group-footer .k-group-cell + td {
+            border-left-width: 1px;
+        }
+
         .k-hierarchy-cell {
             text-align: center;
             padding: 0;
@@ -106,15 +114,9 @@
         .k-hierarchy-cell + td {
             border-left-width: 0;
         }
-
-        .k-group-footer td {
-            border-style: solid;
-            border-width: 1px 0;
-        }
-
-        .k-group-footer .k-group-cell + td {
-            border-left-width: 1px;
-        }
+        .k-detail-cell {}
+        .k-master-row {}
+        .k-detail-row {}
 
     }
 
@@ -436,11 +438,6 @@
     .k-grid-add-row td {
         border-bottom-style: solid;
         border-bottom-width: 1px;
-    }
-
-    .k-grid .k-group-col,
-    .k-grid .k-hierarchy-col {
-        width: 30px;
     }
 
     td.k-hierarchy-cell {
