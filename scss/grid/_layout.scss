@@ -413,6 +413,7 @@
 
     // Pager
     .k-grid-pager {
+        padding: $cell-padding;
         border-width: 1px 0 0;
         border-color: inherit;
     }
