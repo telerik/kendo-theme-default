@@ -4,56 +4,11 @@
     .k-pager-wrap {
         padding: $padding-x;
         border-width: 1px;
+        border-style: solid;
         line-height: $form-line-height;
         display: flex;
         align-items: center;
         overflow: hidden;
-
-        .k-link,
-        .k-state-selected {
-            padding: $button-padding-y;
-            width: $pager-buttons-size;
-            height: $pager-buttons-size;
-            line-height: $pager-buttons-size;
-            box-sizing: content-box;
-            display: inline-block;
-            position: relative;
-            text-align: center;
-            z-index: 1;
-
-            > .k-icon {
-                vertical-align: middle;
-            }
-
-        }
-        .k-link:hover,
-        .k-state-selected {
-            z-index: 2;
-        }
-        .k-link:focus,
-        .k-state-selected {
-            text-decoration: none;
-            outline: none;
-        }
-        > .k-pager-nav {}
-        > .k-pager-nav + .k-pager-nav {}
-
-
-        .k-pager-numbers {
-            display: inline-flex;
-            flex-direction: row;
-
-            li {
-                display: inline-block;
-            }
-
-            .k-current-page {
-                display: none;
-            }
-            .k-current-page + li {
-                margin-left: 0;
-            }
-        }
 
         .k-label {
             margin: 0 $spacer-x;
@@ -81,4 +36,55 @@
             text-align: right;
         }
     }
+
+
+    .k-pager-numbers {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+
+        li {
+            display: inline-block;
+        }
+
+        .k-current-page {
+            display: none;
+        }
+        .k-current-page + li {
+            margin-left: 0;
+        }
+
+    }
+
+
+    // Links
+    .k-pager-wrap > .k-link,
+    .k-pager-numbers .k-link,
+    .k-pager-numbers .k-state-selected {
+        padding: $button-padding-y;
+        width: calc( #{$button-calc-size} );
+        height: calc( #{$button-calc-size} );
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        line-height: $form-line-height;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        box-sizing: border-box;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+
+        &:hover,
+        &:focus {
+            z-index: 2;
+            text-decoration: none;
+        }
+    }
+
 }

@@ -1,43 +1,43 @@
 @include exports("pager/theme") {
-    $pager-text: $header-text !default;
-    $pager-bg: $header-bg !default;
-    $pager-items-hover-bg: $list-item-hovered-bg !default;
+
+    $pager-items-hover-bg: rgba( 0, 0, 0, .07 ) !default;
+    $pager-items-focus-shadow: 0 0 0 2px rgba( 0, 0, 0, .1 ) !default;
     $pager-numbers-text: $accent !default;
-    $pager-numbers-selected-text: $accent-contrast !default;
+    $pager-numbers-selected-text: $selected-text !default;
+    $pager-numbers-selected-bg: $selected-bg !default;
 
     .k-pager-wrap {
-        color: $pager-text;
-        background-color: $pager-bg;
 
         .k-link,
         .k-pager-nav {
-            &:focus {
-                box-shadow: $list-item-focused-shadow;
-            }
+            border-width: 0;
+            color: inherit;
+            background-color: transparent;
+
             &:hover {
                 background-color: $pager-items-hover-bg;
             }
+
+            &:focus {
+                box-shadow: inset $pager-items-focus-shadow;
+            }
+        }
+
+    }
+    .k-pager-numbers {
+
+        .k-link {
+            color: $pager-numbers-text;
         }
 
         .k-state-selected {
-            &:focus {
-                box-shadow: none;
-            }
-            &:hover {
-                color: $selected-text;
-                background-color: $selected-bg;
-                cursor: default;
-            }
+            border-color: transparent;
+            color: $selected-text;
+            background-color: $selected-bg;
+            cursor: default;
+            box-shadow: none;
         }
-    }
-    .k-pager-numbers {
-        .k-link,
-        .k-link:link {
-            color: $pager-numbers-text;
 
-            &.k-state-selected {
-                color: $accent-contrast;
-            }
-        }
     }
+
 }
