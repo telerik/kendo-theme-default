@@ -1,11 +1,21 @@
 {
   "name": "@progress/kendo-theme-default",
   "description": "SASS resources for the default Kendo UI theme",
+  "author": "Progress",
   "version": "2.0.0",
+  "license": "Apache-2.0",
   "keywords": [
     "Kendo UI",
     "Theme"
   ],
+  "main": "dist.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telerik/kendo-theme-default.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.telerik.com"
+  },
   "scripts": {
     "lint": "sass-lint -v -c ./sass-lint.yml",
     "start": "webpack-dev-server",
@@ -14,23 +24,6 @@
     "embed-assets": "node build/embed-assets.js",
     "test": "npm run lint && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "main": "dist.css",
-  "author": "Progress",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@telerik/kendo-common-tasks": "^2.0.0",
-    "cz-conventional-changelog": "^1.1.5",
-    "ghooks": "^1.0.3",
-    "glob": "^7.0.5",
-    "mime": "^1.3.4",
-    "sass-lint": "^1.7.0",
-    "semantic-release": "^4.3.5",
-    "validate-commit-msg": "^1.1.1",
-    "webpack": "^1.13.1"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npm.telerik.com"
   },
   "config": {
     "commitizen": {
@@ -57,8 +50,15 @@
       "maxSubjectLength": 100
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/telerik/kendo-theme-default.git"
+  "devDependencies": {
+    "@telerik/kendo-common-tasks": "^2.0.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "ghooks": "^1.0.3",
+    "glob": "^7.0.5",
+    "mime": "^1.3.4",
+    "sass-lint": "^1.7.0",
+    "semantic-release": "^4.3.5",
+    "validate-commit-msg": "^1.1.1",
+    "webpack": "^1.13.1"
   }
 }
