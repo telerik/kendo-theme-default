@@ -138,6 +138,9 @@
 
     // Button group
     .k-button-group {
+        margin: 0;
+        padding: 0;
+        list-style: none;
         white-space: nowrap;
         display: inline-flex;
         flex-direction: row;
