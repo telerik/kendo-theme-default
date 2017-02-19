@@ -15,9 +15,11 @@
     .k-dialog-buttongroup {
 
         .k-button {
+            padding: $padding-x * 2;
             color: inherit;
             background: none;
             background-clip: padding-box;
+            line-height: 1;
         }
         .k-button:hover,
         .k-button.k-state-hover {

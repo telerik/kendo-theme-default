@@ -39,12 +39,10 @@
 
         .k-button {
             // sass-lint:disable no-important
-            padding: $padding-x * 2;
             width: auto !important;
             border-width: 0;
             border-color: inherit;
             white-space: normal;
-            line-height: 1;
             flex: 1;
             // sass-lint:enable no-important
         }
