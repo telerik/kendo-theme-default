@@ -27,8 +27,8 @@
             border-color: inherit;
         }
         .k-button:active,
-        .k-button.k-state-focus {
-            @include appearance( hovered-button );
+        .k-button.k-state-active {
+            @include appearance( pressed-button );
             border-color: inherit;
         }
         .k-button:focus,
