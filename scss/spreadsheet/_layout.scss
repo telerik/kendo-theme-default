@@ -535,13 +535,17 @@
         }
 
         .k-list-scroller {
+            height: 210px;
             margin-top: ($spacer / 2);
-            margin-left: ($spacer / -2);
-            margin-right: ($spacer / -2);
         }
 
-        .k-tabstrip-top > .k-tabstrip-items {
-            padding: 0 ($spacer / 2);
+        .k-tabstrip-top  {
+            margin-left: ($spacer / -2);
+            margin-right: ($spacer / -2);
+
+            & > .k-tabstrip-items {
+                padding: 0 $padding-x;
+            }
         }
     }
 
