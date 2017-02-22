@@ -58,8 +58,9 @@
     // Navigator
     .k-navigator {
         margin: $spacer-x;
-        width: 50px;
-        height: 50px;
+        width: addThree( (3 * $icon-size), $padding-y-sm*2, 2px );
+        height: addThree( (3 * $icon-size), $padding-y-sm*2, 2px );
+        box-sizing: content-box;
         border-radius: 50%;
         position: relative;
 
@@ -77,24 +78,20 @@
             position: absolute;
         }
         .k-navigator-up {
-            margin-left: calc( -#{$font-size/2} - 1px);
-            top: 2px;
-            left: 50%;
+            margin-left: addTwo( $icon-size, $padding-y-sm );
+            top: $padding-y-sm;
         }
         .k-navigator-right {
-            margin-top: calc( -#{$font-size/2} - 1px);
-            right: 2px;
-            top: 50%;
+            margin-top: addTwo( $icon-size, $padding-y-sm ) ;
+            right: $padding-y-sm;
         }
         .k-navigator-down  {
-            margin-left: calc( -#{$font-size/2} - 1px);
-            bottom: 2px;
-            left: 50%;
+            margin-left: addTwo( $icon-size, $padding-y-sm ) ;
+            bottom: $padding-y-sm;
         }
         .k-navigator-left {
-            margin-top: calc( -#{$font-size/2} - 1px);
-            left: 2px;
-            top: 50%;
+            margin-top: addTwo( $icon-size, $padding-y-sm ) ;
+            left: $padding-y-sm;
         }
     }
 
@@ -120,6 +117,3 @@
     }
 
 }
-
-
-
