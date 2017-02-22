@@ -19,6 +19,7 @@ $calendar-line-height: 1.25 !default;
             text-decoration: none;
             display: block;
             outline: 0;
+            cursor: pointer;
         }
 
         table {
@@ -43,10 +44,6 @@ $calendar-line-height: 1.25 !default;
             border-width: 0 0 1px;
             padding: $calendar-cell-padding-y $calendar-cell-padding-x;
             cursor: default;
-        }
-        td {
-            border-width: 1px;
-            cursor: pointer;
         }
 
         .k-alt {
@@ -114,15 +111,20 @@ $calendar-line-height: 1.25 !default;
                 margin: 0;
                 width: 100%;
                 height: 14.167em;
-                text-align: right;
+                text-align: center;
                 float: left;
 
                 td {
-                    border-color: transparent;
+                    border: 0;
+                }
+                td.k-state-selected {
+                    color: inherit;
+                    background: transparent;
                 }
 
                 .k-link {
-                    line-height: 1.5;
+                    width: 1.8em;
+                    line-height: 1.8;
                     @include border-radius( $border-radius );
                 }
 
