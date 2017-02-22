@@ -126,7 +126,7 @@
 
     // Toolbar
     .k-grid-toolbar {
-        padding: ($cell-padding / 2);
+        padding: $cell-padding;
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
@@ -145,12 +145,15 @@
 
     // Grouping header
     .k-grouping-header {
-        padding: $cell-padding; // alternatively $header-padding-x or $padding-x $padding-y-lg
+        padding: $cell-padding;
+        min-height: button-size();
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
         line-height: $form-line-height;
-        display: block;
+        display: flex;
+        align-items: center;
+        align-content: center;
     }
     .k-group-indicator {
         @include border-radius( $border-radius );
@@ -238,6 +241,7 @@
 
 
         .k-header {
+            height: button-size();
             position: relative;
         }
 
@@ -245,6 +249,7 @@
         .k-header > .k-link {
             margin: -$cell-padding;
             padding: $cell-padding;
+            height: button-size();
             display: flex;
             align-items: center;
             overflow: hidden;
@@ -258,14 +263,15 @@
             position: static;
         }
 
+
         .k-header > .k-grid-filter,
         .k-header > .k-header-column-menu {
-            margin: -($cell-padding / 2);
-            margin-left: 0;
+            margin: -($cell-padding / 2) 0;
             padding: $button-padding-y;
             width: calc( #{$button-calc-size} );
             height: calc( #{$button-calc-size} );
             box-sizing: border-box;
+            outline: 0;
             line-height: $form-line-height;
             display: flex;
             align-items: center;
@@ -289,11 +295,6 @@
     // Filter row
     .k-filter-row {
         line-height: $form-line-height;
-
-        th {
-            padding: $cell-padding / 2;
-        }
-
     }
     .k-filtercell {
         width: auto;
