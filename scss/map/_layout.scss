@@ -1,5 +1,7 @@
 @include exports("map/layout") {
 
+    $map-navigator-padding: 2px !default;
+
     // Layout
     .k-map {
         height: 600px;
@@ -58,8 +60,8 @@
     // Navigator
     .k-navigator {
         margin: $spacer-x;
-        width: addThree( (3 * $icon-size), $padding-y-sm*2, 2px );
-        height: addThree( (3 * $icon-size), $padding-y-sm*2, 2px );
+        width: addTwo( (3 * $icon-size), $map-navigator-padding );
+        height: addTwo( (3 * $icon-size), $map-navigator-padding );
         box-sizing: content-box;
         border-radius: 50%;
         position: relative;
@@ -78,20 +80,24 @@
             position: absolute;
         }
         .k-navigator-up {
-            margin-left: addTwo( $icon-size, $padding-y-sm );
-            top: $padding-y-sm;
+            transform: translateX(-50%);
+            top: $map-navigator-padding;
+            left: 50%;
         }
         .k-navigator-right {
-            margin-top: addTwo( $icon-size, $padding-y-sm ) ;
-            right: $padding-y-sm;
+            transform: translateY(-50%);
+            right: $map-navigator-padding;
+            top: 50%;
         }
         .k-navigator-down  {
-            margin-left: addTwo( $icon-size, $padding-y-sm ) ;
-            bottom: $padding-y-sm;
+            transform: translateX(-50%);
+            bottom: $map-navigator-padding;
+            left: 50%;
         }
         .k-navigator-left {
-            margin-top: addTwo( $icon-size, $padding-y-sm ) ;
-            left: $padding-y-sm;
+            transform: translateY(-50%);
+            left: $map-navigator-padding;
+            top: 50%;
         }
     }
 
