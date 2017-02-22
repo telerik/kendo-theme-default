@@ -71,13 +71,16 @@
 
         // Buttons
         .k-button {
-            border-color: transparent;
-            background: none;
             margin: 0;
             padding: 0;
             border-radius: 100%;
             line-height: 1;
             position: absolute;
+
+            &:not(:hover) {
+                border-color: transparent;
+                background: none;
+            }
         }
         .k-navigator-up {
             transform: translateX(-50%);
