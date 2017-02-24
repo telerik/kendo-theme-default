@@ -286,15 +286,10 @@
             padding: $spacer 0;
         }
 
-        .k-clear-selected {
-            border-radius: 0 0 0 $border-radius;
-        }
-
         .k-upload-selected {
             border-left-width: 1px;
             border-left-style: solid;
             margin-left: -1px;
-            border-radius: 0 0 $border-radius;
         }
 
         .k-action-buttons {
@@ -333,7 +328,6 @@
                     border-right-width: 1px;
                     border-right-style: solid;
                     margin-left: 0;
-                    border-radius: 0 0 0 $border-radius;
                 }
 
                 .k-file-invalid-icon {
