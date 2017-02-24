@@ -357,15 +357,9 @@
 
 
     // Grid content
-    .k-grid-content {
-        width: 100%;
-        min-height: 0;
+    .k-grid-content,
+    .k-grid-content-locked {
         border-color: inherit;
-        overflow: auto;
-        overflow-x: auto;
-        overflow-y: scroll;
-        position: relative;
-        flex: 1;
 
         table {
             table-layout: fixed;
@@ -373,6 +367,15 @@
         tr:last-child td {
             border-bottom-width: 0;
         }
+    }
+    .k-grid-content {
+        width: 100%;
+        min-height: 0;
+        overflow: auto;
+        overflow-x: auto;
+        overflow-y: scroll;
+        position: relative;
+        flex: 1;
 
         .k-button {
             vertical-align: middle;
@@ -420,11 +423,6 @@
         padding: $cell-padding;
         border-width: 1px 0 0;
         border-color: inherit;
-    }
-
-
-    .k-grid-content-locked>table {
-        table-layout: fixed;
     }
 
     .k-grid-virtual {
