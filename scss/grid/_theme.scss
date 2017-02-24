@@ -36,7 +36,8 @@
 
     .k-grid-footer td,
     .k-group-footer td,
-    .k-grouping-row td {
+    .k-grouping-row td,
+    tbody .k-group-cell {
         color: $grid-grouping-row-text;
         background-color: $grid-grouping-row-bg;
     }
