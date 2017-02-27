@@ -147,6 +147,7 @@
 
     // Grouping header
     .k-grouping-header {
+        display: block;
         padding: $cell-padding-y;
         border-width: 0 0 1px;
         border-style: solid;
