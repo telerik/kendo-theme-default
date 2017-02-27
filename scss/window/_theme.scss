@@ -21,16 +21,4 @@
         background-clip: padding-box;
     }
 
-
-    // Actions
-    .k-window-action {
-        opacity: 1;
-        transition: transform .1s ease-in-out;
-
-        &:hover,
-        &.k-state-hover {
-            opacity: 1;
-        }
-    }
-
 }

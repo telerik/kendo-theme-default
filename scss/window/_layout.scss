@@ -65,20 +65,6 @@
         align-items: center;
         vertical-align: top;
     }
-    .k-window-action {
-        padding: 2px;
-        color: inherit;
-        line-height: 1;
-        text-decoration: none;
-        opacity: .2;
-
-        &:hover,
-        &.k-state-hover {
-            color: inherit;
-            text-decoration: none;
-            opacity: .5;
-        }
-    }
 
 
     // Content
