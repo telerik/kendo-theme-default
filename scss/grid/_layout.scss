@@ -28,8 +28,11 @@
         tbody,
         tfoot {
             text-align: left;
+            border-color: inherit;
         }
-        tr {}
+        tr {
+            border-color: inherit;
+        }
         th,
         td {
             padding: $cell-padding;
@@ -145,14 +148,10 @@
     // Grouping header
     .k-grouping-header {
         padding: $cell-padding;
-        min-height: button-size();
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
-        line-height: $form-line-height;
-        display: flex;
-        align-items: center;
-        align-content: center;
+        line-height: button-size();
     }
     .k-group-indicator {
         @include border-radius( $border-radius );
@@ -160,10 +159,12 @@
         padding: $button-padding-y $button-padding-x;
         border-width: 1px;
         border-style: solid;
+        line-height: $form-line-height;
         display: inline-flex;
         flex-direction: row;
         align-items: center;
         align-content: center;
+        vertical-align: top;
 
         .k-link,
         .k-button.k-bare {
@@ -248,9 +249,8 @@
         .k-header > .k-link {
             margin: -$cell-padding;
             padding: $cell-padding;
-            height: button-size();
-            display: flex;
-            align-items: center;
+            line-height: button-size();
+            display: block;
             overflow: hidden;
             text-overflow: ellipsis;
         }
