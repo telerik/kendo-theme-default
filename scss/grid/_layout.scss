@@ -146,6 +146,8 @@
 
 
     // Grouping header
+    $delete-group-offset: calc(#{-$button-padding-y} - 1px) !default;
+
     .k-grouping-header {
         display: block;
         padding: $cell-padding-y;
@@ -154,7 +156,8 @@
         border-color: inherit;
         line-height: button-size();
     }
-    .k-group-indicator {
+    .k-group-indicator,
+    .k-drag-clue {
         @include border-radius( $border-radius );
         margin: 0;
         padding: $button-padding-y $button-padding-x;
@@ -174,6 +177,11 @@
             display: inline-flex;
             align-items: center;
         }
+
+        .k-button.k-bare {
+            margin: $delete-group-offset auto $delete-group-offset $button-padding-x;
+        }
+
         .k-link .k-icon {
             margin-right: $button-padding-y;
         }
@@ -195,7 +203,8 @@
         }
 
         &::before {
-            border-width: $group-dropclue-size solid;
+            border-width: $group-dropclue-size;
+            border-style: solid;
             border-left-color: transparent;
             border-right-color: transparent;
             border-bottom-color: transparent;
