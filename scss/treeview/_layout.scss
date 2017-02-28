@@ -6,6 +6,7 @@
     .k-treeview {
         border-width: 0;
         background: none;
+        line-height: $form-line-height;
         cursor: default;
         overflow: auto;
         white-space: nowrap;
