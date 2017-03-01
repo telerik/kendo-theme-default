@@ -71,7 +71,19 @@
     }
     .k-list {
         height: auto;
+
+        > .k-item {
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            > .k-icon {
+                align-self: center;
+                margin-right: $padding-x;
+            }
+        }
     }
+
     .k-list .k-item,
     .k-list-optionlabel {
         padding: $list-item-padding-y $list-item-padding-x;

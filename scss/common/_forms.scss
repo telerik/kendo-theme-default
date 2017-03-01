@@ -77,11 +77,6 @@
             align-items: center;
             overflow: hidden;
             text-overflow: ellipsis;
-
-            &::selection {
-                color: $selected-text;
-                background: $selected-bg;
-            }
         }
     }
 
@@ -101,6 +96,7 @@
             @include border-radius( 0 $border-radius $border-radius 0 );
             padding: $button-padding-y;
             border-width: 0 0 0 1px;
+            box-sizing: border-box;
             border-style: solid;
             display: flex;
             align-items: center;
