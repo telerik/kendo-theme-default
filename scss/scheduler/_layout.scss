@@ -89,8 +89,8 @@ $modal-inner-padding: 1em;
         white-space: nowrap;
 
         li .k-link {
+            height: button-inner-size();
             box-sizing: border-box;
-            height: calc( #{$button-inner-calc-size} );
         }
     }
     .k-scheduler-toolbar { border-bottom-width: 1px; }
