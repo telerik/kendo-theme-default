@@ -38,6 +38,7 @@
         &:hover,
         &:focus {
             text-decoration: none;
+            outline: 0;
         }
 
         .k-icon,
@@ -262,18 +263,21 @@
         // Hover state
         &:hover,
         &.k-state-hover {
+            color: inherit;
             &::before { opacity: .07; }
         }
 
         // Pressed state
         &:active,
         &.k-state-active {
+            color: inherit;
             &::before { opacity: .08; }
         }
 
         // Focused state
         &:focus,
         &.k-state-focused {
+            color: inherit;
             &::after { opacity: .13; }
         }
 
