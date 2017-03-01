@@ -136,13 +136,13 @@
 
         .k-columns {
             > div {
-                width: 50%;
-                float: left;
                 padding: $padding-x;
-                border-style: solid;
-                border-width: 0 0 0 1px;
-                overflow: auto;
+                width: 50%;
                 box-sizing: border-box;
+                border-width: 0 0 0 1px;
+                border-style: solid;
+                float: left;
+                overflow: auto;
             }
 
             > div:first-child {
