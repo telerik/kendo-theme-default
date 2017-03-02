@@ -347,8 +347,11 @@
         .k-widget,
         .k-filtercell-wrapper > .k-textbox {
             display: flex;
-            width: auto;
             flex: 1;
+        }
+
+        .k-widget {
+            width: auto;
         }
 
         .k-filtercell-wrapper > .k-textbox {
