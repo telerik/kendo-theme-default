@@ -20,6 +20,13 @@
                     right: auto;
                 }
             }
+
+            &.k-combobox-clearable {
+                .k-input {
+                    padding-left: $icon-size + $padding-x;
+                    padding-right: $input-padding-x;
+               }
+            }
         }
 
         // Compact
@@ -38,6 +45,12 @@
             > .k-i-close {
                 right: calc(#{$icon-size} + #{$padding-y-lg * 3});
             }
+        }
+    }
+
+    .k-combobox-clearable {
+        .k-input {
+            padding-right: $icon-size + $padding-x;
         }
     }
 }
