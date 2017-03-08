@@ -11,6 +11,8 @@
 
     $edit-cell-input-space: calc(-#{$cell-padding} - #{$input-border-width}) !default;
 
+    $delete-group-offset: calc(#{-$button-padding-y} - 1px) !default;
+
     .k-grid {
         display: block;
         position: relative;
@@ -150,16 +152,14 @@
         }
     }
 
-    // Grouping header
-    $delete-group-offset: calc(#{-$button-padding-y} - 1px) !default;
 
+    // Grouping header
     .k-grouping-header {
         display: block;
         padding: $cell-padding-y;
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
-        line-height: button-size();
     }
     .k-group-indicator,
     .k-drag-clue {
