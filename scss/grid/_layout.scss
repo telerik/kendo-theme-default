@@ -174,18 +174,23 @@
 
         .k-link,
         .k-button.k-bare {
-            border-width: 0;
             padding: 0;
+            border-width: 0;
             display: inline-flex;
             align-items: center;
         }
 
-        .k-button.k-bare {
-            margin: $delete-group-offset auto $delete-group-offset $button-padding-x;
+        .k-link .k-icon {
+            margin-left: -( $icon-spacing / 2);
+            margin-right: $icon-spacing;
         }
 
-        .k-link .k-icon {
-            margin-right: $button-padding-y;
+        .k-button.k-bare {
+            margin-left: ( 2 * $icon-spacing );
+            margin-right: -( $icon-spacing / 2 );
+            padding: 0;
+            width: auto;
+            height: auto;
         }
     }
     .k-group-indicator + .k-group-indicator {
