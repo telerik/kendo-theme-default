@@ -105,6 +105,15 @@
     // Grid header / footer
     .k-grid-header {
 
+        .k-header {
+            height: button-size();
+        }
+
+
+        .k-header > .k-link {
+            line-height: button-size();
+        }
+
 
         .k-grid-filter {}
         .k-grid-filter:hover {

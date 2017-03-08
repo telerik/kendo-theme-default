@@ -256,8 +256,6 @@
 
 
         .k-header {
-            height: button-size();
-            line-height: button-size();
             position: relative;
             vertical-align: bottom;
         }
@@ -281,8 +279,8 @@
         }
 
 
-        .k-header > .k-grid-filter,
-        .k-header > .k-header-column-menu {
+        .k-grid-filter,
+        .k-header-column-menu {
             padding: $button-padding-y;
             width: button-size();
             height: button-size();
@@ -297,10 +295,10 @@
             position: relative;
             z-index: 1;
         }
-        .k-header > .k-grid-filter {
+        .k-grid-filter {
             margin: -($cell-padding-y / 2) 0;
         }
-        .k-header > .k-header-column-menu {
+        .k-header-column-menu {
             margin: 0;
         }
 
