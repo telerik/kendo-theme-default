@@ -2,6 +2,11 @@
 
     .k-calendar {
 
+        // Common
+        th {
+            border-width: 0;
+        }
+
 
         // Header / footer
         .k-header {
@@ -37,6 +42,7 @@
 
         .k-content thead {
             @include appearance( header );
+            box-shadow: $button-pressed-shadow;
         }
         .k-content td {}
         .k-content .k-today {
