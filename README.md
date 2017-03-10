@@ -37,4 +37,27 @@ During development, the SCSS files are linted on every `commit` and built on eve
 
 Upon build, browser-specific properties are generated through the [PostCSS autoprefixer](https://github.com/postcss/autoprefixer).
 
-When updating resources (images or fonts), run the `npm run embed-assets` task. This will generate a file with the same name, which registers a base64-encoded version in the `$data-uris` SCSS map. For example, the font file `foo.woff` will receive a `foo.scss` file, which can later be imported via `@import './font/foo';`. Then the base64 version can be inlined via `map-get( $data-uris, 'WebComponentsIcons.woff' )`. This is done in order to workaround problems with hosting resources when consuming the theme. See [issue #41](https://github.com/telerik/kendo-theme-default/issues/41#issuecomment-258472183) for more details.
+### Embedding Resources
+
+When you update resources (images or fonts), run the `npm run embed-assets` task. The task generates a file with the same name, which registers a base64-encoded version in the `$data-uris` SCSS map. For example, the `foo.woff` font file will receive a `foo.scss` file, which can later be imported through `@import './font/foo';`. Then, inline the base64 version through `map-get( $data-uris, 'WebComponentsIcons.woff' )`. The embedding of resources avoids issues related with their hosting when your project consumes the theme. For more details, refer to [issue #41](https://github.com/telerik/kendo-theme-default/issues/41#issuecomment-258472183).
+
+### Documenting Variables
+
+The variables for customizing the Default theme are listed in the `docs/customization.md` article. It is generated from the SCSS source files by running the `npm run api` command.  
+
+To document a variable, use triple-slash comments (`///`) before its definition.
+
+    /// Variable description
+    $foo: 42 !default;
+
+To group variables, use the `@group` directive.
+
+    /// Variable description
+    /// @group random
+    $foo: 42 !default;
+
+    /// Another variable description
+    /// @group random
+    $bar: 1024 !default;
+
+To change the layout or the front meter of the generated help topic, change the `build/customization.md.hbs` source file. 

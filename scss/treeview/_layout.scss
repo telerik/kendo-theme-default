@@ -6,6 +6,7 @@
     .k-treeview {
         border-width: 0;
         background: none;
+        line-height: $form-line-height;
         cursor: default;
         overflow: auto;
         white-space: nowrap;
@@ -20,6 +21,16 @@
             position: relative;
         }
 
+        // Wrappers
+        .k-top,
+        .k-mid,
+        .k-bot {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+        }
+
         // Items
         .k-item {
             margin: 0;
@@ -31,12 +42,14 @@
         // Link
         .k-in {
             margin: 0;
-            padding: $padding-y $padding-x;
-            border: 1px solid;
-            border-color: transparent;
+            padding: $button-padding-y;
+            border: 1px solid transparent;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            align-content: center;
             vertical-align: middle;
+            position: relative;
         }
 
         // Expand / collapse
@@ -47,19 +60,13 @@
         }
 
         // Other content
-        .k-checkbox,
-        .k-icon,
-        .k-image,
-        .k-sprite {
-            display: inline-block;
-            vertical-align: top;
+        .k-checkbox-wrapper {
+            margin-right: $icon-spacing;
         }
-        .k-icon {
-            vertical-align: middle;
-        }
-        .k-image,
-        .k-sprite {
-            margin-right: 3px;
+        .k-in .k-icon,
+        .k-in .k-image,
+        .k-in .k-sprite {
+            margin-right: $icon-spacing;
         }
 
 
@@ -70,7 +77,7 @@
 
             // Link
             .k-in {
-                padding: $padding-y-sm $padding-x-sm;
+                padding: $button-padding-y-sm;
             }
 
         }

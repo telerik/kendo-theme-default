@@ -2,6 +2,7 @@
 
     // Base
     .k-multiselect {
+        @include border-radius( $border-radius );
         border-width: 1px;
         border-style: solid;
         width: 100%;
@@ -21,6 +22,7 @@
         min-height: calc( #{$input-inner-calc-size} );
         border-width: 0;
         padding-right: ($padding-x * 3);
+        cursor: text;
 
         // Token list
         ul {
@@ -40,6 +42,7 @@
             flex-direction: row;
             align-items: center;
             line-height: inherit;
+            white-space: normal;
 
             .k-select {
                 display: flex;
@@ -52,11 +55,11 @@
             }
         }
 
-        .k-searchbar
-        .k-input {
-            display: inline-block;
-            width: auto;
+        .k-searchbar {
+            // search bar must be floated to align after any selected tags
+            // (or align below them, if space is not available)
             float: left;
+            width: auto;
         }
 
         // Icons
