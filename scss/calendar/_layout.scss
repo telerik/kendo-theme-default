@@ -185,10 +185,10 @@ $calendar-line-height: 1.25 !default;
 
 
     // Infinite calendar
-    $calendar-cell-size: 34px;
-    $calendar-header-height: 28px;
-    $calendar-weekdays-height: 29px;
-    $calendar-navigation-item-height: 28px;
+    $calendar-cell-size: ( 34px / 14px ) * 1em;
+    $calendar-header-height: 2em;
+    $calendar-weekdays-height: ( 29px / 14px ) * 1em;
+    $calendar-navigation-item-height: 2em;
     $calendar-navigation-width: 5em;
 
     @mixin hide-scrollbar($margin-offset: 0, $dir: 'right') {
@@ -338,7 +338,7 @@ $calendar-line-height: 1.25 !default;
 
             > ul > li {
                 height: $calendar-navigation-item-height;
-                line-height: $calendar-navigation-item-height + 2px;
+                line-height: $calendar-navigation-item-height;
                 cursor: pointer;
                 @include hide-scrollbar();
             }
