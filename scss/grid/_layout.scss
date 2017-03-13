@@ -448,6 +448,14 @@
         }
     }
 
+    .k-edit-cell,
+    .k-grid-edit-row > td {
+        >.k-textbox,
+        >.k-widget,
+        > .text-box {
+            margin-left: -($cell-padding + $input-border-width);
+        }
+    }
 
     // Resize handle
     .k-grid > .k-resize-handle,
