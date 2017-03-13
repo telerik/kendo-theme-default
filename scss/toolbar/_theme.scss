@@ -35,12 +35,18 @@
             border-color: $button-pressed-border;
             box-shadow: inset 0 0 0 1px $button-pressed-border;
         }
+        .k-split-button:focus {
+            box-shadow: $button-focused-shadow;
+        }
 
         // Button pressed state
         .k-button:active,
         .k-button.k-state-active {
             @include appearance( pressed-button );
             box-shadow: none;
+        }
+        .k-state-border-down .k-split-button-arrow {
+            box-shadow: inset $button-pressed-shadow;
         }
 
 
