@@ -140,4 +140,15 @@
         height: button-size();
     }
 
+
+    // Filter row
+    .k-filter-row {}
+    .k-filtercell {
+
+        > span,
+        .k-filtercell-wrapper {
+            height: button-size();
+        }
+    }
+
 }
