@@ -294,6 +294,7 @@
         &:focus,
         &.k-state-focused {
             color: inherit;
+
             &::after { opacity: .13; }
         }
 
