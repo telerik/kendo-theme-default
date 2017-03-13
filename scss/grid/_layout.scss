@@ -8,8 +8,6 @@
 
     $edit-cell-input-space: calc(-#{$cell-padding} - #{$input-border-width}) !default;
 
-    $delete-group-offset: calc(#{-$button-padding-y} - 1px) !default;
-
     .k-grid {
         display: block;
         position: relative;
