@@ -69,6 +69,10 @@
             text-decoration: none;
         }
 
+        table,
+        .k-grid-header-wrap {
+            box-sizing: content-box;
+        }
 
         // Grouping and hierarcy
         .k-group-col,
@@ -251,6 +255,7 @@
 
         .k-header {
             height: button-size();
+            line-height: button-size();
             position: relative;
             vertical-align: bottom;
         }
@@ -259,7 +264,7 @@
         .k-header > .k-link {
             margin: (-$cell-padding-y) (-$cell-padding-x);
             padding: $cell-padding-y $cell-padding-x;
-            line-height: button-size();
+            line-height: inherit;
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -270,6 +275,7 @@
         .k-header > .k-link > .k-icon {
             margin: 0 .4ex;
             position: static;
+            vertical-align: middle;
         }
 
 
@@ -309,10 +315,16 @@
     // Filter row
     .k-filter-row {
         line-height: $form-line-height;
+
+        th {
+            padding: $cell-padding-y;
+        }
+
+        .k-multiselect {
+            height: auto;
+        }
     }
-    .k-filter-row th {
-        padding: $cell-padding-y;
-    }
+
     .k-filtercell {
         width: auto;
         display: block;
