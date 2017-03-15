@@ -102,19 +102,8 @@
     }
 
 
-    // Grouping header
-    .k-grouping-header {
-        line-height: button-size();
-    }
-
-
     // Grid header / footer
     .k-grid-header {
-
-        .k-header {
-            height: button-size();
-            line-height: button-size();
-        }
 
 
         .k-grid-filter {}
@@ -128,22 +117,6 @@
         .k-grid-filter.k-state-active {
             color: $selected-text;
             background-color: $selected-bg;
-        }
-    }
-
-    .k-grid-footer {}
-    .k-footer-template td {
-        height: button-size();
-    }
-
-
-    // Filter row
-    .k-filter-row {}
-    .k-filtercell {
-
-        > span,
-        .k-filtercell-wrapper {
-            height: button-size();
         }
     }
 
