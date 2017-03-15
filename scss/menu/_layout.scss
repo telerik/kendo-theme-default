@@ -49,7 +49,10 @@
         }
 
         .k-separator {
-            display: none;
+            border-width: 1px 0 0;
+            border-style: solid;
+            line-height: 0;
+            overflow: hidden;
         }
 
         // Compact
@@ -89,12 +92,21 @@
         border-style: solid;
         box-sizing: content-box;
     }
+    .k-animation-container .k-context-menu.k-menu-horizontal {
+        display: flex !important; // sass-lint:disable-line no-important
+    }
 
 
     // Orientation
     .k-menu-horizontal {
 
         > .k-item {}
+
+        > .k-separator {
+            width: 0;
+            border-width: 0 1px 0 0;
+            line-height: inherit;
+        }
     }
     .k-menu-group,
     .k-menu-vertical {

@@ -36,6 +36,19 @@
     table.k-widget { display: table; }
 
 
+    // Overlay
+    .k-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: .5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+    }
+
+
     // RTL
     .k-rtl {
         direction: rtl;
@@ -58,7 +71,6 @@
         color: inherit;
         text-decoration: none;
     }
-
 
     // Outline
     .k-content {
@@ -93,6 +105,7 @@
     // Flipping
     .k-flip-h { transform: scaleX(-1); }
     .k-flip-v { transform: scaleY(-1); }
+    .k-flip-h.k-flip-v { transform: scale(-1, -1); }
 
 }
 
@@ -264,7 +277,10 @@
 @include exports( "common/lines" ) {
 
     // Lines
-    .k-line {}
+    .k-line {
+        background-color: currentColor;
+        border-color: currentColor;
+    }
     .k-line-h,
     .k-line-v {
         position: absolute;
@@ -278,19 +294,16 @@
     .k-arrow-w {
         width: 0;
         height: 0;
-        border-width: 5px;
-        border-style: solid;
-        border-top-color: transparent;
-        border-bottom-color: transparent;
+        border: 5px solid transparent;
         position: absolute;
         top: -4px;
     }
     .k-arrow-e {
-        border-right-color: transparent;
+        border-left-color: currentColor;
         right: -6px;
     }
     .k-arrow-w {
-        border-left-color: transparent;
+        border-right-color: currentColor;
         left: -6px;
     }
 

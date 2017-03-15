@@ -13,15 +13,11 @@
             white-space: nowrap;
             vertical-align: top;
         }
-        .k-grid-header tr,
+        .k-grid-header tr {
+            height: addThree( $line-height-em, 2 * $cell-padding-y, 1px );
+        }
         .k-grid-content tr {
-            height: calc( #{$row-height} );
-            line-height: inherit;
-
-            td,
-            th {
-                line-height: inherit;
-            }
+            height: addTwo( $line-height-em, 2 * $cell-padding-y );
         }
 
 
@@ -35,9 +31,6 @@
 
         // Splitbar
         .k-splitbar {
-            width: 5px;
-            border-width: 0 1px;
-            cursor: e-resize;
             position: relative;
             display: inline-flex;
         }
@@ -47,7 +40,7 @@
 
     // Toolbar
     .k-gantt-toolbar {
-        padding: $padding-x;
+        padding: $toolbar-padding-y $toolbar-padding-x;
         border-width: 0 0 1px;
         border-style: solid;
         border-color: inherit;
@@ -75,9 +68,8 @@
         .k-gantt-pdf,
         .k-gantt-create {
             padding: $button-padding-y;
-            width: $line-height-em;
-            height: $line-height-em;
-            box-sizing: content-box;
+            width: button-size();
+            height: button-size();
 
             .k-icon {
                 margin: 0;
@@ -136,12 +128,15 @@
             // sass-lint:enable no-important
         }
         .k-grid-header tr {
-            height: calc( 2 * ( #{$row-height} ) );
+            height: addThree( 2 * $line-height-em, 4 * $cell-padding-y, 2px );
             vertical-align: bottom;
         }
         .k-grid-content {
             overflow: hidden;
             overflow-x: scroll;
+        }
+        .k-grid-content td {
+            vertical-align: middle;
         }
     }
 
@@ -198,7 +193,7 @@
     }
     .k-task-wrap {
         margin: 0 -1.5em;
-        padding: 0 25px;
+        padding: 5px 25px;
         display: inline-flex;
         flex-direction: row;
         align-items: center;
@@ -251,9 +246,13 @@
         border-top-width: 0;
         border-bottom-color: inherit;
         position: absolute;
-        top: 100%;
+        bottom: 0;
         // display: none;
         cursor: e-resize;
+        visibility: hidden;
+    }
+    .k-task-wrap:hover .k-task-draghandle {
+        visibility: visible;
     }
 
 
@@ -279,6 +278,8 @@
     }
     .k-task-summary,
     .k-task-summary-complete {
+        background-color: currentColor;
+
         &::before,
         &::after {
             content: "";
@@ -290,11 +291,11 @@
         }
 
         &::before {
-            border-left-color: inherit;
+            border-left-color: currentColor;
             left: 0;
         }
         &::after {
-            border-right-color: inherit;
+            border-right-color: currentColor;
             right: 0;
         }
     }
@@ -312,6 +313,7 @@
     // Single task
     .k-single-wrap {}
     .k-task-single {
+        @include border-radius( $border-radius );
         border-width: 1px;
         border-style: solid;
         cursor: default;
@@ -337,11 +339,13 @@
             border-left-width: 1px;
         }
 
-        &:hover .k-resize-handle {
+        &:hover .k-resize-handle,
+        &:hover .k-task-actions {
             visibility: visible;
         }
     }
     .k-task-complete {
+        @include border-radius( $border-radius );
         width: 20%;
         position: absolute;
         z-index: 1;
@@ -350,12 +354,11 @@
         left: 0;
     }
     .k-task-content {
-        font-size: .875em;
         position: relative;
         z-index: 2;
         display: flex;
         flex-direction: row;
-        align-children: center;
+        align-items: center;
     }
     .k-task-template {
         padding: $padding-y-sm $padding-x-sm;
@@ -369,7 +372,11 @@
         white-space: nowrap;
         display: flex;
         flex-direction: row;
-        align-children: center;
+        align-items: center;
+        visibility: hidden;
+    }
+    .k-task-actions > .k-link {
+        display: inline-flex;
     }
 
     .k-resources-wrap {
@@ -384,6 +391,24 @@
 
         .k-resource {
             margin: 0 5px;
+        }
+    }
+
+
+    // Task tooltip
+    .k-task-details {
+        padding: $padding-y $padding-x;
+
+        strong {
+            font-size: $font-size-lg;
+            font-weight: normal;
+            display: block;
+        }
+        .k-task-pct {
+            font-size: $icon-size-lg;
+        }
+        ul {
+            line-height: normal;
         }
     }
 

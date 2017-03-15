@@ -1,12 +1,11 @@
 @include exports('grid/theme') {
-    // New
     $grid-chrome-text: $header-text !default;
     $grid-chrome-bg: $header-bg !default;
     $grid-chrome-border: $border-color !default;
     $grid-alt-bg: darken( $panel-bg, 4 ) !default;
 
-    $grid-selected-text: $selected-text !default;
-    $grid-selected-bg: $selected-bg !default;
+    $grid-selected-text: $grid-chrome-text !default;
+    $grid-selected-bg: rgba($selected-bg, .25) !default;
     $grid-grouping-row-text: $text-color !default;
     $grid-grouping-row-bg: darken($bg-color, 7%) !default;
 
@@ -37,7 +36,8 @@
 
     .k-grid-footer td,
     .k-group-footer td,
-    .k-grouping-row td {
+    .k-grouping-row td,
+    tbody .k-group-cell {
         color: $grid-grouping-row-text;
         background-color: $grid-grouping-row-bg;
     }
@@ -49,17 +49,15 @@
     }
 
     .k-grid {
-        .k-alt {
+
+        tr.k-alt {
             background-color: $grid-alt-bg;
         }
 
-        tr.k-state-selected {
-            color: $grid-selected-text;
+        tr.k-state-selected,
+        td.k-state-selected {
+            color: inherit;
             background-color: $grid-selected-bg;
-
-            .k-hierarchy-cell > .k-icon {
-                color: $selected-text;
-            }
         }
 
         td.k-state-focused,
@@ -70,6 +68,7 @@
         .k-grid-filter,
         .k-header-column-menu,
         .k-hierarchy-cell .k-icon {
+            border-width: 0;
             color: $grid-chrome-text;
         }
 
@@ -92,4 +91,24 @@
             }
         }
     }
+
+
+    // Grid header / footer
+    .k-grid-header {
+
+
+        .k-grid-filter {}
+        .k-grid-filter:hover {
+            color: $button-hovered-text;
+            background-color: $button-hovered-bg;
+        }
+        .k-grid-filter:focus {
+            box-shadow: inset 0 0 0 2px rgba( 0, 0, 0, .1 );
+        }
+        .k-grid-filter.k-state-active {
+            color: $selected-text;
+            background-color: $selected-bg;
+        }
+    }
+
 }

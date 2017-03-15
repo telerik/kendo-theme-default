@@ -29,6 +29,7 @@
     .editorToolbarWindow.k-header.k-window-content {
         a.k-tool {
             @include appearance( button );
+            border-width: 0;
             background-image: none;
             background-color: transparent;
 
@@ -45,7 +46,7 @@
             }
 
             &.k-state-selected {
-                @include appearance( pressed-button );
+                @include fill( $selected-text, $selected-bg, $selected-border, none );
             }
         }
         .k-tool-group {
@@ -53,4 +54,12 @@
         }
     }
     // sass-lint:enable class-name-format
+
+
+    // Overflow anchor
+    .k-editor-toolbar .k-overflow-anchor {
+        padding: $toolbar-padding-y;
+        width: calc( #{$toolbar-inner-calc-size} );
+        height: calc( #{$toolbar-inner-calc-size} );
+    }
 }

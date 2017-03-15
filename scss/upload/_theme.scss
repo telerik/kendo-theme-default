@@ -12,11 +12,10 @@
     $upload-success-bg: $success !default;
     $upload-disabled-text: darken($widget-bg, 27%) !default;
     $upload-disabled-border: darken($widget-bg, 27%) !default;
-    $upload-focused-status-box-shadow: 0 0 0 2px rgba(0, 0, 0, .13) !default;
+    $upload-focused-status-shadow: 0 0 0 2px rgba(0, 0, 0, .13) !default;
 
     .k-upload {
         background-color: $upload-bg;
-        border-radius: $border-radius;
         border-color: $upload-border;
 
         .k-upload-files,
@@ -39,7 +38,7 @@
                 }
 
                 &.k-state-focused {
-                    box-shadow: $upload-focused-status-box-shadow;
+                    box-shadow: $upload-focused-status-shadow;
                 }
             }
 
@@ -85,7 +84,8 @@
         }
 
         .k-file-invalid-extension-wrapper,
-        .k-multiple-files-invalid-extension-wrapper {
+        .k-multiple-files-invalid-extension-wrapper,
+        .k-file-error .k-file-extension-wrapper {
             color: $upload-error-text;
             border-color: $upload-error-border;
         }
@@ -97,7 +97,8 @@
         }
 
         .k-file-invalid-extension-wrapper::before,
-        .k-multiple-files-invalid-extension-wrapper::before {
+        .k-multiple-files-invalid-extension-wrapper::before,
+        .k-file-error .k-file-extension-wrapper::before {
             background-color: $upload-files-bg;
             border-color: transparent transparent $upload-error-border $upload-error-border;
         }
