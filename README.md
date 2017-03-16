@@ -19,8 +19,6 @@ Currently, it is available for the following suites:
 * Kendo UI for Angular.
 * Kendo UI for jQuery.
 
-We are working on providing support for the Default Theme in the Kendo UI suite for jQuery suite.
-
 ## Basic Usage
 
 For more information on how to use the Default Theme in Angular 2 and React projects, refer to [its introductory topic](docs/index.md).
