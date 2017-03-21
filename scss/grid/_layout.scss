@@ -190,6 +190,16 @@
             padding: 0;
             width: auto;
             height: auto;
+            opacity: .5;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
     .k-group-indicator + .k-group-indicator {
@@ -259,6 +269,14 @@
         .k-header {
             position: relative;
             vertical-align: bottom;
+
+            &:first-child {
+                border-left-width: 0;
+            }
+
+            &.k-first {
+                border-left-width: 1px;
+            }
         }
 
 
@@ -420,6 +438,13 @@
             margin: 0 .16em;
         }
 
+    }
+
+    // Virtualization
+    .k-virtual-scrollable-wrap {
+        height: 100%;
+        overflow-y: hidden;
+        position: relative;
     }
 
 
