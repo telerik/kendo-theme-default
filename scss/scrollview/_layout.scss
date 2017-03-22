@@ -40,29 +40,33 @@
         }
     }
 
+    .k-pages,
     .k-scrollview-pageable {
-        position: absolute;
+        margin: 0 auto;
         padding: 0;
         width: 100%;
-        left: 0;
-        bottom: 10px;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
         text-align: center;
         list-style: none;
+        position: absolute;
+        left: 0;
+        bottom: 10px;
         pointer-events: none;
-
-        & > li.k-button {
-            box-sizing: content-box;
-            vertical-align: middle;
-            display: inline-block;
-            border-radius: 50%;
-            padding: 0;
-            margin: 10px;
-            width: $scrollview-page-button-size;
-            height: $scrollview-page-button-size;
-            cursor: pointer;
-            pointer-events: all;
-        }
+    }
+    .k-pages > li,
+    .k-scrollview-pageable > li.k-button {
+        margin: 10px;
+        padding: 0;
+        width: $scrollview-page-button-size;
+        height: $scrollview-page-button-size;
+        box-sizing: content-box;
+        vertical-align: middle;
+        display: inline-block;
+        flex: 0 0 $scrollview-page-button-size;
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: all;
     }
 
     .k-scrollview-next,
@@ -76,6 +80,7 @@
         user-select: none;
         cursor: pointer;
         overflow: hidden;
+        -webkit-tap-highlight-color: $rgba-transparent;
     }
 
     .k-scrollview-prev {
@@ -147,15 +152,6 @@
 }
 
 .km-pages {
-    text-align: center;
-    margin: 0;
-    padding: .6em 0 0;
-    height: 1.5em;
-
-    li {
-        display: inline-block;
-        width: .5em;
-        height: .55em;
-        margin: 0 .3em;
-    }
+    padding: $padding-y 0 0 0;
+    position: static;
 }
