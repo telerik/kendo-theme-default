@@ -77,7 +77,7 @@
         .k-group-col,
         .k-hierarchy-col {
             padding: 0;
-            width: 30px;
+            width: $icon-size*2;
         }
 
         .k-grouping-row p {
@@ -95,6 +95,11 @@
         .k-grouping-row + tr .k-group-cell {
             border-top-width: 0;
             text-overflow: none;
+        }
+
+        .k-grouping-row .k-icon {
+            margin-left: addTwo(-1*$cell-padding-x, $icon-size/2);
+            margin-right: $icon-size/2;
         }
 
         .k-group-footer td {
@@ -190,6 +195,16 @@
             padding: 0;
             width: auto;
             height: auto;
+            opacity: .5;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
     .k-group-indicator + .k-group-indicator {
@@ -428,6 +443,13 @@
             margin: 0 .16em;
         }
 
+    }
+
+    // Virtualization
+    .k-virtual-scrollable-wrap {
+        height: 100%;
+        overflow-y: hidden;
+        position: relative;
     }
 
 

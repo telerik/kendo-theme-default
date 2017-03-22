@@ -2,12 +2,13 @@
     $pager-buttons-size: calc(#{$form-line-height-em} + 2px) !default; /// icon button size + 2px border (top and bottom)
 
     .k-pager-wrap {
-        padding: $padding-x;
+        padding: $toolbar-padding-y $toolbar-padding-x;
         border-width: 1px;
         line-height: $form-line-height;
         display: flex;
         align-items: center;
         overflow: hidden;
+        cursor: default;
 
         .k-link,
         .k-state-selected {
@@ -16,7 +17,9 @@
             height: $pager-buttons-size;
             line-height: $pager-buttons-size;
             box-sizing: content-box;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             text-align: center;
             z-index: 1;
@@ -34,6 +37,9 @@
         .k-state-selected {
             text-decoration: none;
             outline: none;
+        }
+        .k-link.k-state-disabled {
+            color: inherit;
         }
         > .k-pager-nav {}
         > .k-pager-nav + .k-pager-nav {}
@@ -79,6 +85,8 @@
         .k-pager-info {
             flex: 1;
             text-align: right;
+            order: 9;
+            justify-content: flex-end;
         }
     }
 }
