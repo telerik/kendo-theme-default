@@ -22,7 +22,7 @@ $switch-handle-size: (.8 * $switch-size) !default;
             display: none;
         }
 
-        [dir='rtl'] {
+        &[dir='rtl'] {
             .k-switch-label-off {
                 left: -2.4em;
                 margin-left: -2px;

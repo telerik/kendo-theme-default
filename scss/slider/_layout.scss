@@ -77,7 +77,7 @@ $slider-track-thickness: 4px !default;
             }
         }
 
-        [dir='rtl'] {
+        &[dir='rtl'] {
             .k-slider-selection {
                 left: auto;
                 right: 0;
