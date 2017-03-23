@@ -53,7 +53,7 @@
         }
 
         .k-align-right {
-            * + * { margin-left: $padding-x; }
+            & > * + * { margin-left: $padding-x; }
         }
 
     }
@@ -72,6 +72,10 @@
         z-index: 3;
         top: -17px;
         left: 0;
+    }
+    .k-mediaplayer-seekbar .k-slider-track {
+        width: 100% !important;
+        border-radius: 0;
     }
 
     .k-mediaplayer-fullscreen {

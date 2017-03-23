@@ -31,30 +31,31 @@
         border-radius: $border-radius;
         background: none;
     }
-    // sass-lint:disable class-name-format
-    .k-editortoolbar-dragHandle {
-        float: left;
-        cursor: move;
-        padding: $button-padding-y-sm $button-padding-x-sm;
-    }
-    // sass-lint:enable class-name-format
-    .k-editor-widget {
-        padding-top: 0;
+    .k-window.k-editor-widget {
+        padding: 0;
     }
     // sass-lint:disable class-name-format
     .editorToolbarWindow {
+        padding: 0;
         display: flex;
-        align-items: center;
-        padding: $padding-y-sm $padding-x-sm;
+        align-items: stretch;
+    }
+    .k-editortoolbar-dragHandle {
+        margin: $toolbar-padding-y;
+        padding: 0;
+        cursor: move;
     }
     // sass-lint:enable class-name-format
 
 
     // Toolbar
-    .k-keditor-toolbar-wrap {}
+    .k-editor-toolbar-wrap {
+        border-color: inherit;
+    }
     .k-editor-toolbar {
         margin: 0;
-        padding: 0;
+        padding: $toolbar-padding-y $toolbar-padding-y;
+        border-color: inherit;
         list-style-type: none;
         line-height: $form-line-height;
         cursor: default;
@@ -66,24 +67,25 @@
 
         li {
             display: inline-flex;
+            align-items: center;
             vertical-align: middle;
         }
 
 
         // Group
         .k-tool-group {
-            padding: $toolbar-padding-y $toolbar-padding-x;
+            padding: 0;
             border-width: 0;
             border-style: solid;
             border-color: inherit;
 
-            .k-tool.k-group-start,
-            .k-tool.k-group-end {
-                border-radius: 0;
+            .k-widget {}
+            .k-widget + .k-widget {
+                margin-left: $toolbar-padding-x;
             }
         }
         .k-tool-group + .k-tool-group {
-            border-left-width: 1px;
+            margin-left: $toolbar-padding-x;
         }
         .k-tool-group .k-state-disabled {
             display: none;
@@ -98,6 +100,7 @@
             border-width: 1px;
             border-style: solid;
             box-sizing: border-box;
+            text-decoration: none;
             display: inline-flex;
             flex-direction: row;
             align-items: center;
@@ -106,6 +109,9 @@
         }
         .k-tool-text {
             display: none;
+        }
+        .k-tool + .k-tool {
+            margin-left: -1px;
         }
 
         // Overflow tools
@@ -125,6 +131,7 @@
         height: 100%;
         border-width: 1px 0 0;
         border-style: solid;
+        border-color: inherit;
         outline: 0;
     }
 
@@ -140,6 +147,12 @@
         .k-editor-toolbar {
             text-align: center;
 
+            .k-tool {
+                @include border-radius( $border-radius );
+                width: 100%;
+                height: auto;
+                display: flex;
+            }
             .k-tool-text {
                 display: inline;
             }
@@ -159,71 +172,6 @@
         }
     }
 
-
-    // Editor dialog
-
-    .k-editor-dialog {
-        padding: $padding-y;
-        width: 400px;
-        border-color: inherit;
-
-        .k-edit-label {
-            padding-bottom: $padding-y;
-            width: 25%;
-            text-align: right;
-            float: left;
-            clear: both;
-        }
-
-        .k-edit-field {
-            padding-bottom: $padding-y;
-            width: 66%;
-            float: right;
-            clear: right;
-
-            .k-textbox {
-                width: 100%;
-                box-sizing: border-box;
-            }
-        }
-
-        .k-edit-buttons {
-            margin: $padding-y (-$padding-y) (-$padding-y);
-            padding: $padding-y;
-            border-top: 1px solid;
-            border-color: inherit;
-            text-align: right;
-            clear: both;
-
-            .k-button + .k-button {
-                margin-left: $padding-y;
-            }
-        }
-    }
-
-    .k-editor-table-wizard-dialog {
-        .k-content {
-            padding: $padding-y-lg $padding-x 0;
-        }
-
-        .k-edit-field {
-            .k-numerictextbox {
-                & + .k-dropdown {
-                    width: 4em;
-                }
-
-                & + .k-colorpicker,
-                & + .k-dropdown {
-                    margin-left: $padding-x-sm;
-                }
-            }
-
-            .k-colorpicker {
-                vertical-align: middle;
-            }
-        }
-    }
-
     .k-editor .k-resize-handle {
         position: absolute;
         right: 0;
@@ -233,6 +181,8 @@
         height: 0;
         border-style: solid;
         border-width: 0 0 13px 13px;
+        border-color: transparent;
+        border-bottom-color: inherit;
         cursor: se-resize;
 
         .k-i-arrow-45-down-right {
@@ -266,4 +216,84 @@
             border-width: 0;
         }
     }
+}
+
+
+
+
+@include exports( "editor/dialog/layout" ) {
+
+
+    .k-editor-dialog {
+        border-color: inherit;
+
+        .k-edit-label {
+            width: 25%;
+        }
+
+        .k-edit-field {
+            width: 66%;
+        }
+
+        .k-edit-buttons {}
+    }
+
+}
+
+
+
+
+@include exports( "editor/table-wizard/layout" ) {
+
+    .k-editor-table-wizard-dialog {
+
+        // Generic widgets
+        .k-numerictextbox {
+            width: 10em;
+
+            & + .k-dropdown {
+                width: 4em;
+            }
+
+            & + .k-colorpicker,
+            & + .k-dropdown {
+                margin-left: $padding-x-sm;
+            }
+        }
+
+        .k-colorpicker {
+            vertical-align: middle;
+        }
+
+
+        // Align
+        .k-dropdown.k-align {
+            width: auto;
+        }
+    }
+
+
+    .k-popup.k-align {
+
+        .k-list {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .k-list .k-item {
+            padding: $button-padding-y;
+            height: button-size();
+            box-sizing: border-box;
+            justify-content: center;
+            flex: 1 0 33%;
+
+            .k-icon {
+                margin: 0;
+            }
+        }
+        .k-list .k-item:last-child {
+            flex: 1 0 100%;
+        }
+
+    }
+
 }
