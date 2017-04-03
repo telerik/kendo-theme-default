@@ -41,7 +41,20 @@
     }
 
     // Datepicker
-    .k-datepicker {}
+    .k-datepicker {
+        .k-picker-wrap.k-state-invalid {
+            transition: none;
+            border-color: $error;
+
+            .k-input {
+                color: $error;
+            }
+        }
+
+        .k-i-warning {
+            color: $error;
+        }
+    }
 
     // Timepicker
     .k-timepicker {}
@@ -87,6 +100,17 @@
             .k-select { @include appearance( active-button ); }
         }
 
+        // Invalid state
+        &.k-state-invalid {
+            .k-textbox {
+                color: $error;
+                border-color: $error;
+            }
+
+            .k-i-warning {
+                color: $error;
+            }
+        }
     }
 
 }
