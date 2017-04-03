@@ -456,7 +456,7 @@
         margin-left: -($loading-size / 2);
         width: $loading-size;
         height: $loading-size;
-        animation: rotate .7s linear infinite;
+        animation: k-loading-animation .7s linear infinite;
     }
 
     .k-i-loading::after {
@@ -464,10 +464,10 @@
         margin-left: -($loading-size / 4);
         width: $loading-size / 2;
         height: $loading-size / 2;
-        animation: rotate reverse 1.4s linear infinite;
+        animation: k-loading-animation reverse 1.4s linear infinite;
     }
 
-    @keyframes rotate  {
+    @keyframes k-loading-animation  {
         0% {
             transform: rotate(0deg);
         }
