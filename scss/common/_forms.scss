@@ -9,6 +9,7 @@
     .k-dropdown,
     .k-multiselect,
     .k-numerictextbox,
+    .k-maskedtextbox,
     .k-timepicker {
         width: 12.4em;
         line-height: $form-line-height;
@@ -21,6 +22,10 @@
         &[dir='rtl'] {
             text-align: right;
         }
+
+        ::-ms-clear {
+            display: none;
+        }
     }
     .k-colorpicker,
     .k-combobox,
@@ -29,6 +34,7 @@
     .k-datetimepicker,
     .k-dropdown,
     .k-numerictextbox,
+    .k-maskedtextbox,
     .k-timepicker {
         border-width: 0;
         background-color: transparent;
@@ -162,10 +168,12 @@
             .k-icon {
                 height: 100%;
                 overflow: hidden;
-                vertical-align: baseline;
+                vertical-align: top;
             }
         }
 
+        .k-link-increase > .k-icon { transform: translateY($padding-y-sm / 2); }
+        .k-link-decrease > .k-icon { transform: translateY(-$padding-y-lg / 2); }
     }
 
     .k-virtual-content {
