@@ -419,18 +419,10 @@
     }
 
     // Loading indicator
-    $loading-size: 1em !default;
-    $loading-base-font-size: 16 !default;
-    $loading-base-font-size-px: 16px !default;
-    $loading-font-size: 16 !default;
-    $loading-font-size-px: 16px !default;
-    $loading-stroke-width: calc( .03 *( #{$loading-font-size} / #{$loading-base-font-size}) * 1px) !default;
-
     .k-i-loading {
         position: relative;
         background-color: transparent;
         box-sizing: border-box;
-        font-size: $loading-font-size-px;
         color: currentColor;
     }
 
@@ -443,7 +435,7 @@
         content: "";
         box-sizing: inherit;
         border-radius: 50%;
-        border-width: $loading-stroke-width;
+        border-width: .03em;
         border-style: solid;
         border-color: currentColor;
         border-top-color: transparent;
@@ -452,18 +444,18 @@
     }
 
     .k-i-loading::before {
-        margin-top: -($loading-size / 2);
-        margin-left: -($loading-size / 2);
-        width: $loading-size;
-        height: $loading-size;
+        margin-top: -.5em;
+        margin-left: -.5em;
+        width: 1em;
+        height: 1em;
         animation: k-loading-animation .7s linear infinite;
     }
 
     .k-i-loading::after {
-        margin-top: -($loading-size / 4);
-        margin-left: -($loading-size / 4);
-        width: $loading-size / 2;
-        height: $loading-size / 2;
+        margin-top: -.25em;
+        margin-left: -.25em;
+        width: .5em;
+        height: .5em;
         animation: k-loading-animation reverse 1.4s linear infinite;
     }
 
