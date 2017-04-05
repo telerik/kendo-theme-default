@@ -5,6 +5,7 @@
     .k-popup-edit-form {}
     .k-edit-form-container {
         width: 400px;
+        min-width: 400px;
         border-color: inherit;
         position: relative;
     }
@@ -73,6 +74,9 @@
         > .k-input.k-textbox {
             width: 100%;
             box-sizing: border-box;
+        }
+        > .k-colorpicker {
+            width: auto;
         }
 
         .k-radio,

@@ -225,7 +225,10 @@
 
 
     .k-editor-dialog {
-        border-color: inherit;
+
+        .k-edit-form-container {
+            width: auto;
+        }
 
         .k-edit-label {
             width: 25%;
@@ -236,6 +239,88 @@
         }
 
         .k-edit-buttons {}
+    }
+
+}
+
+
+
+
+@include exports( "editor/filebrowser/layout" ) {
+
+
+    .k-filebrowser-dialog {
+
+        .k-edit-label {
+            width: 18%;
+        }
+
+        .k-edit-field {
+            width: 75%;
+        }
+    }
+
+    .k-filebrowser {
+
+        // Breadcrumbs and search
+        .k-floatwrap {
+            display: flex;
+
+            &::after { display: none; }
+        }
+        .k-breadcrumbs {
+            flex: 1;
+        }
+        .k-search-wrap {
+            margin: 0 0 0 $spacer-x;
+            width: 150px;
+            display: flex;
+            align-items: center;
+
+            .k-input {
+                flex: 1;
+            }
+            .k-icon {
+                margin: 0;
+                position: static;
+            }
+        }
+
+        // Filebrowser toolbar
+        .k-filebrowser-toolbar {
+            margin: $spacer-y 0 0 0;
+            padding: $toolbar-padding-y $toolbar-padding-x;
+            display: flex;
+            justify-content: space-between;
+        }
+        .k-toolbar-wrap {
+            display: flex;
+
+            > * + * {
+                margin-left: $toolbar-padding-x;
+            }
+
+            .k-state-disabled {
+                display: none;
+            }
+        }
+
+        .k-upload {
+            padding: 0;
+            border-width: 0;
+            background: none;
+
+            .k-upload-button {
+                margin: 0;
+            }
+        }
+
+        .k-tiles {
+            height: 390px;
+            margin: 0 0 $spacer-y 0;
+            padding: $padding-y $padding-x;
+            border-top-width: 0;
+        }
     }
 
 }
