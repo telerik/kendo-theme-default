@@ -336,11 +336,11 @@ $calendar-line-height: 1.25 !default;
             bottom: 0;
             right: 0;
 
-            > ul {
+            ul {
                 width: $calendar-navigation-width;
             }
 
-            > ul > li {
+            li {
                 height: $calendar-navigation-item-height;
                 line-height: $calendar-navigation-item-height;
                 cursor: pointer;
