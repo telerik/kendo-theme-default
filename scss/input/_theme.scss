@@ -53,7 +53,7 @@
 
         .k-state-disabled & {
             &::selection {
-                @include appearance( "input" );
+                color: $input-text;
                 background-color: transparent;
             }
         }
