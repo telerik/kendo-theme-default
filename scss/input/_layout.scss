@@ -22,7 +22,7 @@
         -webkit-appearance: none;
     }
 
-    .k-maskedtextbox {
+    .k-maskedtextbox:not(.k-textbox) {
         display: inline-flex;
         border-width: 0;
     }
