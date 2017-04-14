@@ -280,13 +280,6 @@
             font-size: $font-size-xs;
             margin-left: $padding-x;
         }
-
-        .k-required::after {
-            content: "*";
-            display: inline-block;
-            width: $icon-size;
-            height: $icon-size;
-        }
     }
 
     .k-form-inline {
@@ -320,13 +313,6 @@
                 display: block;
                 clear: both;
             }
-        }
-
-        .k-required::before {
-            content: "*";
-            display: inline-block;
-            width: $icon-size;
-            height: $icon-size;
         }
     }
 

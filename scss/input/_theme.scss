@@ -140,8 +140,8 @@
         }
     }
 
-    .k-form .k-required::after,
-    .k-form-inline .k-required::before {
+    .k-required,
+    .k-required.k-field-info {
         color: $accent;
     }
 }
