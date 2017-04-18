@@ -277,8 +277,8 @@
 
         .k-field-info {
             display: inline-block;
-            font-size: $font-size-xs;
-            margin-left: $padding-x;
+            font-size: ($font-size-xs / $font-size) * 1em;
+            margin: 0 $padding-x;
         }
     }
 
