@@ -5,8 +5,6 @@
     $textbox-shadow: 0 2px 2px 1px rgba(0, 0, 0, .06) !default;
     $fieldset-margin: 30px;
 
-    $input-border-width: 1px !default;
-
     .k-textbox,
     .k-input.k-textbox,
     .k-textarea {
@@ -85,7 +83,7 @@
     .k-checkbox-label,
     .k-radio-label {
         position: relative;
-        padding-left: $icon-size + ($padding-x-lg / 2);
+        padding-left: addTwo($icon-size, ($padding-x-lg / 2));
         vertical-align: text-top;
         cursor: pointer;
         display: inline-flex;
@@ -221,16 +219,16 @@
             &:last-child:last-of-type {
                 margin-bottom: 0;
             }
+        }
 
-            legend {
-                font-size: $font-size-sm;
-                font-weight: 600;
-                line-height: 1;
-                margin-bottom: $padding-y-lg * 2;
-                text-transform: uppercase;
-                padding: 0 $padding-x 0 0;
-                width: auto;
-            }
+        legend {
+            font-size: $font-size-sm;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: $padding-y-lg * 2;
+            text-transform: uppercase;
+            padding: 0 $padding-x 0 0;
+            width: auto;
         }
 
         .k-form-field {
@@ -251,6 +249,12 @@
             margin-top: $padding-y * 2;
         }
 
+        .k-field-info {
+            display: inline-block;
+            font-size: ($font-size-xs / $font-size) * 1em;
+            margin: 0 $padding-x;
+        }
+
         .k-checkbox-label,
         .k-radio-label {
             margin-right: $padding-x * 2;
@@ -265,7 +269,7 @@
         }
 
         .k-form-field {
-            > span {
+            > span:not(.k-widget) {
                 display: block;
                 padding: $padding-y 0;
             }
@@ -274,44 +278,27 @@
                 width: 100%;
             }
         }
-
-        .k-field-info {
-            display: inline-block;
-            font-size: ($font-size-xs / $font-size) * 1em;
-            margin: 0 $padding-x;
-        }
     }
 
     .k-form-inline {
         $inline-form-element-width: 25% !default;
 
         .k-form-field {
-            > span,
-            > input {
-                display: inline-block;
-                box-sizing: border-box;
-            }
+            display: flex;
+            align-items: flex-start;
 
-            > span,
+            > span:not(.k-widget),
             > label:not(.k-checkbox-label):not(.k-radio-label) {
                 width: $inline-form-element-width;
-                float: left;
                 text-align: right;
                 line-height: $line-height;
-                padding: ($padding-y + $input-border-width) 0;
+                padding: addTwo($padding-y, $input-border-width) 0;
                 padding-right: $padding-x-lg;
-                box-sizing: border-box;
+                align-self: center;
             }
 
             > input {
                 width: calc(100% - #{$inline-form-element-width});
-                float: right;
-            }
-
-            &::after {
-                content: "";
-                display: block;
-                clear: both;
             }
         }
     }
