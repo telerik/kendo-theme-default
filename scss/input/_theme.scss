@@ -50,7 +50,8 @@
     }
 
     .k-textbox,
-    .k-input {
+    .k-input,
+    .k-textarea {
         &::selection {
             background-color: $accent;
             color: $accent-contrast;
