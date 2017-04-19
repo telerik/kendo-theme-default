@@ -287,6 +287,7 @@
             display: flex;
             align-items: flex-start;
 
+
             > span:not(.k-widget),
             > label:not(.k-checkbox-label):not(.k-radio-label) {
                 width: $inline-form-element-width;
@@ -298,7 +299,7 @@
             }
 
             > input {
-                width: calc(100% - #{$inline-form-element-width});
+                flex: 1 1 auto;
             }
         }
     }
