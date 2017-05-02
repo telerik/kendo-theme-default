@@ -548,9 +548,17 @@
 
         .k-widget,
         .k-button,
-        .k-textbox {
-            margin-top: -$input-padding-y;
-            margin-bottom: -$input-padding-y;
+        .k-textbox,
+        .k-input.k-textbox {
+            height: auto;
+            // Commented out pending a better approach
+            //     margin-top: -$input-padding-y;
+            //     margin-bottom: -$input-padding-y;
+        }
+
+        .k-edit-cell {
+            padding-top: 0;
+            padding-bottom: 0;
         }
     }
     .k-grid-edit-row,
