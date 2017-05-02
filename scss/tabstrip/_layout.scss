@@ -28,10 +28,16 @@
                 padding: $nav-item-padding-y $nav-item-padding-x;
                 color: inherit;
                 cursor: pointer;
-                display: flex;
+                display: inline-flex;
+                vertical-align: middle;
+                flex: 1 1 0;
                 flex-direction: row;
                 align-content: center;
                 align-items: center;
+            }
+            .k-item .k-link[data-type="remove"] {
+                padding: $nav-item-padding-y;
+                flex: none;
             }
         }
 
@@ -92,12 +98,6 @@
             }
         }
 
-        // Compact
-        @include compact {
-            .k-item .k-link {
-                padding: $padding-y-sm $padding-x-sm;
-            }
-        }
     }
 
 
