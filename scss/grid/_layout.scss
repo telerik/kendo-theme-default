@@ -198,6 +198,12 @@
                 border-left-width: 0;
             }
 
+            .k-grid-header,
+            .k-grid-footer {
+                padding-left: 17px;
+                padding-right: 0;
+            }
+
             .k-grid-header {
                 .k-header {
                     &:first-child {

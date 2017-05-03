@@ -431,3 +431,45 @@
     }
 
 }
+
+
+@include exports("gantt/rtl") {
+
+    .k-rtl {
+
+        .k-gantt-views {
+            float: left;
+        }
+
+        .k-gantt-actions {
+            float: right;
+        }
+
+        .k-gantt-rows,
+        .k-gantt-columns {
+            left: auto;
+            right: 0;
+        }
+
+        .k-task-wrap {
+            margin: 0 -2.1em;
+        }
+
+        .k-gantt-dependencies {
+            left: auto;
+            right: 0;
+        }
+
+        .k-timeline .k-gantt-tasks tbody {
+            text-align: left;
+        }
+
+        .k-task-content {
+            text-align: right;
+        }
+
+        .k-grid-header .k-header {
+            position: static;
+        }
+    }
+}
