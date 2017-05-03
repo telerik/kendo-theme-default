@@ -33,11 +33,17 @@
                 margin-right: -$icon-spacing;
             }
 
+            .k-i-arrow-60-left,
             .k-i-arrow-60-right {
                 margin: (-$icon-size / 2) 0 0;
                 position: absolute;
                 top: 50%;
+            }
+            .k-i-arrow-60-right {
                 right: $icon-spacing;
+            }
+            .k-i-arrow-60-left {
+                left: $icon-spacing;
             }
         }
 
@@ -53,18 +59,6 @@
             border-style: solid;
             line-height: 0;
             overflow: hidden;
-        }
-
-        // Compact
-        @include compact {
-
-            .k-link {
-                padding: $padding-y-sm $padding-x-sm;
-            }
-
-            .k-menu-group .k-item > .k-link {
-                padding: ($padding-y-sm / 2) $padding-x-sm;
-            }
         }
 
     }
@@ -119,6 +113,76 @@
         .k-link {
             padding: $list-item-padding-y $list-item-padding-x;
             padding-right: addTwo( (2 * $list-item-padding-x), $icon-size);
+            color: inherit;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+        }
+    }
+
+
+    // Scrolling
+    .k-menu-scroll-wrapper {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        position: relative;
+
+        .k-menu {
+            overflow: hidden;
+        }
+    }
+    .k-menu-scroll-button {
+        position: absolute;
+        border-width: 0;
+        border-radius: 0;
+        border-color: inherit;
+        background: inherit;
+        background-clip: border-box;
+        color: inherit;
+
+        &.k-scroll-left {
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+        &.k-scroll-right {
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+        &.k-scroll-up {
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        &.k-scroll-down {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+
+    // RTL
+    .k-rtl {
+
+        .k-menu .k-link {
+
+            .k-i-arrow-60-down {
+                margin-left: -$icon-spacing;
+                margin-right: $icon-spacing;
+            }
+        }
+
+        .k-menu-group,
+        .k-menu-vertical {
+
+            .k-link {
+                padding-right: $list-item-padding-x;
+                padding-left: addTwo( (2 * $list-item-padding-x), $icon-size);
+            }
         }
     }
 
