@@ -198,6 +198,12 @@
                 border-left-width: 0;
             }
 
+            .k-grid-header,
+            .k-grid-footer {
+                padding-left: 17px;
+                padding-right: 0;
+            }
+
             .k-grid-header {
                 .k-header {
                     &:first-child {
@@ -735,6 +741,23 @@
         line-height: normal;
         white-space: nowrap;
         margin: $spacer-y 0 ($spacer / 2);
+    }
+
+    // autofitting requires automatic table layout to measure sizes
+    .k-autofitting {
+        // sass-lint:disable-block no-important
+
+        width: auto !important;
+        table-layout: auto !important;
+
+        th.k-header,
+        td {
+            white-space: nowrap !important;
+        }
+
+        .k-detail-row {
+            display: none !important;
+        }
     }
 
 }

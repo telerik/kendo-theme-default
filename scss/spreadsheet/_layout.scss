@@ -207,8 +207,14 @@
 
         // sass-lint:disable no-important
         .k-tabstrip-items {
-            margin: 0 !important;
+            margin: 0 button-size() !important;
             border-width: 0;
+        }
+        .k-tabstrip-prev {
+            left: 0 !important;
+        }
+        .k-tabstrip-next {
+            right: 0 !important;
         }
         // sass-lint:enable no-important
 
@@ -365,6 +371,9 @@
         box-sizing: border-box;
         position: absolute;
     }
+    .k-spreadsheet .k-selection-wrapper .k-spreadsheet-editor-button {
+        position: absolute;
+    }
 
 
     // Autofill
@@ -490,6 +499,21 @@
     .k-spreadsheet-popup {
         padding: 0;
 
+        .k-separator {
+            display: block;
+        }
+
+        .k-button {
+            border-width: 0;
+            border-radius: 0;
+            color: inherit;
+            background: none;
+        }
+        .k-button-icontext {
+            display: flex;
+            justify-content: flex-start;
+        }
+
         .k-reset-color,
         .k-custom-color {
             width: 100%;
@@ -549,6 +573,7 @@
     .k-spreadsheet-window {}
     .k-spreadsheet-window .k-edit-form-container {
         width: auto;
+        min-width: 0;
     }
 
 

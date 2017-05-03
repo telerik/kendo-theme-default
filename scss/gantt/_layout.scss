@@ -193,7 +193,7 @@
     }
     .k-task-wrap {
         margin: 0 -1.5em;
-        padding: 5px 25px;
+        padding: 5px 21px;
         display: inline-flex;
         flex-direction: row;
         align-items: center;
@@ -205,7 +205,7 @@
     }
     .k-task {
         position: relative;
-        flex: 1;
+        flex: 1 1 auto;
     }
     .k-task-dot {
         width: 16px;
@@ -430,4 +430,56 @@
         float: left;
     }
 
+}
+
+
+@include exports("gantt/rtl") {
+
+    .k-rtl {
+
+        .k-gantt-views {
+            float: left;
+        }
+
+        .k-gantt-actions {
+            float: right;
+        }
+
+        .k-gantt-rows,
+        .k-gantt-columns {
+            left: auto;
+            right: 0;
+        }
+
+        .k-task-wrap {
+            margin: 0 -1.9em;
+        }
+        .k-timeline .k-gantt-tasks tbody {
+            text-align: left;
+        }
+
+        .k-task-content {
+            text-align: right;
+        }
+
+        .k-task-complete {
+            left: auto;
+            right: 0;
+        }
+
+        .k-task-draghandle {
+            margin-left: 0;
+            margin-right: 16px;
+        }
+
+        .k-gantt-dependencies {
+            left: auto;
+            right: 0;
+        }
+
+
+        .k-grid-header .k-header {
+            position: static;
+        }
+    }
 }
