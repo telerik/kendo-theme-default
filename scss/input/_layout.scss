@@ -148,7 +148,7 @@
         opacity: .5;
     }
 
-    .k-checkbox:disabled + .k-checkbox-label:hover::before {
+    .k-checkbox:disabled + .k-checkbox-label::before {
         border-width: 1px;
         border-style: solid;
     }
@@ -309,8 +309,7 @@
         }
     }
 
-    .k-grid .k-edit-cell,
-    .k-grid .k-grid-edit-row {
+    .k-grid {
         input.k-checkbox {
             margin-left: 1px;
             margin-top: 3px;
