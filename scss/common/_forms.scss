@@ -302,12 +302,4 @@
     .k-textbox.form-control {
         height: calc(#{$bootstrap-integration-input-height} + 2px);
     }
-
-    /* included in more recent theme versions */
-    .k-widget.form-control .k-picker-wrap .k-dateinput {
-        width: 100%;
-    }
-    .k-widget.form-control .k-picker-wrap .k-dateinput-wrap {
-        border: 0;
-    }
 }
