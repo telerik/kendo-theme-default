@@ -1,6 +1,13 @@
 @include exports('calendar/theme') {
 
     .k-calendar {
+        background-clip: padding-box;
+
+        .k-ie11 &,
+        .k-edge12 &,
+        .k-edge13 & {
+            background-clip: border-box;
+        }
 
 
         // Header / footer

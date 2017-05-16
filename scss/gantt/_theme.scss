@@ -1,7 +1,15 @@
 @include exports("gantt/theme") {
 
     // Theme
-    .k-gantt {}
+    .k-gantt {
+        background-clip: padding-box;
+
+        .k-ie11 &,
+        .k-edge12 &,
+        .k-edge13 & {
+            background-clip: border-box;
+        }
+    }
 
 
     // Header and footer

@@ -1,7 +1,15 @@
 @include exports("sreadsheet/theme") {
 
     // Spreadsheet
-    .k-spreadsheet {}
+    .k-spreadsheet {
+        background-clip: padding-box;
+
+        .k-ie11 &,
+        .k-edge12 &,
+        .k-edge13 & {
+            background-clip: border-box;
+        }
+    }
 
 
     // Header

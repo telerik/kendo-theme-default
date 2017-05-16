@@ -4,11 +4,16 @@
 
     .k-editor {
         @include appearance( panel );
+        background-clip: padding-box;
 
-        .k-editor-toolbar {
-            @include appearance( toolbar );
-        }
+        .k-editor-toolbar {}
         .k-editable-area {}
+
+        .k-ie11 &,
+        .k-edge12 &,
+        .k-edge13 & {
+            background-clip: border-box;
+        }
     }
 
     .k-overlay {
@@ -18,6 +23,7 @@
 
     // Editor toolbar
     .k-editor-toolbar {
+        @include appearance( toolbar );
         padding: 0;
 
 
