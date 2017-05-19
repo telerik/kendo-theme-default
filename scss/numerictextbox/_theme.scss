@@ -46,15 +46,13 @@
             @include appearance( focused-input );
         }
 
-    }
-
-    .k-numeric-wrap.k-state-invalid {
-        border-color: $error;
-        color: $error;
-
-        .k-i-arrow-60-down,
-        .k-i-arrow-60-up {
+        .k-numeric-wrap.k-state-invalid {
             color: $error;
+            border-color: $invalid-border-color;
+
+            .k-select {
+                color: $error;
+            }
         }
     }
 
