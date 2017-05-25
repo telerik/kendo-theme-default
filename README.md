@@ -63,12 +63,3 @@ To group variables, use the `@group` directive.
     $bar: 1024 !default;
 
 To change the layout or the front meter of the generated help topic, change the `build/customization.md.hbs` source file.
-
-## Contribution
-
-We accept contributions from the public.
-
-Before you pose your suggestions, please make sure that you:
-
-1. Read and sign the [Kendo UI for Angular Contribution License Agreement (CLA)](goo.gl/forms/dXc1RaE8le6rVZ0h1). The CLA confirms that you acknowledge the legal aspects of your contributions.
-2. Submit a Pull Request.
