@@ -434,8 +434,6 @@
         color: currentColor;
     }
 
-    .k-loading-image::before,
-    .k-loading-image::after,
     .k-i-loading::before,
     .k-i-loading::after {
         position: absolute;
@@ -451,6 +449,12 @@
         border-top-color: transparent;
         border-bottom-color: transparent;
         background-color: transparent;
+    }
+
+    .k-loading-image::before,
+    .k-loading-image::after {
+        @extend .k-i-loading::before;
+        border-width: .06em;
     }
 
     .k-i-loading::before {
@@ -470,24 +474,19 @@
     }
 
     .k-loading-image::before {
+        @extend .k-i-loading::before;
         margin-top: -2em;
         margin-left: -2em;
         width: 4em;
         height: 4em;
-        animation: k-loading-animation .7s linear infinite;
     }
 
     .k-loading-image::after {
+        @extend .k-i-loading::after;
         margin-top: -1em;
         margin-left: -1em;
         width: 2em;
         height: 2em;
-        animation: k-loading-animation reverse 1.4s linear infinite;
-    }
-
-    .k-loading-image::before,
-    .k-loading-image::after {
-        border-width: .06em;
     }
 
     @keyframes k-loading-animation  {
