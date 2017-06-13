@@ -434,6 +434,8 @@
         color: currentColor;
     }
 
+    .k-loading-image::before,
+    .k-loading-image::after,
     .k-i-loading::before,
     .k-i-loading::after {
         position: absolute;
@@ -465,6 +467,27 @@
         width: .5em;
         height: .5em;
         animation: k-loading-animation reverse 1.4s linear infinite;
+    }
+
+    .k-loading-image::before {
+        margin-top: -2em;
+        margin-left: -2em;
+        width: 4em;
+        height: 4em;
+        animation: k-loading-animation .7s linear infinite;
+    }
+
+    .k-loading-image::after {
+        margin-top: -1em;
+        margin-left: -1em;
+        width: 2em;
+        height: 2em;
+        animation: k-loading-animation reverse 1.4s linear infinite;
+    }
+
+    .k-loading-image::before,
+    .k-loading-image::after {
+        border-width: .06em;
     }
 
     @keyframes k-loading-animation  {
