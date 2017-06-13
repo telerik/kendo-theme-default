@@ -5,7 +5,8 @@
             > .k-i-loading {
                 top: 50%;
                 transform: translateY(-50%);
-                margin-right: $padding-x;
+                right: $padding-x-lg / 2;
+                margin-top: 0;
             }
 
             > .k-i-close {
