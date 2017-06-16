@@ -141,9 +141,16 @@
         .k-clear-value,
         .k-i-loading {
             position: absolute;
-            right: $padding-x;
             top: 50%;
             margin-top: -.5em;
+        }
+
+        .k-clear-value {
+            right: $padding-x;
+        }
+
+        .k-i-loading {
+            right: $padding-x-lg / 2;
         }
 
         .k-clear-value {
