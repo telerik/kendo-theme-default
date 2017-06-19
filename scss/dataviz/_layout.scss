@@ -37,8 +37,14 @@ $chart-title-font-size: 1.143em !default;
         font-size: $chart-font-size;
         font-family: $font-family;
         display: block;
-        height: 400px;
+        height: 400px; // remove along with k-chart-no-size
     }
+
+    // k-chart-no-size feature flag can be removed once introduced in
+    // Kendo UI for jQuery and being live for a while
+    // https://github.com/telerik/kendo-angular/issues/655
+    .k-chart-no-size { height: auto; }
+    .k-chart-size { height: 400px; }
 
     .k-chart-surface {
         height: 100%;
