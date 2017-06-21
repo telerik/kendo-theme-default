@@ -147,14 +147,11 @@
 
         .k-clear-value {
             right: $padding-x;
+            display: none;
         }
 
         .k-i-loading {
             right: $padding-x-lg / 2;
-        }
-
-        .k-clear-value {
-            display: none;
         }
 
         &.k-state-focused,
