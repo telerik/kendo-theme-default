@@ -73,7 +73,8 @@
         }
 
         .k-state-selected,
-        .k-weekend.k-state-selected {
+        .k-weekend.k-state-selected,
+        .k-calendar-monthview .k-content .k-weekend.k-state-selected {
             @include appearance( selected-node );
 
             &.k-state-hover {
