@@ -6,9 +6,9 @@
 
     // Titlebar
     .k-dialog-titlebar {
-        color: $accent-contrast;
-        background-color: $accent;
-        background-image: none;
+        color: $dialog-titlebar-color;
+        background-color: $dialog-titlebar-background-color;
+        background-image: $dialog-titlebar-background-image;
     }
 
 

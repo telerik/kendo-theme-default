@@ -31,8 +31,29 @@
 
 
     // Titlebar
-    .k-dialog-titlebar {}
-    .k-dialog-title {}
+    .k-dialog-titlebar {
+        align-items: center;
+        border-width: $dialog-titlebar-border-width;
+        border-style: $dialog-titlebar-border-style;
+        display: flex;
+        min-height: $dialog-titlebar-min-height;
+        padding: $dialog-titlebar-padding-top $dialog-titlebar-padding-right $dialog-titlebar-padding-bottom $dialog-titlebar-padding-left;
+        flex-direction: row;
+        flex-shrink: 0;
+        text-transform: $dialog-titlebar-text-transform;
+        white-space: nowrap;
+    }
+
+    .k-dialog-title {
+        color: $dialog-title-font-color;
+        margin: 0;
+        font-size: $dialog-title-font-size;
+        line-height: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        cursor: default;
+        flex: 1;
+    }
 
 
     // Actions
