@@ -18,7 +18,9 @@
     // Titlebar
     .k-window-titlebar {
         @include appearance( header );
+        color: $window-titlebar-text;
         border-color: inherit;
+        background: $window-titlebar-bg;
         background-clip: padding-box;
 
         .k-ie11 &,
@@ -26,6 +28,7 @@
         .k-edge13 & {
             background-clip: border-box;
         }
+
     }
 
 }

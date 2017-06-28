@@ -395,27 +395,15 @@ $disabled-opacity: .6 !default;
 // Window
 $window-inner-padding-x: 16px !default;
 $window-inner-padding-y: 16px !default;
-$window-titlebar-padding-x: 16px !default;
-$window-titlebar-padding-y: 16px !default;
 
-// Dialog
-$dialog-titlebar-padding-left: 16px !default;
-$dialog-titlebar-padding-right: 16px !default;
-$dialog-titlebar-padding-top: 16px !default;
-$dialog-titlebar-padding-bottom: 16px !default;
+$window-titlebar-padding: 16px !default;
+$window-titlebar-bg: $accent none !default;
+$window-titlebar-text: $accent-contrast !default;
+$window-titlebar-border-width: 0 0 1px !default;
+$window-titlebar-border-style: solid !default;
+$window-titlebar-min-height: 16px !default;
 
-$dialog-inner-padding-x: 16px !default;
-$dialog-inner-padding-y: 16px !default;
+$window-title-text-transform: inherit !default;
+$window-title-font-size: $font-size-lg !default;
+$window-title-font-family: inherit !default;
 
-$dialog-titlebar-background-image: none !default;
-$dialog-titlebar-background-color: $accent !default;
-$dialog-titlebar-color: $accent-contrast !default;
-
-$dialog-titlebar-border-width: 0 0 1px !default;
-$dialog-titlebar-border-style: solid !default;
-
-$dialog-titlebar-min-height: 16px !default;
-$dialog-titlebar-text-transform: inherit !default;
-
-$dialog-title-font-size: $font-size-lg !default;
-$dialog-title-font-color: inherit !default;

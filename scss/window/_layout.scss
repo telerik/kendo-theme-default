@@ -21,19 +21,23 @@
 
     // Title bar
     .k-window-titlebar {
-        padding: $window-titlebar-padding-y $window-titlebar-padding-x;
-        min-height: 16px;
-        border-width: 0 0 1px;
-        border-style: solid;
+        padding: $window-titlebar-padding;
+        min-height: $window-titlebar-min-height;
+        border-width: $window-titlebar-border-width;
+        border-style: $window-titlebar-border-style;
         white-space: nowrap;
         display: flex;
         flex-direction: row;
         flex-shrink: 0;
         align-items: center;
     }
+
+    // Title bar title text
     .k-window-title {
         margin: 0;
-        font-size: $font-size-lg;
+        font-size: $window-title-font-size;
+        font-family: $window-title-font-family;
+        text-transform: $window-title-text-transform;
         line-height: 1;
         text-overflow: ellipsis;
         overflow: hidden;

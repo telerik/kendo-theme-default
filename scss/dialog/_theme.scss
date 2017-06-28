@@ -5,15 +5,10 @@
 
 
     // Titlebar
-    .k-dialog-titlebar {
-        color: $dialog-titlebar-color;
-        background-color: $dialog-titlebar-background-color;
-        background-image: $dialog-titlebar-background-image;
-    }
+    .k-dialog-titlebar {}
 
 
     .k-dialog-buttongroup {
-
         .k-button {
             padding: $padding-x * 2;
             color: inherit;
