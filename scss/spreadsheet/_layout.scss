@@ -645,15 +645,6 @@
             border-style: solid;
             border-color: inherit;
         }
-
-        .k-tabstrip-top  {
-            margin-left: ($spacer / -2);
-            margin-right: ($spacer / -2);
-
-            & > .k-tabstrip-items {
-                padding: 0 $padding-x;
-            }
-        }
     }
 
 }
