@@ -591,8 +591,11 @@
 
     }
 
+    .k-spreadsheet-format-popup {
+        .k-item { justify-content: space-between; }
+        .k-spreadsheet-sample { order: 1; }
+    }
     .k-spreadsheet-sample {
-        float: right;
         opacity: .7;
     }
 }
