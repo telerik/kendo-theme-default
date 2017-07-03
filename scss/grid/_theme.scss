@@ -161,12 +161,4 @@
             background-color: $selected-bg;
         }
     }
-
-    // Grid content
-    .k-grid-content,
-    .k-grid-header-wrap {
-        > table {
-            min-width: 100%;
-        }
-    }
 }
