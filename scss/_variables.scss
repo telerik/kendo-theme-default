@@ -97,6 +97,11 @@ $cell-padding-y: 8px !default;
 $cell-padding: 8px !default;
 // $cell-padding-sm: $table-sm-cell-padding !default;
 
+$window-inner-padding-x: 16px !default;
+$window-inner-padding-y: 16px !default;
+$window-titlebar-padding-x: 16px !default;
+$window-titlebar-padding-y: 16px !default;
+
 $progressbar-height: 22px;
 
 $zindex-popup: 1;
@@ -391,19 +396,3 @@ $icon-spacing: 4px !default;
 // Disabled mixin variables
 $disabled-filter: grayscale(.1) !default;
 $disabled-opacity: .6 !default;
-
-// Window
-$window-inner-padding-x: 16px !default;
-$window-inner-padding-y: 16px !default;
-
-$window-titlebar-padding: 16px !default;
-$window-titlebar-bg: $accent none !default;
-$window-titlebar-text: $accent-contrast !default;
-$window-titlebar-border-width: 0 0 1px !default;
-$window-titlebar-border-style: solid !default;
-$window-titlebar-min-height: 16px !default;
-
-$window-title-text-transform: inherit !default;
-$window-title-font-size: $font-size-lg !default;
-$window-title-font-family: inherit !default;
-

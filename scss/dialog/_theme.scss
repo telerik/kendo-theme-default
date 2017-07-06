@@ -1,11 +1,16 @@
 @include exports("dialog/theme") {
 
+    $dialog-titlebar-bg: $accent none !default;
+    $dialog-titlebar-text: $accent-contrast !default;
 
     .k-dialog {}
 
 
     // Titlebar
-    .k-dialog-titlebar {}
+    .k-dialog-titlebar {
+        color: $dialog-titlebar-text;
+        background: $dialog-titlebar-bg;
+    }
 
 
     .k-dialog-buttongroup {
