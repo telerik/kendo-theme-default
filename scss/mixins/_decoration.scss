@@ -2,7 +2,7 @@
 @mixin fill( $color: null, $bg: null, $border: null, $gradient: null ) {
     border-color: $border;
     color: $color;
-    background-color: $bg;
+    background: $bg;
     @include linear-gradient( $gradient );
 }
 @mixin outline( $color: null ) {
