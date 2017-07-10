@@ -1,15 +1,15 @@
 @include exports("dialog/theme") {
 
-    $dialog-titlebar-bg: $accent none !default;
-    $dialog-titlebar-text: $accent-contrast !default;
+    $dialog-titlebar-border-color: inherit !default;
+    $dialog-titlebar-bg: $header-bg none !default;
+    $dialog-titlebar-text: $header-text !default;
 
     .k-dialog {}
 
 
     // Titlebar
     .k-dialog-titlebar {
-        color: $dialog-titlebar-text;
-        background: $dialog-titlebar-bg;
+        @include fill( $dialog-titlebar-text, $dialog-titlebar-bg, $dialog-titlebar-border-color );
     }
 
 
