@@ -16,7 +16,7 @@ $alert-error-text: contrast-wcag( $alert-error-bg ) !default;
 
     // Theme
     .k-notification {
-        @include border-radius();
+        @include appearance( panel );
     }
     .k-notification-info {
         border-color: $alert-info-border;
