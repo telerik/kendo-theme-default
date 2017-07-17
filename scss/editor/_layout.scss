@@ -327,6 +327,9 @@
 
         // Tiles
         .k-tiles {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             height: 390px;
             margin: 0 0 $spacer-y 0;
             padding: $padding-y $padding-x;
@@ -335,7 +338,6 @@
         }
 
         .k-tile {
-            float: left;
             width: 33%;
             height: 90px;
             padding: $padding-y $padding-x;
