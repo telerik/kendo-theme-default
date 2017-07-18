@@ -261,14 +261,15 @@ $slider-draghandle-active-size: $slider-draghandle-size !default;
         text-decoration: none;
         text-indent: -3333px;
         box-sizing: content-box;
+        width: $slider-draghandle-size;
+        height: $slider-draghandle-size;
 
         $slider-draghandle-offset: -(($slider-draghandle-size - ($slider-track-thickness / 2)) / 2) !default;
         $slider-draghandle-active-offset: -(($slider-draghandle-active-size - ($slider-track-thickness / 2)) / 2) !default;
 
         .k-slider-horizontal & {
-            height: $slider-draghandle-size;
             top: $slider-draghandle-offset;
-            width: $slider-draghandle-size;
+
 
             &:active,
             &.k-pressed {
@@ -277,9 +278,7 @@ $slider-draghandle-active-size: $slider-draghandle-size !default;
         }
 
         .k-slider-vertical & {
-            height: $slider-draghandle-size;
             left: $slider-draghandle-offset;
-            width: $slider-draghandle-size;
 
             &:active,
             &.k-pressed {
