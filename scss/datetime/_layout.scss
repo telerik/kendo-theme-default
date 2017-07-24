@@ -1,4 +1,25 @@
+// Infinite calendar
+@mixin hide-scrollbar($dir: 'right') {
+    // anything larger than the scrollbar width will do
+    $max-scrollbar: 20px;
+    $scrollbar-size: 17px;
+    $margin: -$max-scrollbar - $scrollbar-size;
+
+    padding-right: $max-scrollbar;
+    padding-left: $max-scrollbar;
+    margin-left: -$max-scrollbar;
+    margin-right: -$max-scrollbar;
+
+    @if ($dir == 'right') {
+        margin-right: $margin;
+    } @else {
+        margin-left: $margin;
+    }
+}
+
+
 @include exports("datetime/layout") {
+    $timepicker-header-height: 2em;
 
     // Datepicker
     .k-datepicker,
@@ -118,4 +139,95 @@
 
     }
 
+    // Infinite timepicker
+    // Header
+    .k-time-header { // Same as the calendar header
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2 * $padding-y $padding-x * 2;
+        line-height: $timepicker-header-height;
+    }
+
+    // Content
+    .k-time-list-wrapper {
+        display: flex;
+        overflow: hidden;
+        box-sizing: content-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .k-time-container {
+        position: relative;
+        display: flex;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 5em;
+        height: 200px;
+        line-height: $line-height;
+        justify-content: center;
+
+        .k-content {
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .k-time-list-container {
+        display: flex;
+        flex: 1 0 auto;
+        position: relative;
+        padding: $padding-y * 4 $padding-y;
+    }
+
+    .k-time-list {
+        position: relative;
+        display: flex;
+        z-index: 10;
+        outline: 0;
+        @include hide-scrollbar('right');
+    }
+
+    .k-time-list .k-item {
+        // The sum should be 30px
+        padding: $list-item-padding-y $list-item-padding-x;
+        min-height: add-two($line-height-em, 2px);
+        line-height: add-two($line-height-em, 2px);
+        // Or
+        //min-height: button-size();
+        //line-height: button-size();
+    }
+
+    .k-time-highlight {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: button-inner-size();
+        border-width: 1px 0;
+        border-style: solid;
+        z-index: 1;
+    }
+
+    .k-time-container .k-scrollable-placeholder {
+        position: absolute;
+        width: 1px;
+        top: 0;
+        right: 0;
+    }
+
+    .k-time-separator {
+        display: inline-flex;
+        align-self: center;
+        justify-content: center;
+        width: 1em;
+        height: 100%;
+        z-index: 11;
+    }
 }

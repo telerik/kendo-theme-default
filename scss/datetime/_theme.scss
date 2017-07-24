@@ -1,4 +1,5 @@
 @include exports("datetime/theme") {
+    $date-focus-shadow: $list-item-focused-shadow !default;
 
     // Shared
     .k-datepicker,
@@ -67,6 +68,45 @@
 
     // Timepicker
     .k-timepicker {}
+
+
+    // Timepicker header
+    .k-time-header {
+        .k-title {
+            font-weight: bold;
+        }
+
+        .k-time-now {
+            color: $accent;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                color: $link-hover-text;
+            }
+        }
+    }
+
+    // Timepicker content
+    .k-time-list-wrapper {
+        background-color: $popup-bg;
+    }
+
+    .k-time-container {
+        background: transparent;
+    }
+
+    .k-time-list {
+        .k-state-focused,
+        .k-state-selected.k-state-focused {
+            box-shadow: $date-focus-shadow;
+        }
+    }
+
+    .k-time-highlight {
+        background-color: $bg-color;
+        border-color: $border-color;
+    }
 
     // Datetimepicker
     .k-datetimepicker {
