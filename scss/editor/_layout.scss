@@ -252,6 +252,20 @@
 
 
     .k-filebrowser-dialog {
+        display: flex;
+
+        .k-edit-form-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+
+        }
+
+        .k-edit-form-content {
+            overflow: auto;
+            margin: (-$window-inner-padding-y) (-$window-inner-padding-x);
+            padding: $window-inner-padding-y $window-inner-padding-x;
+        }
 
         .k-edit-label {
             width: 18%;
@@ -263,6 +277,7 @@
     }
 
     .k-filebrowser {
+        max-width: 100%;
 
         // Breadcrumbs and search
         .k-floatwrap {
@@ -332,6 +347,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             height: 390px;
+            max-height: 50vh;
             margin: 0 0 $spacer-y 0;
             padding: $padding-y $padding-x;
             border-top-width: 0;
@@ -390,6 +406,30 @@
 @include exports( "editor/table-wizard/layout" ) {
 
     .k-editor-table-wizard-dialog {
+        display: flex;
+
+        // Edit form
+        .k-edit-form-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+
+        // Tabstrip wrapper
+        .k-tabstrip-wrapper {
+            display: flex;
+            flex: 1 1 auto;
+            overflow: auto;
+
+            .k-tabstrip.k-root-tabs {
+                flex: 1 1 auto;
+                margin-bottom: 0;
+            }
+        }
+
+        .k-edit-field > .k-checkbox {
+            position: relative; // fix scrolling
+        }
 
         // Generic widgets
         .k-numerictextbox {
@@ -407,6 +447,10 @@
 
         .k-colorpicker {
             vertical-align: middle;
+        }
+
+        .k-edit-field > .k-checkbox {
+            position: relative; // fix scrolling
         }
 
 
