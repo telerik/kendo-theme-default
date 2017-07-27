@@ -6,6 +6,9 @@
         .k-grid td {
             white-space: nowrap;
       }
+        .k-grid-content {
+            flex: 1 1 auto;
+        }
     }
 
     .k-pivot-toolbar {

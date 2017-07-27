@@ -252,6 +252,20 @@
 
 
     .k-filebrowser-dialog {
+        display: flex;
+
+        .k-edit-form-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+
+        }
+
+        .k-edit-form-content {
+            overflow: auto;
+            margin: (-$window-inner-padding-y) (-$window-inner-padding-x);
+            padding: $window-inner-padding-y $window-inner-padding-x;
+        }
 
         .k-edit-label {
             width: 18%;
@@ -263,6 +277,7 @@
     }
 
     .k-filebrowser {
+        max-width: 100%;
 
         // Breadcrumbs and search
         .k-floatwrap {
@@ -281,6 +296,7 @@
 
             .k-input {
                 flex: 1;
+                width: 100px; // fix width for Edge
             }
             .k-icon {
                 margin: 0;
@@ -315,14 +331,70 @@
             .k-upload-button {
                 margin: 0;
             }
+
+            .k-upload-status {
+                display: none;
+            }
         }
 
+        .k-upload-files {
+            display: block;
+        }
+
+        // Tiles
         .k-tiles {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             height: 390px;
+            max-height: 50vh;
             margin: 0 0 $spacer-y 0;
             padding: $padding-y $padding-x;
             border-top-width: 0;
             overflow: auto;
+        }
+
+        .k-tile {
+            width: 33%;
+            height: 90px;
+            padding: $padding-y $padding-x;
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            cursor: pointer;
+            @include border-radius();
+
+            .k-i-file,
+            .k-i-folder {
+                font-size: 4em;
+            }
+
+            input {
+                width: 100px;
+            }
+
+            strong {
+                display: block;
+                font-weight: 400;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .k-thumb {
+            float: left;
+            margin-right: $padding-x-sm;
+        }
+
+        .k-breadcrumbs-wrap {
+            position: absolute;
+            left: $input-padding-x;
+            top: $input-padding-y;
+
+            .k-icon {
+                position: static;
+                margin-top: 0;
+            }
         }
     }
 
@@ -334,6 +406,30 @@
 @include exports( "editor/table-wizard/layout" ) {
 
     .k-editor-table-wizard-dialog {
+        display: flex;
+
+        // Edit form
+        .k-edit-form-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+
+        // Tabstrip wrapper
+        .k-tabstrip-wrapper {
+            display: flex;
+            flex: 1 1 auto;
+            overflow: auto;
+
+            .k-tabstrip.k-root-tabs {
+                flex: 1 1 auto;
+                margin-bottom: 0;
+            }
+        }
+
+        .k-edit-field > .k-checkbox {
+            position: relative; // fix scrolling
+        }
 
         // Generic widgets
         .k-numerictextbox {
@@ -351,6 +447,10 @@
 
         .k-colorpicker {
             vertical-align: middle;
+        }
+
+        .k-edit-field > .k-checkbox {
+            position: relative; // fix scrolling
         }
 
 
