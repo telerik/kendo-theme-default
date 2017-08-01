@@ -135,7 +135,7 @@
     }
 
     $time-list-wrapper-padding: $padding-y * 8;
-    $time-list-wrapper-focused-border-width: 2px;
+    $time-list-focus-size: 2px;
 
     // Content
     .k-time-list-wrapper {
@@ -179,12 +179,12 @@
 
             &::before {
                 top: 0;
-                border-width: $time-list-wrapper-focused-border-width $time-list-wrapper-focused-border-width 0;
+                border-width: $time-list-focus-size $time-list-focus-size 0;
             }
 
             &::after {
                 bottom: 0;
-                border-width: 0 $time-list-wrapper-focused-border-width $time-list-wrapper-focused-border-width;
+                border-width: 0 $time-list-focus-size $time-list-focus-size;
             }
         }
     }
