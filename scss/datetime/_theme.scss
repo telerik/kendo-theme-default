@@ -1,7 +1,7 @@
 @include exports("datetime/theme") {
-    $time-highlight-color: rgba(0, 0, 0, .13) !default;
-    $timelist-focused-bg: rgba(0, 0, 0, .04);
-    $focused-title-color: #000 !default;
+    $time-list-highlight-color: rgba(0, 0, 0, .13) !default;
+    $time-list-focused-bg: rgba(0, 0, 0, .04);
+    $time-list-title-focus: #000 !default;
 
     // Shared
     .k-datepicker,
@@ -101,12 +101,12 @@
 
         &.k-state-focused {
             .k-title {
-                color: $focused-title-color;
+                color: $time-list-title-focus;
             }
 
             &::before,
             &::after {
-                background-color: $timelist-focused-bg;
+                background-color: $time-list-focused-bg;
                 border-width: 0;
             }
         }
@@ -130,7 +130,7 @@
 
     .k-time-highlight {
         background-color: $bg-color;
-        border-color: $time-highlight-color;
+        border-color: $time-list-highlight-color;
     }
 
     // Datetimepicker
