@@ -1,9 +1,10 @@
 @include exports('popup/layout') {
+    $popup-border-width: 1px !default;
 
     .k-popup {
         margin: 0;
         padding: $popup-padding-y $popup-padding-x;
-        border-width: 1px;
+        border-width: $popup-border-width;
         border-style: solid;
         font-size: $font-size;
         line-height: $line-height;
