@@ -4,28 +4,65 @@
     $radio-radius: 50% !default;
     $textbox-shadow: 0 2px 2px 1px rgba(0, 0, 0, .06) !default;
     $fieldset-margin: 30px;
+    $checkbox-size: $icon-size !default;
+    $checkbox-border-width: 1px !default;
+    $checkbox-line-height: 1 !default;
+    $checkbox-indeterminate-style: square !default;
+    $checkbox-dash-height: $checkbox-size / 10 !default;
+    $checkbox-dash-width: $checkbox-size - ( $checkbox-border-width * 4 ) !default;
+    $checkbox-dash-offset-x: $checkbox-border-width * 2 !default;
+    $checkbox-dash-offset-y: ( $checkbox-size - $checkbox-dash-height ) / 2 !default;
+
+    $textbox-line-height: $form-line-height-em !default;
+    // TODO: legacy, consider switching to 100%
+    $textbox-default-width: 12.4em !default;
 
     .k-textbox,
     .k-input.k-textbox,
     .k-textarea {
         @include border-radius();
         padding: $input-padding-y $input-padding-x;
-        width: 12.4em;
+        width: $textbox-default-width;
         box-sizing: border-box;
         border-width: $input-border-width;
         border-style: solid;
         outline: 0;
         font: inherit;
-        line-height: $form-line-height;
+        line-height: $textbox-line-height;
         display: inline-flex;
         vertical-align: middle;
         position: relative;
         -webkit-appearance: none;
+
+        + .k-input-bar {
+            position: relative;
+            display: block;
+            width: $textbox-default-width;
+            z-index: 2;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 2 * $input-border-width;
+                margin: auto;
+                opacity: 0;
+                transform: scaleX(.5);
+                transition: transform .3s;
+            }
+        }
+
+        &:focus + .k-input-bar::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
     }
 
     .k-textbox,
     .k-input.k-textbox {
-        height: calc(#{$form-line-height-em} + (#{$input-padding-y} * 2) + (#{$input-border-width} * 2));
+        height: calc(#{$textbox-line-height} + (#{$input-padding-y} * 2) + (#{$input-border-width} * 2));
     }
 
     .k-textarea {
@@ -79,123 +116,169 @@
         }
     }
 
-    .k-checkbox,
-    .k-radio {
-        position: absolute;
-        display: inline;
-        opacity: 0;
-        margin: 0;
-        -webkit-appearance: none;
-        overflow: hidden;
+
+    // input container / floating label
+    $floating-label-transition: .2s ease-out !default;
+    $floating-label-scale: .75 !default;
+    $floating-label-height: $textbox-line-height * $floating-label-scale;
+
+    .k-textbox-container {
+        position: relative;
+        padding-top: $floating-label-height;
+        display: inline-flex;
+        flex-direction: column;
+
+        > .k-label {
+            position: absolute;
+            line-height: $textbox-line-height;
+            cursor: text;
+            top: add-three($floating-label-height, $input-border-width, $input-padding-y);
+            left: add-two($input-padding-x, $input-border-width);
+            transition: transform $floating-label-transition, color $floating-label-transition;
+        }
+
+        &.k-state-empty {
+            font-style: normal;
+
+            > .k-label {
+                transform: translate( 0, 0 ) scale( 1 );
+            }
+        }
+
+        > .k-label,
+        &.k-state-focused > .k-label {
+            // persist alignment after scaling
+            $half-scale-percent: ((1 - $floating-label-scale) * 100% / 2);
+
+            // transform position to top-left corner of the textbox-container
+            $top-offset: add-three($textbox-line-height, $input-padding-y, $half-scale-percent, -$floating-label-scale);
+            $left-scale: add-three($input-padding-x, $input-border-width, $half-scale-percent, -1);
+            transform: translate( $left-scale, $top-offset ) scale($floating-label-scale);
+        }
     }
 
+
+    // checkbox / radio button
+    .k-checkbox,
+    .k-radio {
+        margin: 0;
+        padding: 0;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+        position: absolute;
+        opacity: 0;
+        -webkit-appearance: none;
+        pointer-events: none;
+    }
     .k-radio:disabled + .k-radio-label,
     .k-checkbox:disabled + .k-checkbox-label {
         @include disabled;
     }
 
+
     .k-checkbox-label,
     .k-radio-label {
-        position: relative;
-        padding-left: add-two($icon-size, ($padding-x-lg / 2));
-        vertical-align: text-top;
-        cursor: pointer;
+        padding-left: add-two($icon-size, $icon-spacing);
+        line-height: $checkbox-line-height;
+        vertical-align: middle;
         display: inline-flex;
-        align-items: baseline;
-        line-height: 1;
+        align-items: flex-start;
+        position: relative;
+        cursor: pointer;
+
+        .k-ripple {
+            top: $checkbox-size / 2;
+            left: $checkbox-size / 2;
+            right: auto;
+            bottom: auto;
+            width: $checkbox-size * 5 / 2;
+            height: $checkbox-size * 5 / 2;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        .k-ripple-blob {
+            // TODO: enhance ripple to yield positioning logic instead of using !important
+            top: 50% !important;
+            left: 50% !important;
+            width: 200% !important;
+            height: 200% !important;
+        }
     }
 
     .k-checkbox-label::before,
-    .k-radio-label::before {
-        font-family: "WebComponentsIcons";
+    .k-checkbox-label::after,
+    .k-radio-label::before,
+    .k-radio-label::after {
+        font: $icon-size/1 "WebComponentsIcons", monospace;
         box-sizing: border-box;
-    }
-
-    .k-checkbox-label::before {
-        @include border-radius( $checkbox-radius );
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: $icon-size;
-        height: $icon-size;
         text-align: center;
-        font-size: $icon-size;
-        line-height: $line-height * .8;
-        border-width: 1px;
-        border-style: solid;
         display: inline-flex;
         align-items: center;
-    }
-
-    .k-checkbox:indeterminate + .k-checkbox-label::after {
-        box-sizing: border-box;
-        content: "";
+        justify-content: center;
+        overflow: hidden;
         position: absolute;
-        width: $icon-size / 2;
-        height: $icon-size / 2;
-        top: $icon-size / 4;
-        left: $icon-size / 4;
+        top: 0;
+        left: 0;
     }
 
-    .k-checkbox:indeterminate:disabled + .k-checkbox-label::after {
-        opacity: .5;
-    }
-
-    .k-checkbox:disabled + .k-checkbox-label,
-    .k-checkbox:checked:disabled + .k-checkbox-label {
-        cursor: default;
-    }
-
-    .k-checkbox:checked + .k-checkbox-label::before {
-        content: "\e118";
-        border-width: 0;
-    }
-
-    .k-checkbox:checked:disabled + .k-checkbox-label::before {
-        content: "\e118";
-        opacity: .5;
-    }
-
-    .k-checkbox:disabled + .k-checkbox-label::before {
-        border-width: 1px;
-        border-style: solid;
-    }
-
+    // Container box
+    .k-checkbox-label::before,
     .k-radio-label::before {
         content: "";
-        width: $icon-size;
-        height: $icon-size;
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-radius: $radio-radius;
-        border-width: 1px;
+        width: $checkbox-size;
+        height: $checkbox-size;
+        border-width: $checkbox-border-width;
         border-style: solid;
-        padding: 0;
+    }
+    .k-checkbox-label::before {
+        @include border-radius( $checkbox-radius );
+    }
+    .k-radio-label::before {
+        border-radius: $radio-radius;
     }
 
-    .k-radio:checked + .k-radio-label::after {
+    // Checkbox
+    .k-checkbox-label::after {
+        content: "\e118";
+        width: $checkbox-size;
+        height: $checkbox-size;
+        transform: scale(0);
+    }
+    .k-checkbox:checked + .k-checkbox-label::after {
+        @include border-radius( $checkbox-radius );
+        transform: scale(1);
+    }
+    .k-checkbox:indeterminate + .k-checkbox-label::after {
         content: "";
-        position: absolute;
-        width: $icon-size / 2;
-        height: $icon-size / 2;
-        top: $icon-size / 4;
-        left: $icon-size / 4;
+        transform: scale(1);
+
+        @if $checkbox-indeterminate-style == 'dash' {
+            width: $checkbox-dash-width;
+            height: $checkbox-dash-height;
+            top: $checkbox-dash-offset-y;
+            left: $checkbox-dash-offset-x;
+        } @else {
+            width: $checkbox-size / 2;
+            height: $checkbox-size / 2;
+            top: $checkbox-size / 4;
+            left: $checkbox-size / 4;
+        }
+    }
+
+    // Radio
+    .k-radio-label::after {
+        content: "";
+        width: $checkbox-size / 2;
+        height: $checkbox-size / 2;
         border-radius: 50%;
+        position: absolute;
+        top: $checkbox-size / 4;
+        left: $checkbox-size / 4;
+        transform: scale(0);
     }
-
-    .k-radio:disabled + .k-radio-label {
-        cursor: auto;
-    }
-
-    .k-radio:disabled + .k-radio-label,
-    .k-radio:checked:disabled + .k-radio-label {
-        cursor: default;
-    }
-
-    .k-radio:checked:disabled + .k-radio-label::before {
-        opacity: .5;
+    .k-radio:checked + .k-radio-label::after {
+        transform: scale(1);
     }
 
     .k-fieldset {
