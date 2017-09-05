@@ -247,13 +247,6 @@
             position: static;
         }
 
-        .k-no-text {
-            padding: 0;
-            display: inline-block;
-            width: $icon-size;
-            height: $icon-size;
-        }
-
         .k-dirty-cell {
             position: relative;
         }
@@ -400,7 +393,7 @@
     div.k-grid-header,
     div.k-grid-footer {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: stretch;
     }
 
@@ -544,7 +537,22 @@
             width: 100%;
         }
 
-        > span,
+        > span {
+            .k-button {
+                visibility: visible;
+                pointer-events: all;
+            }
+
+            .k-button,
+            .k-dropdown-operator {
+                margin-left: $cell-padding-y / 2;
+            }
+
+            .k-numerictextbox {
+                width: auto;
+            }
+        }
+
         .k-filtercell-operator {
             > .k-button.k-clear-button-visible {
                 visibility: visible;
@@ -676,7 +684,7 @@
     .k-edit-cell > .k-widget {
         margin-top: $grid-form-component-offset;
         margin-bottom: $grid-form-component-offset;
-        vertical-align: top;
+        vertical-align: middle;
     }
 
     // Resize handle
