@@ -551,6 +551,10 @@
             .k-numerictextbox {
                 width: auto;
             }
+
+            .k-widget.k-autocomplete {
+                border-left-width: 1px;
+            }
         }
 
         .k-filtercell-operator {
