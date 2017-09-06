@@ -45,11 +45,11 @@ The styles are split into components and the dependencies are managed by the [`i
 
 During development, the SCSS files are linted on every `commit` and built on every `push` command. To test the theme package against a component, link the theme in the components package.
 
-Upon the build, the browser-specific properties are generated through the [PostCSS autoprefixer](https://github.com/postcss/autoprefixer).
+Browser-specific properties are generated at build-time through the [PostCSS autoprefixer](https://github.com/postcss/autoprefixer).
 
 ### Embedding Resources
 
-The embedding of resources, such as images or fonts, avoids issues related to their hosting when your project consumes the theme. For more details, refer to [issue #41](https://github.com/telerik/kendo-theme-default/issues/41#issuecomment-258472183).
+The embedding of resources, such as images or fonts, avoids hosting-related issues when your project consumes the theme. For more details, refer to [issue #41](https://github.com/telerik/kendo-theme-default/issues/41#issuecomment-258472183).
 
 To update the embedded resources in your project:
 
