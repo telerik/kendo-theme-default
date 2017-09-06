@@ -7,7 +7,7 @@ position: 1
 
 # Preview
 
-The following application demonstrates how the Kendo UI components for Angular look like when styled with the Kendo UI Default theme for Angular.
+The following example previews Kendo UI components for Angular styled with the Default theme.
 
 {% meta height:2200 %}
 {% embed_demo ../preview-app/ %}

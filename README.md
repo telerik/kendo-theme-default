@@ -29,7 +29,10 @@ The Kendo UI Default Theme is a SCSS-based theme for the Kendo UI components.
 
 ## Basic Usage
 
-For more information on how to use the Default Theme in Angular projects, refer to [its introductory topic](docs/index.md).
+For more information on how to implement the Default theme in your project, refer to the following articles:
+
+* [Using the Default Theme in Angular Projects](http://www.telerik.com/kendo-angular-ui/components/styling/)
+* [Using the Default Theme in jQuery Projects](http://docs.telerik.com/kendo-ui/styles-and-layout/sass-themes)
 
 ## Customization
 
