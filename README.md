@@ -1,7 +1,8 @@
 # Kendo UI Default Theme
 
+The Kendo UI Default Theme is a SCSS-based theme for the Kendo UI components.
+
 * [License](#license)
-* [Overview](#overview)
 * [Basic Usage](#basic-usage)
 * [Customization](#customization)
 * [Development](#development)
@@ -22,10 +23,6 @@ All available Kendo UI commercial licenses may be obtained at http://www.telerik
 If you do not own a commercial license, the usage of this software shall be governed by the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 *Copyright © 2017 Telerik AD. All rights reserved.*
-
-## Overview
-
-The Kendo UI Default Theme is a SCSS-based theme for the Kendo UI components.
 
 ## Basic Usage
 
