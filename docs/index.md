@@ -9,6 +9,5 @@ position: 1
 
 The following example previews Kendo UI components for Angular styled with the Default theme.
 
-{% meta height:2200 %}
-{% embed_demo ../preview-app/ %}
-{% endmeta %}
+{% theme_preview theme:default %}
+<script async src="{% asset_path theme-preview.js %}"></script>
