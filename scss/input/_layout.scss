@@ -33,31 +33,6 @@
         vertical-align: middle;
         position: relative;
         -webkit-appearance: none;
-
-        + .k-input-bar {
-            position: relative;
-            display: block;
-            width: $textbox-default-width;
-            z-index: 2;
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 2 * $input-border-width;
-                margin: auto;
-                opacity: 0;
-                transform: scaleX(.5);
-                transition: transform .3s;
-            }
-        }
-
-        &:focus + .k-input-bar::after {
-            opacity: 1;
-            transform: scaleX(1);
-        }
     }
 
     .k-textbox,
@@ -139,8 +114,7 @@
             transition: transform $floating-label-transition, color $floating-label-transition;
         }
 
-        > .k-textbox,
-        > .k-input-bar {
+        > .k-textbox {
             flex: 1 1 auto;
             width: auto;
         }
