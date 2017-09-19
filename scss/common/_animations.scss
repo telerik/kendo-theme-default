@@ -144,8 +144,8 @@
         &-exit-active {
             transform: scaleX(0);
             transition: transform 300ms ease-in-out;
-            }
         }
+    }
 
     .k-fade {
         &-enter {
@@ -207,9 +207,9 @@
 
         &-enter-active,
         &-appear-active {
-            transition: transform, opacity 300ms ease-in-out;
             opacity: 1;
             transform: scale(1);
+            transition: transform, opacity 300ms ease-in-out;
         }
 
         &-exit {
@@ -345,6 +345,7 @@
             transition: max-height 300ms ease-in-out;
         }
     }
+
     .k-reveal-horizontal {
         &-enter,
         &-appear {
