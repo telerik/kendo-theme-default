@@ -801,6 +801,12 @@
     }
 }
 
+.k-ie,
+.k-edge {
+    .k-multicheck-wrap {
+        overflow-y: scroll;
+    }
+}
 
 @include exports( "filtermenu/layout" ) {
 
