@@ -359,6 +359,10 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
             table {
                 table-layout: auto;
             }
+
+            .k-link {
+                width: auto;
+            }
         }
     }
 
