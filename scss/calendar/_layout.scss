@@ -249,8 +249,10 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
 
         .k-title {
             font-weight: bold;
+            cursor: pointer;
+
             &:not(.k-state-disabled) {
-                cursor: pointer;
+                opacity: 1;
             }
         }
 
@@ -354,10 +356,17 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
     .k-calendar-decadeview,
     .k-calendar-centuryview {
         .k-content {
-            /*height: 7 * $calendar-cell-size + $calendar-header-height + $calendar-weekdays-height;*/
+            //height: 7 * $calendar-cell-size + $calendar-header-height + $calendar-weekdays-height;
             height: 20.715em; /* TODO: should be 290px like in monthview */
             table {
                 table-layout: auto;
+            }
+
+            td {
+                $cell-size: $calendar-view-width / 5;
+                width: $cell-size;
+                height: $cell-size;
+                border-radius: $cell-size / 2;
             }
 
             .k-link {
