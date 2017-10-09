@@ -362,6 +362,13 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
                 table-layout: auto;
             }
 
+            th {
+                font-size: inherit;
+                height: $calendar-header-height;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
             td {
                 $cell-size: $calendar-view-width / 5;
                 width: $cell-size;
