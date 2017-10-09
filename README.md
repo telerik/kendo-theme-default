@@ -1,3 +1,7 @@
+<a href="https://www.telerik.com/kendo-angular-ui/" target="_blank">
+<img width="631" src="https://www.telerik.com/kendo-angular-ui/npm-banner.svg">
+</a>
+
 # Kendo UI Default Theme
 
 The Kendo UI Default Theme is a SCSS-based theme for the Kendo UI components.
@@ -8,6 +12,8 @@ The Kendo UI Default Theme is a SCSS-based theme for the Kendo UI components.
 * [Development](#development)
     * [Embedding Resources](#embedding-resources)
     * [Documenting Variables](#documenting-variables)
+* [Resources](#resources)
+* [Questions and Feedback](#questions-and-feedback)
 
 ## License
 
@@ -76,3 +82,20 @@ To group variables, use the `@group` directive.
     $bar: 1024 !default;
 
 To change the layout or the front meter of the generated help topic, change the [`build/customization.md.hbs`](/build/customization.md.hbs) source file.
+
+## Resources
+
+- [Get Started](https://www.telerik.com/kendo-angular-ui/getting-started)
+- [Component References](https://www.telerik.com/kendo-angular-ui/components)
+- [Blogs](http://www.telerik.com/blogs/kendo-ui)
+
+## Questions and Feedback
+
+- [FAQ](https://www.telerik.com/kendo-angular-ui/components/faq/)
+- [GitHub Issues](https://github.com/telerik/kendo-angular/issues)
+- [Feedback Portal](http://kendoui-feedback.telerik.com/forums/555517-kendo-ui-for-angular-2-feedback)
+- [StackOverflow](https://stackoverflow.com/questions/tagged/kendo-ui-angular2)
+
+*Copyright © 2017 Progress Software Corporation and/or its subsidiaries or affiliates. All Rights Reserved.*
+
+*Progress, Telerik, and certain product names used herein are trademarks or registered trademarks of Progress Software Corporation and/or one of its subsidiaries or affiliates in the U.S. and/or other countries.*
