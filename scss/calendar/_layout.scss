@@ -274,11 +274,7 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
         flex-direction: column;
         overflow: hidden;
         margin: 0 $spacer-x;
-        width: $calendar-view-width;
-
-        table {
-            width: ($calendar-cell-size * 7);
-        }
+        //width: add-two(2 * $spacer-x, 7 * $calendar-cell-size);
 
         .k-content {
             position: relative;
@@ -286,6 +282,7 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
             > table {
                 position: relative;
                 z-index: 1;
+                width: auto;
             }
 
             th {
@@ -336,17 +333,19 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
         }
 
         .k-calendar-weekdays {
+            width: auto;
+
             thead {
                 @include disabled;
 
                 font-weight: bold;
-                font-size: 10px;
             }
 
             th {
                 text-align: center;
                 border-width: 0;
                 padding: 0;
+                width: (($font-size * $calendar-cell-size) / $font-size-sm);
                 line-height: $calendar-weekdays-height;
             }
         }
@@ -365,19 +364,19 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
             th {
                 font-size: inherit;
                 height: $calendar-header-height;
-                padding-left: 0;
-                padding-right: 0;
+                padding-left: $button-padding-x;
+                padding-right: $button-padding-x;
             }
 
+            $cell-size: $calendar-view-width / 5;
             td {
-                $cell-size: $calendar-view-width / 5;
-                width: $cell-size;
-                height: $cell-size;
                 border-radius: $cell-size / 2;
             }
 
             .k-link {
-                width: auto;
+                width: $cell-size;
+                height: $cell-size;
+                line-height: $cell-size;
             }
         }
     }
