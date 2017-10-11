@@ -250,11 +250,6 @@ $calendar-view-height: 7 * $calendar-cell-size + $calendar-header-height + $cale
 
         .k-title {
             font-weight: bold;
-            cursor: pointer;
-
-            &:not(.k-state-disabled) {
-                opacity: 1;
-            }
         }
 
         .k-today {
