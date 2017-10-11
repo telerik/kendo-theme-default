@@ -349,8 +349,6 @@ $calendar-view-height: 7 * $calendar-cell-size + $calendar-header-height + $cale
         }
 
         .k-calendar-weekdays {
-            width: auto;
-
             thead {
                 @include disabled;
 
@@ -361,7 +359,6 @@ $calendar-view-height: 7 * $calendar-cell-size + $calendar-header-height + $cale
                 text-align: center;
                 border-width: 0;
                 padding: 0;
-                width: (($font-size * $calendar-cell-size) / $font-size-sm);
                 line-height: $calendar-weekdays-height;
             }
         }
