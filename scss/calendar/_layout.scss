@@ -7,7 +7,8 @@ $calendar-header-height: 2em;
 $calendar-weekdays-height: ( 29px / 14px ) * 1em;
 $calendar-navigation-item-height: 2em;
 $calendar-navigation-width: 5em;
-$calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigation-width + (2 * $calendar-cell-padding-y * 1em));
+$calendar-view-width: 7 * $calendar-cell-size;
+$calendar-view-height: 7 * $calendar-cell-size + $calendar-header-height + $calendar-weekdays-height;
 
 @include exports('calendar/layout') {
 
@@ -273,11 +274,26 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
         flex: 1 0 auto;
         flex-direction: column;
         overflow: hidden;
-        margin: 0 $spacer-x;
-        //width: add-two(2 * $spacer-x, 7 * $calendar-cell-size);
+        padding: 0 $spacer-x;
+        // setting width / height prevents layout changes in meta views
+        width: $calendar-view-width;
+        height: $calendar-view-height;
+
+        .k-calendar-header {
+            flex: 0 0 auto;
+
+            // align fast navigation button with content
+            margin-left: -$button-padding-x;
+            padding-left: $button-padding-x;
+
+            .k-title {
+                margin-left: -$button-padding-x;
+            }
+        }
 
         .k-content {
             position: relative;
+            flex: 1 0 auto;
 
             > table {
                 position: relative;
@@ -355,8 +371,6 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
     .k-calendar-decadeview,
     .k-calendar-centuryview {
         .k-content {
-            //height: 7 * $calendar-cell-size + $calendar-header-height + $calendar-weekdays-height;
-            height: 20.715em; /* TODO: should be 290px like in monthview */
             table {
                 table-layout: auto;
             }
@@ -364,8 +378,8 @@ $calendar-view-width: 17em; //TODO: write it with calc(100% - ($calendar-navigat
             th {
                 font-size: inherit;
                 height: $calendar-header-height;
-                padding-left: $button-padding-x;
-                padding-right: $button-padding-x;
+                padding-left: 0;
+                padding-right: 0;
             }
 
             $cell-size: $calendar-view-width / 5;
