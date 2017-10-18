@@ -76,7 +76,7 @@ $switch-handle-size: (.8 * $switch-size) !default;
     }
 
     .k-switch-label-on {
-        left: calc(-1*(#{$switch-size}) + (0.2*#{$switch-size}));
+        left: -0.8*$switch-size;
     }
 
     .k-switch-label-on,
