@@ -7,6 +7,8 @@ $enable-shadows: true !default;
 $enable-gradients: true !default;
 $enable-transitions: true !default;
 
+$color-level-step: 8% !default;
+
 
 // Fonts
 
@@ -151,7 +153,7 @@ $selected-border: rgba( black, .1 ) !default;
 $selected-gradient: none !default;
 
 $selected-hover-color: $selected-text !default;
-$selected-hover-bg: mix( $selected-bg, black, 92) !default;
+$selected-hover-bg: shade( $selected-bg ) !default;
 
 $focused-shadow: inset 0 0 0 2px rgba(0, 0, 0, .13) !default;
 
@@ -174,8 +176,6 @@ $gradient-black-to-transparent: black, rgba( black, 0);
 $gradient-white-to-transparent: white, rgba( white, 0);
 
 $gradient-rainbow: #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000;
-
-$color-level-step: 8% !default;
 
 
 
