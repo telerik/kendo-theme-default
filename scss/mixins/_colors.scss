@@ -1,7 +1,6 @@
 @import "vendor/color-helpers/math";
 @import "vendor/color-helpers/contrast";
 
-
 @function color-level($color, $level: 0) {
 
     @if ($level == 0) {
