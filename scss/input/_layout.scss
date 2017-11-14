@@ -121,8 +121,6 @@
         }
 
         &.k-state-empty {
-            font-style: normal;
-
             > .k-label {
                 transform: translate( 0, 0 ) scale( 1 );
             }
@@ -277,6 +275,13 @@
     }
     .k-radio:checked + .k-radio-label::after {
         transform: scale(1);
+    }
+
+    // Check / Radio list
+    .k-radio-list {
+        .k-radio-label {
+            line-height: $checkbox-size * 1.25;
+        }
     }
 
     .k-fieldset {

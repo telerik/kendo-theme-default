@@ -193,8 +193,6 @@
 
             th,
             td {
-                position: relative;
-
                 &:first-child {
                     border-left-width: 1px;
                 }
@@ -231,6 +229,15 @@
             .k-dirty {
                 left: auto;
                 right: 0;
+            }
+
+            .k-edit-cell,
+            .k-grid-edit-row > td {
+                >.k-textbox,
+                >.k-widget,
+                > .text-box {
+                    margin-right: $edit-cell-input-space;
+                }
             }
         }
 
@@ -431,6 +438,11 @@
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            .k-ff & {
+                margin-inline-start: 0;
+                padding-inline-start: 0;
+            }
         }
 
         .k-header.k-filterable > .k-link {
@@ -760,6 +772,9 @@
         overflow: hidden;
     }
 
+    &.k-grid-no-scrollbar .k-grid-header-wrap {
+        border-width: 0;
+    }
 }
 
 // PDF export
@@ -803,31 +818,45 @@
 @include exports( "filtermenu/layout" ) {
 
     .k-filter-menu {
-        padding: $padding-y-sm;
+        $item-spacing: $spacer-y / 2;
+        $form-padding: $spacer-y;
+        $form-padding-y: $form-padding - $item-spacing;
 
-        .k-button {
-            margin: ( $spacer-y / 2 ) 1% 0;
+        > div:not(.k-animation-container), // BACKCOMPAT: remove when below class is added to container
+        .k-filter-menu-container {
+            padding: $form-padding-y $form-padding;
+        }
+
+        > div > div > .k-button {
+            // BACKCOMPAT: remove when buttons div gets .k-action-buttons.k-button-group
+            margin: $item-spacing 1% 0;
             width: 48%;
             box-sizing: border-box;
             display: inline-block;
         }
 
         .k-widget,
+        .k-radio-list,
         .k-textbox {
-            margin: ( $spacer-y / 2 ) 0 0;
+            margin: $item-spacing 0;
             width: 100%;
             display: block;
         }
-        .k-textbox {
-            margin-bottom: 3px;
-        }
-
 
         .k-widget.k-filter-and {
             width: 6em;
-            margin: .5em 0;
+            margin: (2 * $item-spacing) 0;
+        }
+
+        .k-action-buttons {
+            margin: $form-padding (-$form-padding) (-$form-padding-y);
+
+            .k-button {
+                margin: 0; // <- BACKCOMPAT: remove when buttons div gets .k-action-buttons.k-button-group
+            }
         }
     }
+
     .k-multicheck-wrap {
         max-height: 300px;
         overflow: auto;
