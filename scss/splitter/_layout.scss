@@ -153,6 +153,10 @@
             flex-shrink: 0;
         }
 
+        .k-pane-flex {
+            display: flex;
+        }
+
         .k-splitbar {
             position: static;
             flex: 0 0 auto;
@@ -161,7 +165,7 @@
         &.k-splitter-horizontal {
             flex-direction: row;
 
-            &[dir=rtl] {
+            &[dir = "rtl"] {
                 flex-direction: row-reverse;
             }
         }
