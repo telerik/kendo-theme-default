@@ -1,5 +1,10 @@
 /// <reference path="../data/metrics.ts" />
 
+interface Window {
+    jQuery: JQueryStatic
+    QUnit: QUnit
+}
+
 class TestHelper {
 
 
@@ -78,17 +83,17 @@ class TestHelper {
 
 
 // Test methods
-function getHeight(element) {
+function getHeight(element: HTMLElement | JQuery<HTMLElement> ): Number {
     var $ = window.jQuery;
 
     return $(element).outerHeight();
 }
-function getWidth(element) {
+function getWidth(element: HTMLElement | JQuery<HTMLElement> ): Number {
     var $ = window.jQuery;
 
     return $(element).outerWidth();
 }
-function getSize(element) {
+function getSize(element: HTMLElement | JQuery<HTMLElement> ): {width: Number, height: Number} {
     var $ = window.jQuery;
     var $element = $(element)
 
