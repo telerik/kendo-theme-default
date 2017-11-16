@@ -1,23 +1,24 @@
-var TestHelper = (function() {
+/// <reference path="../data/metrics.ts" />
 
-    function TestHelper() {}
+class TestHelper {
 
 
     // #region Fields
-    TestHelper.fixture = null;
-    TestHelper.fixtureID = `fixture_${Date.now()}`;
+    static fixture: HTMLElement = null;
+    static fixtureID: string = `fixture_${Date.now()}`;
+    static $fixture;
     // #endregion
 
 
     // #region Methods
-    TestHelper.createFixture = function createFixture(id) {
+    static createFixture(id?: string) {
         var fixture = document.createElement("div");
         fixture.id = id || TestHelper.fixtureID;
         document.body.appendChild(fixture);
 
         return fixture;
-    };
-    TestHelper.loadFixture = function loadFixture(url) {
+    }
+    static loadFixture(url: string) {
 
         var $ = window.jQuery;
 
@@ -28,7 +29,7 @@ var TestHelper = (function() {
 
         $.ajax(url, {
             async: false,
-            cacge: false,
+            cache: false,
             success: function(data, status, $xhr) {
                 var tmp = document.createElement("_CONTAINER");
                 tmp.innerHTML = data;
@@ -42,23 +43,20 @@ var TestHelper = (function() {
             },
             error: function() {}
         });
-    };
-    TestHelper.clearFixture = function clearFixture() {
+    }
+    static clearFixture() {
         TestHelper.fixture.innerHTML = "";
-    };
-    TestHelper.removeFixture = function removeFixture() {
+    }
+    static removeFixture() {
         TestHelper.clearFixture();
         delete TestHelper.$fixture;
         TestHelper.fixture.remove();
         TestHelper.fixture = null;
-    };
+    }
     // #endregion
 
 
-    return TestHelper;
-
-
-})();
+}
 
 
 (function() {

@@ -68,6 +68,8 @@
   "devDependencies": {
     "@telerik/kendo-common-tasks": "^3.0.0",
     "@telerik/semantic-prerelease": "^1.0.0",
+    "@types/jquery": "^3.2.16",
+    "@types/qunit": "^2.0.31",
     "bootstrap": "4.0.0-beta.2",
     "cz-conventional-changelog": "^1.1.5",
     "editorconfig-tools": "^0.1.1",
@@ -79,7 +81,7 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-qunit": "^1.2.1",
     "mime": "^1.3.4",
-    "qunitjs": "^1.23.0",
+    "qunitjs": "^2.4.1",
     "sass-lint": "^1.7.0",
     "sassdoc": "^2.1.20",
     "semantic-release": "^6.3.6",

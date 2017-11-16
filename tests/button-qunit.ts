@@ -1,16 +1,16 @@
-module("Button size", {
-    setup: function() {
+QUnit.module("Button size", {
+    before: function() {
         TestHelper.loadFixture( "/base/tests/fixtures/button.html" );
     },
-    teardown: function() {
+    after: function() {
         //kendo.destroy(QUnit.fixture);
         TestHelper.clearFixture();
     }
 });
 
-test("Generic button height should be 30", function() {
+QUnit.test("Generic button height should be 30", function( assert ) {
     var button = $("#button");
     var buttonHeight = getHeight( button );
 
-    equal( buttonHeight, metrics.button.height );
+    assert.equal( buttonHeight, metrics.button.height );
 });

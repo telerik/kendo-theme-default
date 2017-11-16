@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "removeComments": true
+    },
+    "compileOnSave": false,
+    "include": [
+        "lib/*.ts",
+        "**/*-qunit.ts"
+    ],
+    "target": "es6",
+    "lib":[
+        "es2015.iterable"
+    ]
+}
