@@ -36,9 +36,14 @@
     "build": "webpack --optimize-minimize --bail",
     "watch": "webpack --watch",
     "embed-assets": "node build/embed-assets.js",
-    "test": "npm run lint && npm run build && npm run api-check && npm run twbs-compat",
+    "test": "npm run lint && npm run build && npm run api-check && npm run twbs-compat && npm run ts-single && npm run karma-single",
     "twbs-compat": "webpack --env.twbs-compat --bail",
-    "semantic-release": "semantic-release pre && semantic-prerelease publish && semantic-release post"
+    "semantic-release": "semantic-release pre && semantic-prerelease publish && semantic-release post",
+    "watch-test": "npm run ts-watch & npm run karma-watch",
+    "ts-single": "./node_modules/.bin/tsc --project ./tests/",
+    "ts-watch": "./node_modules/.bin/tsc --watch --project ./tests/",
+    "karma-watch": "karma start --auto-watch --no-single-run",
+    "karma-single": "karma start --no-auto-watch --single-run"
   },
   "config": {
     "commitizen": {
@@ -68,7 +73,7 @@
   "devDependencies": {
     "@telerik/kendo-common-tasks": "^3.0.0",
     "@telerik/semantic-prerelease": "^1.0.0",
-    "@types/jquery": "^3.2.16",
+    "@types/jquery": "^2.0.48",
     "@types/qunit": "^2.0.31",
     "bootstrap": "4.0.0-beta.2",
     "cz-conventional-changelog": "^1.1.5",
@@ -85,6 +90,7 @@
     "sass-lint": "^1.7.0",
     "sassdoc": "^2.1.20",
     "semantic-release": "^6.3.6",
+    "typescript": "^2.6.1",
     "validate-commit-msg": "^1.1.1",
     "webpack": "^1.13.1"
   }

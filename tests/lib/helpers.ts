@@ -83,19 +83,19 @@ class TestHelper {
 
 
 // Test methods
-function getHeight(element: HTMLElement | JQuery<HTMLElement> ): Number {
+function getHeight(element: HTMLElement | JQuery ): Number {
     var $ = window.jQuery;
 
     return $(element).outerHeight();
 }
-function getWidth(element: HTMLElement | JQuery<HTMLElement> ): Number {
+function getWidth(element: HTMLElement | JQuery ): Number {
     var $ = window.jQuery;
 
     return $(element).outerWidth();
 }
-function getSize(element: HTMLElement | JQuery<HTMLElement> ): {width: Number, height: Number} {
+function getSize(element: HTMLElement | JQuery ): {width: Number, height: Number} {
     var $ = window.jQuery;
-    var $element = $(element)
+    var $element = $(element);
 
     return { width: $element.outerWidth(), height: $element.outerHeight() };
 }

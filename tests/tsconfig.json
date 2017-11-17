@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
-        "removeComments": true
+        "removeComments": true,
+        "types" : ["qunit", "jquery"]
     },
     "compileOnSave": false,
     "include": [
@@ -8,7 +9,5 @@
         "**/*-qunit.ts"
     ],
     "target": "es6",
-    "lib":[
-        "es2015.iterable"
-    ]
+    "lib":[]
 }
