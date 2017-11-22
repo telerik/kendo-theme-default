@@ -1,7 +1,7 @@
 ---
 title: Customization
 description: "Refer to the list of the Kendo UI Default theme variables available for customization."
-slug: variables_kendothemedefault_kendouiforangular
+slug: variables_kendothemedefault
 position: 9
 ---
 
@@ -522,4 +522,4 @@ Outputs a module once, no matter how many times it is included.
 
 * [Styling Overview]({% slug themesandstyles_kendouiforangular %})
 * [Web Font Icons]({% slug icons_kendouiforangular %})
-* [Preview of the Themed Components]({% slug preview_kendothemedefault_kendouiforangular %})
+* [Preview of the Themed Components](../)
