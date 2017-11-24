@@ -150,6 +150,25 @@
         .k-master-row {}
         .k-detail-row {}
 
+        &.k-grid-lockedcolumns .k-grid-content-locked td,
+        &.k-grid-lockedcolumns .k-grid-header-locked th,
+        &.k-grid-lockedcolumns .k-grid-content td,
+        &.k-grid-lockedcolumns .k-grid-header-wrap th {
+            border-left-width: 0;
+        }
+
+        &.k-grid-lockedcolumns .k-grid-content-locked td,
+        &.k-grid-lockedcolumns .k-grid-header-locked th,
+        &.k-grid-lockedcolumns .k-grid-content td:not(:last-child),
+        &.k-grid-lockedcolumns .k-grid-header-wrap th:not(:last-child) {
+            border-right-width: 1px;
+        }
+
+        &.k-grid-lockedcolumns .k-grid-content-locked,
+        &.k-grid-lockedcolumns .k-grid-header-locked {
+            border-right-width: 0;
+        }
+
         &[dir = "rtl"],
         .k-rtl & {
             thead,
@@ -241,6 +260,25 @@
                 > .text-box {
                     margin-right: $edit-cell-input-space;
                 }
+            }
+
+            &.k-grid-lockedcolumns .k-grid-content-locked td,
+            &.k-grid-lockedcolumns .k-grid-header-locked th,
+            &.k-grid-lockedcolumns .k-grid-content td,
+            &.k-grid-lockedcolumns .k-grid-header-wrap th {
+                border-right-width: 0;
+            }
+
+            &.k-grid-lockedcolumns .k-grid-content-locked td:not(:last-child),
+            &.k-grid-lockedcolumns .k-grid-header-locked th:not(:last-child),
+            &.k-grid-lockedcolumns .k-grid-content td:not(:last-child),
+            &.k-grid-lockedcolumns .k-grid-header-wrap th:not(:last-child) {
+                border-left-width: 1px;
+            }
+
+            &.k-grid-lockedcolumns .k-grid-content-locked,
+            &.k-grid-lockedcolumns .k-grid-header-locked {
+                border-left-width: 0;
             }
         }
 
