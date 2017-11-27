@@ -41,7 +41,7 @@
     "semantic-release": "semantic-release pre && semantic-prerelease publish && semantic-release post",
     "watch-test": "npm run karma-watch",
     "karma-watch": "karma start --auto-watch --no-single-run",
-    "karma-single": "karma start --no-auto-watch --single-run --browsers PhantomJS"
+    "karma-single": "karma start --no-auto-watch --single-run --browsers ChromeHeadless"
   },
   "config": {
     "commitizen": {
@@ -80,7 +80,6 @@
     "jquery": "^1.9.1",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-phantomjs-launcher": "^1.0.4",
     "karma-qunit": "^1.2.1",
     "mime": "^1.3.4",
     "qunitjs": "^2.4.1",
