@@ -3,7 +3,6 @@ QUnit.module("Button size", {
         TestHelper.loadFixture( "/base/tests/fixtures/button.html" );
     },
     after: function() {
-        //kendo.destroy(QUnit.fixture);
         TestHelper.clearFixture();
     }
 });

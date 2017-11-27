@@ -1,29 +1,27 @@
-/// <reference path="../data/metrics.ts" />
+/// <reference path="../data/metrics.js" />
 
-interface Window {
-    jQuery: JQueryStatic
-    QUnit: QUnit
-}
 
-class TestHelper {
+var TestHelper = (function(){
+
+    function TestHelper() {}
 
 
     // #region Fields
-    static fixture: HTMLElement = null;
-    static fixtureID: string = `fixture_${Date.now()}`;
-    static $fixture;
+    TestHelper.fixture = null;
+    TestHelper.fixtureID = "fixture_" + Date.now();
+    var $fixture;
     // #endregion
 
 
     // #region Methods
-    static createFixture(id?: string) {
+    TestHelper.createFixture = function(id) {
         var fixture = document.createElement("div");
         fixture.id = id || TestHelper.fixtureID;
         document.body.appendChild(fixture);
 
         return fixture;
-    }
-    static loadFixture(url: string) {
+    };
+    TestHelper.loadFixture = function(url) {
 
         var $ = window.jQuery;
 
@@ -48,20 +46,22 @@ class TestHelper {
             },
             error: function() {}
         });
-    }
-    static clearFixture() {
+    };
+    TestHelper.clearFixture = function() {
         TestHelper.fixture.innerHTML = "";
-    }
-    static removeFixture() {
+    };
+    TestHelper.removeFixture = function(){
         TestHelper.clearFixture();
         delete TestHelper.$fixture;
         TestHelper.fixture.remove();
         TestHelper.fixture = null;
-    }
+    };
     // #endregion
 
 
-}
+    return TestHelper;
+
+})();
 
 
 (function() {
@@ -83,17 +83,17 @@ class TestHelper {
 
 
 // Test methods
-function getHeight(element: HTMLElement | JQuery ): Number {
+function getHeight(element) {
     var $ = window.jQuery;
 
     return $(element).outerHeight();
 }
-function getWidth(element: HTMLElement | JQuery ): Number {
+function getWidth(element) {
     var $ = window.jQuery;
 
     return $(element).outerWidth();
 }
-function getSize(element: HTMLElement | JQuery ): {width: Number, height: Number} {
+function getSize(element) {
     var $ = window.jQuery;
     var $element = $(element);
 
