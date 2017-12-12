@@ -150,6 +150,18 @@
         .k-master-row {}
         .k-detail-row {}
 
+        &.k-grid-lockedcolumns .k-grid-content td:not(.k-hidden-cell),
+        &.k-grid-lockedcolumns .k-grid-header-wrap th:not(.k-hidden-cell),
+        &.k-grid-lockedcolumns .k-grid-footer-wrap td:not(.k-hidden-cell) {
+            border-left-width: 0;
+        }
+
+        &.k-grid-lockedcolumns .k-grid-content td:not(.k-hidden-cell) ~ td:not(.k-hidden-cell),
+        &.k-grid-lockedcolumns .k-grid-header-wrap th:not(.k-hidden-cell) ~ th:not(.k-hidden-cell),
+        &.k-grid-lockedcolumns .k-grid-footer-wrap td:not(.k-hidden-cell) ~ td:not(.k-hidden-cell) {
+            border-left-width: 1px;
+        }
+
         &[dir = "rtl"],
         .k-rtl & {
             thead,
@@ -250,6 +262,20 @@
 
             .k-grid-header-locked + .k-grid-header-wrap.k-auto-scrollable {
                 margin-left: 0;
+            }
+
+            &.k-grid-lockedcolumns .k-grid-content td:not(.k-hidden-cell),
+            &.k-grid-lockedcolumns .k-grid-header-wrap th:not(.k-hidden-cell),
+            &.k-grid-lockedcolumns .k-grid-footer-wrap tbody td:not(.k-hidden-cell) {
+                border-left-width: 0;
+                border-right-width: 0;
+            }
+
+            &.k-grid-lockedcolumns .k-grid-content td:not(.k-hidden-cell) ~ td:not(.k-hidden-cell),
+            &.k-grid-lockedcolumns .k-grid-header-wrap th:not(.k-hidden-cell) ~ th:not(.k-hidden-cell),
+            &.k-grid-lockedcolumns .k-grid-footer-wrap td:not(.k-hidden-cell) ~ td:not(.k-hidden-cell) {
+                border-left-width: 0;
+                border-right-width: 1px;
             }
         }
 
