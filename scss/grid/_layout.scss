@@ -12,7 +12,9 @@
 
     $grid-row-inner-height: add-two( $line-height-em, $cell-padding-y * 2 );
     // $grid-row-half-inner-height: add-two( $line-height-em / 2, $cell-padding-y );
-    $grid-form-component-offset: calc( (#{$line-height-em} - #{button-size()}) / 2 ) !default;
+
+    // be cautious when changing the next line; see https://github.com/MoOx/reduce-css-calc/issues/38
+    $grid-form-component-offset: calc( (#{$line-height-em} + (-1 * #{button-size()})) / 2 ) !default;
 
     .k-grid {
         display: flex;
@@ -176,10 +178,13 @@
                     margin-right: -( $icon-spacing / 2);
                 }
             }
+            .k-group-indicator {
+                margin-right: 0;
+                margin-left: ( $cell-padding-y / 2 );
+            }
 
             .k-group-indicator + .k-group-indicator {
-                margin-left: 0;
-                margin-right: $cell-padding-y;
+                margin-right: ( $cell-padding-y / 2 );
             }
 
             .k-grid-content-locked,
@@ -191,8 +196,6 @@
 
             th,
             td {
-                position: relative;
-
                 &:first-child {
                     border-left-width: 1px;
                 }
@@ -230,6 +233,24 @@
                 left: auto;
                 right: 0;
             }
+
+            .k-edit-cell,
+            .k-grid-edit-row > td {
+                >.k-textbox,
+                >.k-widget,
+                > .text-box {
+                    margin-right: $edit-cell-input-space;
+                }
+            }
+
+            .k-grid-header-wrap.k-auto-scrollable {
+                margin-left: -1px;
+                margin-right: 0;
+            }
+
+            .k-grid-header-locked + .k-grid-header-wrap.k-auto-scrollable {
+                margin-left: 0;
+            }
         }
 
         .k-tooltip.k-tooltip-validation {
@@ -245,13 +266,6 @@
 
         .k-animation-container-fixed .k-tooltip.k-tooltip-validation {
             position: static;
-        }
-
-        .k-no-text {
-            padding: 0;
-            display: inline-block;
-            width: $icon-size;
-            height: $icon-size;
         }
 
         .k-dirty-cell {
@@ -339,8 +353,13 @@
             }
         }
     }
+
+    .k-group-indicator {
+        margin-right: ( $cell-padding-y / 2 );
+    }
+
     .k-group-indicator + .k-group-indicator {
-        margin-left: $cell-padding-y;
+        margin-left: ( $cell-padding-y / 2 );
     }
 
     .k-grouping-dropclue {
@@ -384,6 +403,14 @@
         overflow: hidden;
     }
 
+    .k-grid-header-wrap.k-auto-scrollable {
+        margin-right: -1px;
+    }
+
+    .k-grid-header-locked + .k-grid-header-wrap.k-auto-scrollable {
+        margin-right: 0;
+    }
+
     .k-grid-header,
     .k-grid-footer {
         flex: 0 0 auto;
@@ -400,6 +427,12 @@
     div.k-grid-header,
     div.k-grid-footer {
         display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .k-ie div.k-grid-header {
+        display: block;
     }
 
     .k-grid-header {
@@ -430,6 +463,11 @@
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            .k-ff & {
+                margin-inline-start: 0;
+                padding-inline-start: 0;
+            }
         }
 
         .k-header.k-filterable > .k-link {
@@ -494,14 +532,6 @@
         }
     }
 
-    .k-grid-content,
-    .k-grid-header-wrap {
-        .k-grid-table,
-        > table {
-            min-width: 100%;
-        }
-    }
-
     .k-grid-footer {
         border-width: 1px 0 0;
 
@@ -542,7 +572,22 @@
             width: 100%;
         }
 
-        > span,
+        > span {
+            .k-button {
+                visibility: visible;
+                pointer-events: all;
+            }
+
+            .k-button,
+            .k-dropdown-operator {
+                margin-left: $cell-padding-y / 2;
+            }
+
+            .k-numerictextbox {
+                width: auto;
+            }
+        }
+
         .k-filtercell-operator {
             > .k-button.k-clear-button-visible {
                 visibility: visible;
@@ -562,11 +607,12 @@
         .k-widget:not(.k-dropdown-operator),
         .k-filtercell-wrapper > .k-textbox {
             display: flex;
-            flex: 1;
+            flex: 1 1 auto;
         }
 
         .k-filtercell-wrapper > .k-textbox {
             width: 100%;
+            min-width: 0;
         }
 
         .k-autocomplete .k-input,
@@ -674,7 +720,7 @@
     .k-edit-cell > .k-widget {
         margin-top: $grid-form-component-offset;
         margin-bottom: $grid-form-component-offset;
-        vertical-align: top;
+        vertical-align: middle;
     }
 
     // Resize handle
@@ -733,6 +779,10 @@
         position: relative;
         border-style: solid;
         border-width: 0 1px 0 0;
+
+        & + .k-grid-content.k-auto-scrollable {
+            display: inline-block;
+        }
     }
 
     .k-grid-content,
@@ -741,7 +791,12 @@
         flex: 1 1 auto;
         display: inline-block;
         vertical-align: top;
+
+        &.k-auto-scrollable {
+            display:block;
+        }
     }
+
     .k-grid-header-locked>table,
     .k-grid-header-wrap>table {
         margin-bottom: -1px;
@@ -751,6 +806,9 @@
         overflow: hidden;
     }
 
+    &.k-grid-no-scrollbar .k-grid-header-wrap {
+        border-width: 0;
+    }
 }
 
 // PDF export
@@ -794,31 +852,45 @@
 @include exports( "filtermenu/layout" ) {
 
     .k-filter-menu {
-        padding: $padding-y-sm;
+        $item-spacing: $spacer-y / 2;
+        $form-padding: $spacer-y;
+        $form-padding-y: $form-padding - $item-spacing;
 
-        .k-button {
-            margin: ( $spacer-y / 2 ) 1% 0;
+        > div:not(.k-animation-container), // BACKCOMPAT: remove when below class is added to container
+        .k-filter-menu-container {
+            padding: $form-padding-y $form-padding;
+        }
+
+        > div > div > .k-button {
+            // BACKCOMPAT: remove when buttons div gets .k-action-buttons.k-button-group
+            margin: $item-spacing 1% 0;
             width: 48%;
             box-sizing: border-box;
             display: inline-block;
         }
 
         .k-widget,
+        .k-radio-list,
         .k-textbox {
-            margin: ( $spacer-y / 2 ) 0 0;
+            margin: $item-spacing 0;
             width: 100%;
             display: block;
         }
-        .k-textbox {
-            margin-bottom: 3px;
-        }
-
 
         .k-widget.k-filter-and {
             width: 6em;
-            margin: .5em 0;
+            margin: (2 * $item-spacing) 0;
+        }
+
+        .k-action-buttons {
+            margin: $form-padding (-$form-padding) (-$form-padding-y);
+
+            .k-button {
+                margin: 0; // <- BACKCOMPAT: remove when buttons div gets .k-action-buttons.k-button-group
+            }
         }
     }
+
     .k-multicheck-wrap {
         max-height: 300px;
         overflow: auto;

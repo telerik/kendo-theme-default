@@ -79,12 +79,6 @@
 
     }
 
-    // Icon button
-    .k-button-icon {
-        height: add-two($form-line-height*1em, (2*$button-padding-y)); // fix vertical icon align for IE
-    }
-
-
     // Toggle button
     .k-toggle-button {}
 
@@ -114,6 +108,7 @@
         }
 
         &.k-widget {
+            border-radius: $border-radius;
             border-width: 0;
             display: inline-block;
         }
@@ -135,7 +130,7 @@
             @include border-radius( 0 );
         }
         .k-button ~ .k-button {
-            margin-left: -1px;
+            margin-left: -$button-border-width;
         }
 
         .k-button:hover,
@@ -192,6 +187,7 @@
     }
 
     .k-split-button.k-widget {
+        border-radius: $border-radius;
         border-width: 0;
     }
 

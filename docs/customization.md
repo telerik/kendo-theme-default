@@ -1,13 +1,13 @@
 ---
 title: Customization
 description: "Refer to the list of the Kendo UI Default theme variables available for customization."
-slug: variables_kendothemedefault_kendouiforangular
+slug: variables_kendothemedefault
 position: 9
 ---
 
 # Customization
 
-The following list describes the theme variables available for adjustment in the Kendo UI Default theme for Angular.
+The following table lists the available variables for customizing the Default theme.
 
 <style>
 .theme-variables th,
@@ -104,6 +104,42 @@ Used for primary buttons and for elements of primary importance across the theme
 </td>
 <td>The color used along with the accent color denoted by $accent.<br/>
 Used to provide contrast between the background and foreground colors.
+</td>
+</tr>
+<tr>
+<td>$info</td>
+<td>
+    <span class="color-preview" style="background-color: #0058e9"></span>
+    #0058e9
+</td>
+<td>The color for informational messages and states.
+</td>
+</tr>
+<tr>
+<td>$success</td>
+<td>
+    <span class="color-preview" style="background-color: #37b400"></span>
+    #37b400
+</td>
+<td>The color for success messages and states.
+</td>
+</tr>
+<tr>
+<td>$warning</td>
+<td>
+    <span class="color-preview" style="background-color: #ffc000"></span>
+    #ffc000
+</td>
+<td>The color for warning messages and states.
+</td>
+</tr>
+<tr>
+<td>$error</td>
+<td>
+    <span class="color-preview" style="background-color: #f31700"></span>
+    #f31700
+</td>
+<td>The color for error messages and states.
 </td>
 </tr>
 <tr>
@@ -212,42 +248,6 @@ Used to provide contrast between the background and foreground colors.
     none
 </td>
 <td>The gradient background of selected items.
-</td>
-</tr>
-<tr>
-<td>$error</td>
-<td>
-    <span class="color-preview" style="background-color: #f31700"></span>
-    #f31700
-</td>
-<td>The color for error messages and states.
-</td>
-</tr>
-<tr>
-<td>$warning</td>
-<td>
-    <span class="color-preview" style="background-color: #ffc000"></span>
-    #ffc000
-</td>
-<td>The color for warning messages and states.
-</td>
-</tr>
-<tr>
-<td>$success</td>
-<td>
-    <span class="color-preview" style="background-color: #37b400"></span>
-    #37b400
-</td>
-<td>The color for success messages and states.
-</td>
-</tr>
-<tr>
-<td>$info</td>
-<td>
-    <span class="color-preview" style="background-color: #0058e9"></span>
-    #0058e9
-</td>
-<td>The color for informational messages and states.
 </td>
 </tr>
 </table>
@@ -520,6 +520,6 @@ Outputs a module once, no matter how many times it is included.
 
 ## Suggested Links
 
-* [Styling Overview]({% slug themesandstyles_kendouiforangular %})
-* [Web Font Icons]({% slug icons_kendouiforangular %})
-* [Preview of the Themed Components]({% slug preview_kendothemedefault_kendouiforangular %})
+* [Styling Overview]({% slug themesandstyles %})
+* [Web Font Icons]({% slug icons %})
+* [Preview of the Themed Components](../)

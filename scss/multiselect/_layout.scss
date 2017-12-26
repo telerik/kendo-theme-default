@@ -10,7 +10,7 @@
         }
 
         .k-clear-value {
-            top: $padding-x-lg / 2;
+            top: $input-padding-y;
             margin-top: 0;
         }
 
@@ -29,6 +29,7 @@
                 }
 
                 .k-button {
+                    width: auto;
                     margin: $padding-y-sm $padding-y-sm 0 0;
 
                     .k-select {

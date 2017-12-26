@@ -315,20 +315,6 @@
         }
     }
 
-
-    // Error-state
-    .k-state-error {
-        border-style: ridge;
-    }
-
-
-    // TODO: what is smpty state?
-    // Empty state
-    .k-state-empty {
-        font-style: italic;
-    }
-
-
     // Dirty indicator
     .k-dirty {
         border-color: $error $error transparent transparent;
@@ -392,6 +378,35 @@
         top: 0;
         right: -3px;
         cursor: w-resize;
+    }
+
+    .k-resize-sw,
+    .k-resize-se,
+    .k-resize-nw,
+    .k-resize-ne {
+        width: 5px;
+        height: 5px;
+    }
+
+    .k-resize-sw {
+        cursor: sw-resize;
+        bottom: 0;
+        left: 0;
+    }
+    .k-resize-se {
+        cursor: se-resize;
+        bottom: 0;
+        right: 0;
+    }
+    .k-resize-nw {
+        cursor: nw-resize;
+        top: 0;
+        left: 0;
+    }
+    .k-resize-ne {
+        cursor: ne-resize;
+        top: 0;
+        right: 0;
     }
 
 }
@@ -540,7 +555,7 @@
         content: "";
         box-sizing: inherit;
         border-radius: 50%;
-        border-width: .03em;
+        border-width: .05em;
         border-style: solid;
         border-color: currentColor;
         border-top-color: transparent;
@@ -613,6 +628,37 @@
     // Theme
     .k-drag-clue {
         @include appearance( selected-node );
+    }
+
+}
+
+
+@include exports( "common/reordercue" ) {
+
+    // Layout
+    .k-reorder-cue {
+        position: absolute;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border: 3px solid transparent;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            border-bottom-width: 0;
+            border-top-color: currentColor;
+            top: -4px;
+        }
+        &::after {
+            border-top-width: 0;
+            border-bottom-color: currentColor;
+            bottom: -4px;
+        }
     }
 
 }

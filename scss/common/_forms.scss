@@ -11,7 +11,7 @@
     .k-numerictextbox,
     .k-maskedtextbox,
     .k-timepicker {
-        width: 12.4em;
+        width: $input-default-width;
         line-height: $form-line-height;
         text-align: left;
         white-space: nowrap;
@@ -28,7 +28,7 @@
             }
 
             .k-clear-value {
-                left: $padding-x;
+                left: $input-padding-x;
                 right: auto;
             }
         }
@@ -139,33 +139,38 @@
     .k-autocomplete,
     .k-dropdown-wrap,
     .k-multiselect {
+
         .k-clear-value,
         .k-i-loading {
             position: absolute;
-            top: 50%;
-            margin-top: -.5em;
+            right: $input-padding-x;
         }
 
         .k-clear-value {
-            right: $padding-x;
+            height: ($form-line-height * $font-size );
+            outline: 0;
+            opacity: .5;
+            cursor: pointer;
             display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            top: $input-padding-y;
         }
 
         .k-i-loading {
-            right: $padding-x-lg / 2;
+            top: 50%;
+            margin-top: -.5em;
         }
 
         &.k-state-focused,
         &.k-state-hover,
         &:hover {
             .k-clear-value {
-                display: inline-block;
-                outline: 0;
-                opacity: .5;
+                display: inline-flex;
 
                 &:hover {
                     opacity: 1;
-                    cursor: pointer;
                 }
             }
         }
@@ -178,7 +183,7 @@
             padding: 0;
             flex-direction: column;
             align-items: stretch;
-            width: button-inner-size();
+            width: add-three( $button-border-width, $icon-size, $button-padding-y * 2 );
         }
         .k-link {
             display: block;
@@ -251,12 +256,20 @@
         right: 3px;
     }
 
-    .k-widget.ng-invalid.ng-touched,
-    .k-widget.ng-invalid.ng-dirty {
-        .k-dateinput-wrap,
-        .k-dropdown-wrap,
-        .k-numeric-wrap,
-        .k-picker-wrap {
+    .k-state-invalid,
+    .ng-invalid.ng-touched,
+    .ng-invalid.ng-dirty {
+        &.k-autocomplete,
+        &.k-maskedtextbox > .k-textbox {
+            color: $error;
+            border-color: $invalid-border;
+        }
+
+        > .k-picker-wrap .k-dateinput-wrap,
+        > .k-dateinput-wrap,
+        > .k-dropdown-wrap,
+        > .k-numeric-wrap,
+        > .k-picker-wrap {
             color: $error;
             border-color: $invalid-border;
 
@@ -444,6 +457,14 @@
     .k-numerictextbox {
         &.form-control {
             &-sm {
+                .k-link-increase > .k-icon {
+                    bottom: -$numerictextbox-icon-offset-sm;
+                }
+
+                .k-link-decrease > .k-icon {
+                    top: -$numerictextbox-icon-offset-sm;
+                }
+
                 .k-link {
                     height: $bootstrap-integration-input-height-sm / 2;
                 }
@@ -452,21 +473,6 @@
             &-lg {
                 .k-link {
                     height: $bootstrap-integration-input-height-lg / 2;
-                }
-            }
-        }
-    }
-
-    .k-numerictextbox,
-    .k-dateinput {
-        &.form-control {
-            &-sm {
-                .k-link-increase > .k-icon {
-                    bottom: -$numerictextbox-icon-offset-sm;
-                }
-
-                .k-link-decrease > .k-icon {
-                    top: -$numerictextbox-icon-offset-sm;
                 }
             }
         }

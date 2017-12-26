@@ -60,6 +60,7 @@
         display: none;
     }
     .k-spreadsheet-tabstrip .k-content {
+        @include border-radius(0);
         padding: 0;
         border-width: 0;
         overflow: hidden;
@@ -273,15 +274,25 @@
         position: absolute;
         z-index: 2;
     }
+    .k-spreadsheet-overflow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        border-color: inherit;
+    }
     .k-spreadsheet-pane {
         padding: 0 1px 0 0;
-        border: 1px solid;
+        border-width: 2px 0 0 2px;
+        border-style: solid;
         border-color: inherit;
         box-sizing: border-box;
         position: absolute;
         overflow: hidden;
 
-        @each $side in (top, right, bottom, left ) {
+        @each $side in (top, left) {
             &.k-#{$side} { border-#{$side}-width: 0; }
         }
 
@@ -413,8 +424,8 @@
     .k-spreadsheet .k-single-selection {}
     .k-spreadsheet .k-single-selection::after {
         content: "";
-        margin-bottom: -5px;
-        margin-right: -5px;
+        margin-bottom: -4px;
+        margin-right: -4px;
         width: 6px;
         height: 6px;
         border-width: 1px;
@@ -426,6 +437,11 @@
         right: 0;
         z-index: 100;
         cursor: crosshair;
+    }
+    .k-spreadsheet-selection.k-right::after,
+    .k-spreadsheet-selection.k-bottom::after {
+        margin-right: -2px;
+        margin-bottom: -2px;
     }
 
 
