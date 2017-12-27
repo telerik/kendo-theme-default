@@ -178,10 +178,13 @@
                     margin-right: -( $icon-spacing / 2);
                 }
             }
+            .k-group-indicator {
+                margin-right: 0;
+                margin-left: ( $cell-padding-y / 2 );
+            }
 
             .k-group-indicator + .k-group-indicator {
-                margin-left: 0;
-                margin-right: $cell-padding-y;
+                margin-right: ( $cell-padding-y / 2 );
             }
 
             .k-grid-content-locked,
@@ -238,6 +241,15 @@
                 > .text-box {
                     margin-right: $edit-cell-input-space;
                 }
+            }
+
+            .k-grid-header-wrap.k-auto-scrollable {
+                margin-left: -1px;
+                margin-right: 0;
+            }
+
+            .k-grid-header-locked + .k-grid-header-wrap.k-auto-scrollable {
+                margin-left: 0;
             }
         }
 
@@ -341,8 +353,13 @@
             }
         }
     }
+
+    .k-group-indicator {
+        margin-right: ( $cell-padding-y / 2 );
+    }
+
     .k-group-indicator + .k-group-indicator {
-        margin-left: $cell-padding-y;
+        margin-left: ( $cell-padding-y / 2 );
     }
 
     .k-grouping-dropclue {
@@ -384,6 +401,14 @@
         border-color: inherit;
         position: relative;
         overflow: hidden;
+    }
+
+    .k-grid-header-wrap.k-auto-scrollable {
+        margin-right: -1px;
+    }
+
+    .k-grid-header-locked + .k-grid-header-wrap.k-auto-scrollable {
+        margin-right: 0;
     }
 
     .k-grid-header,

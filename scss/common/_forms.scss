@@ -11,7 +11,7 @@
     .k-numerictextbox,
     .k-maskedtextbox,
     .k-timepicker {
-        width: 12.4em;
+        width: $input-default-width;
         line-height: $form-line-height;
         text-align: left;
         white-space: nowrap;
@@ -256,7 +256,7 @@
         right: 3px;
     }
 
-
+    .k-state-invalid,
     .ng-invalid.ng-touched,
     .ng-invalid.ng-dirty {
         &.k-autocomplete,
@@ -265,7 +265,8 @@
             border-color: $invalid-border;
         }
 
-        .k-dateinput-wrap, // dateinput is nested deeper in datepicker
+        > .k-picker-wrap .k-dateinput-wrap,
+        > .k-dateinput-wrap,
         > .k-dropdown-wrap,
         > .k-numeric-wrap,
         > .k-picker-wrap {
