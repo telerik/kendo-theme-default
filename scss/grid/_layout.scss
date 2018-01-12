@@ -31,6 +31,12 @@
             overflow: hidden;
         }
 
+        .k-grid-aria-root {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
         table {
             margin: 0;
             width: 100%;
