@@ -24,6 +24,7 @@
     .k-grid-content-locked,
     .k-grid-footer-locked,
     .k-grid-header-locked,
+    .k-filter-row > td,
     .k-filter-row > th {
         border-color: $grid-chrome-border;
     }
@@ -49,6 +50,16 @@
     .k-group-footer td,
     .k-grouping-row td {
         font-weight: bold;
+    }
+
+    .k-grouping-dropclue {
+        &::before {
+            border-color: $grid-chrome-text transparent transparent;
+        }
+
+        &::after {
+            background-color: $grid-chrome-text;
+        }
     }
 
     .k-grid {
@@ -88,16 +99,6 @@
             .k-icon {
                 color: $grid-chrome-text;
                 text-decoration: none;
-            }
-        }
-
-        .k-grouping-dropclue {
-            &::before {
-                border-color: $grid-chrome-text transparent transparent;
-            }
-
-            &::after {
-                background-color: $grid-chrome-text;
             }
         }
 

@@ -31,6 +31,13 @@
             overflow: hidden;
         }
 
+        .k-grid-aria-root {
+            border-color: inherit;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
         table {
             margin: 0;
             width: 100%;
@@ -308,6 +315,24 @@
         border-color: inherit;
         line-height: button-size();
     }
+
+    .k-grouping-header-flex {
+        display: flex;
+        flex-shrink: 0;
+        padding: 0;
+
+        > .k-indicator-container {
+            display: inline-flex;
+            margin: 0;
+            padding: $padding-y 0 $padding-y $padding-x;
+            line-height: 1.5 * $form-line-height-em;
+
+            &:last-child {
+                flex-grow: 1;
+            }
+        }
+    }
+
     .k-group-indicator,
     .k-drag-clue {
         @include border-radius();
@@ -366,6 +391,7 @@
         width: ($group-dropclue-size * 2);
         height: button-size();
         position: absolute;
+        box-sizing: content-box;
 
         &::before,
         &::after {
@@ -545,7 +571,10 @@
     .k-filter-row {
         line-height: $form-line-height;
 
+        td,
         th {
+            border-width: 0 0 1px 1px;
+            white-space: nowrap;
             padding: $cell-padding-y;
         }
 
@@ -793,7 +822,7 @@
         vertical-align: top;
 
         &.k-auto-scrollable {
-            display:block;
+            display: block;
         }
     }
 
