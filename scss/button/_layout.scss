@@ -128,6 +128,7 @@
 
         .k-button {
             @include border-radius( 0 );
+            position: relative;
         }
         .k-button ~ .k-button {
             margin-left: -$button-border-width;
@@ -137,6 +138,14 @@
         .k-button.k-state-hover,
         .k-button.k-state-active {
             z-index: 2;
+        }
+
+        &.k-state-disabled .k-button,
+        [disabled],
+        .k-state-disabled,
+        .k-state-disabled:hover,
+        .k-state-disabled:focus {
+            pointer-events: auto;
         }
 
         .k-group-start,
@@ -168,7 +177,7 @@
     .k-button-group-stretched {
         display: flex;
 
-        > .k-button {
+        .k-button {
             display: inline-block;
             flex: 1 1 0;
             overflow: hidden;

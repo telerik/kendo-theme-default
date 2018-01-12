@@ -115,6 +115,27 @@
     .k-flip-h.k-flip-v { transform: scale(-1, -1); }
 
 
+    // Badge
+    .k-badge {
+        line-height: $line-height-lg;
+        font-size: $font-size-xs;
+        margin-left: $padding-x-sm;
+        padding: 0 $padding-x-sm;
+        border-radius: $border-radius;
+        background-color: $accent;
+        color: $accent-contrast;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+        z-index: 5;
+    }
+    .k-rtl .k-badge {
+        right: auto;
+        left: -0.5em*$line-height-lg;
+    }
+
+
     // Dirty indicator
     .k-dirty {
         margin: 0;
