@@ -9,7 +9,9 @@
 
         .k-input {}
 
-        .k-select {}
+        .k-select {
+            width: button-inner-size();
+        }
 
         &[dir='rtl'],
         .k-rtl & {
