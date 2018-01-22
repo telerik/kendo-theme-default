@@ -35,6 +35,7 @@
             border-color: inherit;
             display: flex;
             flex-direction: column;
+            flex: 1 1 auto;
             overflow: hidden;
         }
 
@@ -581,6 +582,10 @@
 
         .k-multiselect {
             height: auto;
+        }
+
+        .k-filtercell .k-widget.k-sized-input {
+            flex: 0 1 auto;
         }
     }
 
