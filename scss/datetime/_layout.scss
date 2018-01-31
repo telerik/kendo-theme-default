@@ -5,7 +5,8 @@
     // Datepicker
     .k-datepicker,
     .k-datetimepicker,
-    .k-timepicker {
+    .k-timepicker,
+    .k-dateinput {
 
         .k-i-warning {
             display: none;
@@ -19,17 +20,6 @@
             .k-i-warning {
                 display: inline-block;
             }
-        }
-
-        .k-dateinput {
-            width: 100%;
-            flex: 1 1 0%;
-            margin: 0;
-        }
-
-        .k-dateinput-wrap {
-            border: 0;
-            @include border-left-radius-only();
         }
 
         .k-rtl &,
