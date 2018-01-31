@@ -101,6 +101,8 @@ $window-inner-padding-x: 16px !default;
 $window-inner-padding-y: 16px !default;
 $window-titlebar-padding-x: 16px !default;
 $window-titlebar-padding-y: 12px !default;
+$window-titlebar-font-size: $font-size-lg !default;
+$window-titlebar-line-height: $line-height / (unitless( $font-size-lg ) / unitless($font-size) ) !default;
 
 $progressbar-height: 22px !default;
 
