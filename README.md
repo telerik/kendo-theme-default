@@ -1,3 +1,5 @@
+## This repository has been archived.<br> Development has moved to the [`kendo-themes` monorepo](https://github.com/telerik/kendo-themes).
+
 # Kendo UI Default Theme
 
 The Kendo UI Default Theme is a SCSS-based theme for the Kendo UI components.
