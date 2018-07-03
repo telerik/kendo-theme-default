@@ -350,6 +350,7 @@
     .k-spreadsheet-row-header,
     .k-spreadsheet-column-header {
         text-align: center;
+        z-index: 100;
     }
     .k-spreadsheet-row-header {
         position: relative;
@@ -408,6 +409,7 @@
 
     .k-spreadsheet-active-cell {
         outline-color: transparent !important;
+        z-index: 10;
     }
 
     .k-spreadsheet .k-auto-fill-wrapper {
@@ -415,7 +417,9 @@
     }
     .k-spreadsheet .k-auto-fill,
     .k-spreadsheet .k-auto-fill-punch,
-    .k-spreadsheet .k-auto-fill-br-hint {
+    .k-spreadsheet .k-auto-fill-br-hint,
+    .k-spreadsheet .k-auto-fill-tr-hint,
+    .k-spreadsheet .k-auto-fill-bl-hint {
         box-sizing: border-box;
         position: absolute;
     }
@@ -473,6 +477,7 @@
     // Filter button
     .k-spreadsheet .k-filter-wrapper {
         position: relative;
+        z-index: 50;
     }
     .k-spreadsheet .k-filter-range {
         border-width: 1px;
